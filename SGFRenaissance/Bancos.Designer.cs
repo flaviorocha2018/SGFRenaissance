@@ -271,7 +271,7 @@
             this._lblLinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblLinha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this._lblLinha.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this._lblLinha.Location = new System.Drawing.Point(-48, 38);
+            this._lblLinha.Location = new System.Drawing.Point(-49, 38);
             this._lblLinha.Name = "_lblLinha";
             this._lblLinha.Size = new System.Drawing.Size(872, 18);
             this._lblLinha.TabIndex = 115;
@@ -312,9 +312,9 @@
             this.groupBox1.Controls.Add(telefoneLabel);
             this.groupBox1.Controls.Add(this.telefoneTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 69);
+            this.groupBox1.Location = new System.Drawing.Point(5, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 197);
+            this.groupBox1.Size = new System.Drawing.Size(806, 207);
             this.groupBox1.TabIndex = 116;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do Banco";
@@ -495,7 +495,7 @@
             this.panel1.Controls.Add(this.btn_Proximo);
             this.panel1.Controls.Add(this.btnFechar);
             this.panel1.Controls.Add(this.btnSalvar);
-            this.panel1.Location = new System.Drawing.Point(2, 272);
+            this.panel1.Location = new System.Drawing.Point(1, 272);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 52);
             this.panel1.TabIndex = 129;
@@ -577,7 +577,7 @@
             this._lblMensagemUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this._lblMensagemUsuario.AutoSize = true;
             this._lblMensagemUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblMensagemUsuario.Location = new System.Drawing.Point(2, 478);
+            this._lblMensagemUsuario.Location = new System.Drawing.Point(1, 478);
             this._lblMensagemUsuario.Name = "_lblMensagemUsuario";
             this._lblMensagemUsuario.Size = new System.Drawing.Size(202, 15);
             this._lblMensagemUsuario.TabIndex = 128;
@@ -591,7 +591,7 @@
             this.flowLayoutPanel1.Controls.Add(this.login_NameTextBox);
             this.flowLayoutPanel1.Controls.Add(label19);
             this.flowLayoutPanel1.Controls.Add(this.txt_datalogin);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 496);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 496);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(810, 39);
             this.flowLayoutPanel1.TabIndex = 127;
@@ -627,7 +627,7 @@
             this._lblTituloJanela.AutoSize = true;
             this._lblTituloJanela.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblTituloJanela.ForeColor = System.Drawing.Color.Maroon;
-            this._lblTituloJanela.Location = new System.Drawing.Point(5, 9);
+            this._lblTituloJanela.Location = new System.Drawing.Point(4, 9);
             this._lblTituloJanela.Name = "_lblTituloJanela";
             this._lblTituloJanela.Size = new System.Drawing.Size(219, 29);
             this._lblTituloJanela.TabIndex = 130;
@@ -752,7 +752,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 536);
+            this.ClientSize = new System.Drawing.Size(813, 536);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this._lblTituloJanela);
             this.Controls.Add(this.panel1);
