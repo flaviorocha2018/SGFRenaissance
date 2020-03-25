@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DGV_BaseTitulosRecebidosXNomeBanco" targetNamespace="http://tempuri.org/DGV_BaseTitulosRecebidosXNomeBanco.xsd" xmlns:mstns="http://tempuri.org/DGV_BaseTitulosRecebidosXNomeBanco.xsd" xmlns="http://tempuri.org/DGV_BaseTitulosRecebidosXNomeBanco.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_Titulos_RecebidosTableAdapter" GeneratorDataComponentClassName="Base_Titulos_RecebidosTableAdapter" Name="Base_Titulos_Recebidos" UserDataComponentName="Base_Titulos_RecebidosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                         Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                        Bancos.Nome_Banco,  Base_Titulos_Recebidos.Historico
+FROM       Base_Titulos_Recebidos INNER JOIN
+                  Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Base_Titulos_a_Recebidos" DataSetColumn="Cod_Base_Titulos_a_Recebidos" />
+              <Mapping SourceColumn="Data_Recebimento" DataSetColumn="Data_Recebimento" />
+              <Mapping SourceColumn="Total_Recebido" DataSetColumn="Total_Recebido" />
+              <Mapping SourceColumn="Banco_Creditado" DataSetColumn="Banco_Creditado" />
+              <Mapping SourceColumn="Historico" DataSetColumn="Historico" />
+              <Mapping SourceColumn="Nome_Banco" DataSetColumn="Nome_Banco" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DGV_BaseTitulosRecebidosXNomeBanco" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DGV_BaseTitulosRecebidosXNomeBanco" msprop:Generator_UserDSName="DGV_BaseTitulosRecebidosXNomeBanco">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Base_Titulos_Recebidos" msprop:Generator_TableClassName="Base_Titulos_RecebidosDataTable" msprop:Generator_TableVarName="tableBase_Titulos_Recebidos" msprop:Generator_RowChangedName="Base_Titulos_RecebidosRowChanged" msprop:Generator_TablePropName="Base_Titulos_Recebidos" msprop:Generator_RowDeletingName="Base_Titulos_RecebidosRowDeleting" msprop:Generator_RowChangingName="Base_Titulos_RecebidosRowChanging" msprop:Generator_RowEvHandlerName="Base_Titulos_RecebidosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Titulos_RecebidosRowDeleted" msprop:Generator_RowClassName="Base_Titulos_RecebidosRow" msprop:Generator_UserTableName="Base_Titulos_Recebidos" msprop:Generator_RowEvArgName="Base_Titulos_RecebidosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Base_Titulos_a_Recebidos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInRow="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInTable="Cod_Base_Titulos_a_RecebidosColumn" msprop:Generator_UserColumnName="Cod_Base_Titulos_a_Recebidos" type="xs:int" />
+              <xs:element name="Data_Recebimento" msprop:Generator_ColumnVarNameInTable="columnData_Recebimento" msprop:Generator_ColumnPropNameInRow="Data_Recebimento" msprop:Generator_ColumnPropNameInTable="Data_RecebimentoColumn" msprop:Generator_UserColumnName="Data_Recebimento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total_Recebido" msprop:Generator_ColumnVarNameInTable="columnTotal_Recebido" msprop:Generator_ColumnPropNameInRow="Total_Recebido" msprop:Generator_ColumnPropNameInTable="Total_RecebidoColumn" msprop:Generator_UserColumnName="Total_Recebido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Banco_Creditado" msprop:Generator_ColumnVarNameInTable="columnBanco_Creditado" msprop:Generator_ColumnPropNameInRow="Banco_Creditado" msprop:Generator_ColumnPropNameInTable="Banco_CreditadoColumn" msprop:Generator_UserColumnName="Banco_Creditado" type="xs:int" minOccurs="0" />
+              <xs:element name="Historico" msprop:Generator_ColumnVarNameInTable="columnHistorico" msprop:Generator_ColumnPropNameInRow="Historico" msprop:Generator_ColumnPropNameInTable="HistoricoColumn" msprop:Generator_UserColumnName="Historico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nome_Banco" msprop:Generator_ColumnVarNameInTable="columnNome_Banco" msprop:Generator_ColumnPropNameInRow="Nome_Banco" msprop:Generator_ColumnPropNameInTable="Nome_BancoColumn" msprop:Generator_UserColumnName="Nome_Banco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Base_Titulos_Recebidos" />
+      <xs:field xpath="mstns:Cod_Base_Titulos_a_Recebidos" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

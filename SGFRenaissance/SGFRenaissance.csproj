@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B5B4932-52B4-4C10-B1B8-4E1500AA1D0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGFRenaissance</RootNamespace>
+    <AssemblyName>SGFRenaissance</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Globalization.CultureInfoCache, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Globalization.CultureInfoCache.1.1.3\lib\netstandard1.1\Microsoft.Extensions.Globalization.CultureInfoCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos.Designer.cs">
+      <DependentUpon>Bancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BancosDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BancosDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseParcelasRecebidasDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseParcelasRecebidasDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTitulosaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseTitulosaPagar.Designer.cs">
+      <DependentUpon>BaseTitulosaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTitulosaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseTitulosaReceber.Designer.cs">
+      <DependentUpon>BaseTitulosaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTitulosPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTitulosPagosINSERT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTitulosPagosINSERT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTitulosRecebidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTitulosRecebidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Base_Parcelas_PagasDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroTitulosaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroTitulosaPagar.Designer.cs">
+      <DependentUpon>CadastroTitulosaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_Despesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_Despesas.Designer.cs">
+      <DependentUpon>Cadastro_Despesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Centro_de_Custos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Centro_de_Custos.Designer.cs">
+      <DependentUpon>Centro_de_Custos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes_Contas_a_Receber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes_Contas_a_Receber.Designer.cs">
+      <DependentUpon>Clientes_Contas_a_Receber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVNumeroParcelasPagar.cs">
+      <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGVNumeroParcelasPagar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGV_BaseTitulosPagosXNomeBanco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DGV_BaseTitulosPagosXNomeBanco.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGV_BaseTitulosRecebidosXNomeBanco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DGV_BaseTitulosRecebidosXNomeBanco.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaTitulosaPagarDataGrid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntradaTitulosaPagarDataGrid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaTitulosaPagarDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaTitulosaReceberDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada_Titulos_a_Receber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada_Titulos_a_Receber.Designer.cs">
+      <DependentUpon>Entrada_Titulos_a_Receber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DRE_Exercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DRE_Exercicio.Designer.cs">
+      <DependentUpon>Form_DRE_Exercicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRel_TitulosRecebidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRel_TitulosRecebidos.Designer.cs">
+      <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.Designer.cs">
+      <DependentUpon>Frm_Rel_Titulos_a_Pagar_em_Aberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEscolherBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEscolherBanco.Designer.cs">
+      <DependentUpon>FormEscolherBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedor_Contas_a_Pagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecedor_Contas_a_Pagar.Designer.cs">
+      <DependentUpon>Fornecedor_Contas_a_Pagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelLancamentos.Designer.cs">
+      <DependentUpon>FrmRelLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupo.Designer.cs">
+      <DependentUpon>Grupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lancamentos.Designer.cs">
+      <DependentUpon>Lancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lancamentos_Movimentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lancamentos_Movimentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroParcelasaPagarDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumeroParcelasaPagarDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroParcelasaPagarUpdate.cs">
+      <DependentUpon>NumeroParcelasaPagarUpdate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroParcelasaPagarUpdate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumeroParcelasaPagarUpdate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroParcelasaReceberDGV.cs">
+      <DependentUpon>NumeroParcelasaReceberDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroParcelasaReceberDGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumeroParcelasaReceberDGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamento_de_Titulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamento_de_Titulos.Designer.cs">
+      <DependentUpon>Pagamento_de_Titulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisarCliente.Designer.cs">
+      <DependentUpon>PesquisarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisarFornecedor.Designer.cs">
+      <DependentUpon>PesquisarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal_Sistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal_Sistema.Designer.cs">
+      <DependentUpon>Principal_Sistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecebimentodeTitulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecebimentodeTitulos.Designer.cs">
+      <DependentUpon>RecebimentodeTitulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelTitulosaReceberemAberto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelTitulosaReceberemAberto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_Lancamentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_NumeroParcelaaPagar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_NumeroParcelaaPagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_NumeroParcelasaReceber.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_NumeroParcelasaReceber.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_TitulosaPagaremAberto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_TitulosaPagaremAberto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rel_TitulosaReceberemAberto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_TitulosaReceberemAberto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_TitulosaReceberemAberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_TitulosaReceberemAberto.Designer.cs">
+      <DependentUpon>Report_TitulosaReceberemAberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissanceDataSet.cs">
+      <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissanceDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissanceDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StatusTitulo.cs" />
+    <Compile Include="TelaBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBancos.Designer.cs">
+      <DependentUpon>TelaBancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBancosNova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBancosNova.Designer.cs">
+      <DependentUpon>TelaBancosNova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBaseTitulosPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBaseTitulosPagos.Designer.cs">
+      <DependentUpon>TelaBaseTitulosPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBaseTitulosRecebidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBaseTitulosRecebidos.Designer.cs">
+      <DependentUpon>TelaBaseTitulosRecebidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaClientes.Designer.cs">
+      <DependentUpon>TelaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaRelatorioBancosLancamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRelatorioBancosLancamento.Designer.cs">
+      <DependentUpon>TelaRelatorioBancosLancamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaStatusTitulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaStatusTitulo.Designer.cs">
+      <DependentUpon>TelaStatusTitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCentroCustos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCentroCustos.Designer.cs">
+      <DependentUpon>TelaCentroCustos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCodigoDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCodigoDespesa.Designer.cs">
+      <DependentUpon>TelaCodigoDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaFornecedores.Designer.cs">
+      <DependentUpon>TelaFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaStatusTituloReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaStatusTituloReceber.Designer.cs">
+      <DependentUpon>TelaStatusTituloReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaTipoReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaTipoReceita.Designer.cs">
+      <DependentUpon>TelaTipoReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaUpdateParcelaTitPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaUpdateParcelaTitPagar.Designer.cs">
+      <DependentUpon>TelaUpdateParcelaTitPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_Operacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Operacao.Designer.cs">
+      <DependentUpon>Tela_Operacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposdeAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposdeAcesso.Designer.cs">
+      <DependentUpon>TiposdeAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bancos.resx">
+      <DependentUpon>Bancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseTitulosaPagar.resx">
+      <DependentUpon>BaseTitulosaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseTitulosaReceber.resx">
+      <DependentUpon>BaseTitulosaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroTitulosaPagar.resx">
+      <DependentUpon>CadastroTitulosaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_Despesas.resx">
+      <DependentUpon>Cadastro_Despesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Centro_de_Custos.resx">
+      <DependentUpon>Centro_de_Custos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes_Contas_a_Receber.resx">
+      <DependentUpon>Clientes_Contas_a_Receber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrada_Titulos_a_Receber.resx">
+      <DependentUpon>Entrada_Titulos_a_Receber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DRE_Exercicio.resx">
+      <DependentUpon>Form_DRE_Exercicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRel_TitulosRecebidos.resx">
+      <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.resx">
+      <DependentUpon>Frm_Rel_Titulos_a_Pagar_em_Aberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEscolherBanco.resx">
+      <DependentUpon>FormEscolherBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fornecedor_Contas_a_Pagar.resx">
+      <DependentUpon>Fornecedor_Contas_a_Pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelLancamentos.resx">
+      <DependentUpon>FrmRelLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupo.resx">
+      <DependentUpon>Grupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lancamentos.resx">
+      <DependentUpon>Lancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagamento_de_Titulos.resx">
+      <DependentUpon>Pagamento_de_Titulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarCliente.resx">
+      <DependentUpon>PesquisarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarFornecedor.resx">
+      <DependentUpon>PesquisarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal_Sistema.resx">
+      <DependentUpon>Principal_Sistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecebimentodeTitulos.resx">
+      <DependentUpon>RecebimentodeTitulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report_Lancamentos.rdlc" />
+    <EmbeddedResource Include="Report_TitulosaReceberemAberto.resx">
+      <DependentUpon>Report_TitulosaReceberemAberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaBancos.resx">
+      <DependentUpon>TelaBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaBancosNova.resx">
+      <DependentUpon>TelaBancosNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaBaseTitulosPagos.resx">
+      <DependentUpon>TelaBaseTitulosPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaBaseTitulosRecebidos.resx">
+      <DependentUpon>TelaBaseTitulosRecebidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaClientes.resx">
+      <DependentUpon>TelaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRelatorioBancosLancamento.resx">
+      <DependentUpon>TelaRelatorioBancosLancamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaStatusTitulo.resx">
+      <DependentUpon>TelaStatusTitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCentroCustos.resx">
+      <DependentUpon>TelaCentroCustos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCodigoDespesa.resx">
+      <DependentUpon>TelaCodigoDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaFornecedores.resx">
+      <DependentUpon>TelaFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaStatusTituloReceber.resx">
+      <DependentUpon>TelaStatusTituloReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaTipoReceita.resx">
+      <DependentUpon>TelaTipoReceita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaUpdateParcelaTitPagar.resx">
+      <DependentUpon>TelaUpdateParcelaTitPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_Operacao.resx">
+      <DependentUpon>Tela_Operacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiposdeAcesso.resx">
+      <DependentUpon>TiposdeAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BancosDGV.xsc">
+      <DependentUpon>BancosDGV.xsd</DependentUpon>
+    </None>
+    <None Include="BancosDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BancosDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosDGV.xss">
+      <DependentUpon>BancosDGV.xsd</DependentUpon>
+    </None>
+    <None Include="BaseParcelasRecebidasDGV.xsc">
+      <DependentUpon>BaseParcelasRecebidasDGV.xsd</DependentUpon>
+    </None>
+    <None Include="BaseParcelasRecebidasDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseParcelasRecebidasDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseParcelasRecebidasDGV.xss">
+      <DependentUpon>BaseParcelasRecebidasDGV.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosPago.xsc">
+      <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosPago.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseTitulosPago.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseTitulosPago.xss">
+      <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosPagosINSERT.xsc">
+      <DependentUpon>BaseTitulosPagosINSERT.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosPagosINSERT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseTitulosPagosINSERT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseTitulosPagosINSERT.xss">
+      <DependentUpon>BaseTitulosPagosINSERT.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosRecebidos.xsc">
+      <DependentUpon>BaseTitulosRecebidos.xsd</DependentUpon>
+    </None>
+    <None Include="BaseTitulosRecebidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseTitulosRecebidos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseTitulosRecebidos.xss">
+      <DependentUpon>BaseTitulosRecebidos.xsd</DependentUpon>
+    </None>
+    <None Include="Base_Parcelas_PagasDGV.xsc">
+      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+    </None>
+    <None Include="Base_Parcelas_PagasDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Base_Parcelas_PagasDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Base_Parcelas_PagasDGV.xss">
+      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="DGVNumeroParcelasPagar.xsc">
+      <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
+    </None>
+    <None Include="DGVNumeroParcelasPagar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DGVNumeroParcelasPagar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DGVNumeroParcelasPagar.xss">
+      <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
+    </None>
+    <None Include="DGV_BaseTitulosPagosXNomeBanco.xsc">
+      <DependentUpon>DGV_BaseTitulosPagosXNomeBanco.xsd</DependentUpon>
+    </None>
+    <None Include="DGV_BaseTitulosPagosXNomeBanco.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DGV_BaseTitulosPagosXNomeBanco.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DGV_BaseTitulosPagosXNomeBanco.xss">
+      <DependentUpon>DGV_BaseTitulosPagosXNomeBanco.xsd</DependentUpon>
+    </None>
+    <None Include="DGV_BaseTitulosRecebidosXNomeBanco.xsc">
+      <DependentUpon>DGV_BaseTitulosRecebidosXNomeBanco.xsd</DependentUpon>
+    </None>
+    <None Include="DGV_BaseTitulosRecebidosXNomeBanco.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DGV_BaseTitulosRecebidosXNomeBanco.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DGV_BaseTitulosRecebidosXNomeBanco.xss">
+      <DependentUpon>DGV_BaseTitulosRecebidosXNomeBanco.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaPagarDataGrid.xsc">
+      <DependentUpon>EntradaTitulosaPagarDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaPagarDataGrid.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntradaTitulosaPagarDataGrid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntradaTitulosaPagarDataGrid.xss">
+      <DependentUpon>EntradaTitulosaPagarDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaPagarDGV.xsc">
+      <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaPagarDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntradaTitulosaPagarDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntradaTitulosaPagarDGV.xss">
+      <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaReceberDGV.xsc">
+      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaTitulosaReceberDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntradaTitulosaReceberDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntradaTitulosaReceberDGV.xss">
+      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
+    </None>
+    <None Include="Lancamentos_Movimentos.xsc">
+      <DependentUpon>Lancamentos_Movimentos.xsd</DependentUpon>
+    </None>
+    <None Include="Lancamentos_Movimentos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lancamentos_Movimentos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lancamentos_Movimentos.xss">
+      <DependentUpon>Lancamentos_Movimentos.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaPagarDGV.xsc">
+      <DependentUpon>NumeroParcelasaPagarDGV.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaPagarDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NumeroParcelasaPagarDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NumeroParcelasaPagarDGV.xss">
+      <DependentUpon>NumeroParcelasaPagarDGV.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaPagarUpdate.xsc">
+      <DependentUpon>NumeroParcelasaPagarUpdate.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaPagarUpdate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NumeroParcelasaPagarUpdate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NumeroParcelasaPagarUpdate.xss">
+      <DependentUpon>NumeroParcelasaPagarUpdate.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaReceberDGV.xsc">
+      <DependentUpon>NumeroParcelasaReceberDGV.xsd</DependentUpon>
+    </None>
+    <None Include="NumeroParcelasaReceberDGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NumeroParcelasaReceberDGV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NumeroParcelasaReceberDGV.xss">
+      <DependentUpon>NumeroParcelasaReceberDGV.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\sistema.DAL.Banco.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Centro_Custo.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Clientes_Contas_a_Receber.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Contas_Despesa.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Entrada_Titulos_a_Pagar.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Entrada_Titulos_a_Receber.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Fornecedor_Contas_a_Pagar.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Grupo.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Lancamento.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Numero_Parcelas_a_Pagar.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Numero_Parcelas_a_Receber.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Operacao.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Pesquisa_Por_Nome.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Status_Fornecedor_Cliente.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Status_Titulo.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Status_Titulos_a_Receber.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Tipos_Acesso.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Tipos_Receita.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Usuario.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RelTitulosaReceberemAberto.xsc">
+      <DependentUpon>RelTitulosaReceberemAberto.xsd</DependentUpon>
+    </None>
+    <None Include="RelTitulosaReceberemAberto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RelTitulosaReceberemAberto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RelTitulosaReceberemAberto.xss">
+      <DependentUpon>RelTitulosaReceberemAberto.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_Lancamentos.xsc">
+      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_Lancamentos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_Lancamentos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_Lancamentos.xss">
+      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_NumeroParcelaaPagar.xsc">
+      <DependentUpon>Rel_NumeroParcelaaPagar.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_NumeroParcelaaPagar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_NumeroParcelaaPagar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_NumeroParcelaaPagar.xss">
+      <DependentUpon>Rel_NumeroParcelaaPagar.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_NumeroParcelasaReceber.xsc">
+      <DependentUpon>Rel_NumeroParcelasaReceber.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_NumeroParcelasaReceber.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_NumeroParcelasaReceber.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_NumeroParcelasaReceber.xss">
+      <DependentUpon>Rel_NumeroParcelasaReceber.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_TitulosaPagaremAberto.xsc">
+      <DependentUpon>Rel_TitulosaPagaremAberto.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_TitulosaPagaremAberto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_TitulosaPagaremAberto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_TitulosaPagaremAberto.xss">
+      <DependentUpon>Rel_TitulosaPagaremAberto.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_TitulosaReceberemAberto.xsc">
+      <DependentUpon>Rel_TitulosaReceberemAberto.xsd</DependentUpon>
+    </None>
+    <None Include="Rel_TitulosaReceberemAberto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rel_TitulosaReceberemAberto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rel_TitulosaReceberemAberto.xss">
+      <DependentUpon>Rel_TitulosaReceberemAberto.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet.xsc">
+      <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissanceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissanceDataSet.xss">
+      <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet1.xsc">
+      <DependentUpon>SGFRenaissanceDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissanceDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissanceDataSet1.xss">
+      <DependentUpon>SGFRenaissanceDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres.dll_I003b_0409.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sistema.DAL\sistema.DAL.csproj">
+      <Project>{8c3c7392-e988-42f9-bcda-bf4c8ee49888}</Project>
+      <Name>sistema.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
