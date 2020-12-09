@@ -69,7 +69,6 @@
             this.btn_consulta.TabIndex = 1;
             this.btn_consulta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_consulta.UseVisualStyleBackColor = true;
-         
             // 
             // txt_Consulta
             // 
@@ -168,7 +167,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaFornecedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaFornecedores";
+            this.Text = "Tela Fornecedores";
             this.Load += new System.EventHandler(this.TelaFornecedores_Load);
             this.gb_Consulta.ResumeLayout(false);
             this.gb_Consulta.PerformLayout();

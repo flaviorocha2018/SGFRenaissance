@@ -20,9 +20,9 @@ namespace SGFRenaissance {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Base_Parcelas_PagasDGV")]
+    [global::System.Xml.Serialization.XmlRootAttribute("base_Parcelas_PagasDGV")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Base_Parcelas_PagasDGV : global::System.Data.DataSet {
+    public partial class base_Parcelas_PagasDGV : global::System.Data.DataSet {
         
         private Base_Parcelas_PagasDataTable tableBase_Parcelas_Pagas;
         
@@ -30,7 +30,7 @@ namespace SGFRenaissance {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Base_Parcelas_PagasDGV() {
+        public base_Parcelas_PagasDGV() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SGFRenaissance {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected Base_Parcelas_PagasDGV(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected base_Parcelas_PagasDGV(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace SGFRenaissance {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Base_Parcelas_PagasDGV cln = ((Base_Parcelas_PagasDGV)(base.Clone()));
+            base_Parcelas_PagasDGV cln = ((base_Parcelas_PagasDGV)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace SGFRenaissance {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Base_Parcelas_PagasDGV";
+            this.DataSetName = "base_Parcelas_PagasDGV";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Base_Parcelas_PagasDGV.xsd";
+            this.Namespace = "http://tempuri.org/base_Parcelas_PagasDGV.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBase_Parcelas_Pagas = new Base_Parcelas_PagasDataTable();
@@ -225,7 +225,7 @@ namespace SGFRenaissance {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Base_Parcelas_PagasDGV ds = new Base_Parcelas_PagasDGV();
+            base_Parcelas_PagasDGV ds = new base_Parcelas_PagasDGV();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -285,7 +285,25 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnCod_Numero_Parc_a_Pagar;
             
+            private global::System.Data.DataColumn columnCod_Fornecedor;
+            
+            private global::System.Data.DataColumn columnNumero_Documento;
+            
+            private global::System.Data.DataColumn columnNumero_Parcela;
+            
+            private global::System.Data.DataColumn columnValor_Titulo;
+            
+            private global::System.Data.DataColumn columnData_Documento;
+            
             private global::System.Data.DataColumn columnData_Pagamento;
+            
+            private global::System.Data.DataColumn columnData_Venc_Parcela;
+            
+            private global::System.Data.DataColumn columnCod_Centro_Custos;
+            
+            private global::System.Data.DataColumn columnCod_Despesa;
+            
+            private global::System.Data.DataColumn columnValor_Pago_a_Vista;
             
             private global::System.Data.DataColumn columnValor_Pago;
             
@@ -302,24 +320,6 @@ namespace SGFRenaissance {
             private global::System.Data.DataColumn columnStatusTitulo;
             
             private global::System.Data.DataColumn columnHistorico;
-            
-            private global::System.Data.DataColumn columnCod_Fornecedor;
-            
-            private global::System.Data.DataColumn columnNumero_Documento;
-            
-            private global::System.Data.DataColumn columnNumero_Parcela;
-            
-            private global::System.Data.DataColumn columnValor_Titulo;
-            
-            private global::System.Data.DataColumn columnData_Documento;
-            
-            private global::System.Data.DataColumn columnData_Venc_Parcela;
-            
-            private global::System.Data.DataColumn columnCod_Centro_Custos;
-            
-            private global::System.Data.DataColumn columnCod_Despesa;
-            
-            private global::System.Data.DataColumn columnValor_Pago_a_Vista;
             
             private global::System.Data.DataColumn columnHistorico_Titulo;
             
@@ -382,9 +382,81 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_FornecedorColumn {
+                get {
+                    return this.columnCod_Fornecedor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Numero_DocumentoColumn {
+                get {
+                    return this.columnNumero_Documento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Numero_ParcelaColumn {
+                get {
+                    return this.columnNumero_Parcela;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Valor_TituloColumn {
+                get {
+                    return this.columnValor_Titulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Data_DocumentoColumn {
+                get {
+                    return this.columnData_Documento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Data_PagamentoColumn {
                 get {
                     return this.columnData_Pagamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Data_Venc_ParcelaColumn {
+                get {
+                    return this.columnData_Venc_Parcela;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_Centro_CustosColumn {
+                get {
+                    return this.columnCod_Centro_Custos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_DespesaColumn {
+                get {
+                    return this.columnCod_Despesa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Valor_Pago_a_VistaColumn {
+                get {
+                    return this.columnValor_Pago_a_Vista;
                 }
             }
             
@@ -454,78 +526,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_FornecedorColumn {
-                get {
-                    return this.columnCod_Fornecedor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Numero_DocumentoColumn {
-                get {
-                    return this.columnNumero_Documento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Numero_ParcelaColumn {
-                get {
-                    return this.columnNumero_Parcela;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Valor_TituloColumn {
-                get {
-                    return this.columnValor_Titulo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Data_DocumentoColumn {
-                get {
-                    return this.columnData_Documento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Data_Venc_ParcelaColumn {
-                get {
-                    return this.columnData_Venc_Parcela;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_Centro_CustosColumn {
-                get {
-                    return this.columnCod_Centro_Custos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_DespesaColumn {
-                get {
-                    return this.columnCod_Despesa;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Valor_Pago_a_VistaColumn {
-                get {
-                    return this.columnValor_Pago_a_Vista;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Historico_TituloColumn {
                 get {
                     return this.columnHistorico_Titulo;
@@ -573,7 +573,16 @@ namespace SGFRenaissance {
                         int Cod_Base_Titulos_Pagos, 
                         int Cod_Titulo_a_Pagar, 
                         int Cod_Numero_Parc_a_Pagar, 
+                        int Cod_Fornecedor, 
+                        string Numero_Documento, 
+                        int Numero_Parcela, 
+                        decimal Valor_Titulo, 
+                        System.DateTime Data_Documento, 
                         System.DateTime Data_Pagamento, 
+                        System.DateTime Data_Venc_Parcela, 
+                        int Cod_Centro_Custos, 
+                        int Cod_Despesa, 
+                        decimal Valor_Pago_a_Vista, 
                         decimal Valor_Pago, 
                         int Numero_banco, 
                         string Numero_cheque, 
@@ -582,22 +591,22 @@ namespace SGFRenaissance {
                         decimal Saldo, 
                         int StatusTitulo, 
                         string Historico, 
-                        int Cod_Fornecedor, 
-                        string Numero_Documento, 
-                        int Numero_Parcela, 
-                        decimal Valor_Titulo, 
-                        System.DateTime Data_Documento, 
-                        System.DateTime Data_Venc_Parcela, 
-                        int Cod_Centro_Custos, 
-                        int Cod_Despesa, 
-                        decimal Valor_Pago_a_Vista, 
                         string Historico_Titulo) {
                 Base_Parcelas_PagasRow rowBase_Parcelas_PagasRow = ((Base_Parcelas_PagasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod_Base_Titulos_Pagos,
                         Cod_Titulo_a_Pagar,
                         Cod_Numero_Parc_a_Pagar,
+                        Cod_Fornecedor,
+                        Numero_Documento,
+                        Numero_Parcela,
+                        Valor_Titulo,
+                        Data_Documento,
                         Data_Pagamento,
+                        Data_Venc_Parcela,
+                        Cod_Centro_Custos,
+                        Cod_Despesa,
+                        Valor_Pago_a_Vista,
                         Valor_Pago,
                         Numero_banco,
                         Numero_cheque,
@@ -606,15 +615,6 @@ namespace SGFRenaissance {
                         Saldo,
                         StatusTitulo,
                         Historico,
-                        Cod_Fornecedor,
-                        Numero_Documento,
-                        Numero_Parcela,
-                        Valor_Titulo,
-                        Data_Documento,
-                        Data_Venc_Parcela,
-                        Cod_Centro_Custos,
-                        Cod_Despesa,
-                        Valor_Pago_a_Vista,
                         Historico_Titulo};
                 rowBase_Parcelas_PagasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBase_Parcelas_PagasRow);
@@ -648,7 +648,16 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_Pagos = base.Columns["Cod_Base_Titulos_Pagos"];
                 this.columnCod_Titulo_a_Pagar = base.Columns["Cod_Titulo_a_Pagar"];
                 this.columnCod_Numero_Parc_a_Pagar = base.Columns["Cod_Numero_Parc_a_Pagar"];
+                this.columnCod_Fornecedor = base.Columns["Cod_Fornecedor"];
+                this.columnNumero_Documento = base.Columns["Numero_Documento"];
+                this.columnNumero_Parcela = base.Columns["Numero_Parcela"];
+                this.columnValor_Titulo = base.Columns["Valor_Titulo"];
+                this.columnData_Documento = base.Columns["Data_Documento"];
                 this.columnData_Pagamento = base.Columns["Data_Pagamento"];
+                this.columnData_Venc_Parcela = base.Columns["Data_Venc_Parcela"];
+                this.columnCod_Centro_Custos = base.Columns["Cod_Centro_Custos"];
+                this.columnCod_Despesa = base.Columns["Cod_Despesa"];
+                this.columnValor_Pago_a_Vista = base.Columns["Valor_Pago_a_Vista"];
                 this.columnValor_Pago = base.Columns["Valor_Pago"];
                 this.columnNumero_banco = base.Columns["Numero_banco"];
                 this.columnNumero_cheque = base.Columns["Numero_cheque"];
@@ -657,15 +666,6 @@ namespace SGFRenaissance {
                 this.columnSaldo = base.Columns["Saldo"];
                 this.columnStatusTitulo = base.Columns["StatusTitulo"];
                 this.columnHistorico = base.Columns["Historico"];
-                this.columnCod_Fornecedor = base.Columns["Cod_Fornecedor"];
-                this.columnNumero_Documento = base.Columns["Numero_Documento"];
-                this.columnNumero_Parcela = base.Columns["Numero_Parcela"];
-                this.columnValor_Titulo = base.Columns["Valor_Titulo"];
-                this.columnData_Documento = base.Columns["Data_Documento"];
-                this.columnData_Venc_Parcela = base.Columns["Data_Venc_Parcela"];
-                this.columnCod_Centro_Custos = base.Columns["Cod_Centro_Custos"];
-                this.columnCod_Despesa = base.Columns["Cod_Despesa"];
-                this.columnValor_Pago_a_Vista = base.Columns["Valor_Pago_a_Vista"];
                 this.columnHistorico_Titulo = base.Columns["Historico_Titulo"];
             }
             
@@ -678,8 +678,26 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnCod_Titulo_a_Pagar);
                 this.columnCod_Numero_Parc_a_Pagar = new global::System.Data.DataColumn("Cod_Numero_Parc_a_Pagar", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCod_Numero_Parc_a_Pagar);
+                this.columnCod_Fornecedor = new global::System.Data.DataColumn("Cod_Fornecedor", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Fornecedor);
+                this.columnNumero_Documento = new global::System.Data.DataColumn("Numero_Documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Documento);
+                this.columnNumero_Parcela = new global::System.Data.DataColumn("Numero_Parcela", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Parcela);
+                this.columnValor_Titulo = new global::System.Data.DataColumn("Valor_Titulo", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValor_Titulo);
+                this.columnData_Documento = new global::System.Data.DataColumn("Data_Documento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData_Documento);
                 this.columnData_Pagamento = new global::System.Data.DataColumn("Data_Pagamento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Pagamento);
+                this.columnData_Venc_Parcela = new global::System.Data.DataColumn("Data_Venc_Parcela", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData_Venc_Parcela);
+                this.columnCod_Centro_Custos = new global::System.Data.DataColumn("Cod_Centro_Custos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Centro_Custos);
+                this.columnCod_Despesa = new global::System.Data.DataColumn("Cod_Despesa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Despesa);
+                this.columnValor_Pago_a_Vista = new global::System.Data.DataColumn("Valor_Pago_a_Vista", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValor_Pago_a_Vista);
                 this.columnValor_Pago = new global::System.Data.DataColumn("Valor_Pago", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValor_Pago);
                 this.columnNumero_banco = new global::System.Data.DataColumn("Numero_banco", typeof(int), null, global::System.Data.MappingType.Element);
@@ -696,24 +714,6 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnStatusTitulo);
                 this.columnHistorico = new global::System.Data.DataColumn("Historico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHistorico);
-                this.columnCod_Fornecedor = new global::System.Data.DataColumn("Cod_Fornecedor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Fornecedor);
-                this.columnNumero_Documento = new global::System.Data.DataColumn("Numero_Documento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumero_Documento);
-                this.columnNumero_Parcela = new global::System.Data.DataColumn("Numero_Parcela", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumero_Parcela);
-                this.columnValor_Titulo = new global::System.Data.DataColumn("Valor_Titulo", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValor_Titulo);
-                this.columnData_Documento = new global::System.Data.DataColumn("Data_Documento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_Documento);
-                this.columnData_Venc_Parcela = new global::System.Data.DataColumn("Data_Venc_Parcela", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_Venc_Parcela);
-                this.columnCod_Centro_Custos = new global::System.Data.DataColumn("Cod_Centro_Custos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Centro_Custos);
-                this.columnCod_Despesa = new global::System.Data.DataColumn("Cod_Despesa", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Despesa);
-                this.columnValor_Pago_a_Vista = new global::System.Data.DataColumn("Valor_Pago_a_Vista", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValor_Pago_a_Vista);
                 this.columnHistorico_Titulo = new global::System.Data.DataColumn("Historico_Titulo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHistorico_Titulo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -722,9 +722,9 @@ namespace SGFRenaissance {
                 this.columnCod_Titulo_a_Pagar.AllowDBNull = false;
                 this.columnCod_Numero_Parc_a_Pagar.AllowDBNull = false;
                 this.columnCod_Numero_Parc_a_Pagar.Unique = true;
+                this.columnNumero_Documento.MaxLength = 50;
                 this.columnNumero_cheque.MaxLength = 25;
                 this.columnHistorico.MaxLength = 200;
-                this.columnNumero_Documento.MaxLength = 50;
                 this.columnHistorico_Titulo.MaxLength = 200;
             }
             
@@ -793,7 +793,7 @@ namespace SGFRenaissance {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Base_Parcelas_PagasDGV ds = new Base_Parcelas_PagasDGV();
+                base_Parcelas_PagasDGV ds = new base_Parcelas_PagasDGV();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -901,6 +901,87 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Fornecedor {
+                get {
+                    try {
+                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Fornecedor\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Numero_Documento {
+                get {
+                    try {
+                        return ((string)(this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Documento\' in table \'Base_Parcelas_Pagas\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Numero_Parcela {
+                get {
+                    try {
+                        return ((int)(this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Parcela\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Valor_Titulo {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Valor_Titulo\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Data_Documento {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Data_Documento\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime Data_Pagamento {
                 get {
                     try {
@@ -912,6 +993,73 @@ namespace SGFRenaissance {
                 }
                 set {
                     this[this.tableBase_Parcelas_Pagas.Data_PagamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Data_Venc_Parcela {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Data_Venc_Parcela\' in table \'Base_Parcelas_Pagas\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Centro_Custos {
+                get {
+                    try {
+                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Centro_Custos\' in table \'Base_Parcelas_Pagas\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Despesa {
+                get {
+                    try {
+                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Despesa\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Valor_Pago_a_Vista {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Valor_Pago_a_Vista\' in table \'Base_Parcelas_Pagas\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn] = value;
                 }
             }
             
@@ -1045,154 +1193,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cod_Fornecedor {
-                get {
-                    try {
-                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Fornecedor\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Numero_Documento {
-                get {
-                    try {
-                        return ((string)(this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Documento\' in table \'Base_Parcelas_Pagas\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Numero_Parcela {
-                get {
-                    try {
-                        return ((int)(this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Parcela\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Valor_Titulo {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Valor_Titulo\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Data_Documento {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Data_Documento\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Data_Venc_Parcela {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Data_Venc_Parcela\' in table \'Base_Parcelas_Pagas\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cod_Centro_Custos {
-                get {
-                    try {
-                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Centro_Custos\' in table \'Base_Parcelas_Pagas\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cod_Despesa {
-                get {
-                    try {
-                        return ((int)(this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Despesa\' in table \'Base_Parcelas_Pagas\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Valor_Pago_a_Vista {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Valor_Pago_a_Vista\' in table \'Base_Parcelas_Pagas\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Historico_Titulo {
                 get {
                     try {
@@ -1210,6 +1210,66 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCod_FornecedorNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCod_FornecedorNull() {
+                this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNumero_DocumentoNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNumero_DocumentoNull() {
+                this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNumero_ParcelaNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNumero_ParcelaNull() {
+                this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsValor_TituloNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Valor_TituloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetValor_TituloNull() {
+                this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsData_DocumentoNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Data_DocumentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetData_DocumentoNull() {
+                this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsData_PagamentoNull() {
                 return this.IsNull(this.tableBase_Parcelas_Pagas.Data_PagamentoColumn);
             }
@@ -1218,6 +1278,54 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetData_PagamentoNull() {
                 this[this.tableBase_Parcelas_Pagas.Data_PagamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsData_Venc_ParcelaNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetData_Venc_ParcelaNull() {
+                this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCod_Centro_CustosNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCod_Centro_CustosNull() {
+                this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCod_DespesaNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_DespesaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCod_DespesaNull() {
+                this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsValor_Pago_a_VistaNull() {
+                return this.IsNull(this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetValor_Pago_a_VistaNull() {
+                this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1318,114 +1426,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCod_FornecedorNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCod_FornecedorNull() {
-                this[this.tableBase_Parcelas_Pagas.Cod_FornecedorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNumero_DocumentoNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNumero_DocumentoNull() {
-                this[this.tableBase_Parcelas_Pagas.Numero_DocumentoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNumero_ParcelaNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNumero_ParcelaNull() {
-                this[this.tableBase_Parcelas_Pagas.Numero_ParcelaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsValor_TituloNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Valor_TituloColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetValor_TituloNull() {
-                this[this.tableBase_Parcelas_Pagas.Valor_TituloColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsData_DocumentoNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Data_DocumentoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetData_DocumentoNull() {
-                this[this.tableBase_Parcelas_Pagas.Data_DocumentoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsData_Venc_ParcelaNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetData_Venc_ParcelaNull() {
-                this[this.tableBase_Parcelas_Pagas.Data_Venc_ParcelaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCod_Centro_CustosNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCod_Centro_CustosNull() {
-                this[this.tableBase_Parcelas_Pagas.Cod_Centro_CustosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCod_DespesaNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Cod_DespesaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCod_DespesaNull() {
-                this[this.tableBase_Parcelas_Pagas.Cod_DespesaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsValor_Pago_a_VistaNull() {
-                return this.IsNull(this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetValor_Pago_a_VistaNull() {
-                this[this.tableBase_Parcelas_Pagas.Valor_Pago_a_VistaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHistorico_TituloNull() {
                 return this.IsNull(this.tableBase_Parcelas_Pagas.Historico_TituloColumn);
             }
@@ -1472,7 +1472,7 @@ namespace SGFRenaissance {
         }
     }
 }
-namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
+namespace SGFRenaissance.base_Parcelas_PagasDGVTableAdapters {
     
     
     /// <summary>
@@ -1484,7 +1484,7 @@ namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Base_Parcelas_PagasTableAdapter : global::System.ComponentModel.Component {
+    public partial class base_Parcelas_PagasTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1498,7 +1498,7 @@ namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Base_Parcelas_PagasTableAdapter() {
+        public base_Parcelas_PagasTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1599,7 +1599,16 @@ namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
             tableMapping.ColumnMappings.Add("Cod_Base_Titulos_Pagos", "Cod_Base_Titulos_Pagos");
             tableMapping.ColumnMappings.Add("Cod_Titulo_a_Pagar", "Cod_Titulo_a_Pagar");
             tableMapping.ColumnMappings.Add("Cod_Numero_Parc_a_Pagar", "Cod_Numero_Parc_a_Pagar");
+            tableMapping.ColumnMappings.Add("Cod_Fornecedor", "Cod_Fornecedor");
+            tableMapping.ColumnMappings.Add("Numero_Documento", "Numero_Documento");
+            tableMapping.ColumnMappings.Add("Numero_Parcela", "Numero_Parcela");
+            tableMapping.ColumnMappings.Add("Valor_Titulo", "Valor_Titulo");
+            tableMapping.ColumnMappings.Add("Data_Documento", "Data_Documento");
             tableMapping.ColumnMappings.Add("Data_Pagamento", "Data_Pagamento");
+            tableMapping.ColumnMappings.Add("Data_Venc_Parcela", "Data_Venc_Parcela");
+            tableMapping.ColumnMappings.Add("Cod_Centro_Custos", "Cod_Centro_Custos");
+            tableMapping.ColumnMappings.Add("Cod_Despesa", "Cod_Despesa");
+            tableMapping.ColumnMappings.Add("Valor_Pago_a_Vista", "Valor_Pago_a_Vista");
             tableMapping.ColumnMappings.Add("Valor_Pago", "Valor_Pago");
             tableMapping.ColumnMappings.Add("Numero_banco", "Numero_banco");
             tableMapping.ColumnMappings.Add("Numero_cheque", "Numero_cheque");
@@ -1608,48 +1617,39 @@ namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
             tableMapping.ColumnMappings.Add("Saldo", "Saldo");
             tableMapping.ColumnMappings.Add("StatusTitulo", "StatusTitulo");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
-            tableMapping.ColumnMappings.Add("Cod_Fornecedor", "Cod_Fornecedor");
-            tableMapping.ColumnMappings.Add("Numero_Documento", "Numero_Documento");
-            tableMapping.ColumnMappings.Add("Numero_Parcela", "Numero_Parcela");
-            tableMapping.ColumnMappings.Add("Valor_Titulo", "Valor_Titulo");
-            tableMapping.ColumnMappings.Add("Data_Documento", "Data_Documento");
-            tableMapping.ColumnMappings.Add("Data_Venc_Parcela", "Data_Venc_Parcela");
-            tableMapping.ColumnMappings.Add("Cod_Centro_Custos", "Cod_Centro_Custos");
-            tableMapping.ColumnMappings.Add("Cod_Despesa", "Cod_Despesa");
-            tableMapping.ColumnMappings.Add("Valor_Pago_a_Vista", "Valor_Pago_a_Vista");
             tableMapping.ColumnMappings.Add("Historico_Titulo", "Historico_Titulo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Base_Parcelas_Pagas] WHERE (([Cod_Base_Titulos_Pagos] = @Original_Co" +
-                "d_Base_Titulos_Pagos) AND ([Cod_Titulo_a_Pagar] = @Original_Cod_Titulo_a_Pagar) " +
-                "AND ([Cod_Numero_Parc_a_Pagar] = @Original_Cod_Numero_Parc_a_Pagar) AND ((@IsNul" +
-                "l_Cod_Fornecedor = 1 AND [Cod_Fornecedor] IS NULL) OR ([Cod_Fornecedor] = @Origi" +
-                "nal_Cod_Fornecedor)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] I" +
-                "S NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ((@IsNull_Nume" +
-                "ro_Parcela = 1 AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Original_Nu" +
-                "mero_Parcela)) AND ((@IsNull_Valor_Titulo = 1 AND [Valor_Titulo] IS NULL) OR ([V" +
-                "alor_Titulo] = @Original_Valor_Titulo)) AND ((@IsNull_Data_Documento = 1 AND [Da" +
-                "ta_Documento] IS NULL) OR ([Data_Documento] = @Original_Data_Documento)) AND ((@" +
-                "IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @" +
-                "Original_Data_Pagamento)) AND ((@IsNull_Data_Venc_Parcela = 1 AND [Data_Venc_Par" +
-                "cela] IS NULL) OR ([Data_Venc_Parcela] = @Original_Data_Venc_Parcela)) AND ((@Is" +
-                "Null_Cod_Centro_Custos = 1 AND [Cod_Centro_Custos] IS NULL) OR ([Cod_Centro_Cust" +
-                "os] = @Original_Cod_Centro_Custos)) AND ((@IsNull_Cod_Despesa = 1 AND [Cod_Despe" +
-                "sa] IS NULL) OR ([Cod_Despesa] = @Original_Cod_Despesa)) AND ((@IsNull_Valor_Pag" +
-                "o_a_Vista = 1 AND [Valor_Pago_a_Vista] IS NULL) OR ([Valor_Pago_a_Vista] = @Orig" +
-                "inal_Valor_Pago_a_Vista)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS NULL)" +
-                " OR ([Valor_Pago] = @Original_Valor_Pago)) AND ((@IsNull_Numero_banco = 1 AND [N" +
-                "umero_banco] IS NULL) OR ([Numero_banco] = @Original_Numero_banco)) AND ((@IsNul" +
-                "l_Numero_cheque = 1 AND [Numero_cheque] IS NULL) OR ([Numero_cheque] = @Original" +
-                "_Numero_cheque)) AND ((@IsNull_Acrescimos = 1 AND [Acrescimos] IS NULL) OR ([Acr" +
-                "escimos] = @Original_Acrescimos)) AND ((@IsNull_Descontos = 1 AND [Descontos] IS" +
-                " NULL) OR ([Descontos] = @Original_Descontos)) AND ((@IsNull_Saldo = 1 AND [Sald" +
-                "o] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_StatusTitulo = 1 AND [" +
-                "StatusTitulo] IS NULL) OR ([StatusTitulo] = @Original_StatusTitulo)) AND ((@IsNu" +
-                "ll_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)" +
-                ") AND ((@IsNull_Historico_Titulo = 1 AND [Historico_Titulo] IS NULL) OR ([Histor" +
-                "ico_Titulo] = @Original_Historico_Titulo)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Base_Parcelas_Pagas] WHERE (([Cod_Base_Titulos_Pagos] = @Origi" +
+                "nal_Cod_Base_Titulos_Pagos) AND ([Cod_Titulo_a_Pagar] = @Original_Cod_Titulo_a_P" +
+                "agar) AND ([Cod_Numero_Parc_a_Pagar] = @Original_Cod_Numero_Parc_a_Pagar) AND ((" +
+                "@IsNull_Cod_Fornecedor = 1 AND [Cod_Fornecedor] IS NULL) OR ([Cod_Fornecedor] = " +
+                "@Original_Cod_Fornecedor)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Docume" +
+                "nto] IS NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ((@IsNul" +
+                "l_Numero_Parcela = 1 AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Origi" +
+                "nal_Numero_Parcela)) AND ((@IsNull_Valor_Titulo = 1 AND [Valor_Titulo] IS NULL) " +
+                "OR ([Valor_Titulo] = @Original_Valor_Titulo)) AND ((@IsNull_Data_Documento = 1 A" +
+                "ND [Data_Documento] IS NULL) OR ([Data_Documento] = @Original_Data_Documento)) A" +
+                "ND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagament" +
+                "o] = @Original_Data_Pagamento)) AND ((@IsNull_Data_Venc_Parcela = 1 AND [Data_Ve" +
+                "nc_Parcela] IS NULL) OR ([Data_Venc_Parcela] = @Original_Data_Venc_Parcela)) AND" +
+                " ((@IsNull_Cod_Centro_Custos = 1 AND [Cod_Centro_Custos] IS NULL) OR ([Cod_Centr" +
+                "o_Custos] = @Original_Cod_Centro_Custos)) AND ((@IsNull_Cod_Despesa = 1 AND [Cod" +
+                "_Despesa] IS NULL) OR ([Cod_Despesa] = @Original_Cod_Despesa)) AND ((@IsNull_Val" +
+                "or_Pago_a_Vista = 1 AND [Valor_Pago_a_Vista] IS NULL) OR ([Valor_Pago_a_Vista] =" +
+                " @Original_Valor_Pago_a_Vista)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS" +
+                " NULL) OR ([Valor_Pago] = @Original_Valor_Pago)) AND ((@IsNull_Numero_banco = 1 " +
+                "AND [Numero_banco] IS NULL) OR ([Numero_banco] = @Original_Numero_banco)) AND ((" +
+                "@IsNull_Numero_cheque = 1 AND [Numero_cheque] IS NULL) OR ([Numero_cheque] = @Or" +
+                "iginal_Numero_cheque)) AND ((@IsNull_Acrescimos = 1 AND [Acrescimos] IS NULL) OR" +
+                " ([Acrescimos] = @Original_Acrescimos)) AND ((@IsNull_Descontos = 1 AND [Descont" +
+                "os] IS NULL) OR ([Descontos] = @Original_Descontos)) AND ((@IsNull_Saldo = 1 AND" +
+                " [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_StatusTitulo = 1" +
+                " AND [StatusTitulo] IS NULL) OR ([StatusTitulo] = @Original_StatusTitulo)) AND (" +
+                "(@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Hist" +
+                "orico)) AND ((@IsNull_Historico_Titulo = 1 AND [Historico_Titulo] IS NULL) OR ([" +
+                "Historico_Titulo] = @Original_Historico_Titulo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_Pagos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_Pagos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Titulo_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Titulo_a_Pagar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1694,7 +1694,7 @@ namespace SGFRenaissance.Base_Parcelas_PagasDGVTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Historico_Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico_Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Base_Parcelas_Pagas] ([Cod_Base_Titulos_Pagos], [Cod_Titulo_a_Pagar], [Cod_Numero_Parc_a_Pagar], [Cod_Fornecedor], [Numero_Documento], [Numero_Parcela], [Valor_Titulo], [Data_Documento], [Data_Pagamento], [Data_Venc_Parcela], [Cod_Centro_Custos], [Cod_Despesa], [Valor_Pago_a_Vista], [Valor_Pago], [Numero_banco], [Numero_cheque], [Acrescimos], [Descontos], [Saldo], [StatusTitulo], [Historico], [Historico_Titulo]) VALUES (@Cod_Base_Titulos_Pagos, @Cod_Titulo_a_Pagar, @Cod_Numero_Parc_a_Pagar, @Cod_Fornecedor, @Numero_Documento, @Numero_Parcela, @Valor_Titulo, @Data_Documento, @Data_Pagamento, @Data_Venc_Parcela, @Cod_Centro_Custos, @Cod_Despesa, @Valor_Pago_a_Vista, @Valor_Pago, @Numero_banco, @Numero_cheque, @Acrescimos, @Descontos, @Saldo, @StatusTitulo, @Historico, @Historico_Titulo);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Base_Parcelas_Pagas] ([Cod_Base_Titulos_Pagos], [Cod_Titulo_a_Pagar], [Cod_Numero_Parc_a_Pagar], [Cod_Fornecedor], [Numero_Documento], [Numero_Parcela], [Valor_Titulo], [Data_Documento], [Data_Pagamento], [Data_Venc_Parcela], [Cod_Centro_Custos], [Cod_Despesa], [Valor_Pago_a_Vista], [Valor_Pago], [Numero_banco], [Numero_cheque], [Acrescimos], [Descontos], [Saldo], [StatusTitulo], [Historico], [Historico_Titulo]) VALUES (@Cod_Base_Titulos_Pagos, @Cod_Titulo_a_Pagar, @Cod_Numero_Parc_a_Pagar, @Cod_Fornecedor, @Numero_Documento, @Numero_Parcela, @Valor_Titulo, @Data_Documento, @Data_Pagamento, @Data_Venc_Parcela, @Cod_Centro_Custos, @Cod_Despesa, @Valor_Pago_a_Vista, @Valor_Pago, @Numero_banco, @Numero_cheque, @Acrescimos, @Descontos, @Saldo, @StatusTitulo, @Historico, @Historico_Titulo);
 SELECT Cod_Base_Titulos_Pagos, Cod_Titulo_a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_Fornecedor, Numero_Documento, Numero_Parcela, Valor_Titulo, Data_Documento, Data_Pagamento, Data_Venc_Parcela, Cod_Centro_Custos, Cod_Despesa, Valor_Pago_a_Vista, Valor_Pago, Numero_banco, Numero_cheque, Acrescimos, Descontos, Saldo, StatusTitulo, Historico, Historico_Titulo FROM Base_Parcelas_Pagas WHERE (Cod_Numero_Parc_a_Pagar = @Cod_Numero_Parc_a_Pagar)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Base_Titulos_Pagos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_Pagos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1721,50 +1721,50 @@ SELECT Cod_Base_Titulos_Pagos, Cod_Titulo_a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico_Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico_Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Base_Parcelas_Pagas] SET [Cod_Base_Titulos_Pagos] = @Cod_Base_Titulos_Pag" +
-                "os, [Cod_Titulo_a_Pagar] = @Cod_Titulo_a_Pagar, [Cod_Numero_Parc_a_Pagar] = @Cod" +
-                "_Numero_Parc_a_Pagar, [Cod_Fornecedor] = @Cod_Fornecedor, [Numero_Documento] = @" +
-                "Numero_Documento, [Numero_Parcela] = @Numero_Parcela, [Valor_Titulo] = @Valor_Ti" +
-                "tulo, [Data_Documento] = @Data_Documento, [Data_Pagamento] = @Data_Pagamento, [D" +
-                "ata_Venc_Parcela] = @Data_Venc_Parcela, [Cod_Centro_Custos] = @Cod_Centro_Custos" +
-                ", [Cod_Despesa] = @Cod_Despesa, [Valor_Pago_a_Vista] = @Valor_Pago_a_Vista, [Val" +
-                "or_Pago] = @Valor_Pago, [Numero_banco] = @Numero_banco, [Numero_cheque] = @Numer" +
-                "o_cheque, [Acrescimos] = @Acrescimos, [Descontos] = @Descontos, [Saldo] = @Saldo" +
-                ", [StatusTitulo] = @StatusTitulo, [Historico] = @Historico, [Historico_Titulo] =" +
-                " @Historico_Titulo WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos" +
-                "_Pagos) AND ([Cod_Titulo_a_Pagar] = @Original_Cod_Titulo_a_Pagar) AND ([Cod_Nume" +
-                "ro_Parc_a_Pagar] = @Original_Cod_Numero_Parc_a_Pagar) AND ((@IsNull_Cod_Forneced" +
-                "or = 1 AND [Cod_Fornecedor] IS NULL) OR ([Cod_Fornecedor] = @Original_Cod_Fornec" +
-                "edor)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) OR ([N" +
-                "umero_Documento] = @Original_Numero_Documento)) AND ((@IsNull_Numero_Parcela = 1" +
-                " AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Original_Numero_Parcela))" +
-                " AND ((@IsNull_Valor_Titulo = 1 AND [Valor_Titulo] IS NULL) OR ([Valor_Titulo] =" +
-                " @Original_Valor_Titulo)) AND ((@IsNull_Data_Documento = 1 AND [Data_Documento] " +
-                "IS NULL) OR ([Data_Documento] = @Original_Data_Documento)) AND ((@IsNull_Data_Pa" +
-                "gamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_" +
-                "Pagamento)) AND ((@IsNull_Data_Venc_Parcela = 1 AND [Data_Venc_Parcela] IS NULL)" +
-                " OR ([Data_Venc_Parcela] = @Original_Data_Venc_Parcela)) AND ((@IsNull_Cod_Centr" +
-                "o_Custos = 1 AND [Cod_Centro_Custos] IS NULL) OR ([Cod_Centro_Custos] = @Origina" +
-                "l_Cod_Centro_Custos)) AND ((@IsNull_Cod_Despesa = 1 AND [Cod_Despesa] IS NULL) O" +
-                "R ([Cod_Despesa] = @Original_Cod_Despesa)) AND ((@IsNull_Valor_Pago_a_Vista = 1 " +
-                "AND [Valor_Pago_a_Vista] IS NULL) OR ([Valor_Pago_a_Vista] = @Original_Valor_Pag" +
-                "o_a_Vista)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS NULL) OR ([Valor_Pa" +
-                "go] = @Original_Valor_Pago)) AND ((@IsNull_Numero_banco = 1 AND [Numero_banco] I" +
-                "S NULL) OR ([Numero_banco] = @Original_Numero_banco)) AND ((@IsNull_Numero_chequ" +
-                "e = 1 AND [Numero_cheque] IS NULL) OR ([Numero_cheque] = @Original_Numero_cheque" +
-                ")) AND ((@IsNull_Acrescimos = 1 AND [Acrescimos] IS NULL) OR ([Acrescimos] = @Or" +
-                "iginal_Acrescimos)) AND ((@IsNull_Descontos = 1 AND [Descontos] IS NULL) OR ([De" +
-                "scontos] = @Original_Descontos)) AND ((@IsNull_Saldo = 1 AND [Saldo] IS NULL) OR" +
-                " ([Saldo] = @Original_Saldo)) AND ((@IsNull_StatusTitulo = 1 AND [StatusTitulo] " +
-                "IS NULL) OR ([StatusTitulo] = @Original_StatusTitulo)) AND ((@IsNull_Historico =" +
-                " 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNul" +
-                "l_Historico_Titulo = 1 AND [Historico_Titulo] IS NULL) OR ([Historico_Titulo] = " +
-                "@Original_Historico_Titulo)));\r\nSELECT Cod_Base_Titulos_Pagos, Cod_Titulo_a_Paga" +
-                "r, Cod_Numero_Parc_a_Pagar, Cod_Fornecedor, Numero_Documento, Numero_Parcela, Va" +
-                "lor_Titulo, Data_Documento, Data_Pagamento, Data_Venc_Parcela, Cod_Centro_Custos" +
-                ", Cod_Despesa, Valor_Pago_a_Vista, Valor_Pago, Numero_banco, Numero_cheque, Acre" +
-                "scimos, Descontos, Saldo, StatusTitulo, Historico, Historico_Titulo FROM Base_Pa" +
-                "rcelas_Pagas WHERE (Cod_Numero_Parc_a_Pagar = @Cod_Numero_Parc_a_Pagar)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Base_Parcelas_Pagas] SET [Cod_Base_Titulos_Pagos] = @Cod_Base_Titul" +
+                "os_Pagos, [Cod_Titulo_a_Pagar] = @Cod_Titulo_a_Pagar, [Cod_Numero_Parc_a_Pagar] " +
+                "= @Cod_Numero_Parc_a_Pagar, [Cod_Fornecedor] = @Cod_Fornecedor, [Numero_Document" +
+                "o] = @Numero_Documento, [Numero_Parcela] = @Numero_Parcela, [Valor_Titulo] = @Va" +
+                "lor_Titulo, [Data_Documento] = @Data_Documento, [Data_Pagamento] = @Data_Pagamen" +
+                "to, [Data_Venc_Parcela] = @Data_Venc_Parcela, [Cod_Centro_Custos] = @Cod_Centro_" +
+                "Custos, [Cod_Despesa] = @Cod_Despesa, [Valor_Pago_a_Vista] = @Valor_Pago_a_Vista" +
+                ", [Valor_Pago] = @Valor_Pago, [Numero_banco] = @Numero_banco, [Numero_cheque] = " +
+                "@Numero_cheque, [Acrescimos] = @Acrescimos, [Descontos] = @Descontos, [Saldo] = " +
+                "@Saldo, [StatusTitulo] = @StatusTitulo, [Historico] = @Historico, [Historico_Tit" +
+                "ulo] = @Historico_Titulo WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_T" +
+                "itulos_Pagos) AND ([Cod_Titulo_a_Pagar] = @Original_Cod_Titulo_a_Pagar) AND ([Co" +
+                "d_Numero_Parc_a_Pagar] = @Original_Cod_Numero_Parc_a_Pagar) AND ((@IsNull_Cod_Fo" +
+                "rnecedor = 1 AND [Cod_Fornecedor] IS NULL) OR ([Cod_Fornecedor] = @Original_Cod_" +
+                "Fornecedor)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) " +
+                "OR ([Numero_Documento] = @Original_Numero_Documento)) AND ((@IsNull_Numero_Parce" +
+                "la = 1 AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Original_Numero_Par" +
+                "cela)) AND ((@IsNull_Valor_Titulo = 1 AND [Valor_Titulo] IS NULL) OR ([Valor_Tit" +
+                "ulo] = @Original_Valor_Titulo)) AND ((@IsNull_Data_Documento = 1 AND [Data_Docum" +
+                "ento] IS NULL) OR ([Data_Documento] = @Original_Data_Documento)) AND ((@IsNull_D" +
+                "ata_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original" +
+                "_Data_Pagamento)) AND ((@IsNull_Data_Venc_Parcela = 1 AND [Data_Venc_Parcela] IS" +
+                " NULL) OR ([Data_Venc_Parcela] = @Original_Data_Venc_Parcela)) AND ((@IsNull_Cod" +
+                "_Centro_Custos = 1 AND [Cod_Centro_Custos] IS NULL) OR ([Cod_Centro_Custos] = @O" +
+                "riginal_Cod_Centro_Custos)) AND ((@IsNull_Cod_Despesa = 1 AND [Cod_Despesa] IS N" +
+                "ULL) OR ([Cod_Despesa] = @Original_Cod_Despesa)) AND ((@IsNull_Valor_Pago_a_Vist" +
+                "a = 1 AND [Valor_Pago_a_Vista] IS NULL) OR ([Valor_Pago_a_Vista] = @Original_Val" +
+                "or_Pago_a_Vista)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS NULL) OR ([Va" +
+                "lor_Pago] = @Original_Valor_Pago)) AND ((@IsNull_Numero_banco = 1 AND [Numero_ba" +
+                "nco] IS NULL) OR ([Numero_banco] = @Original_Numero_banco)) AND ((@IsNull_Numero" +
+                "_cheque = 1 AND [Numero_cheque] IS NULL) OR ([Numero_cheque] = @Original_Numero_" +
+                "cheque)) AND ((@IsNull_Acrescimos = 1 AND [Acrescimos] IS NULL) OR ([Acrescimos]" +
+                " = @Original_Acrescimos)) AND ((@IsNull_Descontos = 1 AND [Descontos] IS NULL) O" +
+                "R ([Descontos] = @Original_Descontos)) AND ((@IsNull_Saldo = 1 AND [Saldo] IS NU" +
+                "LL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_StatusTitulo = 1 AND [StatusTi" +
+                "tulo] IS NULL) OR ([StatusTitulo] = @Original_StatusTitulo)) AND ((@IsNull_Histo" +
+                "rico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((" +
+                "@IsNull_Historico_Titulo = 1 AND [Historico_Titulo] IS NULL) OR ([Historico_Titu" +
+                "lo] = @Original_Historico_Titulo)));\r\nSELECT Cod_Base_Titulos_Pagos, Cod_Titulo_" +
+                "a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_Fornecedor, Numero_Documento, Numero_Parce" +
+                "la, Valor_Titulo, Data_Documento, Data_Pagamento, Data_Venc_Parcela, Cod_Centro_" +
+                "Custos, Cod_Despesa, Valor_Pago_a_Vista, Valor_Pago, Numero_banco, Numero_cheque" +
+                ", Acrescimos, Descontos, Saldo, StatusTitulo, Historico, Historico_Titulo FROM B" +
+                "ase_Parcelas_Pagas WHERE (Cod_Numero_Parc_a_Pagar = @Cod_Numero_Parc_a_Pagar)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Base_Titulos_Pagos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_Pagos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Titulo_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Titulo_a_Pagar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1844,9 +1844,7 @@ SELECT Cod_Base_Titulos_Pagos, Cod_Titulo_a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Cod_Base_Titulos_Pagos, Cod_Titulo_a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_Fornecedor,                                      Numero_Documento, Numero_Parcela, Valor_Titulo, Data_Documento, Data_Pagamento,                                           Data_Venc_Parcela, Cod_Centro_Custos, Cod_Despesa, Valor_Pago_a_Vista, Valor_Pago,
-                     Numero_banco, Numero_cheque, Acrescimos, Descontos, Saldo, StatusTitulo, Historico,                                           Historico_Titulo
-FROM          Base_Parcelas_Pagas";
+            this._commandCollection[0].CommandText = @"SELECT Cod_Base_Titulos_Pagos, Cod_Titulo_a_Pagar, Cod_Numero_Parc_a_Pagar, Cod_Fornecedor, Numero_Documento, Numero_Parcela, Valor_Titulo, Data_Documento, Data_Pagamento, Data_Venc_Parcela, Cod_Centro_Custos, Cod_Despesa, Valor_Pago_a_Vista, Valor_Pago, Numero_banco, Numero_cheque, Acrescimos, Descontos, Saldo, StatusTitulo, Historico, Historico_Titulo FROM dbo.Base_Parcelas_Pagas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1854,7 +1852,7 @@ FROM          Base_Parcelas_Pagas";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable) {
+        public virtual int Fill(base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1867,9 +1865,9 @@ FROM          Base_Parcelas_Pagas";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable GetData() {
+        public virtual base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable = new Base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable();
+            base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable = new base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1877,14 +1875,14 @@ FROM          Base_Parcelas_Pagas";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable) {
+        public virtual int Update(base_Parcelas_PagasDGV.Base_Parcelas_PagasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Base_Parcelas_PagasDGV dataSet) {
+        public virtual int Update(base_Parcelas_PagasDGV dataSet) {
             return this.Adapter.Update(dataSet, "Base_Parcelas_Pagas");
         }
         
@@ -2662,7 +2660,7 @@ FROM          Base_Parcelas_Pagas";
         
         private UpdateOrderOption _updateOrder;
         
-        private Base_Parcelas_PagasTableAdapter _base_Parcelas_PagasTableAdapter;
+        private base_Parcelas_PagasTableAdapter _base_Parcelas_PagasTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2684,7 +2682,7 @@ FROM          Base_Parcelas_Pagas";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Base_Parcelas_PagasTableAdapter Base_Parcelas_PagasTableAdapter {
+        public base_Parcelas_PagasTableAdapter base_Parcelas_PagasTableAdapter {
             get {
                 return this._base_Parcelas_PagasTableAdapter;
             }
@@ -2741,7 +2739,7 @@ FROM          Base_Parcelas_Pagas";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(Base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._base_Parcelas_PagasTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Base_Parcelas_Pagas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2760,7 +2758,7 @@ FROM          Base_Parcelas_Pagas";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(Base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._base_Parcelas_PagasTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Base_Parcelas_Pagas.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2778,7 +2776,7 @@ FROM          Base_Parcelas_Pagas";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(Base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(base_Parcelas_PagasDGV dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._base_Parcelas_PagasTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Base_Parcelas_Pagas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2820,7 +2818,7 @@ FROM          Base_Parcelas_Pagas";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(Base_Parcelas_PagasDGV dataSet) {
+        public virtual int UpdateAll(base_Parcelas_PagasDGV dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

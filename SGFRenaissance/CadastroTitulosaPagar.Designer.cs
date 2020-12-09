@@ -167,7 +167,8 @@
             this.cod_Entr_Tit_a_Pagartextbox.Name = "cod_Entr_Tit_a_Pagartextbox";
             this.cod_Entr_Tit_a_Pagartextbox.ReadOnly = true;
             this.cod_Entr_Tit_a_Pagartextbox.Size = new System.Drawing.Size(41, 21);
-            this.cod_Entr_Tit_a_Pagartextbox.TabIndex = 150;
+            this.cod_Entr_Tit_a_Pagartextbox.TabIndex = 15;
+            this.cod_Entr_Tit_a_Pagartextbox.TabStop = false;
             // 
             // entradaTitulosaPagarBindingSource
             // 
@@ -186,7 +187,7 @@
             this.label1.Location = new System.Drawing.Point(10, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Cód. Título a Pagar:";
             // 
             // groupBox_Titulo
@@ -338,6 +339,7 @@
             this.saldoTextBox.ReadOnly = true;
             this.saldoTextBox.Size = new System.Drawing.Size(105, 21);
             this.saldoTextBox.TabIndex = 13;
+            this.saldoTextBox.TabStop = false;
             // 
             // acrescimosTextBox
             // 
@@ -691,7 +693,7 @@
             this.DataGridViewTitulo.ReadOnly = true;
             this.DataGridViewTitulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewTitulo.Size = new System.Drawing.Size(973, 111);
-            this.DataGridViewTitulo.TabIndex = 126;
+            this.DataGridViewTitulo.TabIndex = 0;
             this.DataGridViewTitulo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTitulo_CellContentClick);
             this.DataGridViewTitulo.SelectionChanged += new System.EventHandler(this.DataGridViewTitulo_SelectionChanged);
             // 
@@ -1218,7 +1220,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-      
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = SGFRenaissance.DGVNumeroParcelasPagarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // numero_Parcelas_a_PagarTableAdapter

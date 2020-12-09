@@ -33,15 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox_titulospagos = new System.Windows.Forms.GroupBox();
-            this.btn_fechar = new System.Windows.Forms.Button();
             this.base_Titulos_PagosDataGridView = new System.Windows.Forms.DataGridView();
             this.base_Titulos_PagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dGV_BaseTitulosPagosXNomeBanco = new SGFRenaissance.DGV_BaseTitulosPagosXNomeBanco();
+            this.btn_fechar = new System.Windows.Forms.Button();
             this.base_Titulos_PagosTableAdapter = new SGFRenaissance.DGV_BaseTitulosPagosXNomeBancoTableAdapters.Base_Titulos_PagosTableAdapter();
             this.tableAdapterManager = new SGFRenaissance.DGV_BaseTitulosPagosXNomeBancoTableAdapters.TableAdapterManager();
+            this.textboxTotalPago = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,16 +86,6 @@
             this.groupBox_titulospagos.TabStop = false;
             this.groupBox_titulospagos.Text = "Selecione o Código Títulos Pagos";
             // 
-            // btn_fechar
-            // 
-            this.btn_fechar.Location = new System.Drawing.Point(802, 427);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(81, 32);
-            this.btn_fechar.TabIndex = 4;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
-            // 
             // base_Titulos_PagosDataGridView
             // 
             this.base_Titulos_PagosDataGridView.AllowUserToAddRows = false;
@@ -103,7 +95,7 @@
             this.base_Titulos_PagosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
+            this.Total_Pago,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn5,
@@ -128,6 +120,16 @@
             this.dGV_BaseTitulosPagosXNomeBanco.DataSetName = "DGV_BaseTitulosPagosXNomeBanco";
             this.dGV_BaseTitulosPagosXNomeBanco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(802, 427);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(81, 32);
+            this.btn_fechar.TabIndex = 4;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
             // base_Titulos_PagosTableAdapter
             // 
             this.base_Titulos_PagosTableAdapter.ClearBeforeFill = true;
@@ -137,6 +139,25 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = SGFRenaissance.DGV_BaseTitulosPagosXNomeBancoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // textboxTotalPago
+            // 
+            this.textboxTotalPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxTotalPago.ForeColor = System.Drawing.Color.Red;
+            this.textboxTotalPago.Location = new System.Drawing.Point(641, 434);
+            this.textboxTotalPago.Name = "textboxTotalPago";
+            this.textboxTotalPago.Size = new System.Drawing.Size(114, 22);
+            this.textboxTotalPago.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(465, 435);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Total de Títulos Pagos:";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -154,13 +175,13 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 90;
             // 
-            // dataGridViewTextBoxColumn3
+            // Total_Pago
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Total_Pago";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Total Pago";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 90;
+            this.Total_Pago.DataPropertyName = "Total_Pago";
+            this.Total_Pago.HeaderText = "Total Pago";
+            this.Total_Pago.Name = "Total_Pago";
+            this.Total_Pago.ReadOnly = true;
+            this.Total_Pago.Width = 90;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -203,13 +224,15 @@
             this.Selecionar.Text = "Selecionar";
             this.Selecionar.ToolTipText = "Selecione o Código";
             this.Selecionar.UseColumnTextForButtonValue = true;
-            this.Selecionar.Width = 110;
+            this.Selecionar.Width = 128;
             // 
             // TelaBaseTitulosPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 469);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textboxTotalPago);
             this.Controls.Add(this.btn_fechar);
             this.Controls.Add(this.groupBox_titulospagos);
             this.Controls.Add(this.label2);
@@ -239,9 +262,11 @@
         private DGV_BaseTitulosPagosXNomeBancoTableAdapters.Base_Titulos_PagosTableAdapter base_Titulos_PagosTableAdapter;
         private DGV_BaseTitulosPagosXNomeBancoTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView base_Titulos_PagosDataGridView;
+        private System.Windows.Forms.TextBox textboxTotalPago;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

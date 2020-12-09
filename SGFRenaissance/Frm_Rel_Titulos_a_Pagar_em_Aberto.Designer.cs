@@ -99,6 +99,7 @@
             this.btn_Fornecedor.TabIndex = 9;
             this.btn_Fornecedor.Text = "+";
             this.btn_Fornecedor.UseVisualStyleBackColor = true;
+            this.btn_Fornecedor.Click += new System.EventHandler(this.btn_Fornecedor_Click);
             // 
             // btn_executar
             // 
@@ -191,6 +192,7 @@
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(905, 381);
             this.reportViewer2.TabIndex = 2;
+            this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
             // Numero_Parcelas_a_PagarTableAdapter
             // 
@@ -223,7 +225,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Fornecedor;
         private System.Windows.Forms.Button btn_executar;
-        private System.Windows.Forms.TextBox textbox_codFornecedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxFim;
@@ -235,5 +236,6 @@
         private System.Windows.Forms.BindingSource Numero_Parcelas_a_PagarBindingSource;
         private Rel_NumeroParcelaaPagar Rel_NumeroParcelaaPagar;
         private Rel_NumeroParcelaaPagarTableAdapters.Numero_Parcelas_a_PagarTableAdapter Numero_Parcelas_a_PagarTableAdapter;
+        public System.Windows.Forms.TextBox textbox_codFornecedor;
     }
 }

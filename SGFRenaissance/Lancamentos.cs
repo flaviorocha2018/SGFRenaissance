@@ -25,6 +25,7 @@ namespace SGFRenaissance
         SqlDataAdapter adapt;
         Int32 LastID = 0;
         Int32 ID = 0;
+        Int32 IDLancamento;
 
 
         public Lancamentos()
@@ -349,6 +350,12 @@ namespace SGFRenaissance
             data_LancamentoDateTimePicker.Enabled = true;
             descricao_OperacaoTextBox.Enabled = true;
             valor_MovimentoTextBox.Enabled = true;
+            btn_salvar.Enabled = false;
+            btn_Update.Enabled = true;
+            btn_Update.Focus();
+            btn_proximo.Enabled = false;
+            btn_novo.Enabled = false;
+            btn_Anterior.Enabled = false;
         }
 
         private void btn_proximo_Click(object sender, EventArgs e)
@@ -618,7 +625,69 @@ namespace SGFRenaissance
 
         private void descricao_OperacaoTextBox_Enter(object sender, EventArgs e)
         {
+            btn_salvar.Enabled = true;
+            btn_editar.Enabled = false;
+            btn_Update.Enabled = true;
+            
+        }
 
+        private void data_LancamentoDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            data_LancamentoDateTimePicker.AllowDrop = true;
+     
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+            if (cod_LancamentoTextBox.Text != null && textBoxCodOperacao.Text != null && data_LancamentoDateTimePicker.Text != null)
+            {
+                ID = Convert.ToInt32(cod_LancamentoTextBox.Text);
+                IDLancamento = ID;
+                try
+                {
+                    cmd = new SqlCommand("UPDATE Lancamentos SET  Descricao_Operacao=@Descricao_Operacao,  Data_Login=@Data_Login, Login_Name=@Login_Name WHERE Cod_Lancamento=@Cod_Lancamento", conn);
+                    conn.Open();
+                  
+                    cmd.Parameters.AddWithValue("@Cod_Lancamento", IDLancamento);
+             
+                    string descricaooperacao = Convert.ToString(descricao_OperacaoTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Descricao_Operacao", descricaooperacao);
+            
+                    DateTime datalogin = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@Data_Login", datalogin);
+                    string loginname = Login.DadosGerais.Loginusuario;
+                    cmd.Parameters.AddWithValue("@Login_Name", loginname);
+                    int result01 = cmd.ExecuteNonQuery();
+                    MessageBox.Show("Dados do Lançamento atualizados com Sucesso! " + result01.ToString()+ "Registro Atualizado");
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao Inserir Lançamento! " + Ex.Message);
+
+                }
+                finally
+                {
+                    conn.Close();
+                    btn_fechar.Enabled = true;
+                    btn_Update.Enabled = false;
+                    btn_editar.Enabled = false;
+                    btn_salvar.Enabled = false;
+                    descricao_OperacaoTextBox.Enabled = false;
+                    descricao_OperacaoTextBox.ReadOnly = true;
+                    data_LancamentoDateTimePicker.Enabled = false;
+                    numero_ChequeTextBox.Enabled = false;
+                    valor_MovimentoTextBox.Enabled = false;
+                    btn_fechar.Focus();
+                }
+
+
+            }
+        }
+
+        private void descricao_OperacaoTextBox_Leave(object sender, EventArgs e)
+        {
 
             if (textBoxCodOperacao.Text == "3")
             {
@@ -663,13 +732,8 @@ namespace SGFRenaissance
                 btn_salvar.BackColor = Color.Orange;
                 btn_salvar.ForeColor = Color.DarkBlue;
             }
-
         }
 
-        private void data_LancamentoDateTimePicker_Enter(object sender, EventArgs e)
-        {
-            data_LancamentoDateTimePicker.AllowDrop = true;
-     
-        }
+       
     }
 }

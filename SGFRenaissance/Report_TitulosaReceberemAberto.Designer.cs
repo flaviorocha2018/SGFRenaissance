@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report_TitulosaReceberemAberto));
+            this.Entrada_Titulos_a_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Rel_NumeroParcelasaReceber = new SGFRenaissance.Rel_NumeroParcelasaReceber();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Executar = new System.Windows.Forms.Button();
             this.btn_Clientes = new System.Windows.Forms.Button();
@@ -42,13 +44,21 @@
             this.maskedTextBoxInicio = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Rel_NumeroParcelasaReceber = new SGFRenaissance.Rel_NumeroParcelasaReceber();
-            this.Entrada_Titulos_a_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Entrada_Titulos_a_ReceberTableAdapter = new SGFRenaissance.Rel_NumeroParcelasaReceberTableAdapters.Entrada_Titulos_a_ReceberTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Rel_NumeroParcelasaReceber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Entrada_Titulos_a_ReceberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rel_NumeroParcelasaReceber)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Entrada_Titulos_a_ReceberBindingSource
+            // 
+            this.Entrada_Titulos_a_ReceberBindingSource.DataMember = "Entrada_Titulos_a_Receber";
+            this.Entrada_Titulos_a_ReceberBindingSource.DataSource = this.Rel_NumeroParcelasaReceber;
+            // 
+            // Rel_NumeroParcelasaReceber
+            // 
+            this.Rel_NumeroParcelasaReceber.DataSetName = "Rel_NumeroParcelasaReceber";
+            this.Rel_NumeroParcelasaReceber.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -85,6 +95,7 @@
             this.btn_Clientes.TabIndex = 136;
             this.btn_Clientes.Text = "+";
             this.btn_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Clientes.Click += new System.EventHandler(this.btn_Clientes_Click);
             // 
             // textBoxCodCliente
             // 
@@ -107,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 21);
+            this.label3.Location = new System.Drawing.Point(180, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 15);
             this.label3.TabIndex = 1;
@@ -125,17 +136,21 @@
             // 
             // maskedTextBoxFim
             // 
-            this.maskedTextBoxFim.Location = new System.Drawing.Point(205, 19);
+            this.maskedTextBoxFim.Location = new System.Drawing.Point(216, 19);
+            this.maskedTextBoxFim.Mask = "00/00/0000";
             this.maskedTextBoxFim.Name = "maskedTextBoxFim";
-            this.maskedTextBoxFim.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxFim.Size = new System.Drawing.Size(76, 20);
             this.maskedTextBoxFim.TabIndex = 2;
+            this.maskedTextBoxFim.ValidatingType = typeof(System.DateTime);
             // 
             // maskedTextBoxInicio
             // 
             this.maskedTextBoxInicio.Location = new System.Drawing.Point(78, 19);
+            this.maskedTextBoxInicio.Mask = "00/00/0000";
             this.maskedTextBoxInicio.Name = "maskedTextBoxInicio";
-            this.maskedTextBoxInicio.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxInicio.Size = new System.Drawing.Size(76, 20);
             this.maskedTextBoxInicio.TabIndex = 1;
+            this.maskedTextBoxInicio.ValidatingType = typeof(System.DateTime);
             // 
             // label1
             // 
@@ -157,18 +172,8 @@
             this.reportViewer1.Location = new System.Drawing.Point(1, 59);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(954, 425);
+            this.reportViewer1.Size = new System.Drawing.Size(954, 297);
             this.reportViewer1.TabIndex = 1;
-            // 
-            // Rel_NumeroParcelasaReceber
-            // 
-            this.Rel_NumeroParcelasaReceber.DataSetName = "Rel_NumeroParcelasaReceber";
-            this.Rel_NumeroParcelasaReceber.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Entrada_Titulos_a_ReceberBindingSource
-            // 
-            this.Entrada_Titulos_a_ReceberBindingSource.DataMember = "Entrada_Titulos_a_Receber";
-            this.Entrada_Titulos_a_ReceberBindingSource.DataSource = this.Rel_NumeroParcelasaReceber;
             // 
             // Entrada_Titulos_a_ReceberTableAdapter
             // 
@@ -178,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 488);
+            this.ClientSize = new System.Drawing.Size(956, 358);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -186,10 +191,10 @@
             this.Text = "Titulos a Receber em Aberto";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Report_TitulosaReceberemAberto_FormClosing);
             this.Load += new System.EventHandler(this.Report_TitulosaReceberemAberto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Entrada_Titulos_a_ReceberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rel_NumeroParcelasaReceber)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Rel_NumeroParcelasaReceber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Entrada_Titulos_a_ReceberBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +202,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxCodCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -210,5 +214,6 @@
         private System.Windows.Forms.BindingSource Entrada_Titulos_a_ReceberBindingSource;
         private Rel_NumeroParcelasaReceber Rel_NumeroParcelasaReceber;
         private Rel_NumeroParcelasaReceberTableAdapters.Entrada_Titulos_a_ReceberTableAdapter Entrada_Titulos_a_ReceberTableAdapter;
+        public System.Windows.Forms.TextBox textBoxCodCliente;
     }
 }

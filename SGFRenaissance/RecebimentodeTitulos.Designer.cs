@@ -344,6 +344,7 @@
             // banco_CreditadoTextBox
             // 
             this.banco_CreditadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_RecebidosBindingSource, "Banco_Creditado", true));
+            this.banco_CreditadoTextBox.Enabled = false;
             this.banco_CreditadoTextBox.Location = new System.Drawing.Point(652, 42);
             this.banco_CreditadoTextBox.MaxLength = 4;
             this.banco_CreditadoTextBox.Name = "banco_CreditadoTextBox";
@@ -363,7 +364,7 @@
             // 
             // data_RecebimentoDateTimePicker
             // 
-            this.data_RecebimentoDateTimePicker.CustomFormat = "   ";
+            this.data_RecebimentoDateTimePicker.CustomFormat = "";
             this.data_RecebimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.base_Titulos_RecebidosBindingSource, "Data_Recebimento", true));
             this.data_RecebimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_RecebimentoDateTimePicker.Location = new System.Drawing.Point(373, 12);
@@ -548,6 +549,7 @@
             // data_Recebimento_NF
             // 
             this.data_Recebimento_NF.Location = new System.Drawing.Point(831, 36);
+            this.data_Recebimento_NF.MaxLength = 10;
             this.data_Recebimento_NF.Name = "data_Recebimento_NF";
             this.data_Recebimento_NF.Size = new System.Drawing.Size(112, 20);
             this.data_Recebimento_NF.TabIndex = 50;
@@ -559,6 +561,7 @@
             this.StatusDescricao.Name = "StatusDescricao";
             this.StatusDescricao.Size = new System.Drawing.Size(103, 20);
             this.StatusDescricao.TabIndex = 49;
+            this.StatusDescricao.TabStop = false;
             // 
             // Cod_CV
             // 
@@ -646,8 +649,10 @@
             this.historico_parcela.Location = new System.Drawing.Point(144, 111);
             this.historico_parcela.MaxLength = 200;
             this.historico_parcela.Name = "historico_parcela";
+            this.historico_parcela.ReadOnly = true;
             this.historico_parcela.Size = new System.Drawing.Size(399, 20);
             this.historico_parcela.TabIndex = 39;
+            this.historico_parcela.TabStop = false;
             // 
             // label22
             // 
@@ -660,13 +665,16 @@
             // 
             // historico_Titulo
             // 
+            this.historico_Titulo.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.historico_Titulo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_RecebidosBindingSource, "Cod_Base_Titulos_a_Recebidos", true));
             this.historico_Titulo.Enabled = false;
             this.historico_Titulo.Location = new System.Drawing.Point(638, 85);
             this.historico_Titulo.MaxLength = 200;
             this.historico_Titulo.Name = "historico_Titulo";
+            this.historico_Titulo.ReadOnly = true;
             this.historico_Titulo.Size = new System.Drawing.Size(305, 20);
             this.historico_Titulo.TabIndex = 37;
+            this.historico_Titulo.TabStop = false;
             // 
             // label21
             // 
@@ -685,6 +693,7 @@
             this.Status_Titulo.ReadOnly = true;
             this.Status_Titulo.Size = new System.Drawing.Size(28, 20);
             this.Status_Titulo.TabIndex = 35;
+            this.Status_Titulo.TextChanged += new System.EventHandler(this.Status_Titulo_TextChanged);
             // 
             // label20
             // 
@@ -1154,6 +1163,7 @@
             // 
             // textBoxTotalRecebido
             // 
+            this.textBoxTotalRecebido.Enabled = false;
             this.textBoxTotalRecebido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotalRecebido.ForeColor = System.Drawing.Color.Green;
             this.textBoxTotalRecebido.Location = new System.Drawing.Point(839, 544);
@@ -1266,7 +1276,7 @@
             this.flowLayoutPanel1.Controls.Add(this.data_LoginTextBox);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 645);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(954, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(954, 40);
             this.flowLayoutPanel1.TabIndex = 138;
             // 
             // login_NameTextBox

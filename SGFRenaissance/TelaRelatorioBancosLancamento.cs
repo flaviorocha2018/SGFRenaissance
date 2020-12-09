@@ -39,7 +39,7 @@ namespace SGFRenaissance
 
         private void bancosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ((FrmRelLancamentos)Owner).textBoxBanco.Text = bancosDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+        //    ((Form_Rel_Lancamentos)Owner).textBoxBanco.Text = bancosDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.Close();
         }
     }

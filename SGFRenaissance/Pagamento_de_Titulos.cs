@@ -55,6 +55,8 @@ namespace SGFRenaissance
         {
             // TODO: This line of code loads data into the 'base_Parcelas_PagasDGV.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
             this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
+            // TODO: This line of code loads data into the 'base_Parcelas_PagasDGV.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
+            this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
             // TODO: This line of code loads data into the 'baseTitulosPago.Base_Titulos_Pagos' table. You can move, or remove it, as needed.
             this.base_Titulos_PagosTableAdapter.Fill(this.baseTitulosPago.Base_Titulos_Pagos);
             // TODO: This line of code loads data into the 'numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar' table. You can move, or remove it, as needed.
@@ -65,8 +67,11 @@ namespace SGFRenaissance
             btn_Anterior.Enabled = false;
             btn_Localizar.Enabled = false;
             btn_InserirPagto.Enabled = false;
+            btn_Bancos.Enabled = false;
             btn_Pagar.Enabled = false;
+            btn_novo.Enabled = true;
             numero_Parcelas_a_PagarDataGridView.Enabled = false;
+            base_Parcelas_PagasDataGridView.Enabled = false;
             data_PagamentoDateTimePicker1.CustomFormat = null;
             data_PagamentoDateTimePicker1.Value.ToShortDateString();
             cod_Base_Titulos_PagosTextBox1.Enabled = false;
@@ -76,6 +81,8 @@ namespace SGFRenaissance
             historicoTextBox1.Enabled = false;
             numero_ChequeTextBox1.Enabled = false;
             data_PagamentoDateTimePicker.CustomFormat = "   ";
+            MessageBox.Show("Iniciar Pagamentos com Botão Novo e Inserir Pagamentos!");
+            
         }
 
         void BuscarDadosDoFornecedor()
@@ -320,7 +327,8 @@ namespace SGFRenaissance
                 Numero_Parcela.Text = numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[2].Value.ToString();
                 vencimento_Parcela.Text = numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[3].Value.ToString();
                 historicoTextBox.Text = numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[5].Value.ToString();
-            //  cod_Status_TituloTextBox.Text = numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[6].Value.ToString();
+                //  cod_Status_TituloTextBox.Text = numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[6].Value.ToString();
+                //     int IDBanco = Int32.Parse(banco_DebitadoTextBox1.Text);
                 int IDBanco = Int32.Parse(banco_DebitadoTextBox1.Text);
                 banco_DebitadoTextBox.Text = Convert.ToString(IDBanco);
                 string NumeroCheque1 = numero_ChequeTextBox1.Text;
@@ -412,6 +420,7 @@ namespace SGFRenaissance
                         textBoxTotal.Text = string.Empty;
                         Total = 0;
                         pagamento = 0;
+                        btn_salvar.Enabled = false;
                         cod_Base_Titulos_PagosTextBox.Text = string.Empty;
                         cod_Base_Titulos_PagosTextBox1.Text = string.Empty;
                         data_PagamentoDateTimePicker1.CustomFormat = "   ";
@@ -432,9 +441,9 @@ namespace SGFRenaissance
         private void btn_Bancos_Click_1(object sender, EventArgs e)
         {
         
-          FormEscolherBanco frm = new FormEscolherBanco {Owner = this};
-          frm.ShowDialog();
-
+              FormEscolherBanco frm = new FormEscolherBanco {Owner = this};
+              frm.ShowDialog();
+              btn_InserirPagto.Enabled = true;
         }
 
 
@@ -445,6 +454,7 @@ namespace SGFRenaissance
         //  login_NameTextBox.Text = Login.DadosGerais.Loginusuario;
             btn_salvar.Enabled = true;
             btn_Pagar.Enabled = true;
+            btn_Bancos.Enabled = true;
             btn_salvar.BackColor = Color.DarkOrange;
             btn_Pagar.BackColor = Color.Coral;
             btn_Pagar.ForeColor = Color.Black;
@@ -507,7 +517,6 @@ namespace SGFRenaissance
             cod_Base_Titulos_PagosTextBox1.Enabled = false;
             data_PagamentoDateTimePicker1.Enabled = true;
             data_PagamentoDateTimePicker1.CustomFormat = "   ";
-            valor_PagoTextBox1.Enabled = true;
             banco_DebitadoTextBox1.Enabled = true;
             historicoTextBox1.Enabled = true;
             numero_ChequeTextBox1.Enabled = true;
@@ -518,7 +527,10 @@ namespace SGFRenaissance
             numero_ChequeTextBox1.Text = string.Empty;
             login_NameTextBox.Text = string.Empty;
             data_LoginTextBox.Text = string.Empty;
-            btn_InserirPagto.Enabled = true;
+            btn_InserirPagto.Enabled = false;
+            valor_PagoTextBox1.Enabled = true;
+            btn_Bancos.Enabled = false;
+
         }
 
         private void data_PagamentoDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -638,7 +650,7 @@ namespace SGFRenaissance
                                 numero_Parcelas_a_PagarDataGridView.Rows.Remove(numero_Parcelas_a_PagarDataGridView.CurrentRow);
                                 this.numero_Parcelas_a_PagarTableAdapter.Fill(this.numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar);
                                 this.numero_Parcelas_a_PagarBindingSource.MoveLast();
-                                this.numero_Parcelas_a_PagarDataGridView.RowsDefaultCellStyle.BackColor = Color.OrangeRed;
+                                this.numero_Parcelas_a_PagarDataGridView.RowsDefaultCellStyle.BackColor = Color.LightGray;
                                 this.base_Parcelas_PagasDataGridView.DefaultCellStyle.BackColor = Color.Beige;
                             }
                             catch (Exception Ex)
@@ -663,7 +675,7 @@ namespace SGFRenaissance
                                 numero_Parcelas_a_PagarDataGridView.Rows.Remove(numero_Parcelas_a_PagarDataGridView.CurrentRow);
                                 this.numero_Parcelas_a_PagarTableAdapter.Fill(this.numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar);
                                 this.numero_Parcelas_a_PagarBindingSource.MoveLast();
-                                this.base_Parcelas_PagasDataGridView.BackgroundColor = Color.OrangeRed;
+                                this.base_Parcelas_PagasDataGridView.BackgroundColor = Color.Gray;
 
                                 //       DELETAR TÍTULO
                                 //       VERIFICAR SE O CÓDIGO DO TÍTULO É O MESMO DA PARCELA QUE ESTÁ SENDO EXCLUÍDA
@@ -847,5 +859,11 @@ namespace SGFRenaissance
                 }
 
             }
+
+        private void numero_ChequeTextBox1_Leave(object sender, EventArgs e)
+        {
+            btn_Bancos.Enabled = true;
+            btn_Bancos.Focus();
+        }
     }
 }

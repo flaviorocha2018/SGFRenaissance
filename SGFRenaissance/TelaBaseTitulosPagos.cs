@@ -26,6 +26,8 @@ namespace SGFRenaissance
         {
             // TODO: This line of code loads data into the 'dGV_BaseTitulosPagosXNomeBanco.Base_Titulos_Pagos' table. You can move, or remove it, as needed.
             this.base_Titulos_PagosTableAdapter.Fill(this.dGV_BaseTitulosPagosXNomeBanco.Base_Titulos_Pagos);
+            textboxTotalPago.Text = base_Titulos_PagosDataGridView.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[Total_Pago.Name].Value ?? 0)).ToString("N2");
+            btn_fechar.Focus();
 
         }
 

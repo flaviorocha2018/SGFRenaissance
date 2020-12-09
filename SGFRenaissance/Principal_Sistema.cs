@@ -159,7 +159,7 @@ namespace SGFRenaissance
 
         private void extratoDeLançamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmRelLancamentos frm = new FrmRelLancamentos();
+            Form_Relatorio_Lancamentos frm = new Form_Relatorio_Lancamentos();
             frm.Show();
         }
 
@@ -178,6 +178,42 @@ namespace SGFRenaissance
         private void dREOperacionalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_DRE_Exercicio frm = new Form_DRE_Exercicio();
+            frm.Show();
+        }
+
+        private void baseDeTítulosPagosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaBaseTitulosPagos frm = new TelaBaseTitulosPagos();
+            frm.Show();
+        }
+
+        private void baseDeTítulosRecebidosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaBaseTitulosRecebidos frm = new TelaBaseTitulosRecebidos();
+            frm.Show();
+        }
+
+        private void titulosAReceberQuitadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRel_TitulosRecebidos frm = new FrmRel_TitulosRecebidos();
+            frm.Show();
+        }
+
+        private void títulosAPagarQuitadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTitulosPagos frm = new FrmTitulosPagos();
+            frm.Show();
+        }
+
+        private void títulosAPagarTotalTodosOsFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Titulos_a_Pagar_Total frm = new Form_Titulos_a_Pagar_Total();
+            frm.Show();
+        }
+
+        private void títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Relatorio_Contas_Receber_Total frm = new Form_Relatorio_Contas_Receber_Total();
             frm.Show();
         }
     }

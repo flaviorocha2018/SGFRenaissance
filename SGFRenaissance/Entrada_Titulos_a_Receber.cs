@@ -57,16 +57,21 @@ namespace SGFRenaissance
         {
             try
             {
+               
                 String StrConn;
                 StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
-                string sql = string.Format("select  Nome_Cliente from Clientes_Contas_a_Receber where Cod_Cliente_Contas_a_Receber ='{0}'", cod_ClienteTextBox.Text);
+                string sql = string.Format("select  Nome_Cliente from Clientes_Contas_a_Receber where Cod_Cliente_Contas_a_Receber='{0}'", cod_ClienteTextBox.Text);
                 SqlCommand sqlComm = new SqlCommand(sql, sqlConnection);
                 SqlDataReader reader = sqlComm.ExecuteReader();
                 while (reader.Read())
                 {
+
+                    nome_ClienteTextBox.Refresh();
                     nome_ClienteTextBox.Text = reader["Nome_Cliente"].ToString();
+                    nome_ClienteTextBox.Refresh();
+
                 }
 
                 sqlConnection.Close();
@@ -179,7 +184,9 @@ namespace SGFRenaissance
         int flag = -1;
         private void Entrada_Titulos_a_Receber_Load(object sender, EventArgs e)
         {
-       //   Desabilitar os botões no Form_Load
+            // TODO: This line of code loads data into the 'entrada_Titulos_a_Receber._Entrada_Titulos_a_Receber' table. You can move, or remove it, as needed.
+            this.entrada_Titulos_a_ReceberTableAdapter1.Fill(this.entrada_Titulos_a_Receber._Entrada_Titulos_a_Receber);
+            //   Desabilitar os botões no Form_Load
             btn_excluir.Enabled = false;
             btn_Salvar.Enabled = false;
             btn_Inserir_Titulo.Enabled = false;
@@ -191,10 +198,12 @@ namespace SGFRenaissance
             btn_Fechar.Enabled = true;
             btn_proximo.Enabled = true;
             btn_Voltar.Enabled = true;
-           // TODO: This line of code loads data into the 'entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber' table. You can move, or remove it, as needed.
-              this.entrada_Titulos_a_ReceberTableAdapter.Fill(this.entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber);  
-           // TODO: This line of code loads data into the 'numeroParcelasaReceberDGV.Numero_Parcelas_a_Receber' table. You can move, or remove it, as needed.
-           // this.numero_Parcelas_a_ReceberTableAdapter.Fill(this.numeroParcelasaReceberDGV.Numero_Parcelas_a_Receber); 
+
+            // TODO: This line of code loads data into the 'entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber' table. You can move, or remove it, as needed.
+           //  this.entrada_Titulos_a_ReceberTableAdapter.Fill(this.entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber);  
+            // TODO: This line of code loads data into the 'numeroParcelasaReceberDGV.Numero_Parcelas_a_Receber' table. You can move, or remove it, as needed.
+            // this.numero_Parcelas_a_ReceberTableAdapter.Fill(this.numeroParcelasaReceberDGV.Numero_Parcelas_a_Receber); 
+           // this.entrada_Titulos_a_ReceberBindingSource.DataSource = DataContextFactory.DataContext.Entrada_Titulos_a_Recebers;
               this.clientes_Contas_a_ReceberBindingSource.DataSource = DataContextFactory.DataContext.Clientes_Contas_a_Recebers;
           //  this.numero_Parcelas_a_ReceberBindingSource.DataSource = DataContextFactory.DataContext.Numero_Parcelas_a_Recebers;
               this.status_Titulos_a_ReceberBindingSource.DataSource = DataContextFactory.DataContext.Status_Titulos_a_Recebers;
@@ -202,6 +211,7 @@ namespace SGFRenaissance
               TryRefreshCliente();
               TryRefreshTipoReceita();
               TryRefreshStatusTitulo();
+              inabilitardados_Titulo();
             string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
             {
@@ -295,7 +305,15 @@ namespace SGFRenaissance
                         cmd.Parameters.AddWithValue("@Login_Name", login_NameTextBox.Text);
                         int result = cmd.ExecuteNonQuery();
                         MessageBox.Show("Show! Dados do Título Atualizados com Sucesso! " + result.ToString()+ " Registro Atualizado!");
-                
+                       
+                        SDA.Fill(this.entrada_Titulos_a_Receber._Entrada_Titulos_a_Receber);
+                   //   entrada_Titulos_a_ReceberTableAdapter1.Fill(this.entrada_Titulos_a_Receber._Entrada_Titulos_a_Receber);
+                        entrada_Titulos_a_ReceberDataGridView.DataSource = this.entrada_Titulos_a_ReceberBindingSource;
+                        this.entrada_Titulos_a_ReceberBindingSource.MoveLast();
+                     //   Selecionar a última linha do DataGridView
+
+                //        this.entrada_Titulos_a_ReceberDataGridView.Rows[this.entrada_Titulos_a_ReceberDataGridView.Rows.Count - 1].DataGridView.ForeColor = Color.Red;
+                   
                     }
                     catch (Exception Ex)
                     {
@@ -339,9 +357,9 @@ namespace SGFRenaissance
                 {
                     try
                     {
-                        cod_Entrada_Titulos_a_ReceberTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[0].Value.ToString();
-                        cod_Numero_Parcelas_ReceberTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[1].Value.ToString();
-                        numero_ParcelaTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
+                        cod_Entrada_Titulos_a_ReceberTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
+                        cod_Numero_Parcelas_ReceberTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[0].Value.ToString();
+                        numero_ParcelaTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[1].Value.ToString();
                         data_VencimentoDateTimePicker1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[3].Value.ToString();
                         ValorParcela.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[4].Value.ToString();
                         historicoTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[5].Value.ToString();
@@ -370,6 +388,7 @@ namespace SGFRenaissance
 
        private void btn_novo_Click(object sender, EventArgs e)
        {
+            habilitardados_Titulo();
             cod_Entrada_Titulos_a_ReceberTextBox.Text = string.Empty;
             nome_ClienteTextBox.Text = string.Empty;
             cod_ClienteTextBox.Text = string.Empty;
@@ -436,17 +455,23 @@ namespace SGFRenaissance
                 entrada_Titulos_a_ReceberDataGridView.Rows[currentIndex - 1].Cells[0].Selected = true;
                 this.entrada_Titulos_a_ReceberDataGridView.DataSource = this.entrada_Titulos_a_ReceberBindingSource;
                 // Passar os valores do DataGridView Parcela para os Textboxes
-                cod_Entrada_Titulos_a_ReceberTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[0].Value.ToString();
-                cod_Numero_Parcelas_ReceberTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[1].Value.ToString();
-                numero_ParcelaTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
+                cod_Entrada_Titulos_a_ReceberTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
+                cod_Numero_Parcelas_ReceberTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[0].Value.ToString();
+
+                numero_ParcelaTextBox.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[1].Value.ToString();
                 data_VencimentoDateTimePicker1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[3].Value.ToString();
                 ValorParcela.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[4].Value.ToString();
                 historicoTextBox1.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[5].Value.ToString();
                 cod_Status_TituloParcela.Text = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[6].Value.ToString();
+                TryRefreshCliente();
+                TryRefreshTipoReceita();
+                TryRefreshStatusTitulo();
             }
+
             TryRefreshCliente();
-            TryRefreshTipoReceita();
-            TryRefreshStatusTitulo();
+
+
+            
        }
 
        private void btn_InserirParcela_Click(object sender, EventArgs e)
@@ -468,16 +493,14 @@ namespace SGFRenaissance
             ValorParcela.Enabled = true;
             cod_Status_TituloParcela.Enabled = true;
             historicoTextBox1.Enabled = true;
-            // Aqui busca o valor da Textbox da Entrada do Titulo a receber
-            int CodIDEntrTitReceber = 0;
-        //    cod_Entrada_Titulos_a_ReceberTextBox.Text = entrada_Titulos_a_ReceberDataGridView.CurrentRow
-            cod_Entrada_Titulos_a_ReceberTextBox.Refresh();
-
-
+        
             // Aqui busco o último ID - Cod_Entrada_Titulos_a_Receber da tabela Entrada_Titulos_a_Receber utilizando uma expressão lambda e guardo na váriavel ultimoId
-            //    var ultimoId = DataContextFactory.DataContext.Entrada_Titulos_a_Recebers.Max(x => x.Cod_Entrada_Titulos_a_Receber);
-            CodIDEntrTitReceber = Convert.ToInt32(cod_Entrada_Titulos_a_ReceberTextBox.Text);
-            cod_Entrada_Titulos_a_ReceberTextBox1.Text = CodIDEntrTitReceber.ToString();
+            int ultimoId = DataContextFactory.DataContext.Entrada_Titulos_a_Recebers.Max(x => x.Cod_Entrada_Titulos_a_Receber);
+
+            cod_Entrada_Titulos_a_ReceberTextBox1.Text = Convert.ToString(ultimoId);
+
+            cod_Entrada_Titulos_a_ReceberTextBox.Text = Convert.ToString(ultimoId);
+            
             numero_ParcelaTextBox.Focus();
             btn_Salvar.Enabled = false;
             btn_InserirParcela.Enabled = false;
@@ -600,10 +623,16 @@ namespace SGFRenaissance
                         cmd.Parameters.AddWithValue("@Login_Name", login_NameTextBox.Text);
                         Int32 result = cmd.ExecuteNonQuery();
                         MessageBox.Show("Show! Dados do Título Inseridos com Sucesso!" +result.ToString() +" Registro Inserido!");
-                        entrada_Titulos_a_ReceberTableAdapter.Fill(entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber);
-                        entrada_Titulos_a_ReceberDataGridView.DataSource = entrada_Titulos_a_ReceberBindingSource;
-                        entrada_Titulos_a_ReceberBindingSource.MoveLast();
+                        // entrada_Titulos_a_ReceberTableAdapter.Fill(entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber);
+                        // entrada_Titulos_a_ReceberDataGridView.DataSource = entrada_Titulos_a_ReceberBindingSource;
+                        // entrada_Titulos_a_ReceberBindingSource.MoveLast();
+                        // pegar o último valor inserido na tabela do código Título a receber e passar para a parcela a receber.
+                        int ultimoId = DataContextFactory.DataContext.Entrada_Titulos_a_Recebers.Max(x => x.Cod_Entrada_Titulos_a_Receber);
+                        cod_Entrada_Titulos_a_ReceberTextBox.Text = Convert.ToString(ultimoId);
                         cod_Entrada_Titulos_a_ReceberTextBox.Refresh();
+                        // Selecionar a última linha do DataGridView
+
+
                     }
                     catch (Exception Ex)
                     {
@@ -750,9 +779,9 @@ namespace SGFRenaissance
             {
                 // Aqui busca o valor da Textbox da Entrada do Titulo a receber
                 int CodIDEntrTitReceber = 0;
-                cod_Entrada_Titulos_a_ReceberTextBox.Refresh();
-                CodIDEntrTitReceber = Convert.ToInt32(cod_Entrada_Titulos_a_ReceberTextBox.Text);
-                cod_Entrada_Titulos_a_ReceberTextBox1.Text = CodIDEntrTitReceber.ToString();
+        
+                CodIDEntrTitReceber = Convert.ToInt32(cod_Entrada_Titulos_a_ReceberTextBox1.Text);
+               
 
                 try
                 {
@@ -896,6 +925,64 @@ namespace SGFRenaissance
                 MessageBox.Show("Erro! Não foi possível transferir os dados do DataGridView!" + ex.Message);
             }
         }
+
+        private void inabilitardados_Titulo()
+        {
+            try
+            {
+                cod_Entrada_Titulos_a_ReceberTextBox.Enabled = false;
+                cod_ClienteTextBox.Enabled = false;
+                nome_ClienteTextBox.Enabled = false;
+                Cod_ReceitaTextBox.Enabled = false;
+                DescricaoReceita.Enabled = false;
+                Cod_StatusTextBox.Enabled = false;
+                descricaoStatusTitulo.Enabled = false;
+                numero_ParcelasTextBox.Enabled = false;
+                data_VencimentoDateTimePicker.Enabled = false;
+                numero_NFTextBox.Enabled = false;
+                valor_NFTextBox.Enabled = false;
+                valor_Pago_a_VistaTextBox.Enabled = false;
+                dateTimePicker_NF.Enabled = false;
+                historicoTextBox.Enabled = false;
+                textBox_CV.Enabled = false;
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro! Não foi possível Inabilitar Dados do Formulário! " + Ex.Message);
+            }
+
+
+        }
+
+        private void habilitardados_Titulo()
+        {
+            try
+            {
+                cod_Entrada_Titulos_a_ReceberTextBox.Enabled = true;
+                cod_ClienteTextBox.Enabled = true;
+                nome_ClienteTextBox.Enabled = true;
+                Cod_ReceitaTextBox.Enabled = true;
+                DescricaoReceita.Enabled = true;
+                Cod_StatusTextBox.Enabled = true;
+                descricaoStatusTitulo.Enabled = true;
+                numero_ParcelasTextBox.Enabled = true;
+                data_VencimentoDateTimePicker.Enabled = true;
+                numero_NFTextBox.Enabled = true;
+                valor_NFTextBox.Enabled = true;
+                valor_Pago_a_VistaTextBox.Enabled = true;
+                dateTimePicker_NF.Enabled = true;
+                historicoTextBox.Enabled = true;
+                textBox_CV.Enabled = true;
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro! Não foi possível Habilitar Dados do Formulário! " + Ex.Message);
+            }
+
+        }
+
     }
     
 }

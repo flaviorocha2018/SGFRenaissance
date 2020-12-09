@@ -33,8 +33,11 @@ namespace SGFRenaissance
             // TODO: This line of code loads data into the 'dGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_Recebidos' table. You can move, or remove it, as needed.
             this.base_Titulos_RecebidosTableAdapter.Fill(this.dGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_Recebidos);
             // TODO: This line of code loads data into the 'baseTitulosRecebidos.Base_Titulos_Recebidos' table. You can move, or remove it, as needed.
-         
-           
+
+            //Somatório no Textbox
+            textBoxTotalRecebido.Text = base_Titulos_RecebidosDataGridView .Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[Total_Recebido.Name].Value ?? 0)).ToString("N2");
+            btn_fechar.Focus();
+
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -44,14 +47,33 @@ namespace SGFRenaissance
 
         private void base_Titulos_RecebidosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+           
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.base_Titulos_RecebidosTableAdapter.FillBy(this.dGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_Recebidos);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void base_Titulos_RecebidosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
             {
                 ((Lancamentos)Owner).cod_Titulos_recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                ((Lancamentos)Owner).Valor_Tit_Recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-                ((Lancamentos)Owner).textBoxCod_banco.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                ((Lancamentos)Owner).Valor_Tit_Recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                ((Lancamentos)Owner).textBoxCod_banco.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
                 ((Lancamentos)Owner).Valor_Tit_Recebidos.Focus();
-                 this.Close();
+                this.Close();
             }
+
         }
     }
 }

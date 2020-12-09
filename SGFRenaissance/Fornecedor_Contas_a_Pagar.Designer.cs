@@ -595,7 +595,7 @@
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedor_Contas_a_PagarBindingSource, "CPF", true));
             this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cPFTextBox.Location = new System.Drawing.Point(769, 102);
-            this.cPFTextBox.MaxLength = 13;
+            this.cPFTextBox.MaxLength = 14;
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(144, 21);
             this.cPFTextBox.TabIndex = 176;
@@ -645,7 +645,7 @@
             this.identificacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedor_Contas_a_PagarBindingSource, "Identificacao", true));
             this.identificacaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.identificacaoTextBox.Location = new System.Drawing.Point(104, 99);
-            this.identificacaoTextBox.MaxLength = 15;
+            this.identificacaoTextBox.MaxLength = 25;
             this.identificacaoTextBox.Name = "identificacaoTextBox";
             this.identificacaoTextBox.Size = new System.Drawing.Size(194, 21);
             this.identificacaoTextBox.TabIndex = 188;

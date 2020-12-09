@@ -1056,7 +1056,7 @@ namespace SGFRenaissance
 
         private void btn_StatusParcela_Click(object sender, EventArgs e)
         {
-            TelaStatusTitulo frm = new TelaStatusTitulo { Owner = this };
+            TelaStatusTitulo frm = new TelaStatusTitulo() { Owner = this };
             frm.ShowDialog();
         }
     }

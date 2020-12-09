@@ -9,12 +9,13 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_Titulos_RecebidosTableAdapter" GeneratorDataComponentClassName="Base_Titulos_RecebidosTableAdapter" Name="Base_Titulos_Recebidos" UserDataComponentName="Base_Titulos_RecebidosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                         Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                        Bancos.Nome_Banco,  Base_Titulos_Recebidos.Historico
-FROM       Base_Titulos_Recebidos INNER JOIN
-                  Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado</CommandText>
+                    <CommandText>SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                                      Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                              Bancos.Nome_Banco, Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
+FROM          Base_Titulos_Recebidos INNER JOIN
+                     Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
+                     Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos =                      Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -27,6 +28,70 @@ FROM       Base_Titulos_Recebidos INNER JOIN
               <Mapping SourceColumn="Banco_Creditado" DataSetColumn="Banco_Creditado" />
               <Mapping SourceColumn="Historico" DataSetColumn="Historico" />
               <Mapping SourceColumn="Nome_Banco" DataSetColumn="Nome_Banco" />
+              <Mapping SourceColumn="Numero_Documento" DataSetColumn="Numero_Documento" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
+                         Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
+FROM            Base_Titulos_Recebidos INNER JOIN
+                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
+                         Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos = Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_Parcelas_RecebidasTableAdapter" GeneratorDataComponentClassName="Base_Parcelas_RecebidasTableAdapter" Name="Base_Parcelas_Recebidas" UserDataComponentName="Base_Parcelas_RecebidasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectName="SGFRenaissance.dbo.Base_Parcelas_Recebidas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Base_Parcelas_Recebidas] WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Cod_Cliente = 1 AND [Cod_Cliente] IS NULL) OR ([Cod_Cliente] = @Original_Cod_Cliente)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ([Cod_Numero_Parcelas_Receber] = @Original_Cod_Numero_Parcelas_Receber))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Base_Titulos_a_Recebidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Base_Titulos_a_Recebidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cod_Cliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Cliente" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Cliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Cliente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero_Documento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Numero_Documento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Numero_Documento" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Numero_Documento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Numero_Parcelas_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Numero_Parcelas_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_Parcelas_Receber FROM Base_Parcelas_Recebidas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Base_Parcelas_Recebidas] SET [Cod_Base_Titulos_a_Recebidos] = @Cod_Base_Titulos_a_Recebidos, [Cod_Cliente] = @Cod_Cliente, [Numero_Documento] = @Numero_Documento, [Cod_Numero_Parcelas_Receber] = @Cod_Numero_Parcelas_Receber WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Cod_Cliente = 1 AND [Cod_Cliente] IS NULL) OR ([Cod_Cliente] = @Original_Cod_Cliente)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ([Cod_Numero_Parcelas_Receber] = @Original_Cod_Numero_Parcelas_Receber));
+SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_Parcelas_Receber FROM Base_Parcelas_Recebidas WHERE (Cod_Numero_Parcelas_Receber = @Cod_Numero_Parcelas_Receber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cod_Base_Titulos_a_Recebidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Base_Titulos_a_Recebidos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cod_Cliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Cliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Numero_Documento" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Numero_Documento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cod_Numero_Parcelas_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Numero_Parcelas_Receber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Base_Titulos_a_Recebidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Base_Titulos_a_Recebidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cod_Cliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Cliente" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Cliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Cliente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero_Documento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Numero_Documento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Numero_Documento" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Numero_Documento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cod_Numero_Parcelas_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cod_Numero_Parcelas_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Base_Titulos_a_Recebidos" DataSetColumn="Cod_Base_Titulos_a_Recebidos" />
+              <Mapping SourceColumn="Cod_Cliente" DataSetColumn="Cod_Cliente" />
+              <Mapping SourceColumn="Numero_Documento" DataSetColumn="Numero_Documento" />
+              <Mapping SourceColumn="Cod_Numero_Parcelas_Receber" DataSetColumn="Cod_Numero_Parcelas_Receber" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -59,6 +124,29 @@ FROM       Base_Titulos_Recebidos INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Numero_Documento" msprop:Generator_ColumnVarNameInTable="columnNumero_Documento" msprop:Generator_ColumnPropNameInRow="Numero_Documento" msprop:Generator_ColumnPropNameInTable="Numero_DocumentoColumn" msprop:Generator_UserColumnName="Numero_Documento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Base_Parcelas_Recebidas" msprop:Generator_TableClassName="Base_Parcelas_RecebidasDataTable" msprop:Generator_TableVarName="tableBase_Parcelas_Recebidas" msprop:Generator_RowChangedName="Base_Parcelas_RecebidasRowChanged" msprop:Generator_TablePropName="Base_Parcelas_Recebidas" msprop:Generator_RowDeletingName="Base_Parcelas_RecebidasRowDeleting" msprop:Generator_RowChangingName="Base_Parcelas_RecebidasRowChanging" msprop:Generator_RowEvHandlerName="Base_Parcelas_RecebidasRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Parcelas_RecebidasRowDeleted" msprop:Generator_RowClassName="Base_Parcelas_RecebidasRow" msprop:Generator_UserTableName="Base_Parcelas_Recebidas" msprop:Generator_RowEvArgName="Base_Parcelas_RecebidasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnVarNameInTable="columnCod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInRow="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInTable="Cod_Base_Titulos_a_RecebidosColumn" msprop:Generator_UserColumnName="Cod_Base_Titulos_a_Recebidos" type="xs:int" />
+              <xs:element name="Cod_Cliente" msprop:Generator_ColumnVarNameInTable="columnCod_Cliente" msprop:Generator_ColumnPropNameInRow="Cod_Cliente" msprop:Generator_ColumnPropNameInTable="Cod_ClienteColumn" msprop:Generator_UserColumnName="Cod_Cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero_Documento" msprop:Generator_ColumnVarNameInTable="columnNumero_Documento" msprop:Generator_ColumnPropNameInRow="Numero_Documento" msprop:Generator_ColumnPropNameInTable="Numero_DocumentoColumn" msprop:Generator_UserColumnName="Numero_Documento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cod_Numero_Parcelas_Receber" msprop:Generator_ColumnVarNameInTable="columnCod_Numero_Parcelas_Receber" msprop:Generator_ColumnPropNameInRow="Cod_Numero_Parcelas_Receber" msprop:Generator_ColumnPropNameInTable="Cod_Numero_Parcelas_ReceberColumn" msprop:Generator_UserColumnName="Cod_Numero_Parcelas_Receber" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -68,5 +156,14 @@ FROM       Base_Titulos_Recebidos INNER JOIN
       <xs:selector xpath=".//mstns:Base_Titulos_Recebidos" />
       <xs:field xpath="mstns:Cod_Base_Titulos_a_Recebidos" />
     </xs:unique>
+    <xs:unique name="Base_Parcelas_Recebidas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Base_Parcelas_Recebidas" />
+      <xs:field xpath="mstns:Cod_Numero_Parcelas_Receber" />
+    </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msdata:parent="Base_Titulos_Recebidos" msdata:child="Base_Parcelas_Recebidas" msdata:parentkey="Cod_Base_Titulos_a_Recebidos" msdata:childkey="Cod_Base_Titulos_a_Recebidos" msprop:Generator_UserChildTable="Base_Parcelas_Recebidas" msprop:Generator_ChildPropName="GetBase_Parcelas_RecebidasRows" msprop:Generator_UserRelationName="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_RelationVarName="relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_UserParentTable="Base_Titulos_Recebidos" msprop:Generator_ParentPropName="Base_Titulos_RecebidosRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

@@ -28,6 +28,7 @@ namespace SGFRenaissance
         public int numeroparcelaDGVInt = 0;
         public int CodigoTituloaReceber = 0;
 
+
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
@@ -65,15 +66,18 @@ namespace SGFRenaissance
             btn_proximo.Enabled = false;
             btn_Anterior.Enabled = false;
             btn_Localizar.Enabled = false;
-            btn_Bancos.Enabled = true;
+            btn_Bancos.Enabled = false;
             btn_Inserir_Recebimentos.Enabled = false;
             btn_novo.Enabled = true;
-            data_RecebimentoDateTimePicker.CustomFormat = null;
+            btn_fechar.Enabled = true;
+            data_RecebimentoDateTimePicker.Format = DateTimePickerFormat.Custom;
+            data_RecebimentoDateTimePicker.CustomFormat = "dd/MM/yyyy";
             data_RecebimentoDateTimePicker.Value.ToShortDateString();
             cod_Base_Titulos_a_RecebidosTextBox.Enabled = false;
             data_RecebimentoDateTimePicker.Enabled = false;
             historicoTextBox.Enabled = false;
             data_RecebimentoDateTimePicker.CustomFormat = "   ";
+            data_RecebimentoDateTimePicker.Text = null;
             Valor_Pago_a_Vista.Enabled = false;
             data_Recebimento_NF.Enabled = false;
             Valor_recebido.Enabled = false;
@@ -98,10 +102,13 @@ namespace SGFRenaissance
             Cod_numero_parcela.Text = string.Empty;
             Cod_Receita.Text = string.Empty;
             Status_Titulo.Text = string.Empty;
+            StatusDescricao.Text = string.Empty;
             historico_parcela.Text = string.Empty;
             Cod_Base_Tit_Recebidos.Text = string.Empty;
             data_LoginTextBox.Text = string.Empty;
             login_NameTextBox.Text = string.Empty;
+            MessageBox.Show("Para Iniciar o Recebimento de Título Clicar em NOVO e Escolha o Banco!");
+            btn_fechar.Focus();
 
         }
 
@@ -234,7 +241,9 @@ namespace SGFRenaissance
                 SqlDataReader reader = sqlComm.ExecuteReader();
                 while (reader.Read())
                 {
-                    Data_NF_textbox.Text = reader["Data_NF"].ToString();
+                    DateTime Data_Nota_Fiscal =Convert.ToDateTime(reader["Data_NF"].ToString());
+                    Data_NF_textbox.Text = (Data_Nota_Fiscal.ToShortDateString());
+                    
                 }
 
                 sqlConnection.Close();
@@ -278,12 +287,13 @@ namespace SGFRenaissance
                 StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
-                string sql = string.Format("select  Cod_Status_Titulo from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
+                string sql = string.Format("select  Cod_Status_Titulo, from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
                 SqlCommand sqlComm = new SqlCommand(sql, sqlConnection);
                 SqlDataReader reader = sqlComm.ExecuteReader();
                 while (reader.Read())
                 {
                     Status_Titulo.Text = reader["Cod_Status_Titulo"].ToString();
+                  
                 }
 
                 sqlConnection.Close();
@@ -294,6 +304,32 @@ namespace SGFRenaissance
             }
 
         }
+         
+        void buscar_Descricao_Titulo()
+        {
+            try
+            {
+                String StrConn;
+                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                SqlConnection sqlConnection = new SqlConnection(StrConn);
+                sqlConnection.Open();
+                string sql = string.Format("select Descricao_Status from Status_Titulos_a_Receber where Codigo_Status_Tit_a_Receber='{0}'", Status_Titulo.Text);
+                SqlCommand sqlComm = new SqlCommand(sql, sqlConnection);
+                SqlDataReader reader = sqlComm.ExecuteReader();
+                while (reader.Read())
+                {
+                    StatusDescricao.Text = reader["Descricao_Status"].ToString();
+                }
+
+                sqlConnection.Close();
+            }
+            catch (Exception Ex)
+            {
+                Debug.WriteLine("Erro ao buscar Status do Título da N.F.!" + Ex.Message);
+            }
+
+        }
+
 
         void buscar_historicoTitulo()
         {
@@ -383,19 +419,28 @@ namespace SGFRenaissance
         {
             TelaBancosNova frm = new TelaBancosNova() { Owner = this };
             frm.ShowDialog();
+            btn_Inserir_Recebimentos.Enabled = true;
+
             //    TelaBancosNova f = new TelaBancosNova(this,banco_CreditadoTextBox);
             //    f.ShowDialog();
         }
 
         private void btn_Inserir_Recebimentos_Click(object sender, EventArgs e)
         {
+            btn_Bancos.Enabled = true;
             btn_salvar.Enabled = true;
-            btn_recebido.Enabled = true;
+            btn_recebido.Enabled = false;
             btn_salvar.BackColor = Color.Orange;
             btn_salvar.ForeColor = Color.Navy;
-            btn_recebido.BackColor = Color.DarkBlue;
+            btn_recebido.BackColor = Color.Coral;
             btn_recebido.ForeColor = Color.White;
-            if (data_RecebimentoDateTimePicker.Text != "" && banco_CreditadoTextBox.Text != "")
+
+            if (data_RecebimentoDateTimePicker.Text == " ")
+            {
+                MessageBox.Show("É necessário o preenchimento da data de recebimento!");
+
+            }
+            else
             {
                 try
                 {
@@ -432,24 +477,24 @@ namespace SGFRenaissance
                 }
 
             }
-            else
-            {
-                MessageBox.Show("Informe todos os Dados necessários para incluir o Recebimento do Título!");
-            }
 
-        }
+        }           
+
 
         private void btn_novo_Click(object sender, EventArgs e)
         {
             cod_Base_Titulos_a_RecebidosTextBox.Text = string.Empty;
-            data_RecebimentoDateTimePicker.CustomFormat = "   ";
+            data_RecebimentoDateTimePicker.Format = DateTimePickerFormat.Custom;
+            data_RecebimentoDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            data_RecebimentoDateTimePicker.Text =null;
             total_RecebidoTextBox.Text = "0,00";
             historicoTextBox.Text = string.Empty;
             banco_CreditadoTextBox.Text = string.Empty;
-            btn_Inserir_Recebimentos.Enabled = true;
-            numero_Parcelas_a_ReceberDataGridView.Enabled = true;
+            btn_Inserir_Recebimentos.Enabled = false;
+            numero_Parcelas_a_ReceberDataGridView.Enabled = false;
             data_LoginTextBox.Text = string.Empty;
             login_NameTextBox.Text = string.Empty;
+            
             // HABILITAR CAMPOS DE EDIÇÃO
             data_RecebimentoDateTimePicker.Enabled = true;
             historicoTextBox.Enabled = true;
@@ -459,6 +504,7 @@ namespace SGFRenaissance
             Valor_recebido.Enabled = true;
             historico_Titulo.Enabled = true;
             btn_novo.Enabled = false;
+            btn_Bancos.Enabled = true;
 
         }
 
@@ -484,9 +530,9 @@ namespace SGFRenaissance
                 btn_Anterior.Enabled = false;
                 btn_salvar.Enabled = false;
                 btn_fechar.Enabled = false;
-                btn_recebido.Enabled = true;
+                btn_recebido.Enabled = false;
                 btn_novo.Enabled = false;
-                //  AQUI EU BUSCO AS INFORMAÇÕES DO TÍTULO SELECIONADO NO BANCO E PASSO PARA OS TEXTBOXES COM O MÉTODO
+                //  AQUI EU BUSCO AS INFORMAÇÕES DO TÍTULO SELECIONADO NO BANCO de DADOS E PASSO PARA OS TEXTBOXES COM O MÉTODO
                 buscar_dados_cliente();
                 buscar_numero_NF();
                 buscar_Valor_NF();
@@ -496,6 +542,8 @@ namespace SGFRenaissance
                 buscar_StatusTitulo();
                 buscar_historicoTitulo();
                 buscar_ControleVenda();
+                data_Recebimento_NF.Focus();
+
             }
         }
 
@@ -513,7 +561,7 @@ namespace SGFRenaissance
             string numeroparcelaDGV = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
             numeroparcelaDGVInt = Convert.ToInt32(numeroparcelaDGV);
 
-            if (data_Recebimento_NF.Text == "" && Cod_Entr_Tit_a_Receber.Text != "")
+            if (data_Recebimento_NF.Text == " " && Cod_Entr_Tit_a_Receber.Text != " ")
             {
                 MessageBox.Show("Insira a Data de Pagamento da Nota Fiscal!");
             }
@@ -642,6 +690,7 @@ namespace SGFRenaissance
                             {
                                 conn.Close();
                                 btn_salvar.Enabled = true;
+                                btn_salvar.Focus();
                             }
 
                         }
@@ -748,6 +797,8 @@ namespace SGFRenaissance
                         Total = 0;
                         textBoxTotalRecebido.Text = string.Empty;
                         btn_Inserir_Recebimentos.Enabled = false;
+                        login_NameTextBox.Text = string.Empty;
+                        data_LoginTextBox.Text = string.Empty;
 
                     }
                 }
@@ -877,7 +928,27 @@ namespace SGFRenaissance
                 data_Recebimento_NF.Text = "";
                 data_Recebimento_NF.Focus();
             }
+            decimal valorrecebido = 0;
+            decimal valorparcela = 0;
+            decimal Acrescimos = 0;
+            decimal Desconto = 0;
+            decimal Saldo = 0;
+            Decimal.TryParse(Valor_Parcela.Text, out valorparcela);
+            Decimal.TryParse(Valor_recebido.Text, out valorrecebido);
+            Decimal.TryParse(Descontotextbox.Text, out Desconto);
+            Decimal.TryParse(SaldoTextbox.Text, out Saldo);
+            valorrecebido = Convert.ToDecimal(Valor_recebido.Text);
+            Acrescimos = Convert.ToDecimal(AcrescimosTextbox.Text);
+            valorparcela = Convert.ToDecimal(Valor_Parcela.Text);
+            Desconto = Convert.ToDecimal(Descontotextbox.Text);
+            valorrecebido = ((valorparcela + Acrescimos) - (Desconto));
+            Saldo = ((valorrecebido) - (valorparcela - Desconto));
+            SaldoTextbox.Text = Convert.ToString(Saldo);
+            Valor_recebido.Text = Convert.ToString(valorrecebido);
+            btn_recebido.Enabled = true;
+
         }
+
 
         private void Descontotextbox_Leave(object sender, EventArgs e)
         {
@@ -914,6 +985,11 @@ namespace SGFRenaissance
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Status_Titulo_TextChanged(object sender, EventArgs e)
+        {
+            buscar_Descricao_Titulo();
         }
     }
 

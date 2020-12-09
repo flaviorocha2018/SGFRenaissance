@@ -97,8 +97,8 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lancamentosTableAdapter = new SGFRenaissance.Lancamentos_MovimentosTableAdapters.LancamentosTableAdapter();
             this.tableAdapterManager = new SGFRenaissance.Lancamentos_MovimentosTableAdapters.TableAdapterManager();
             LoginLabel = new System.Windows.Forms.Label();
@@ -544,6 +544,7 @@
             this.descricao_OperacaoTextBox.Size = new System.Drawing.Size(526, 22);
             this.descricao_OperacaoTextBox.TabIndex = 8;
             this.descricao_OperacaoTextBox.Enter += new System.EventHandler(this.descricao_OperacaoTextBox_Enter);
+            this.descricao_OperacaoTextBox.Leave += new System.EventHandler(this.descricao_OperacaoTextBox_Leave);
             // 
             // data_LancamentoDateTimePicker
             // 
@@ -647,6 +648,7 @@
             this.btn_Update.TabIndex = 3;
             this.btn_Update.Text = "Atualizar";
             this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Anterior
             // 
@@ -742,8 +744,8 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn15});
             this.lancamentosDataGridView.DataSource = this.lancamentosBindingSource;
             this.lancamentosDataGridView.Location = new System.Drawing.Point(6, 20);
             this.lancamentosDataGridView.Name = "lancamentosDataGridView";
@@ -751,6 +753,7 @@
             this.lancamentosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lancamentosDataGridView.Size = new System.Drawing.Size(893, 196);
             this.lancamentosDataGridView.TabIndex = 0;
+            
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -848,19 +851,19 @@
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 90;
             // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Saldo";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Saldo";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "Saldo_Anterior";
             this.dataGridViewTextBoxColumn16.HeaderText = "Saldo Anterior";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Saldo";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Saldo";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
             // 
             // lancamentosTableAdapter
             // 
@@ -965,7 +968,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }

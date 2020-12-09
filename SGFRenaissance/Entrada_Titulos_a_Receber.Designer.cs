@@ -55,7 +55,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.login_NameTextBox = new System.Windows.Forms.TextBox();
             this.entrada_Titulos_a_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.entradaTitulosaReceberDGV = new SGFRenaissance.EntradaTitulosaReceberDGV();
+            this.entrada_Titulos_a_Receber = new SGFRenaissance.Entrada_Titulos_a_Receber();
             this.data_logintxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Inserir_Titulo = new System.Windows.Forms.Button();
@@ -106,8 +106,19 @@
             this.descricaostatusparcela = new System.Windows.Forms.TextBox();
             this.ValorParcela = new System.Windows.Forms.TextBox();
             this.btn_salvarParcela = new System.Windows.Forms.Button();
-            this.entrada_Titulos_a_ReceberTableAdapter = new SGFRenaissance.EntradaTitulosaReceberDGVTableAdapters.Entrada_Titulos_a_ReceberTableAdapter();
-            this.tableAdapterManager1 = new SGFRenaissance.EntradaTitulosaReceberDGVTableAdapters.TableAdapterManager();
+            this.status_Titulos_a_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipos_ReceitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.numero_Parcelas_a_ReceberDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExcluirParcela = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.entrada_Titulos_a_ReceberTableAdapter1 = new SGFRenaissance.Entrada_Titulos_a_ReceberTableAdapters.Entrada_Titulos_a_ReceberTableAdapter();
+            this.tableAdapterManager1 = new SGFRenaissance.Entrada_Titulos_a_ReceberTableAdapters.TableAdapterManager();
             this.entrada_Titulos_a_ReceberDataGridView = new System.Windows.Forms.DataGridView();
             this.Cod_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,17 +132,8 @@
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_Titulos_a_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipos_ReceitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numero_Parcelas_a_ReceberDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExcluirParcela = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             cod_ClienteLabel = new System.Windows.Forms.Label();
             cod_Entrada_Titulos_a_ReceberLabel = new System.Windows.Forms.Label();
             cod_ReceitaLabel = new System.Windows.Forms.Label();
@@ -153,17 +155,17 @@
             label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entradaTitulosaReceberDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_Receber)).BeginInit();
             this.panel1.SuspendLayout();
             this.gbox_informacoes_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientes_Contas_a_ReceberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_ReceberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroParcelasaReceberDGV)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.status_Titulos_a_ReceberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipos_ReceitaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_ReceberDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cod_ClienteLabel
@@ -302,7 +304,7 @@
             // 
             cod_Numero_Parcelas_ReceberLabel.AutoSize = true;
             cod_Numero_Parcelas_ReceberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cod_Numero_Parcelas_ReceberLabel.Location = new System.Drawing.Point(191, 16);
+            cod_Numero_Parcelas_ReceberLabel.Location = new System.Drawing.Point(187, 13);
             cod_Numero_Parcelas_ReceberLabel.Name = "cod_Numero_Parcelas_ReceberLabel";
             cod_Numero_Parcelas_ReceberLabel.Size = new System.Drawing.Size(132, 15);
             cod_Numero_Parcelas_ReceberLabel.TabIndex = 119;
@@ -376,7 +378,7 @@
             this._lblLinha.AutoSize = true;
             this._lblLinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblLinha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this._lblLinha.Location = new System.Drawing.Point(-33, 29);
+            this._lblLinha.Location = new System.Drawing.Point(-35, 29);
             this._lblLinha.Name = "_lblLinha";
             this._lblLinha.Size = new System.Drawing.Size(1128, 18);
             this._lblLinha.TabIndex = 112;
@@ -388,7 +390,7 @@
             this._lblMensagemUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this._lblMensagemUsuario.AutoSize = true;
             this._lblMensagemUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblMensagemUsuario.Location = new System.Drawing.Point(6, 599);
+            this._lblMensagemUsuario.Location = new System.Drawing.Point(0, 599);
             this._lblMensagemUsuario.Name = "_lblMensagemUsuario";
             this._lblMensagemUsuario.Size = new System.Drawing.Size(202, 15);
             this._lblMensagemUsuario.TabIndex = 118;
@@ -403,7 +405,7 @@
             this.flowLayoutPanel1.Controls.Add(this.data_logintxtbox);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 617);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1036, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1028, 32);
             this.flowLayoutPanel1.TabIndex = 117;
             // 
             // login_NameTextBox
@@ -421,12 +423,12 @@
             // entrada_Titulos_a_ReceberBindingSource
             // 
             this.entrada_Titulos_a_ReceberBindingSource.DataMember = "Entrada_Titulos_a_Receber";
-            this.entrada_Titulos_a_ReceberBindingSource.DataSource = this.entradaTitulosaReceberDGV;
+            this.entrada_Titulos_a_ReceberBindingSource.DataSource = this.entrada_Titulos_a_Receber;
             // 
-            // entradaTitulosaReceberDGV
+            // entrada_Titulos_a_Receber
             // 
-            this.entradaTitulosaReceberDGV.DataSetName = "EntradaTitulosaReceberDGV";
-            this.entradaTitulosaReceberDGV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.entrada_Titulos_a_Receber.DataSetName = "Entrada_Titulos_a_Receber";
+            this.entrada_Titulos_a_Receber.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // data_logintxtbox
             // 
@@ -646,9 +648,9 @@
             // 
             this.cod_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.entrada_Titulos_a_ReceberBindingSource, "Cod_Cliente", true));
             this.cod_ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cod_ClienteTextBox.Location = new System.Drawing.Point(363, 15);
+            this.cod_ClienteTextBox.Location = new System.Drawing.Point(349, 15);
             this.cod_ClienteTextBox.Name = "cod_ClienteTextBox";
-            this.cod_ClienteTextBox.Size = new System.Drawing.Size(33, 21);
+            this.cod_ClienteTextBox.Size = new System.Drawing.Size(47, 21);
             this.cod_ClienteTextBox.TabIndex = 142;
             // 
             // nome_ClienteTextBox
@@ -657,7 +659,7 @@
             this.nome_ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome_ClienteTextBox.Location = new System.Drawing.Point(397, 15);
             this.nome_ClienteTextBox.Name = "nome_ClienteTextBox";
-            this.nome_ClienteTextBox.Size = new System.Drawing.Size(397, 21);
+            this.nome_ClienteTextBox.Size = new System.Drawing.Size(338, 21);
             this.nome_ClienteTextBox.TabIndex = 141;
             // 
             // clientes_Contas_a_ReceberBindingSource
@@ -779,7 +781,7 @@
             // btn_Clientes
             // 
             this.btn_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Clientes.Location = new System.Drawing.Point(794, 13);
+            this.btn_Clientes.Location = new System.Drawing.Point(736, 13);
             this.btn_Clientes.Name = "btn_Clientes";
             this.btn_Clientes.Size = new System.Drawing.Size(22, 24);
             this.btn_Clientes.TabIndex = 135;
@@ -870,10 +872,10 @@
             // cod_Numero_Parcelas_ReceberTextBox
             // 
             this.cod_Numero_Parcelas_ReceberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cod_Numero_Parcelas_ReceberTextBox.Location = new System.Drawing.Point(329, 13);
+            this.cod_Numero_Parcelas_ReceberTextBox.Location = new System.Drawing.Point(322, 12);
             this.cod_Numero_Parcelas_ReceberTextBox.Name = "cod_Numero_Parcelas_ReceberTextBox";
             this.cod_Numero_Parcelas_ReceberTextBox.ReadOnly = true;
-            this.cod_Numero_Parcelas_ReceberTextBox.Size = new System.Drawing.Size(43, 21);
+            this.cod_Numero_Parcelas_ReceberTextBox.Size = new System.Drawing.Size(55, 21);
             this.cod_Numero_Parcelas_ReceberTextBox.TabIndex = 120;
             // 
             // data_VencimentoDateTimePicker1
@@ -971,15 +973,109 @@
             this.btn_salvarParcela.UseVisualStyleBackColor = true;
             this.btn_salvarParcela.Click += new System.EventHandler(this.btn_salvarParcela_Click_1);
             // 
-            // entrada_Titulos_a_ReceberTableAdapter
+            // status_Titulos_a_ReceberBindingSource
             // 
-            this.entrada_Titulos_a_ReceberTableAdapter.ClearBeforeFill = true;
+            this.status_Titulos_a_ReceberBindingSource.DataSource = typeof(sistema.DAL.Status_Titulos_a_Receber);
+            // 
+            // tipos_ReceitaBindingSource
+            // 
+            this.tipos_ReceitaBindingSource.DataSource = typeof(sistema.DAL.Tipos_Receita);
+            // 
+            // numero_Parcelas_a_ReceberDataGridView
+            // 
+            this.numero_Parcelas_a_ReceberDataGridView.AllowUserToAddRows = false;
+            this.numero_Parcelas_a_ReceberDataGridView.AllowUserToDeleteRows = false;
+            this.numero_Parcelas_a_ReceberDataGridView.AutoGenerateColumns = false;
+            this.numero_Parcelas_a_ReceberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.numero_Parcelas_a_ReceberDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.ExcluirParcela});
+            this.numero_Parcelas_a_ReceberDataGridView.DataSource = this.numero_Parcelas_a_ReceberBindingSource;
+            this.numero_Parcelas_a_ReceberDataGridView.Location = new System.Drawing.Point(7, 429);
+            this.numero_Parcelas_a_ReceberDataGridView.Name = "numero_Parcelas_a_ReceberDataGridView";
+            this.numero_Parcelas_a_ReceberDataGridView.ReadOnly = true;
+            this.numero_Parcelas_a_ReceberDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.numero_Parcelas_a_ReceberDataGridView.Size = new System.Drawing.Size(1024, 109);
+            this.numero_Parcelas_a_ReceberDataGridView.TabIndex = 121;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cod_Numero_Parcelas_Receber";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cód. Nº Parc. a Receber";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Numero_Parcela";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nº Parcela";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Entrada_Titulos_a_Receber";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cód. Entr. Tit. a Receber";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Data_Vencimento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Data Vencto.";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Valor_Parcela";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Valor Parcela";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Historico";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Histórico";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Cod_Status_Titulo";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Cód. Status Tit.";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 80;
+            // 
+            // ExcluirParcela
+            // 
+            this.ExcluirParcela.HeaderText = "Excluir Parcela";
+            this.ExcluirParcela.Name = "ExcluirParcela";
+            this.ExcluirParcela.ReadOnly = true;
+            this.ExcluirParcela.Text = "Excluir Parcela";
+            this.ExcluirParcela.ToolTipText = "Excluir Parcela";
+            this.ExcluirParcela.UseColumnTextForButtonValue = true;
+            this.ExcluirParcela.Width = 120;
+            // 
+            // entrada_Titulos_a_ReceberTableAdapter1
+            // 
+            this.entrada_Titulos_a_ReceberTableAdapter1.ClearBeforeFill = true;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Entrada_Titulos_a_ReceberTableAdapter = this.entrada_Titulos_a_ReceberTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = SGFRenaissance.EntradaTitulosaReceberDGVTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.Entrada_Titulos_a_ReceberTableAdapter = this.entrada_Titulos_a_ReceberTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = SGFRenaissance.Entrada_Titulos_a_ReceberTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // entrada_Titulos_a_ReceberDataGridView
             // 
@@ -999,15 +1095,16 @@
             this.dataGridViewTextBoxColumn27,
             this.dataGridViewTextBoxColumn28,
             this.dataGridViewTextBoxColumn29,
-            this.dataGridViewTextBoxColumn30});
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32});
             this.entrada_Titulos_a_ReceberDataGridView.DataSource = this.entrada_Titulos_a_ReceberBindingSource;
-            this.entrada_Titulos_a_ReceberDataGridView.Location = new System.Drawing.Point(7, 190);
+            this.entrada_Titulos_a_ReceberDataGridView.Location = new System.Drawing.Point(3, 190);
             this.entrada_Titulos_a_ReceberDataGridView.Name = "entrada_Titulos_a_ReceberDataGridView";
             this.entrada_Titulos_a_ReceberDataGridView.ReadOnly = true;
             this.entrada_Titulos_a_ReceberDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.entrada_Titulos_a_ReceberDataGridView.Size = new System.Drawing.Size(1024, 134);
+            this.entrada_Titulos_a_ReceberDataGridView.Size = new System.Drawing.Size(1028, 134);
             this.entrada_Titulos_a_ReceberDataGridView.TabIndex = 121;
-            this.entrada_Titulos_a_ReceberDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.entrada_Titulos_a_ReceberDataGridView_CellContentClick_1);
             // 
             // Cod_Id
             // 
@@ -1092,109 +1189,29 @@
             this.dataGridViewTextBoxColumn30.HeaderText = "Historico";
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            this.dataGridViewTextBoxColumn30.Width = 250;
             // 
-            // status_Titulos_a_ReceberBindingSource
+            // dataGridViewTextBoxColumn31
             // 
-            this.status_Titulos_a_ReceberBindingSource.DataSource = typeof(sistema.DAL.Status_Titulos_a_Receber);
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "Data_Login";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Data_Login";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
             // 
-            // tipos_ReceitaBindingSource
+            // dataGridViewTextBoxColumn32
             // 
-            this.tipos_ReceitaBindingSource.DataSource = typeof(sistema.DAL.Tipos_Receita);
-            // 
-            // numero_Parcelas_a_ReceberDataGridView
-            // 
-            this.numero_Parcelas_a_ReceberDataGridView.AllowUserToAddRows = false;
-            this.numero_Parcelas_a_ReceberDataGridView.AllowUserToDeleteRows = false;
-            this.numero_Parcelas_a_ReceberDataGridView.AutoGenerateColumns = false;
-            this.numero_Parcelas_a_ReceberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.numero_Parcelas_a_ReceberDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.ExcluirParcela});
-            this.numero_Parcelas_a_ReceberDataGridView.DataSource = this.numero_Parcelas_a_ReceberBindingSource;
-            this.numero_Parcelas_a_ReceberDataGridView.Location = new System.Drawing.Point(7, 429);
-            this.numero_Parcelas_a_ReceberDataGridView.Name = "numero_Parcelas_a_ReceberDataGridView";
-            this.numero_Parcelas_a_ReceberDataGridView.ReadOnly = true;
-            this.numero_Parcelas_a_ReceberDataGridView.Size = new System.Drawing.Size(1024, 109);
-            this.numero_Parcelas_a_ReceberDataGridView.TabIndex = 121;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cod_Numero_Parcelas_Receber";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cód. Nº Parc. a Receber";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Numero_Parcela";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nº Parcela";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Entrada_Titulos_a_Receber";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cód. Entr. Tit. a Receber";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Data_Vencimento";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Data Vencto.";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Valor_Parcela";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Valor Parcela";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Historico";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Histórico";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Cod_Status_Titulo";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Cód. Status Tit.";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 80;
-            // 
-            // ExcluirParcela
-            // 
-            this.ExcluirParcela.HeaderText = "Excluir Parcela";
-            this.ExcluirParcela.Name = "ExcluirParcela";
-            this.ExcluirParcela.ReadOnly = true;
-            this.ExcluirParcela.Text = "Excluir Parcela";
-            this.ExcluirParcela.ToolTipText = "Excluir Parcela";
-            this.ExcluirParcela.UseColumnTextForButtonValue = true;
-            this.ExcluirParcela.Width = 120;
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "Login_Name";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Login_Name";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
             // 
             // EntradaTitulosaReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1037, 651);
-            this.Controls.Add(this.numero_Parcelas_a_ReceberDataGridView);
+            this.ClientSize = new System.Drawing.Size(1033, 669);
             this.Controls.Add(this.entrada_Titulos_a_ReceberDataGridView);
+            this.Controls.Add(this.numero_Parcelas_a_ReceberDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbox_informacoes_titulo);
@@ -1211,7 +1228,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entradaTitulosaReceberDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_Receber)).EndInit();
             this.panel1.ResumeLayout(false);
             this.gbox_informacoes_titulo.ResumeLayout(false);
             this.gbox_informacoes_titulo.PerformLayout();
@@ -1220,10 +1237,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeroParcelasaReceberDGV)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.status_Titulos_a_ReceberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipos_ReceitaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_ReceberDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrada_Titulos_a_ReceberDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1314,26 +1331,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_NF;
         private System.Windows.Forms.TextBox textBox_CV;
         private System.Windows.Forms.Label label4;
-        private EntradaTitulosaReceberDGV entradaTitulosaReceberDGV;
+      
         private System.Windows.Forms.Button btn_Inserir_Titulo;
-        private System.Windows.Forms.BindingSource entrada_Titulos_a_ReceberBindingSource;
-        private EntradaTitulosaReceberDGVTableAdapters.Entrada_Titulos_a_ReceberTableAdapter entrada_Titulos_a_ReceberTableAdapter;
-        private EntradaTitulosaReceberDGVTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.DataGridView entrada_Titulos_a_ReceberDataGridView;
+      
         private System.Windows.Forms.Button btn_salvarParcela;
         private System.Windows.Forms.TextBox ValorParcela;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         public System.Windows.Forms.TextBox DescricaoReceita;
         public System.Windows.Forms.TextBox textBox1;
         
@@ -1348,5 +1350,25 @@
         private System.Windows.Forms.DataGridViewButtonColumn ExcluirParcela;
         public System.Windows.Forms.TextBox descricaoStatusTitulo;
         public System.Windows.Forms.TextBox descricaostatusparcela;
+       
+        private Entrada_Titulos_a_Receber entrada_Titulos_a_Receber;
+        private System.Windows.Forms.BindingSource entrada_Titulos_a_ReceberBindingSource;
+        private Entrada_Titulos_a_ReceberTableAdapters.Entrada_Titulos_a_ReceberTableAdapter entrada_Titulos_a_ReceberTableAdapter1;
+        private Entrada_Titulos_a_ReceberTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridView entrada_Titulos_a_ReceberDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
     }
 }

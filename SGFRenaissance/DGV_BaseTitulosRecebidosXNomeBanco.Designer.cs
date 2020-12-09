@@ -26,6 +26,10 @@ namespace SGFRenaissance {
         
         private Base_Titulos_RecebidosDataTable tableBase_Titulos_Recebidos;
         
+        private Base_Parcelas_RecebidasDataTable tableBase_Parcelas_Recebidas;
+        
+        private global::System.Data.DataRelation relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57,6 +61,9 @@ namespace SGFRenaissance {
                 if ((ds.Tables["Base_Titulos_Recebidos"] != null)) {
                     base.Tables.Add(new Base_Titulos_RecebidosDataTable(ds.Tables["Base_Titulos_Recebidos"]));
                 }
+                if ((ds.Tables["Base_Parcelas_Recebidas"] != null)) {
+                    base.Tables.Add(new Base_Parcelas_RecebidasDataTable(ds.Tables["Base_Parcelas_Recebidas"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -82,6 +89,16 @@ namespace SGFRenaissance {
         public Base_Titulos_RecebidosDataTable Base_Titulos_Recebidos {
             get {
                 return this.tableBase_Titulos_Recebidos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Base_Parcelas_RecebidasDataTable Base_Parcelas_Recebidas {
+            get {
+                return this.tableBase_Parcelas_Recebidas;
             }
         }
         
@@ -155,6 +172,9 @@ namespace SGFRenaissance {
                 if ((ds.Tables["Base_Titulos_Recebidos"] != null)) {
                     base.Tables.Add(new Base_Titulos_RecebidosDataTable(ds.Tables["Base_Titulos_Recebidos"]));
                 }
+                if ((ds.Tables["Base_Parcelas_Recebidas"] != null)) {
+                    base.Tables.Add(new Base_Parcelas_RecebidasDataTable(ds.Tables["Base_Parcelas_Recebidas"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -194,6 +214,13 @@ namespace SGFRenaissance {
                     this.tableBase_Titulos_Recebidos.InitVars();
                 }
             }
+            this.tableBase_Parcelas_Recebidas = ((Base_Parcelas_RecebidasDataTable)(base.Tables["Base_Parcelas_Recebidas"]));
+            if ((initTable == true)) {
+                if ((this.tableBase_Parcelas_Recebidas != null)) {
+                    this.tableBase_Parcelas_Recebidas.InitVars();
+                }
+            }
+            this.relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas = this.Relations["Base_Titulos_Recebidos_Base_Parcelas_Recebidas"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -206,11 +233,23 @@ namespace SGFRenaissance {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBase_Titulos_Recebidos = new Base_Titulos_RecebidosDataTable();
             base.Tables.Add(this.tableBase_Titulos_Recebidos);
+            this.tableBase_Parcelas_Recebidas = new Base_Parcelas_RecebidasDataTable();
+            base.Tables.Add(this.tableBase_Parcelas_Recebidas);
+            this.relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas = new global::System.Data.DataRelation("Base_Titulos_Recebidos_Base_Parcelas_Recebidas", new global::System.Data.DataColumn[] {
+                        this.tableBase_Titulos_Recebidos.Cod_Base_Titulos_a_RecebidosColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBase_Parcelas_Recebidas.Cod_Base_Titulos_a_RecebidosColumn}, false);
+            this.Relations.Add(this.relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeBase_Titulos_Recebidos() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeBase_Parcelas_Recebidas() {
             return false;
         }
         
@@ -272,6 +311,9 @@ namespace SGFRenaissance {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Base_Titulos_RecebidosRowChangeEventHandler(object sender, Base_Titulos_RecebidosRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void Base_Parcelas_RecebidasRowChangeEventHandler(object sender, Base_Parcelas_RecebidasRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -290,6 +332,8 @@ namespace SGFRenaissance {
             private global::System.Data.DataColumn columnHistorico;
             
             private global::System.Data.DataColumn columnNome_Banco;
+            
+            private global::System.Data.DataColumn columnNumero_Documento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -374,6 +418,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Numero_DocumentoColumn {
+                get {
+                    return this.columnNumero_Documento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +461,7 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, string Nome_Banco) {
+            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, string Nome_Banco, string Numero_Documento) {
                 Base_Titulos_RecebidosRow rowBase_Titulos_RecebidosRow = ((Base_Titulos_RecebidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -417,7 +469,8 @@ namespace SGFRenaissance {
                         Total_Recebido,
                         Banco_Creditado,
                         Historico,
-                        Nome_Banco};
+                        Nome_Banco,
+                        Numero_Documento};
                 rowBase_Titulos_RecebidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBase_Titulos_RecebidosRow);
                 return rowBase_Titulos_RecebidosRow;
@@ -453,6 +506,7 @@ namespace SGFRenaissance {
                 this.columnBanco_Creditado = base.Columns["Banco_Creditado"];
                 this.columnHistorico = base.Columns["Historico"];
                 this.columnNome_Banco = base.Columns["Nome_Banco"];
+                this.columnNumero_Documento = base.Columns["Numero_Documento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +524,8 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnHistorico);
                 this.columnNome_Banco = new global::System.Data.DataColumn("Nome_Banco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome_Banco);
+                this.columnNumero_Documento = new global::System.Data.DataColumn("Numero_Documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Documento);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Base_Titulos_a_Recebidos}, true));
                 this.columnCod_Base_Titulos_a_Recebidos.AutoIncrement = true;
@@ -480,6 +536,7 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_a_Recebidos.Unique = true;
                 this.columnHistorico.MaxLength = 200;
                 this.columnNome_Banco.MaxLength = 50;
+                this.columnNumero_Documento.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -566,6 +623,311 @@ namespace SGFRenaissance {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Base_Titulos_RecebidosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Base_Parcelas_RecebidasDataTable : global::System.Data.TypedTableBase<Base_Parcelas_RecebidasRow> {
+            
+            private global::System.Data.DataColumn columnCod_Base_Titulos_a_Recebidos;
+            
+            private global::System.Data.DataColumn columnCod_Cliente;
+            
+            private global::System.Data.DataColumn columnNumero_Documento;
+            
+            private global::System.Data.DataColumn columnCod_Numero_Parcelas_Receber;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasDataTable() {
+                this.TableName = "Base_Parcelas_Recebidas";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal Base_Parcelas_RecebidasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected Base_Parcelas_RecebidasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_Base_Titulos_a_RecebidosColumn {
+                get {
+                    return this.columnCod_Base_Titulos_a_Recebidos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_ClienteColumn {
+                get {
+                    return this.columnCod_Cliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Numero_DocumentoColumn {
+                get {
+                    return this.columnNumero_Documento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Cod_Numero_Parcelas_ReceberColumn {
+                get {
+                    return this.columnCod_Numero_Parcelas_Receber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow this[int index] {
+                get {
+                    return ((Base_Parcelas_RecebidasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Base_Parcelas_RecebidasRowChangeEventHandler Base_Parcelas_RecebidasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Base_Parcelas_RecebidasRowChangeEventHandler Base_Parcelas_RecebidasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Base_Parcelas_RecebidasRowChangeEventHandler Base_Parcelas_RecebidasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Base_Parcelas_RecebidasRowChangeEventHandler Base_Parcelas_RecebidasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddBase_Parcelas_RecebidasRow(Base_Parcelas_RecebidasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow AddBase_Parcelas_RecebidasRow(Base_Titulos_RecebidosRow parentBase_Titulos_RecebidosRowByBase_Titulos_Recebidos_Base_Parcelas_Recebidas, int Cod_Cliente, string Numero_Documento, int Cod_Numero_Parcelas_Receber) {
+                Base_Parcelas_RecebidasRow rowBase_Parcelas_RecebidasRow = ((Base_Parcelas_RecebidasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Cod_Cliente,
+                        Numero_Documento,
+                        Cod_Numero_Parcelas_Receber};
+                if ((parentBase_Titulos_RecebidosRowByBase_Titulos_Recebidos_Base_Parcelas_Recebidas != null)) {
+                    columnValuesArray[0] = parentBase_Titulos_RecebidosRowByBase_Titulos_Recebidos_Base_Parcelas_Recebidas[0];
+                }
+                rowBase_Parcelas_RecebidasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBase_Parcelas_RecebidasRow);
+                return rowBase_Parcelas_RecebidasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow FindByCod_Numero_Parcelas_Receber(int Cod_Numero_Parcelas_Receber) {
+                return ((Base_Parcelas_RecebidasRow)(this.Rows.Find(new object[] {
+                            Cod_Numero_Parcelas_Receber})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Base_Parcelas_RecebidasDataTable cln = ((Base_Parcelas_RecebidasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Base_Parcelas_RecebidasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnCod_Base_Titulos_a_Recebidos = base.Columns["Cod_Base_Titulos_a_Recebidos"];
+                this.columnCod_Cliente = base.Columns["Cod_Cliente"];
+                this.columnNumero_Documento = base.Columns["Numero_Documento"];
+                this.columnCod_Numero_Parcelas_Receber = base.Columns["Cod_Numero_Parcelas_Receber"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnCod_Base_Titulos_a_Recebidos = new global::System.Data.DataColumn("Cod_Base_Titulos_a_Recebidos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Base_Titulos_a_Recebidos);
+                this.columnCod_Cliente = new global::System.Data.DataColumn("Cod_Cliente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Cliente);
+                this.columnNumero_Documento = new global::System.Data.DataColumn("Numero_Documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Documento);
+                this.columnCod_Numero_Parcelas_Receber = new global::System.Data.DataColumn("Cod_Numero_Parcelas_Receber", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Numero_Parcelas_Receber);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCod_Numero_Parcelas_Receber}, true));
+                this.columnCod_Base_Titulos_a_Recebidos.AllowDBNull = false;
+                this.columnNumero_Documento.MaxLength = 50;
+                this.columnCod_Numero_Parcelas_Receber.AllowDBNull = false;
+                this.columnCod_Numero_Parcelas_Receber.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow NewBase_Parcelas_RecebidasRow() {
+                return ((Base_Parcelas_RecebidasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Base_Parcelas_RecebidasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Base_Parcelas_RecebidasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Base_Parcelas_RecebidasRowChanged != null)) {
+                    this.Base_Parcelas_RecebidasRowChanged(this, new Base_Parcelas_RecebidasRowChangeEvent(((Base_Parcelas_RecebidasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Base_Parcelas_RecebidasRowChanging != null)) {
+                    this.Base_Parcelas_RecebidasRowChanging(this, new Base_Parcelas_RecebidasRowChangeEvent(((Base_Parcelas_RecebidasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Base_Parcelas_RecebidasRowDeleted != null)) {
+                    this.Base_Parcelas_RecebidasRowDeleted(this, new Base_Parcelas_RecebidasRowChangeEvent(((Base_Parcelas_RecebidasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Base_Parcelas_RecebidasRowDeleting != null)) {
+                    this.Base_Parcelas_RecebidasRowDeleting(this, new Base_Parcelas_RecebidasRowChangeEvent(((Base_Parcelas_RecebidasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveBase_Parcelas_RecebidasRow(Base_Parcelas_RecebidasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DGV_BaseTitulosRecebidosXNomeBanco ds = new DGV_BaseTitulosRecebidosXNomeBanco();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Base_Parcelas_RecebidasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -716,6 +1078,23 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Numero_Documento {
+                get {
+                    try {
+                        return ((string)(this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Documento\' in table \'Base_Titulos_Recebidos\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsData_RecebimentoNull() {
                 return this.IsNull(this.tableBase_Titulos_Recebidos.Data_RecebimentoColumn);
             }
@@ -773,6 +1152,134 @@ namespace SGFRenaissance {
             public void SetNome_BancoNull() {
                 this[this.tableBase_Titulos_Recebidos.Nome_BancoColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNumero_DocumentoNull() {
+                return this.IsNull(this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNumero_DocumentoNull() {
+                this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow[] GetBase_Parcelas_RecebidasRows() {
+                if ((this.Table.ChildRelations["Base_Titulos_Recebidos_Base_Parcelas_Recebidas"] == null)) {
+                    return new Base_Parcelas_RecebidasRow[0];
+                }
+                else {
+                    return ((Base_Parcelas_RecebidasRow[])(base.GetChildRows(this.Table.ChildRelations["Base_Titulos_Recebidos_Base_Parcelas_Recebidas"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Base_Parcelas_RecebidasRow : global::System.Data.DataRow {
+            
+            private Base_Parcelas_RecebidasDataTable tableBase_Parcelas_Recebidas;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal Base_Parcelas_RecebidasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBase_Parcelas_Recebidas = ((Base_Parcelas_RecebidasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Base_Titulos_a_Recebidos {
+                get {
+                    return ((int)(this[this.tableBase_Parcelas_Recebidas.Cod_Base_Titulos_a_RecebidosColumn]));
+                }
+                set {
+                    this[this.tableBase_Parcelas_Recebidas.Cod_Base_Titulos_a_RecebidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Cliente {
+                get {
+                    try {
+                        return ((int)(this[this.tableBase_Parcelas_Recebidas.Cod_ClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cod_Cliente\' in table \'Base_Parcelas_Recebidas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Recebidas.Cod_ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Numero_Documento {
+                get {
+                    try {
+                        return ((string)(this[this.tableBase_Parcelas_Recebidas.Numero_DocumentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Documento\' in table \'Base_Parcelas_Recebidas\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Parcelas_Recebidas.Numero_DocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Numero_Parcelas_Receber {
+                get {
+                    return ((int)(this[this.tableBase_Parcelas_Recebidas.Cod_Numero_Parcelas_ReceberColumn]));
+                }
+                set {
+                    this[this.tableBase_Parcelas_Recebidas.Cod_Numero_Parcelas_ReceberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Titulos_RecebidosRow Base_Titulos_RecebidosRow {
+                get {
+                    return ((Base_Titulos_RecebidosRow)(this.GetParentRow(this.Table.ParentRelations["Base_Titulos_Recebidos_Base_Parcelas_Recebidas"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Base_Titulos_Recebidos_Base_Parcelas_Recebidas"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCod_ClienteNull() {
+                return this.IsNull(this.tableBase_Parcelas_Recebidas.Cod_ClienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCod_ClienteNull() {
+                this[this.tableBase_Parcelas_Recebidas.Cod_ClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNumero_DocumentoNull() {
+                return this.IsNull(this.tableBase_Parcelas_Recebidas.Numero_DocumentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNumero_DocumentoNull() {
+                this[this.tableBase_Parcelas_Recebidas.Numero_DocumentoColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -795,6 +1302,40 @@ namespace SGFRenaissance {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Base_Titulos_RecebidosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class Base_Parcelas_RecebidasRowChangeEvent : global::System.EventArgs {
+            
+            private Base_Parcelas_RecebidasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRowChangeEvent(Base_Parcelas_RecebidasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Base_Parcelas_RecebidasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -940,6 +1481,7 @@ namespace SGFRenaissance.DGV_BaseTitulosRecebidosXNomeBancoTableAdapters {
             tableMapping.ColumnMappings.Add("Banco_Creditado", "Banco_Creditado");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
             tableMapping.ColumnMappings.Add("Nome_Banco", "Nome_Banco");
+            tableMapping.ColumnMappings.Add("Numero_Documento", "Numero_Documento");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -953,13 +1495,22 @@ namespace SGFRenaissance.DGV_BaseTitulosRecebidosXNomeBancoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT     Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                         Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                        Bancos.Nome_Banco,  Base_Titulos_Recebidos.Historico
-FROM       Base_Titulos_Recebidos INNER JOIN
-                  Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado";
+            this._commandCollection[0].CommandText = @"SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                                      Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                              Bancos.Nome_Banco, Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
+FROM          Base_Titulos_Recebidos INNER JOIN
+                     Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
+                     Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos =                      Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
+                         Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
+FROM            Base_Titulos_Recebidos INNER JOIN
+                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
+                         Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos = Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -985,6 +1536,244 @@ FROM       Base_Titulos_Recebidos INNER JOIN
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_RecebidosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Base_Parcelas_RecebidasTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public Base_Parcelas_RecebidasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Base_Parcelas_Recebidas";
+            tableMapping.ColumnMappings.Add("Cod_Base_Titulos_a_Recebidos", "Cod_Base_Titulos_a_Recebidos");
+            tableMapping.ColumnMappings.Add("Cod_Cliente", "Cod_Cliente");
+            tableMapping.ColumnMappings.Add("Numero_Documento", "Numero_Documento");
+            tableMapping.ColumnMappings.Add("Cod_Numero_Parcelas_Receber", "Cod_Numero_Parcelas_Receber");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Base_Parcelas_Recebidas] WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Cod_Cliente = 1 AND [Cod_Cliente] IS NULL) OR ([Cod_Cliente] = @Original_Cod_Cliente)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ([Cod_Numero_Parcelas_Receber] = @Original_Cod_Numero_Parcelas_Receber))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_a_Recebidos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_a_Recebidos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Documento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Documento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_Documento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Documento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Numero_Parcelas_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Base_Parcelas_Recebidas] SET [Cod_Base_Titulos_a_Recebidos] = @Cod_Base_Titulos_a_Recebidos, [Cod_Cliente] = @Cod_Cliente, [Numero_Documento] = @Numero_Documento, [Cod_Numero_Parcelas_Receber] = @Cod_Numero_Parcelas_Receber WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Cod_Cliente = 1 AND [Cod_Cliente] IS NULL) OR ([Cod_Cliente] = @Original_Cod_Cliente)) AND ((@IsNull_Numero_Documento = 1 AND [Numero_Documento] IS NULL) OR ([Numero_Documento] = @Original_Numero_Documento)) AND ([Cod_Numero_Parcelas_Receber] = @Original_Cod_Numero_Parcelas_Receber));
+SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_Parcelas_Receber FROM Base_Parcelas_Recebidas WHERE (Cod_Numero_Parcelas_Receber = @Cod_Numero_Parcelas_Receber)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Base_Titulos_a_Recebidos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_a_Recebidos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Documento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Documento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Numero_Parcelas_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_Receber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_a_Recebidos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_a_Recebidos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Documento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Documento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_Documento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Documento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Numero_Parcelas_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_Pa" +
+                "rcelas_Receber FROM Base_Parcelas_Recebidas";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DGV_BaseTitulosRecebidosXNomeBanco.Base_Parcelas_RecebidasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DGV_BaseTitulosRecebidosXNomeBanco.Base_Parcelas_RecebidasDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DGV_BaseTitulosRecebidosXNomeBanco.Base_Parcelas_RecebidasDataTable dataTable = new DGV_BaseTitulosRecebidosXNomeBanco.Base_Parcelas_RecebidasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DGV_BaseTitulosRecebidosXNomeBanco.Base_Parcelas_RecebidasDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DGV_BaseTitulosRecebidosXNomeBanco dataSet) {
+            return this.Adapter.Update(dataSet, "Base_Parcelas_Recebidas");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
     }
     
     /// <summary>
@@ -999,6 +1788,8 @@ FROM       Base_Titulos_Recebidos INNER JOIN
         
         private UpdateOrderOption _updateOrder;
         
+        private Base_Parcelas_RecebidasTableAdapter _base_Parcelas_RecebidasTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1011,6 +1802,20 @@ FROM       Base_Titulos_Recebidos INNER JOIN
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Base_Parcelas_RecebidasTableAdapter Base_Parcelas_RecebidasTableAdapter {
+            get {
+                return this._base_Parcelas_RecebidasTableAdapter;
+            }
+            set {
+                this._base_Parcelas_RecebidasTableAdapter = value;
             }
         }
         
@@ -1033,6 +1838,10 @@ FROM       Base_Titulos_Recebidos INNER JOIN
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._base_Parcelas_RecebidasTableAdapter != null) 
+                            && (this._base_Parcelas_RecebidasTableAdapter.Connection != null))) {
+                    return this._base_Parcelas_RecebidasTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -1046,6 +1855,9 @@ FROM       Base_Titulos_Recebidos INNER JOIN
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -1057,6 +1869,15 @@ FROM       Base_Titulos_Recebidos INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(DGV_BaseTitulosRecebidosXNomeBanco dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Base_Parcelas_Recebidas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._base_Parcelas_RecebidasTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -1067,6 +1888,14 @@ FROM       Base_Titulos_Recebidos INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(DGV_BaseTitulosRecebidosXNomeBanco dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Base_Parcelas_Recebidas.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._base_Parcelas_RecebidasTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -1077,6 +1906,14 @@ FROM       Base_Titulos_Recebidos INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(DGV_BaseTitulosRecebidosXNomeBanco dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Base_Parcelas_Recebidas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._base_Parcelas_RecebidasTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -1116,6 +1953,11 @@ FROM       Base_Titulos_Recebidos INNER JOIN
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._base_Parcelas_RecebidasTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._base_Parcelas_RecebidasTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1148,6 +1990,15 @@ FROM       Base_Titulos_Recebidos INNER JOIN
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                    revertConnections.Add(this._base_Parcelas_RecebidasTableAdapter, this._base_Parcelas_RecebidasTableAdapter.Connection);
+                    this._base_Parcelas_RecebidasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._base_Parcelas_RecebidasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._base_Parcelas_RecebidasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._base_Parcelas_RecebidasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._base_Parcelas_RecebidasTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1205,6 +2056,10 @@ FROM       Base_Titulos_Recebidos INNER JOIN
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._base_Parcelas_RecebidasTableAdapter != null)) {
+                    this._base_Parcelas_RecebidasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._base_Parcelas_RecebidasTableAdapter]));
+                    this._base_Parcelas_RecebidasTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -121,6 +121,9 @@
     <Compile Include="BaseTitulosaReceber.Designer.cs">
       <DependentUpon>BaseTitulosaReceber.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseTitulosPago.cs">
+      <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseTitulosPago.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,10 +139,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseTitulosRecebidos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Base_Parcelas_PagasDGV.Designer.cs">
+    <Compile Include="base_Parcelas_PagasDGV.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+      <DependentUpon>base_Parcelas_PagasDGV.xsd</DependentUpon>
     </Compile>
     <Compile Include="CadastroTitulosaPagar.cs">
       <SubType>Form</SubType>
@@ -164,6 +167,24 @@
     </Compile>
     <Compile Include="Clientes_Contas_a_Receber.Designer.cs">
       <DependentUpon>Clientes_Contas_a_Receber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Relatorio_NF_Total_a_Receber.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Relatorio_NF_Total_a_Receber.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Rel_Lancamentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Rel_Lancamentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Rel_Titulos_a_Pagar_Total.cs">
+      <DependentUpon>DataSet_Rel_Titulos_a_Pagar_Total.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Rel_Titulos_a_Pagar_Total.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Rel_Titulos_a_Pagar_Total.xsd</DependentUpon>
     </Compile>
     <Compile Include="DGVNumeroParcelasPagar.cs">
       <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
@@ -193,16 +214,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EntradaTitulosaReceberDGV.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Entrada_Titulos_a_Receber.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entrada_Titulos_a_Receber.Designer.cs">
       <DependentUpon>Entrada_Titulos_a_Receber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada_Titulos_a_Receber1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entrada_Titulos_a_Receber.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form_DRE_Exercicio.cs">
       <SubType>Form</SubType>
@@ -210,11 +231,35 @@
     <Compile Include="Form_DRE_Exercicio.Designer.cs">
       <DependentUpon>Form_DRE_Exercicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Relatorio_Contas_Receber_Total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Relatorio_Contas_Receber_Total.Designer.cs">
+      <DependentUpon>Form_Relatorio_Contas_Receber_Total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Relatorio_Lancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Relatorio_Lancamentos.Designer.cs">
+      <DependentUpon>Form_Relatorio_Lancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Titulos_a_Pagar_Total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Titulos_a_Pagar_Total.Designer.cs">
+      <DependentUpon>Form_Titulos_a_Pagar_Total.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRel_TitulosRecebidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRel_TitulosRecebidos.Designer.cs">
       <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTitulosPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTitulosPagos.Designer.cs">
+      <DependentUpon>FrmTitulosPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.cs">
       <SubType>Form</SubType>
@@ -233,12 +278,6 @@
     </Compile>
     <Compile Include="Fornecedor_Contas_a_Pagar.Designer.cs">
       <DependentUpon>Fornecedor_Contas_a_Pagar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRelLancamentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRelLancamentos.Designer.cs">
-      <DependentUpon>FrmRelLancamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Grupo.cs">
       <SubType>Form</SubType>
@@ -321,11 +360,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RelTitulosaReceberemAberto.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Rel_Lancamentos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Rel_NumeroParcelaaPagar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -365,8 +399,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SGFRenaissanceDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SGFRenaissanceDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissanceDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissance_Base_Parcelas_Pagas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissance_Base_Parcelas_Pagas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StatusTitulo.cs" />
+    <Compile Include="TelaBancoRel_Lancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBancoRel_Lancamentos.Designer.cs">
+      <DependentUpon>TelaBancoRel_Lancamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +446,18 @@
     </Compile>
     <Compile Include="TelaClientes.Designer.cs">
       <DependentUpon>TelaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCliente_Relatorio_Tit_Receber_Aberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCliente_Relatorio_Tit_Receber_Aberto.Designer.cs">
+      <DependentUpon>TelaCliente_Relatorio_Tit_Receber_Aberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaFornedor_Relatorio_Tit_Aberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaFornedor_Relatorio_Tit_Aberto.Designer.cs">
+      <DependentUpon>TelaFornedor_Relatorio_Tit_Aberto.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaRelatorioBancosLancamento.cs">
       <SubType>Form</SubType>
@@ -490,8 +552,20 @@
     <EmbeddedResource Include="Form_DRE_Exercicio.resx">
       <DependentUpon>Form_DRE_Exercicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Relatorio_Contas_Receber_Total.resx">
+      <DependentUpon>Form_Relatorio_Contas_Receber_Total.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Relatorio_Lancamentos.resx">
+      <DependentUpon>Form_Relatorio_Lancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Titulos_a_Pagar_Total.resx">
+      <DependentUpon>Form_Titulos_a_Pagar_Total.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRel_TitulosRecebidos.resx">
       <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTitulosPagos.resx">
+      <DependentUpon>FrmTitulosPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.resx">
       <DependentUpon>Frm_Rel_Titulos_a_Pagar_em_Aberto.cs</DependentUpon>
@@ -501,9 +575,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fornecedor_Contas_a_Pagar.resx">
       <DependentUpon>Fornecedor_Contas_a_Pagar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRelLancamentos.resx">
-      <DependentUpon>FrmRelLancamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grupo.resx">
       <DependentUpon>Grupo.cs</DependentUpon>
@@ -541,9 +612,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report_Relatorio_NF_Total.rdlc" />
+    <EmbeddedResource Include="Report_Titulos_a_Pagar_Total.rdlc" />
     <EmbeddedResource Include="Report_Lancamentos.rdlc" />
     <EmbeddedResource Include="Report_TitulosaReceberemAberto.resx">
       <DependentUpon>Report_TitulosaReceberemAberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Titulos_Pagos.rdlc" />
+    <EmbeddedResource Include="Report_Titulos_Recebidos.rdlc" />
+    <EmbeddedResource Include="TelaBancoRel_Lancamentos.resx">
+      <DependentUpon>TelaBancoRel_Lancamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaBancos.resx">
       <DependentUpon>TelaBancos.cs</DependentUpon>
@@ -559,6 +637,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaClientes.resx">
       <DependentUpon>TelaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCliente_Relatorio_Tit_Receber_Aberto.resx">
+      <DependentUpon>TelaCliente_Relatorio_Tit_Receber_Aberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaFornedor_Relatorio_Tit_Aberto.resx">
+      <DependentUpon>TelaFornedor_Relatorio_Tit_Aberto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaRelatorioBancosLancamento.resx">
       <DependentUpon>TelaRelatorioBancosLancamento.cs</DependentUpon>
@@ -648,19 +732,52 @@
     <None Include="BaseTitulosRecebidos.xss">
       <DependentUpon>BaseTitulosRecebidos.xsd</DependentUpon>
     </None>
-    <None Include="Base_Parcelas_PagasDGV.xsc">
-      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+    <None Include="base_Parcelas_PagasDGV.xsc">
+      <DependentUpon>base_Parcelas_PagasDGV.xsd</DependentUpon>
     </None>
-    <None Include="Base_Parcelas_PagasDGV.xsd">
+    <None Include="base_Parcelas_PagasDGV.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Base_Parcelas_PagasDGV.Designer.cs</LastGenOutput>
+      <LastGenOutput>base_Parcelas_PagasDGV.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Base_Parcelas_PagasDGV.xss">
-      <DependentUpon>Base_Parcelas_PagasDGV.xsd</DependentUpon>
+    <None Include="base_Parcelas_PagasDGV.xss">
+      <DependentUpon>base_Parcelas_PagasDGV.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="DataSet_Relatorio_NF_Total_a_Receber.xsc">
+      <DependentUpon>DataSet_Relatorio_NF_Total_a_Receber.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Relatorio_NF_Total_a_Receber.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Relatorio_NF_Total_a_Receber.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Relatorio_NF_Total_a_Receber.xss">
+      <DependentUpon>DataSet_Relatorio_NF_Total_a_Receber.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Rel_Lancamentos.xsc">
+      <DependentUpon>DataSet_Rel_Lancamentos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Rel_Lancamentos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Rel_Lancamentos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Rel_Lancamentos.xss">
+      <DependentUpon>DataSet_Rel_Lancamentos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Rel_Titulos_a_Pagar_Total.xsc">
+      <DependentUpon>DataSet_Rel_Titulos_a_Pagar_Total.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Rel_Titulos_a_Pagar_Total.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Rel_Titulos_a_Pagar_Total.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Rel_Titulos_a_Pagar_Total.xss">
+      <DependentUpon>DataSet_Rel_Titulos_a_Pagar_Total.xsd</DependentUpon>
+    </None>
     <None Include="DGVNumeroParcelasPagar.xsc">
       <DependentUpon>DGVNumeroParcelasPagar.xsd</DependentUpon>
     </None>
@@ -716,16 +833,16 @@
     <None Include="EntradaTitulosaPagarDGV.xss">
       <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
     </None>
-    <None Include="EntradaTitulosaReceberDGV.xsc">
-      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
+    <None Include="Entrada_Titulos_a_Receber.xsc">
+      <DependentUpon>Entrada_Titulos_a_Receber.xsd</DependentUpon>
     </None>
-    <None Include="EntradaTitulosaReceberDGV.xsd">
+    <None Include="Entrada_Titulos_a_Receber.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EntradaTitulosaReceberDGV.Designer.cs</LastGenOutput>
+      <LastGenOutput>Entrada_Titulos_a_Receber1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EntradaTitulosaReceberDGV.xss">
-      <DependentUpon>EntradaTitulosaReceberDGV.xsd</DependentUpon>
+    <None Include="Entrada_Titulos_a_Receber.xss">
+      <DependentUpon>Entrada_Titulos_a_Receber.xsd</DependentUpon>
     </None>
     <None Include="Lancamentos_Movimentos.xsc">
       <DependentUpon>Lancamentos_Movimentos.xsd</DependentUpon>
@@ -772,6 +889,9 @@
       <DependentUpon>NumeroParcelasaReceberDGV.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SGFRenaissance.DataSet_Relatorio_LancamentosTableAdapters.LancamentosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SGFRenaissance.DataSet_Relatorio_LancamentosTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\SGFRenaissance.DataSet_Relatorio_LancamentosTableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.Banco.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.Centro_Custo.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.Clientes_Contas_a_Receber.datasource" />
@@ -810,17 +930,6 @@
     </None>
     <None Include="RelTitulosaReceberemAberto.xss">
       <DependentUpon>RelTitulosaReceberemAberto.xsd</DependentUpon>
-    </None>
-    <None Include="Rel_Lancamentos.xsc">
-      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
-    </None>
-    <None Include="Rel_Lancamentos.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Rel_Lancamentos.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Rel_Lancamentos.xss">
-      <DependentUpon>Rel_Lancamentos.xsd</DependentUpon>
     </None>
     <None Include="Rel_NumeroParcelaaPagar.xsc">
       <DependentUpon>Rel_NumeroParcelaaPagar.xsd</DependentUpon>
@@ -887,6 +996,28 @@
     </None>
     <None Include="SGFRenaissanceDataSet1.xss">
       <DependentUpon>SGFRenaissanceDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet2.xsc">
+      <DependentUpon>SGFRenaissanceDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissanceDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissanceDataSet2.xss">
+      <DependentUpon>SGFRenaissanceDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissance_Base_Parcelas_Pagas.xsc">
+      <DependentUpon>SGFRenaissance_Base_Parcelas_Pagas.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissance_Base_Parcelas_Pagas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissance_Base_Parcelas_Pagas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissance_Base_Parcelas_Pagas.xss">
+      <DependentUpon>SGFRenaissance_Base_Parcelas_Pagas.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
