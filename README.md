@@ -7,3 +7,4 @@ Os cadastros de títulos (receber e pagar) possuem duas tabelas para vincular o 
 Inclui obviamente centro de custos, tipos das despesas, status do título e etc. 
 Necessito construir uma classe de conexão para evitar problemas de servidor na instalação. Vários arquivos acessando com a string de conexão em cada formulário, não é bom.
 Qualquer dúvida estou a disposição. O sistema estará público para receber melhorias, e também um módulo gráfico nos relatórios também.
+No projeto está adicionado o SCRIPT DO BANCO DE DADOS SQLServer, procure por Script_Backup_xx-xx-xxxx (xx-xx-xxxx é a data do script) com as últimas atualizações.
