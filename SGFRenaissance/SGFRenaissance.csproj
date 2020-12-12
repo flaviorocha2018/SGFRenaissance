@@ -199,6 +199,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DGV_BaseTitulosPagosXNomeBanco.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DGV_BaseTitulosRecebidosXNomeBanco.cs">
+      <DependentUpon>DGV_BaseTitulosRecebidosXNomeBanco.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DGV_BaseTitulosRecebidosXNomeBanco.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

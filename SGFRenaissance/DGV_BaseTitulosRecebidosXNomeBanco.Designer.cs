@@ -333,7 +333,7 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnNome_Banco;
             
-            private global::System.Data.DataColumn columnNumero_Documento;
+            private global::System.Data.DataColumn columnNumeroNF;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -418,9 +418,9 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Numero_DocumentoColumn {
+            public global::System.Data.DataColumn NumeroNFColumn {
                 get {
-                    return this.columnNumero_Documento;
+                    return this.columnNumeroNF;
                 }
             }
             
@@ -461,7 +461,7 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, string Nome_Banco, string Numero_Documento) {
+            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, string Nome_Banco, string NumeroNF) {
                 Base_Titulos_RecebidosRow rowBase_Titulos_RecebidosRow = ((Base_Titulos_RecebidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -470,7 +470,7 @@ namespace SGFRenaissance {
                         Banco_Creditado,
                         Historico,
                         Nome_Banco,
-                        Numero_Documento};
+                        NumeroNF};
                 rowBase_Titulos_RecebidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBase_Titulos_RecebidosRow);
                 return rowBase_Titulos_RecebidosRow;
@@ -506,7 +506,7 @@ namespace SGFRenaissance {
                 this.columnBanco_Creditado = base.Columns["Banco_Creditado"];
                 this.columnHistorico = base.Columns["Historico"];
                 this.columnNome_Banco = base.Columns["Nome_Banco"];
-                this.columnNumero_Documento = base.Columns["Numero_Documento"];
+                this.columnNumeroNF = base.Columns["NumeroNF"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -524,8 +524,8 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnHistorico);
                 this.columnNome_Banco = new global::System.Data.DataColumn("Nome_Banco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome_Banco);
-                this.columnNumero_Documento = new global::System.Data.DataColumn("Numero_Documento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumero_Documento);
+                this.columnNumeroNF = new global::System.Data.DataColumn("NumeroNF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeroNF);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Base_Titulos_a_Recebidos}, true));
                 this.columnCod_Base_Titulos_a_Recebidos.AutoIncrement = true;
@@ -536,7 +536,7 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_a_Recebidos.Unique = true;
                 this.columnHistorico.MaxLength = 200;
                 this.columnNome_Banco.MaxLength = 50;
-                this.columnNumero_Documento.MaxLength = 50;
+                this.columnNumeroNF.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1078,18 +1078,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Numero_Documento {
+            public string NumeroNF {
                 get {
                     try {
-                        return ((string)(this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn]));
+                        return ((string)(this[this.tableBase_Titulos_Recebidos.NumeroNFColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Numero_Documento\' in table \'Base_Titulos_Recebidos\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumeroNF\' in table \'Base_Titulos_Recebidos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn] = value;
+                    this[this.tableBase_Titulos_Recebidos.NumeroNFColumn] = value;
                 }
             }
             
@@ -1155,14 +1154,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNumero_DocumentoNull() {
-                return this.IsNull(this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn);
+            public bool IsNumeroNFNull() {
+                return this.IsNull(this.tableBase_Titulos_Recebidos.NumeroNFColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNumero_DocumentoNull() {
-                this[this.tableBase_Titulos_Recebidos.Numero_DocumentoColumn] = global::System.Convert.DBNull;
+            public void SetNumeroNFNull() {
+                this[this.tableBase_Titulos_Recebidos.NumeroNFColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1481,7 +1480,7 @@ namespace SGFRenaissance.DGV_BaseTitulosRecebidosXNomeBancoTableAdapters {
             tableMapping.ColumnMappings.Add("Banco_Creditado", "Banco_Creditado");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
             tableMapping.ColumnMappings.Add("Nome_Banco", "Nome_Banco");
-            tableMapping.ColumnMappings.Add("Numero_Documento", "Numero_Documento");
+            tableMapping.ColumnMappings.Add("NumeroNF", "NumeroNF");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1495,22 +1494,14 @@ namespace SGFRenaissance.DGV_BaseTitulosRecebidosXNomeBancoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                                      Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                              Bancos.Nome_Banco, Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
-FROM          Base_Titulos_Recebidos INNER JOIN
-                     Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
-                     Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos =                      Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
-                         Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
+            this._commandCollection[0].CommandText = @"SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
+                         Base_Titulos_Recebidos.Historico, Base_Titulos_Recebidos.NumeroNF
 FROM            Base_Titulos_Recebidos INNER JOIN
-                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
-                         Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos = Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1535,19 +1526,6 @@ FROM            Base_Titulos_Recebidos INNER JOIN
             DGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_RecebidosDataTable dataTable = new DGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_RecebidosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(DGV_BaseTitulosRecebidosXNomeBanco.Base_Titulos_RecebidosDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
     }
     

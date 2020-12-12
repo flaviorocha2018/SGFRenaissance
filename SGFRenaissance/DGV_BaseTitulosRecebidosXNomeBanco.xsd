@@ -12,10 +12,10 @@
               <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento,                                      Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado,                                                              Bancos.Nome_Banco, Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
-FROM          Base_Titulos_Recebidos INNER JOIN
-                     Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
-                     Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos =                      Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos</CommandText>
+                    <CommandText>SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
+                         Base_Titulos_Recebidos.Historico, Base_Titulos_Recebidos.NumeroNF
+FROM            Base_Titulos_Recebidos INNER JOIN
+                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -28,22 +28,9 @@ FROM          Base_Titulos_Recebidos INNER JOIN
               <Mapping SourceColumn="Banco_Creditado" DataSetColumn="Banco_Creditado" />
               <Mapping SourceColumn="Historico" DataSetColumn="Historico" />
               <Mapping SourceColumn="Nome_Banco" DataSetColumn="Nome_Banco" />
-              <Mapping SourceColumn="Numero_Documento" DataSetColumn="Numero_Documento" />
+              <Mapping SourceColumn="NumeroNF" DataSetColumn="NumeroNF" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos, Base_Titulos_Recebidos.Data_Recebimento, Base_Titulos_Recebidos.Total_Recebido, Base_Titulos_Recebidos.Banco_Creditado, Bancos.Nome_Banco, 
-                         Base_Titulos_Recebidos.Historico, Base_Parcelas_Recebidas.Numero_Documento
-FROM            Base_Titulos_Recebidos INNER JOIN
-                         Bancos ON Bancos.Cod_Banco = Base_Titulos_Recebidos.Banco_Creditado INNER JOIN
-                         Base_Parcelas_Recebidas ON Base_Titulos_Recebidos.Cod_Base_Titulos_a_Recebidos = Base_Parcelas_Recebidas.Cod_Base_Titulos_a_Recebidos</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_Parcelas_RecebidasTableAdapter" GeneratorDataComponentClassName="Base_Parcelas_RecebidasTableAdapter" Name="Base_Parcelas_Recebidas" UserDataComponentName="Base_Parcelas_RecebidasTableAdapter">
             <MainSource>
@@ -103,7 +90,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_P
   <xs:element name="DGV_BaseTitulosRecebidosXNomeBanco" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DGV_BaseTitulosRecebidosXNomeBanco" msprop:Generator_UserDSName="DGV_BaseTitulosRecebidosXNomeBanco">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Base_Titulos_Recebidos" msprop:Generator_TableClassName="Base_Titulos_RecebidosDataTable" msprop:Generator_TableVarName="tableBase_Titulos_Recebidos" msprop:Generator_RowChangedName="Base_Titulos_RecebidosRowChanged" msprop:Generator_TablePropName="Base_Titulos_Recebidos" msprop:Generator_RowDeletingName="Base_Titulos_RecebidosRowDeleting" msprop:Generator_RowChangingName="Base_Titulos_RecebidosRowChanging" msprop:Generator_RowEvHandlerName="Base_Titulos_RecebidosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Titulos_RecebidosRowDeleted" msprop:Generator_RowClassName="Base_Titulos_RecebidosRow" msprop:Generator_UserTableName="Base_Titulos_Recebidos" msprop:Generator_RowEvArgName="Base_Titulos_RecebidosRowChangeEvent">
+        <xs:element name="Base_Titulos_Recebidos" msprop:Generator_TableClassName="Base_Titulos_RecebidosDataTable" msprop:Generator_TableVarName="tableBase_Titulos_Recebidos" msprop:Generator_TablePropName="Base_Titulos_Recebidos" msprop:Generator_RowDeletingName="Base_Titulos_RecebidosRowDeleting" msprop:Generator_RowChangingName="Base_Titulos_RecebidosRowChanging" msprop:Generator_RowEvHandlerName="Base_Titulos_RecebidosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Titulos_RecebidosRowDeleted" msprop:Generator_UserTableName="Base_Titulos_Recebidos" msprop:Generator_RowChangedName="Base_Titulos_RecebidosRowChanged" msprop:Generator_RowEvArgName="Base_Titulos_RecebidosRowChangeEvent" msprop:Generator_RowClassName="Base_Titulos_RecebidosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod_Base_Titulos_a_Recebidos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInRow="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInTable="Cod_Base_Titulos_a_RecebidosColumn" msprop:Generator_UserColumnName="Cod_Base_Titulos_a_Recebidos" type="xs:int" />
@@ -124,17 +111,17 @@ SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_P
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Numero_Documento" msprop:Generator_ColumnVarNameInTable="columnNumero_Documento" msprop:Generator_ColumnPropNameInRow="Numero_Documento" msprop:Generator_ColumnPropNameInTable="Numero_DocumentoColumn" msprop:Generator_UserColumnName="Numero_Documento" minOccurs="0">
+              <xs:element name="NumeroNF" msprop:Generator_ColumnVarNameInTable="columnNumeroNF" msprop:Generator_ColumnPropNameInRow="NumeroNF" msprop:Generator_ColumnPropNameInTable="NumeroNFColumn" msprop:Generator_UserColumnName="NumeroNF" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="25" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Base_Parcelas_Recebidas" msprop:Generator_TableClassName="Base_Parcelas_RecebidasDataTable" msprop:Generator_TableVarName="tableBase_Parcelas_Recebidas" msprop:Generator_RowChangedName="Base_Parcelas_RecebidasRowChanged" msprop:Generator_TablePropName="Base_Parcelas_Recebidas" msprop:Generator_RowDeletingName="Base_Parcelas_RecebidasRowDeleting" msprop:Generator_RowChangingName="Base_Parcelas_RecebidasRowChanging" msprop:Generator_RowEvHandlerName="Base_Parcelas_RecebidasRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Parcelas_RecebidasRowDeleted" msprop:Generator_RowClassName="Base_Parcelas_RecebidasRow" msprop:Generator_UserTableName="Base_Parcelas_Recebidas" msprop:Generator_RowEvArgName="Base_Parcelas_RecebidasRowChangeEvent">
+        <xs:element name="Base_Parcelas_Recebidas" msprop:Generator_TableClassName="Base_Parcelas_RecebidasDataTable" msprop:Generator_TableVarName="tableBase_Parcelas_Recebidas" msprop:Generator_TablePropName="Base_Parcelas_Recebidas" msprop:Generator_RowDeletingName="Base_Parcelas_RecebidasRowDeleting" msprop:Generator_RowChangingName="Base_Parcelas_RecebidasRowChanging" msprop:Generator_RowEvHandlerName="Base_Parcelas_RecebidasRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Parcelas_RecebidasRowDeleted" msprop:Generator_UserTableName="Base_Parcelas_Recebidas" msprop:Generator_RowChangedName="Base_Parcelas_RecebidasRowChanged" msprop:Generator_RowEvArgName="Base_Parcelas_RecebidasRowChangeEvent" msprop:Generator_RowClassName="Base_Parcelas_RecebidasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnVarNameInTable="columnCod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInRow="Cod_Base_Titulos_a_Recebidos" msprop:Generator_ColumnPropNameInTable="Cod_Base_Titulos_a_RecebidosColumn" msprop:Generator_UserColumnName="Cod_Base_Titulos_a_Recebidos" type="xs:int" />
@@ -163,7 +150,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Cod_Cliente, Numero_Documento, Cod_Numero_P
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msdata:parent="Base_Titulos_Recebidos" msdata:child="Base_Parcelas_Recebidas" msdata:parentkey="Cod_Base_Titulos_a_Recebidos" msdata:childkey="Cod_Base_Titulos_a_Recebidos" msprop:Generator_UserChildTable="Base_Parcelas_Recebidas" msprop:Generator_ChildPropName="GetBase_Parcelas_RecebidasRows" msprop:Generator_UserRelationName="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_RelationVarName="relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_UserParentTable="Base_Titulos_Recebidos" msprop:Generator_ParentPropName="Base_Titulos_RecebidosRow" />
+      <msdata:Relationship name="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msdata:parent="Base_Titulos_Recebidos" msdata:child="Base_Parcelas_Recebidas" msdata:parentkey="Cod_Base_Titulos_a_Recebidos" msdata:childkey="Cod_Base_Titulos_a_Recebidos" msprop:Generator_UserChildTable="Base_Parcelas_Recebidas" msprop:Generator_ChildPropName="GetBase_Parcelas_RecebidasRows" msprop:Generator_UserRelationName="Base_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_ParentPropName="Base_Titulos_RecebidosRow" msprop:Generator_RelationVarName="relationBase_Titulos_Recebidos_Base_Parcelas_Recebidas" msprop:Generator_UserParentTable="Base_Titulos_Recebidos" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

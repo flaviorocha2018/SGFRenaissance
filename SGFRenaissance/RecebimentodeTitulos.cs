@@ -27,6 +27,7 @@ namespace SGFRenaissance
         public int numeroparcelastituloaReceberInt = 0;
         public int numeroparcelaDGVInt = 0;
         public int CodigoTituloaReceber = 0;
+        public string Public_NumeroNF;
 
 
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
@@ -93,6 +94,7 @@ namespace SGFRenaissance
             cod_Base_Titulos_a_RecebidosTextBox.Text = string.Empty;
             banco_CreditadoTextBox.Text = string.Empty;
             data_RecebimentoDateTimePicker.CustomFormat = "   ";
+            total_RecebidoTextBox.Text = string.Empty;
             data_Recebimento_NF.Text = string.Empty;
             Valor_Pago_a_Vista.Text = string.Empty;
             Valor_recebido.Text = string.Empty;
@@ -162,6 +164,8 @@ namespace SGFRenaissance
                 while (reader.Read())
                 {
                     Numero_NF.Text = reader["Numero_NF"].ToString();
+                    Public_NumeroNF = Numero_NF.Text.ToString();
+                    
                 }
 
                 sqlConnection.Close();
@@ -455,6 +459,8 @@ namespace SGFRenaissance
                     cmd.Parameters.AddWithValue("@Banco_Creditado", bancocreditado);
                     string historicopagamento = historicoTextBox.Text;
                     cmd.Parameters.AddWithValue("@Historico", historicopagamento);
+             //     string NumeroNF = Public_NumeroNF;
+            //      cmd.Parameters.AddWithValue("@NumeroNF", NumeroNF);
                     cmd.Parameters.AddWithValue("@Data_Login", Data_Agora);
                     string LoginName = Login.DadosGerais.Loginusuario;
                     cmd.Parameters.AddWithValue("@Login_Name", LoginName);
@@ -560,8 +566,10 @@ namespace SGFRenaissance
             BuscarNumeroParcelaTituloaReceber();
             string numeroparcelaDGV = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
             numeroparcelaDGVInt = Convert.ToInt32(numeroparcelaDGV);
+            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(constr))
 
-            if (data_Recebimento_NF.Text == " " && Cod_Entr_Tit_a_Receber.Text != " ")
+                if (data_Recebimento_NF.Text == " " && Cod_Entr_Tit_a_Receber.Text != " ")
             {
                 MessageBox.Show("Insira a Data de Pagamento da Nota Fiscal!");
             }
@@ -756,7 +764,7 @@ namespace SGFRenaissance
                 {
                     try
                     {
-                        cmd = new SqlCommand("UPDATE Base_Titulos_Recebidos SET Data_Recebimento=@Data_Recebimento, Total_Recebido=@Total_Recebido, Banco_Creditado=@Banco_Creditado, Historico=@Historico, Data_Login=@Data_Login,"
+                        cmd = new SqlCommand("UPDATE Base_Titulos_Recebidos SET Data_Recebimento=@Data_Recebimento, Total_Recebido=@Total_Recebido, Banco_Creditado=@Banco_Creditado, Historico=@Historico, NumeroNF=@NumeroNF, Data_Login=@Data_Login,"
                                      + "Login_Name=@Login_Name WHERE Cod_Base_Titulos_a_Recebidos=@Cod_Base_Titulos_a_Recebidos", conn);
                         conn.Open();
                         cmd.Parameters.AddWithValue("@Cod_Base_Titulos_a_Recebidos", ID);
@@ -768,6 +776,8 @@ namespace SGFRenaissance
                         cmd.Parameters.AddWithValue("@Banco_Creditado", bancocreditado);
                         string historico = historicoTextBox.Text;
                         cmd.Parameters.AddWithValue("@Historico", historico);
+                        string NumeroNF = Public_NumeroNF;
+                        cmd.Parameters.AddWithValue("@NumeroNF", NumeroNF);
                         DateTime datalogin = Convert.ToDateTime(data_LoginTextBox.Text);
                         cmd.Parameters.AddWithValue("@Data_Login", datalogin);
                         string login = login_NameTextBox.Text;
@@ -777,8 +787,7 @@ namespace SGFRenaissance
                         btn_salvar.Enabled = false;
                         btn_fechar.Enabled = true;
                         numero_Parcelas_a_ReceberDataGridView.Enabled = false;
-
-
+                     
                     }
                     catch (Exception Ex)
                     {
@@ -788,6 +797,7 @@ namespace SGFRenaissance
                     {
                         conn.Close();
                         cod_Base_Titulos_a_RecebidosTextBox.Text = string.Empty;
+                        Public_NumeroNF = String.Empty;
                         data_RecebimentoDateTimePicker.CustomFormat = "   ";
                         Cod_Base_Tit_Recebidos.Text = string.Empty;
                         historicoTextBox.Text = string.Empty;
@@ -799,7 +809,7 @@ namespace SGFRenaissance
                         btn_Inserir_Recebimentos.Enabled = false;
                         login_NameTextBox.Text = string.Empty;
                         data_LoginTextBox.Text = string.Empty;
-
+                        numero_Parcelas_a_ReceberDataGridView.Enabled = false;
                     }
                 }
         }

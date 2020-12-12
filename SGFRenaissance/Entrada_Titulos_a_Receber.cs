@@ -644,6 +644,8 @@ namespace SGFRenaissance
                         load();
                         ExibirDadosParcela();
                         btn_InserirParcela.Enabled = true;
+                        btn_InserirParcela.BackColor = Color.Orange;
+                        btn_InserirParcela.ForeColor = Color.DarkBlue;
                         btn_Inserir_Titulo.Enabled = false;
                 //      LimparDados();
                     }
