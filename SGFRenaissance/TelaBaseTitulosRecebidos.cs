@@ -56,9 +56,9 @@ namespace SGFRenaissance
             if (e.ColumnIndex == 7)
             {
                 ((Lancamentos)Owner).cod_Titulos_recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                ((Lancamentos)Owner).Valor_Tit_Recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                ((Lancamentos)Owner).Valor_Tit_Recebidos.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
                 ((Lancamentos)Owner).textBoxCod_banco.Text = base_Titulos_RecebidosDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-                ((Lancamentos)Owner).Valor_Tit_Recebidos.Focus();
+                ((Lancamentos)Owner).valor_MovimentoTextBox.Focus();
                 this.Close();
             }
 

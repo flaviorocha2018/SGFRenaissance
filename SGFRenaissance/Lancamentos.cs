@@ -432,7 +432,7 @@ namespace SGFRenaissance
                 btn_operacao.Enabled = false;
                 cod_Tit_Pagos.Text = "000";
                 Valor_Tit_Pagos.Text = "0,00";
-                valor_MovimentoTextBox.Enabled = false;
+                valor_MovimentoTextBox.Enabled = true;
               
 
             }
@@ -579,7 +579,7 @@ namespace SGFRenaissance
             BuscarNomeBanco();
             BuscarSaldoConta();
             btn_Base_Titulos_Recebidos.Enabled = false;
-            valor_MovimentoTextBox.Enabled = false;
+            valor_MovimentoTextBox.Enabled = true;
             valor_MovimentoTextBox.Text = Valor_Tit_Recebidos.Text;
             valorMovimento = Convert.ToDecimal(valor_MovimentoTextBox.Text);
             saldo_AnteriorTextBox.Text = Convert.ToString(saldoanterior);
