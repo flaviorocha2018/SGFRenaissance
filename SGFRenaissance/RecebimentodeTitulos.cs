@@ -30,7 +30,7 @@ namespace SGFRenaissance
         public string Public_NumeroNF;
 
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         Int32 LastID = 0;
@@ -131,7 +131,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Cliente from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -155,7 +155,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Numero_NF from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -185,7 +185,7 @@ namespace SGFRenaissance
             {
                 String StrConn;
                 string ValorNF;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Valor_NF from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -212,7 +212,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Valor_Pago_a_Vista from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -237,7 +237,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Data_NF from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -263,7 +263,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Receita from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -288,7 +288,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Status_Titulo, from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -314,7 +314,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select Descricao_Status from Status_Titulos_a_Receber where Codigo_Status_Tit_a_Receber='{0}'", Status_Titulo.Text);
@@ -341,7 +341,7 @@ namespace SGFRenaissance
             {
                 string historico;
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Historico from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -367,7 +367,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Codigo_CV from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -392,7 +392,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Numero_Parcelas from Entrada_Titulos_a_Receber where Cod_Entrada_Titulos_a_Receber='{0}'", Cod_Entr_Tit_a_Receber.Text);
@@ -566,7 +566,7 @@ namespace SGFRenaissance
             BuscarNumeroParcelaTituloaReceber();
             string numeroparcelaDGV = numero_Parcelas_a_ReceberDataGridView.CurrentRow.Cells[2].Value.ToString();
             numeroparcelaDGVInt = Convert.ToInt32(numeroparcelaDGV);
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
 
                 if (data_Recebimento_NF.Text == " " && Cod_Entr_Tit_a_Receber.Text != " ")
@@ -758,7 +758,7 @@ namespace SGFRenaissance
             total_RecebidoTextBox.Text = textBoxTotalRecebido.Text;
             ID = Convert.ToInt32(Cod_Base_Tit_Recebidos.Text);
             btn_novo.Enabled = true;
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
                 if (cod_Base_Titulos_a_RecebidosTextBox.Text!=null && data_RecebimentoDateTimePicker.Text != null && banco_CreditadoTextBox.Text !=null)
                 {

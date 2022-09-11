@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace sistema.DAL
 {
-    public class DataContextFactory
+    
+   public class DataContextFactory
     {
-        private static sistemaDataContext dataContext;
-        public static sistemaDataContext DataContext
+       private static sistemaDataContext dataContext;
+       public static  sistemaDataContext DataContext
         {
             get
             {
@@ -17,6 +19,7 @@ namespace sistema.DAL
                     dataContext = new sistemaDataContext();
                 return dataContext;
 
+                
             }
         }
 

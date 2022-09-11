@@ -15,7 +15,7 @@ namespace SGFRenaissance
 {
     public partial class TelaBaseTitulosRecebidos : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         SqlDataAdapter adapt2;

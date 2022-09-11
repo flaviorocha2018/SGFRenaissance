@@ -321,9 +321,9 @@ namespace SGFRenaissance {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Numero_Parcelas_a_ReceberDataTable : global::System.Data.TypedTableBase<Numero_Parcelas_a_ReceberRow> {
             
-            private global::System.Data.DataColumn columnCod_Entrada_Titulos_a_Receber;
-            
             private global::System.Data.DataColumn columnCod_Numero_Parcelas_Receber;
+            
+            private global::System.Data.DataColumn columnCod_Entrada_Titulos_a_Receber;
             
             private global::System.Data.DataColumn columnNumero_Parcela;
             
@@ -336,6 +336,8 @@ namespace SGFRenaissance {
             private global::System.Data.DataColumn columnCod_Status_Titulo;
             
             private global::System.Data.DataColumn columnDescricao_Status;
+            
+            private global::System.Data.DataColumn columnCodigo_Status_Tit_a_Receber;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -372,17 +374,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_Entrada_Titulos_a_ReceberColumn {
+            public global::System.Data.DataColumn Cod_Numero_Parcelas_ReceberColumn {
                 get {
-                    return this.columnCod_Entrada_Titulos_a_Receber;
+                    return this.columnCod_Numero_Parcelas_Receber;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_Numero_Parcelas_ReceberColumn {
+            public global::System.Data.DataColumn Cod_Entrada_Titulos_a_ReceberColumn {
                 get {
-                    return this.columnCod_Numero_Parcelas_Receber;
+                    return this.columnCod_Entrada_Titulos_a_Receber;
                 }
             }
             
@@ -436,6 +438,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Codigo_Status_Tit_a_ReceberColumn {
+                get {
+                    return this.columnCodigo_Status_Tit_a_Receber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -474,14 +484,15 @@ namespace SGFRenaissance {
             public Numero_Parcelas_a_ReceberRow AddNumero_Parcelas_a_ReceberRow(int Cod_Entrada_Titulos_a_Receber, int Numero_Parcela, System.DateTime Data_Vencimento, decimal Valor_Parcela, string Historico, int Cod_Status_Titulo, string Descricao_Status) {
                 Numero_Parcelas_a_ReceberRow rowNumero_Parcelas_a_ReceberRow = ((Numero_Parcelas_a_ReceberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Cod_Entrada_Titulos_a_Receber,
                         null,
+                        Cod_Entrada_Titulos_a_Receber,
                         Numero_Parcela,
                         Data_Vencimento,
                         Valor_Parcela,
                         Historico,
                         Cod_Status_Titulo,
-                        Descricao_Status};
+                        Descricao_Status,
+                        null};
                 rowNumero_Parcelas_a_ReceberRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowNumero_Parcelas_a_ReceberRow);
                 return rowNumero_Parcelas_a_ReceberRow;
@@ -511,23 +522,24 @@ namespace SGFRenaissance {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnCod_Entrada_Titulos_a_Receber = base.Columns["Cod_Entrada_Titulos_a_Receber"];
                 this.columnCod_Numero_Parcelas_Receber = base.Columns["Cod_Numero_Parcelas_Receber"];
+                this.columnCod_Entrada_Titulos_a_Receber = base.Columns["Cod_Entrada_Titulos_a_Receber"];
                 this.columnNumero_Parcela = base.Columns["Numero_Parcela"];
                 this.columnData_Vencimento = base.Columns["Data_Vencimento"];
                 this.columnValor_Parcela = base.Columns["Valor_Parcela"];
                 this.columnHistorico = base.Columns["Historico"];
                 this.columnCod_Status_Titulo = base.Columns["Cod_Status_Titulo"];
                 this.columnDescricao_Status = base.Columns["Descricao_Status"];
+                this.columnCodigo_Status_Tit_a_Receber = base.Columns["Codigo_Status_Tit_a_Receber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnCod_Entrada_Titulos_a_Receber = new global::System.Data.DataColumn("Cod_Entrada_Titulos_a_Receber", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Entrada_Titulos_a_Receber);
                 this.columnCod_Numero_Parcelas_Receber = new global::System.Data.DataColumn("Cod_Numero_Parcelas_Receber", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCod_Numero_Parcelas_Receber);
+                this.columnCod_Entrada_Titulos_a_Receber = new global::System.Data.DataColumn("Cod_Entrada_Titulos_a_Receber", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Entrada_Titulos_a_Receber);
                 this.columnNumero_Parcela = new global::System.Data.DataColumn("Numero_Parcela", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumero_Parcela);
                 this.columnData_Vencimento = new global::System.Data.DataColumn("Data_Vencimento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -540,17 +552,24 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnCod_Status_Titulo);
                 this.columnDescricao_Status = new global::System.Data.DataColumn("Descricao_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescricao_Status);
+                this.columnCodigo_Status_Tit_a_Receber = new global::System.Data.DataColumn("Codigo_Status_Tit_a_Receber", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigo_Status_Tit_a_Receber);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Numero_Parcelas_Receber}, true));
-                this.columnCod_Entrada_Titulos_a_Receber.AllowDBNull = false;
                 this.columnCod_Numero_Parcelas_Receber.AutoIncrement = true;
                 this.columnCod_Numero_Parcelas_Receber.AutoIncrementSeed = -1;
                 this.columnCod_Numero_Parcelas_Receber.AutoIncrementStep = -1;
                 this.columnCod_Numero_Parcelas_Receber.AllowDBNull = false;
                 this.columnCod_Numero_Parcelas_Receber.ReadOnly = true;
                 this.columnCod_Numero_Parcelas_Receber.Unique = true;
+                this.columnCod_Entrada_Titulos_a_Receber.AllowDBNull = false;
                 this.columnHistorico.MaxLength = 200;
                 this.columnDescricao_Status.MaxLength = 25;
+                this.columnCodigo_Status_Tit_a_Receber.AutoIncrement = true;
+                this.columnCodigo_Status_Tit_a_Receber.AutoIncrementSeed = -1;
+                this.columnCodigo_Status_Tit_a_Receber.AutoIncrementStep = -1;
+                this.columnCodigo_Status_Tit_a_Receber.AllowDBNull = false;
+                this.columnCodigo_Status_Tit_a_Receber.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -684,9 +703,13 @@ namespace SGFRenaissance {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Status_Titulos_a_ReceberDataTable : global::System.Data.TypedTableBase<Status_Titulos_a_ReceberRow> {
             
+            private global::System.Data.DataColumn columnCodigo_Status_Tit_a_Receber;
+            
             private global::System.Data.DataColumn columnDescricao_Status;
             
-            private global::System.Data.DataColumn columnCodigo_Status_Tit_a_Receber;
+            private global::System.Data.DataColumn columndata_login;
+            
+            private global::System.Data.DataColumn columnlogin_name;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -723,6 +746,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Codigo_Status_Tit_a_ReceberColumn {
+                get {
+                    return this.columnCodigo_Status_Tit_a_Receber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Descricao_StatusColumn {
                 get {
                     return this.columnDescricao_Status;
@@ -731,9 +762,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Codigo_Status_Tit_a_ReceberColumn {
+            public global::System.Data.DataColumn data_loginColumn {
                 get {
-                    return this.columnCodigo_Status_Tit_a_Receber;
+                    return this.columndata_login;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn login_nameColumn {
+                get {
+                    return this.columnlogin_name;
                 }
             }
             
@@ -774,11 +813,13 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Status_Titulos_a_ReceberRow AddStatus_Titulos_a_ReceberRow(string Descricao_Status) {
+            public Status_Titulos_a_ReceberRow AddStatus_Titulos_a_ReceberRow(string Descricao_Status, System.DateTime data_login, string login_name) {
                 Status_Titulos_a_ReceberRow rowStatus_Titulos_a_ReceberRow = ((Status_Titulos_a_ReceberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         Descricao_Status,
-                        null};
+                        data_login,
+                        login_name};
                 rowStatus_Titulos_a_ReceberRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStatus_Titulos_a_ReceberRow);
                 return rowStatus_Titulos_a_ReceberRow;
@@ -808,26 +849,33 @@ namespace SGFRenaissance {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnDescricao_Status = base.Columns["Descricao_Status"];
                 this.columnCodigo_Status_Tit_a_Receber = base.Columns["Codigo_Status_Tit_a_Receber"];
+                this.columnDescricao_Status = base.Columns["Descricao_Status"];
+                this.columndata_login = base.Columns["data_login"];
+                this.columnlogin_name = base.Columns["login_name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnDescricao_Status = new global::System.Data.DataColumn("Descricao_Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescricao_Status);
                 this.columnCodigo_Status_Tit_a_Receber = new global::System.Data.DataColumn("Codigo_Status_Tit_a_Receber", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigo_Status_Tit_a_Receber);
+                this.columnDescricao_Status = new global::System.Data.DataColumn("Descricao_Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescricao_Status);
+                this.columndata_login = new global::System.Data.DataColumn("data_login", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_login);
+                this.columnlogin_name = new global::System.Data.DataColumn("login_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlogin_name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodigo_Status_Tit_a_Receber}, true));
-                this.columnDescricao_Status.MaxLength = 25;
                 this.columnCodigo_Status_Tit_a_Receber.AutoIncrement = true;
                 this.columnCodigo_Status_Tit_a_Receber.AutoIncrementSeed = -1;
                 this.columnCodigo_Status_Tit_a_Receber.AutoIncrementStep = -1;
                 this.columnCodigo_Status_Tit_a_Receber.AllowDBNull = false;
                 this.columnCodigo_Status_Tit_a_Receber.ReadOnly = true;
                 this.columnCodigo_Status_Tit_a_Receber.Unique = true;
+                this.columnDescricao_Status.MaxLength = 25;
+                this.columnlogin_name.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -970,23 +1018,23 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cod_Entrada_Titulos_a_Receber {
-                get {
-                    return ((int)(this[this.tableNumero_Parcelas_a_Receber.Cod_Entrada_Titulos_a_ReceberColumn]));
-                }
-                set {
-                    this[this.tableNumero_Parcelas_a_Receber.Cod_Entrada_Titulos_a_ReceberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Cod_Numero_Parcelas_Receber {
                 get {
                     return ((int)(this[this.tableNumero_Parcelas_a_Receber.Cod_Numero_Parcelas_ReceberColumn]));
                 }
                 set {
                     this[this.tableNumero_Parcelas_a_Receber.Cod_Numero_Parcelas_ReceberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Entrada_Titulos_a_Receber {
+                get {
+                    return ((int)(this[this.tableNumero_Parcelas_a_Receber.Cod_Entrada_Titulos_a_ReceberColumn]));
+                }
+                set {
+                    this[this.tableNumero_Parcelas_a_Receber.Cod_Entrada_Titulos_a_ReceberColumn] = value;
                 }
             }
             
@@ -1093,6 +1141,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Codigo_Status_Tit_a_Receber {
+                get {
+                    return ((int)(this[this.tableNumero_Parcelas_a_Receber.Codigo_Status_Tit_a_ReceberColumn]));
+                }
+                set {
+                    this[this.tableNumero_Parcelas_a_Receber.Codigo_Status_Tit_a_ReceberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNumero_ParcelaNull() {
                 return this.IsNull(this.tableNumero_Parcelas_a_Receber.Numero_ParcelaColumn);
             }
@@ -1191,6 +1250,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Codigo_Status_Tit_a_Receber {
+                get {
+                    return ((int)(this[this.tableStatus_Titulos_a_Receber.Codigo_Status_Tit_a_ReceberColumn]));
+                }
+                set {
+                    this[this.tableStatus_Titulos_a_Receber.Codigo_Status_Tit_a_ReceberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Descricao_Status {
                 get {
                     try {
@@ -1208,12 +1278,33 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Codigo_Status_Tit_a_Receber {
+            public System.DateTime data_login {
                 get {
-                    return ((int)(this[this.tableStatus_Titulos_a_Receber.Codigo_Status_Tit_a_ReceberColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableStatus_Titulos_a_Receber.data_loginColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'data_login\' in table \'Status_Titulos_a_Receber\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableStatus_Titulos_a_Receber.Codigo_Status_Tit_a_ReceberColumn] = value;
+                    this[this.tableStatus_Titulos_a_Receber.data_loginColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string login_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableStatus_Titulos_a_Receber.login_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'login_name\' in table \'Status_Titulos_a_Receber\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStatus_Titulos_a_Receber.login_nameColumn] = value;
                 }
             }
             
@@ -1238,6 +1329,30 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDescricao_StatusNull() {
                 this[this.tableStatus_Titulos_a_Receber.Descricao_StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdata_loginNull() {
+                return this.IsNull(this.tableStatus_Titulos_a_Receber.data_loginColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdata_loginNull() {
+                this[this.tableStatus_Titulos_a_Receber.data_loginColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Islogin_nameNull() {
+                return this.IsNull(this.tableStatus_Titulos_a_Receber.login_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setlogin_nameNull() {
+                this[this.tableStatus_Titulos_a_Receber.login_nameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1434,14 +1549,15 @@ namespace SGFRenaissance.NumeroParcelasaReceberDGVTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Numero_Parcelas_a_Receber";
-            tableMapping.ColumnMappings.Add("Cod_Entrada_Titulos_a_Receber", "Cod_Entrada_Titulos_a_Receber");
             tableMapping.ColumnMappings.Add("Cod_Numero_Parcelas_Receber", "Cod_Numero_Parcelas_Receber");
+            tableMapping.ColumnMappings.Add("Cod_Entrada_Titulos_a_Receber", "Cod_Entrada_Titulos_a_Receber");
             tableMapping.ColumnMappings.Add("Numero_Parcela", "Numero_Parcela");
             tableMapping.ColumnMappings.Add("Data_Vencimento", "Data_Vencimento");
             tableMapping.ColumnMappings.Add("Valor_Parcela", "Valor_Parcela");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
             tableMapping.ColumnMappings.Add("Cod_Status_Titulo", "Cod_Status_Titulo");
             tableMapping.ColumnMappings.Add("Descricao_Status", "Descricao_Status");
+            tableMapping.ColumnMappings.Add("Codigo_Status_Tit_a_Receber", "Codigo_Status_Tit_a_Receber");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1449,7 +1565,7 @@ namespace SGFRenaissance.NumeroParcelasaReceberDGVTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1612,34 +1728,45 @@ FROM            Numero_Parcelas_a_Receber INNER JOIN
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Status_Titulos_a_Receber";
-            tableMapping.ColumnMappings.Add("Descricao_Status", "Descricao_Status");
             tableMapping.ColumnMappings.Add("Codigo_Status_Tit_a_Receber", "Codigo_Status_Tit_a_Receber");
+            tableMapping.ColumnMappings.Add("Descricao_Status", "Descricao_Status");
+            tableMapping.ColumnMappings.Add("data_login", "data_login");
+            tableMapping.ColumnMappings.Add("login_name", "login_name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Status_Titulos_a_Receber] WHERE (((@IsNull_Descricao_Status = 1 AND " +
-                "[Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)" +
-                ") AND ([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Status_Titulos_a_Receber] WHERE (([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber) AND ((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ((@IsNull_data_login = 1 AND [data_login] IS NULL) OR ([data_login] = @Original_data_login)) AND ((@IsNull_login_name = 1 AND [login_name] IS NULL) OR ([login_name] = @Original_login_name)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo_Status_Tit_a_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo_Status_Tit_a_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descricao_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descricao_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo_Status_Tit_a_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo_Status_Tit_a_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_login", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_login_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_login_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Status_Titulos_a_Receber] ([Descricao_Status]) VALUES (@Descricao_St" +
-                "atus);\r\nSELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos" +
-                "_a_Receber WHERE (Codigo_Status_Tit_a_Receber = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Status_Titulos_a_Receber] ([Descricao_Status], [data_login], [login_name]) VALUES (@Descricao_Status, @data_login, @login_name);
+SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descricao_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Status_Titulos_a_Receber] SET [Descricao_Status] = @Descricao_Status WHERE (((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber));
-SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = @Codigo_Status_Tit_a_Receber)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Status_Titulos_a_Receber] SET [Descricao_Status] = @Descricao_Status, [data_login] = @data_login, [login_name] = @login_name WHERE (([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber) AND ((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ((@IsNull_data_login = 1 AND [data_login] IS NULL) OR ([data_login] = @Original_data_login)) AND ((@IsNull_login_name = 1 AND [login_name] IS NULL) OR ([login_name] = @Original_login_name)));
+SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = @Codigo_Status_Tit_a_Receber)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descricao_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo_Status_Tit_a_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo_Status_Tit_a_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descricao_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descricao_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo_Status_Tit_a_Receber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo_Status_Tit_a_Receber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_login", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_login_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_login_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Codigo_Status_Tit_a_Receber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo_Status_Tit_a_Receber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1647,7 +1774,7 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1656,8 +1783,8 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Descricao_Status, Codigo_Status_Tit_a_Receber\r\nFROM            Stat" +
-                "us_Titulos_a_Receber";
+            this._commandCollection[0].CommandText = "SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM" +
+                " dbo.Status_Titulos_a_Receber";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1718,16 +1845,32 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Descricao_Status, int Original_Codigo_Status_Tit_a_Receber) {
+        public virtual int Delete(int Original_Codigo_Status_Tit_a_Receber, string Original_Descricao_Status, global::System.Nullable<global::System.DateTime> Original_data_login, string Original_login_name) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Codigo_Status_Tit_a_Receber));
             if ((Original_Descricao_Status == null)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Descricao_Status));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Descricao_Status));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Codigo_Status_Tit_a_Receber));
+            if ((Original_data_login.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_data_login.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_login_name == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_login_name));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1748,12 +1891,24 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Descricao_Status) {
+        public virtual int Insert(string Descricao_Status, global::System.Nullable<global::System.DateTime> data_login, string login_name) {
             if ((Descricao_Status == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Descricao_Status));
+            }
+            if ((data_login.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(data_login.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((login_name == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(login_name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1775,23 +1930,51 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Descricao_Status, string Original_Descricao_Status, int Original_Codigo_Status_Tit_a_Receber, int Codigo_Status_Tit_a_Receber) {
+        public virtual int Update(string Descricao_Status, global::System.Nullable<global::System.DateTime> data_login, string login_name, int Original_Codigo_Status_Tit_a_Receber, string Original_Descricao_Status, global::System.Nullable<global::System.DateTime> Original_data_login, string Original_login_name, int Codigo_Status_Tit_a_Receber) {
             if ((Descricao_Status == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Descricao_Status));
             }
-            if ((Original_Descricao_Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((object)(1));
+            if ((data_login.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(data_login.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((login_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Descricao_Status));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(login_name));
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Codigo_Status_Tit_a_Receber));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Codigo_Status_Tit_a_Receber));
+            if ((Original_Descricao_Status == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Descricao_Status));
+            }
+            if ((Original_data_login.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_data_login.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_login_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_login_name));
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Codigo_Status_Tit_a_Receber));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1812,8 +1995,8 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Descricao_Status, string Original_Descricao_Status, int Original_Codigo_Status_Tit_a_Receber) {
-            return this.Update(Descricao_Status, Original_Descricao_Status, Original_Codigo_Status_Tit_a_Receber, Original_Codigo_Status_Tit_a_Receber);
+        public virtual int Update(string Descricao_Status, global::System.Nullable<global::System.DateTime> data_login, string login_name, int Original_Codigo_Status_Tit_a_Receber, string Original_Descricao_Status, global::System.Nullable<global::System.DateTime> Original_data_login, string Original_login_name) {
+            return this.Update(Descricao_Status, data_login, login_name, Original_Codigo_Status_Tit_a_Receber, Original_Descricao_Status, Original_data_login, Original_login_name, Original_Codigo_Status_Tit_a_Receber);
         }
     }
     

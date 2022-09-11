@@ -60,7 +60,7 @@
             this.btn_Banco = new System.Windows.Forms.Button();
             this.textBoxCodOperacao = new System.Windows.Forms.TextBox();
             this.btn_Base_Titulos_Recebidos = new System.Windows.Forms.Button();
-            this.btn_base_Titulos_Pagos = new System.Windows.Forms.Button();
+            this.btn_base_Titulos_a_Pagar = new System.Windows.Forms.Button();
             this.cod_Titulos_recebidos = new System.Windows.Forms.TextBox();
             this.cod_Tit_Pagos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -266,7 +266,7 @@
             this.groupBox1.Controls.Add(this.btn_Banco);
             this.groupBox1.Controls.Add(this.textBoxCodOperacao);
             this.groupBox1.Controls.Add(this.btn_Base_Titulos_Recebidos);
-            this.groupBox1.Controls.Add(this.btn_base_Titulos_Pagos);
+            this.groupBox1.Controls.Add(this.btn_base_Titulos_a_Pagar);
             this.groupBox1.Controls.Add(this.cod_Titulos_recebidos);
             this.groupBox1.Controls.Add(this.cod_Tit_Pagos);
             this.groupBox1.Controls.Add(this.label2);
@@ -448,16 +448,16 @@
             this.btn_Base_Titulos_Recebidos.UseVisualStyleBackColor = true;
             this.btn_Base_Titulos_Recebidos.Click += new System.EventHandler(this.btn_Base_Titulos_Recebidos_Click);
             // 
-            // btn_base_Titulos_Pagos
+            // btn_base_Titulos_a_Pagar
             // 
-            this.btn_base_Titulos_Pagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_base_Titulos_Pagos.Location = new System.Drawing.Point(223, 124);
-            this.btn_base_Titulos_Pagos.Name = "btn_base_Titulos_Pagos";
-            this.btn_base_Titulos_Pagos.Size = new System.Drawing.Size(22, 24);
-            this.btn_base_Titulos_Pagos.TabIndex = 6;
-            this.btn_base_Titulos_Pagos.Text = "+";
-            this.btn_base_Titulos_Pagos.UseVisualStyleBackColor = true;
-            this.btn_base_Titulos_Pagos.Click += new System.EventHandler(this.btn_base_Titulos_Pagos_Click);
+            this.btn_base_Titulos_a_Pagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_base_Titulos_a_Pagar.Location = new System.Drawing.Point(223, 124);
+            this.btn_base_Titulos_a_Pagar.Name = "btn_base_Titulos_a_Pagar";
+            this.btn_base_Titulos_a_Pagar.Size = new System.Drawing.Size(22, 24);
+            this.btn_base_Titulos_a_Pagar.TabIndex = 6;
+            this.btn_base_Titulos_a_Pagar.Text = "+";
+            this.btn_base_Titulos_a_Pagar.UseVisualStyleBackColor = true;
+            this.btn_base_Titulos_a_Pagar.Click += new System.EventHandler(this.btn_base_Titulos_a_Pagar_Click);
             // 
             // cod_Titulos_recebidos
             // 
@@ -494,9 +494,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.Size = new System.Drawing.Size(133, 16);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Cód. Títulos Pagos:";
+            this.label1.Text = "Cód. Títulos a Pagar:";
             // 
             // valor_MovimentoTextBox
             // 
@@ -753,7 +753,6 @@
             this.lancamentosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lancamentosDataGridView.Size = new System.Drawing.Size(893, 196);
             this.lancamentosDataGridView.TabIndex = 0;
-            
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -932,7 +931,7 @@
         private System.Windows.Forms.Button btn_operacao;
         private System.Windows.Forms.Button btn_Banco;
         private System.Windows.Forms.Button btn_Base_Titulos_Recebidos;
-        private System.Windows.Forms.Button btn_base_Titulos_Pagos;
+        private System.Windows.Forms.Button btn_base_Titulos_a_Pagar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox GB_Lancamentos;
         private System.Windows.Forms.Label label4;

@@ -47,6 +47,8 @@ namespace SGFRenaissance
         {
             InitializeComponent();
         }
+        // Alterar strConn com novo servidor
+        // Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True
 
         void SelectRentFromTable()
         {
@@ -54,7 +56,7 @@ namespace SGFRenaissance
             {
                
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 9 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -93,7 +95,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 12 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -131,7 +133,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Recebido) from Base_Parcelas_Recebidas where (Cod_Receita = 1) and Data_Recebimento Between @inicialdate and @finaldate");
@@ -171,7 +173,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Recebido) from Base_Parcelas_Recebidas where (Cod_Receita = 2) and Data_Recebimento Between @inicialdate and @finaldate");
@@ -213,7 +215,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Recebido) from Base_Parcelas_Recebidas where (Cod_Receita = 3) and Data_Recebimento Between @inicialdate and @finaldate");
@@ -256,7 +258,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 8 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -295,7 +297,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 2 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -332,7 +334,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 5 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -372,7 +374,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 9 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -407,7 +409,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 4 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -446,7 +448,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 11 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -483,7 +485,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 3 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -520,7 +522,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 6 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -557,7 +559,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 7 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -594,7 +596,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select SUM(Valor_Pago) from Base_Parcelas_Pagas where Cod_Despesa = 10 and Data_Pagamento Between @inicialdate and @finaldate");
@@ -631,7 +633,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("Select SUM(Valor_Movimento) from Lancamentos Where (Cod_Operacao = 8) and Data_Lancamento Between @inicialdate and @finaldate");
@@ -668,7 +670,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("Select SUM(Valor_Movimento) from Lancamentos Where (Cod_Operacao = 5) and Data_Lancamento Between @inicialdate and @finaldate");
@@ -705,7 +707,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("Select SUM(Valor_Movimento) from Lancamentos Where (Cod_Operacao = 7) and Data_Lancamento Between @inicialdate and @finaldate");

@@ -289,6 +289,8 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnHistorico;
             
+            private global::System.Data.DataColumn columnNumeroNF;
+            
             private global::System.Data.DataColumn columnData_Login;
             
             private global::System.Data.DataColumn columnLogin_Name;
@@ -368,6 +370,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NumeroNFColumn {
+                get {
+                    return this.columnNumeroNF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Data_LoginColumn {
                 get {
                     return this.columnData_Login;
@@ -419,7 +429,7 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, System.DateTime Data_Login, string Login_Name) {
+            public Base_Titulos_RecebidosRow AddBase_Titulos_RecebidosRow(System.DateTime Data_Recebimento, decimal Total_Recebido, int Banco_Creditado, string Historico, string NumeroNF, System.DateTime Data_Login, string Login_Name) {
                 Base_Titulos_RecebidosRow rowBase_Titulos_RecebidosRow = ((Base_Titulos_RecebidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -427,6 +437,7 @@ namespace SGFRenaissance {
                         Total_Recebido,
                         Banco_Creditado,
                         Historico,
+                        NumeroNF,
                         Data_Login,
                         Login_Name};
                 rowBase_Titulos_RecebidosRow.ItemArray = columnValuesArray;
@@ -463,6 +474,7 @@ namespace SGFRenaissance {
                 this.columnTotal_Recebido = base.Columns["Total_Recebido"];
                 this.columnBanco_Creditado = base.Columns["Banco_Creditado"];
                 this.columnHistorico = base.Columns["Historico"];
+                this.columnNumeroNF = base.Columns["NumeroNF"];
                 this.columnData_Login = base.Columns["Data_Login"];
                 this.columnLogin_Name = base.Columns["Login_Name"];
             }
@@ -480,6 +492,8 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnBanco_Creditado);
                 this.columnHistorico = new global::System.Data.DataColumn("Historico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHistorico);
+                this.columnNumeroNF = new global::System.Data.DataColumn("NumeroNF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeroNF);
                 this.columnData_Login = new global::System.Data.DataColumn("Data_Login", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Login);
                 this.columnLogin_Name = new global::System.Data.DataColumn("Login_Name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -493,6 +507,7 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_a_Recebidos.ReadOnly = true;
                 this.columnCod_Base_Titulos_a_Recebidos.Unique = true;
                 this.columnHistorico.MaxLength = 200;
+                this.columnNumeroNF.MaxLength = 25;
                 this.columnLogin_Name.MaxLength = 15;
             }
             
@@ -714,6 +729,22 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string NumeroNF {
+                get {
+                    try {
+                        return ((string)(this[this.tableBase_Titulos_Recebidos.NumeroNFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumeroNF\' in table \'Base_Titulos_Recebidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Titulos_Recebidos.NumeroNFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime Data_Login {
                 get {
                     try {
@@ -790,6 +821,18 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHistoricoNull() {
                 this[this.tableBase_Titulos_Recebidos.HistoricoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNumeroNFNull() {
+                return this.IsNull(this.tableBase_Titulos_Recebidos.NumeroNFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNumeroNFNull() {
+                this[this.tableBase_Titulos_Recebidos.NumeroNFColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -981,12 +1024,13 @@ namespace SGFRenaissance.BaseTitulosRecebidosTableAdapters {
             tableMapping.ColumnMappings.Add("Total_Recebido", "Total_Recebido");
             tableMapping.ColumnMappings.Add("Banco_Creditado", "Banco_Creditado");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
+            tableMapping.ColumnMappings.Add("NumeroNF", "NumeroNF");
             tableMapping.ColumnMappings.Add("Data_Login", "Data_Login");
             tableMapping.ColumnMappings.Add("Login_Name", "Login_Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Base_Titulos_Recebidos] WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Data_Recebimento = 1 AND [Data_Recebimento] IS NULL) OR ([Data_Recebimento] = @Original_Data_Recebimento)) AND ((@IsNull_Total_Recebido = 1 AND [Total_Recebido] IS NULL) OR ([Total_Recebido] = @Original_Total_Recebido)) AND ((@IsNull_Banco_Creditado = 1 AND [Banco_Creditado] IS NULL) OR ([Banco_Creditado] = @Original_Banco_Creditado)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Base_Titulos_Recebidos] WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Data_Recebimento = 1 AND [Data_Recebimento] IS NULL) OR ([Data_Recebimento] = @Original_Data_Recebimento)) AND ((@IsNull_Total_Recebido = 1 AND [Total_Recebido] IS NULL) OR ([Total_Recebido] = @Original_Total_Recebido)) AND ((@IsNull_Banco_Creditado = 1 AND [Banco_Creditado] IS NULL) OR ([Banco_Creditado] = @Original_Banco_Creditado)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_NumeroNF = 1 AND [NumeroNF] IS NULL) OR ([NumeroNF] = @Original_NumeroNF)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_a_Recebidos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_a_Recebidos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Recebimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Recebimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -997,30 +1041,34 @@ namespace SGFRenaissance.BaseTitulosRecebidosTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Banco_Creditado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Creditado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Historico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NumeroNF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumeroNF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Login", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Login_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Base_Titulos_Recebidos] ([Data_Recebimento], [Total_Recebido], [Banco_Creditado], [Historico], [Data_Login], [Login_Name]) VALUES (@Data_Recebimento, @Total_Recebido, @Banco_Creditado, @Historico, @Data_Login, @Login_Name);
-SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, Data_Login, Login_Name FROM Base_Titulos_Recebidos WHERE (Cod_Base_Titulos_a_Recebidos = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Base_Titulos_Recebidos] ([Data_Recebimento], [Total_Recebido], [Banco_Creditado], [Historico], [NumeroNF], [Data_Login], [Login_Name]) VALUES (@Data_Recebimento, @Total_Recebido, @Banco_Creditado, @Historico, @NumeroNF, @Data_Login, @Login_Name);
+SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, NumeroNF, Data_Login, Login_Name FROM Base_Titulos_Recebidos WHERE (Cod_Base_Titulos_a_Recebidos = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Recebimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Recebimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Recebido", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Recebido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Banco_Creditado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Creditado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroNF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Base_Titulos_Recebidos] SET [Data_Recebimento] = @Data_Recebimento, [Total_Recebido] = @Total_Recebido, [Banco_Creditado] = @Banco_Creditado, [Historico] = @Historico, [Data_Login] = @Data_Login, [Login_Name] = @Login_Name WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Data_Recebimento = 1 AND [Data_Recebimento] IS NULL) OR ([Data_Recebimento] = @Original_Data_Recebimento)) AND ((@IsNull_Total_Recebido = 1 AND [Total_Recebido] IS NULL) OR ([Total_Recebido] = @Original_Total_Recebido)) AND ((@IsNull_Banco_Creditado = 1 AND [Banco_Creditado] IS NULL) OR ([Banco_Creditado] = @Original_Banco_Creditado)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)));
-SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, Data_Login, Login_Name FROM Base_Titulos_Recebidos WHERE (Cod_Base_Titulos_a_Recebidos = @Cod_Base_Titulos_a_Recebidos)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Base_Titulos_Recebidos] SET [Data_Recebimento] = @Data_Recebimento, [Total_Recebido] = @Total_Recebido, [Banco_Creditado] = @Banco_Creditado, [Historico] = @Historico, [NumeroNF] = @NumeroNF, [Data_Login] = @Data_Login, [Login_Name] = @Login_Name WHERE (([Cod_Base_Titulos_a_Recebidos] = @Original_Cod_Base_Titulos_a_Recebidos) AND ((@IsNull_Data_Recebimento = 1 AND [Data_Recebimento] IS NULL) OR ([Data_Recebimento] = @Original_Data_Recebimento)) AND ((@IsNull_Total_Recebido = 1 AND [Total_Recebido] IS NULL) OR ([Total_Recebido] = @Original_Total_Recebido)) AND ((@IsNull_Banco_Creditado = 1 AND [Banco_Creditado] IS NULL) OR ([Banco_Creditado] = @Original_Banco_Creditado)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_NumeroNF = 1 AND [NumeroNF] IS NULL) OR ([NumeroNF] = @Original_NumeroNF)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)));
+SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, NumeroNF, Data_Login, Login_Name FROM Base_Titulos_Recebidos WHERE (Cod_Base_Titulos_a_Recebidos = @Cod_Base_Titulos_a_Recebidos)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Recebimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Recebimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Recebido", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Recebido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Banco_Creditado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Creditado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroNF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_a_Recebidos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_a_Recebidos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1032,6 +1080,8 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Banco_Creditado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Creditado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Historico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NumeroNF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumeroNF", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroNF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Login", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Login", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Login_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1043,7 +1093,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1053,8 +1103,8 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Ban" +
-                "co_Creditado, Historico, Data_Login, Login_Name\r\nFROM            Base_Titulos_Re" +
-                "cebidos";
+                "co_Creditado, Historico, NumeroNF, Data_Login, Login_Name\r\nFROM            Base_" +
+                "Titulos_Recebidos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1115,7 +1165,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Cod_Base_Titulos_a_Recebidos, global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, global::System.Nullable<decimal> Original_Total_Recebido, global::System.Nullable<int> Original_Banco_Creditado, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
+        public virtual int Delete(int Original_Cod_Base_Titulos_a_Recebidos, global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, global::System.Nullable<decimal> Original_Total_Recebido, global::System.Nullable<int> Original_Banco_Creditado, string Original_Historico, string Original_NumeroNF, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Cod_Base_Titulos_a_Recebidos));
             if ((Original_Data_Recebimento.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -1149,21 +1199,29 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Historico));
             }
-            if ((Original_Data_Login.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_Data_Login.Value));
-            }
-            else {
+            if ((Original_NumeroNF == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Login_Name == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_NumeroNF));
+            }
+            if ((Original_Data_Login.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_Data_Login.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
+            if ((Original_Login_Name == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Login_Name));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Login_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1185,7 +1243,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data_Recebimento, global::System.Nullable<decimal> Total_Recebido, global::System.Nullable<int> Banco_Creditado, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data_Recebimento, global::System.Nullable<decimal> Total_Recebido, global::System.Nullable<int> Banco_Creditado, string Historico, string NumeroNF, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name) {
             if ((Data_Recebimento.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Data_Recebimento.Value));
             }
@@ -1210,17 +1268,23 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Historico));
             }
-            if ((Data_Login.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Data_Login.Value));
-            }
-            else {
+            if ((NumeroNF == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Login_Name == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(NumeroNF));
+            }
+            if ((Data_Login.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Data_Login.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Login_Name));
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Login_Name == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Login_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1242,7 +1306,23 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Recebimento, global::System.Nullable<decimal> Total_Recebido, global::System.Nullable<int> Banco_Creditado, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name, int Original_Cod_Base_Titulos_a_Recebidos, global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, global::System.Nullable<decimal> Original_Total_Recebido, global::System.Nullable<int> Original_Banco_Creditado, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name, int Cod_Base_Titulos_a_Recebidos) {
+        public virtual int Update(
+                    global::System.Nullable<global::System.DateTime> Data_Recebimento, 
+                    global::System.Nullable<decimal> Total_Recebido, 
+                    global::System.Nullable<int> Banco_Creditado, 
+                    string Historico, 
+                    string NumeroNF, 
+                    global::System.Nullable<global::System.DateTime> Data_Login, 
+                    string Login_Name, 
+                    int Original_Cod_Base_Titulos_a_Recebidos, 
+                    global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, 
+                    global::System.Nullable<decimal> Original_Total_Recebido, 
+                    global::System.Nullable<int> Original_Banco_Creditado, 
+                    string Original_Historico, 
+                    string Original_NumeroNF, 
+                    global::System.Nullable<global::System.DateTime> Original_Data_Login, 
+                    string Original_Login_Name, 
+                    int Cod_Base_Titulos_a_Recebidos) {
             if ((Data_Recebimento.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Data_Recebimento.Value));
             }
@@ -1267,68 +1347,82 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Historico));
             }
-            if ((Data_Login.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Data_Login.Value));
-            }
-            else {
+            if ((NumeroNF == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Login_Name == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(NumeroNF));
+            }
+            if ((Data_Login.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Data_Login.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Login_Name));
+            if ((Login_Name == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Cod_Base_Titulos_a_Recebidos));
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Login_Name));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Cod_Base_Titulos_a_Recebidos));
             if ((Original_Data_Recebimento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Data_Recebimento.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Data_Recebimento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_Total_Recebido.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_Total_Recebido.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Total_Recebido.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_Banco_Creditado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Banco_Creditado.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Banco_Creditado.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Original_Historico == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Historico));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Historico));
+            }
+            if ((Original_NumeroNF == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_NumeroNF));
             }
             if ((Original_Data_Login.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Data_Login.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_Data_Login.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_Login_Name == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Login_Name));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Login_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Cod_Base_Titulos_a_Recebidos));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Cod_Base_Titulos_a_Recebidos));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1349,8 +1443,8 @@ SELECT Cod_Base_Titulos_a_Recebidos, Data_Recebimento, Total_Recebido, Banco_Cre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Recebimento, global::System.Nullable<decimal> Total_Recebido, global::System.Nullable<int> Banco_Creditado, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name, int Original_Cod_Base_Titulos_a_Recebidos, global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, global::System.Nullable<decimal> Original_Total_Recebido, global::System.Nullable<int> Original_Banco_Creditado, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
-            return this.Update(Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, Data_Login, Login_Name, Original_Cod_Base_Titulos_a_Recebidos, Original_Data_Recebimento, Original_Total_Recebido, Original_Banco_Creditado, Original_Historico, Original_Data_Login, Original_Login_Name, Original_Cod_Base_Titulos_a_Recebidos);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Recebimento, global::System.Nullable<decimal> Total_Recebido, global::System.Nullable<int> Banco_Creditado, string Historico, string NumeroNF, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name, int Original_Cod_Base_Titulos_a_Recebidos, global::System.Nullable<global::System.DateTime> Original_Data_Recebimento, global::System.Nullable<decimal> Original_Total_Recebido, global::System.Nullable<int> Original_Banco_Creditado, string Original_Historico, string Original_NumeroNF, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
+            return this.Update(Data_Recebimento, Total_Recebido, Banco_Creditado, Historico, NumeroNF, Data_Login, Login_Name, Original_Cod_Base_Titulos_a_Recebidos, Original_Data_Recebimento, Original_Total_Recebido, Original_Banco_Creditado, Original_Historico, Original_NumeroNF, Original_Data_Login, Original_Login_Name, Original_Cod_Base_Titulos_a_Recebidos);
         }
     }
     

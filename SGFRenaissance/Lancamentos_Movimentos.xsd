@@ -2,14 +2,15 @@
 <xs:schema id="Lancamentos_Movimentos" targetNamespace="http://tempuri.org/Lancamentos_Movimentos.xsd" xmlns:mstns="http://tempuri.org/Lancamentos_Movimentos.xsd" xmlns="http://tempuri.org/Lancamentos_Movimentos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LancamentosTableAdapter" GeneratorDataComponentClassName="LancamentosTableAdapter" Name="Lancamentos" UserDataComponentName="LancamentosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectName="SGFRenaissance.dbo.Lancamentos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString1 (Settings)" DbObjectName="SGFRenaissance.dbo.Lancamentos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Lancamentos] WHERE (([Cod_Lancamento] = @Original_Cod_Lancamento) AND ((@IsNull_Cod_Operacao = 1 AND [Cod_Operacao] IS NULL) OR ([Cod_Operacao] = @Original_Cod_Operacao)) AND ((@IsNull_Cod_Base_Tit_Pagos = 1 AND [Cod_Base_Tit_Pagos] IS NULL) OR ([Cod_Base_Tit_Pagos] = @Original_Cod_Base_Tit_Pagos)) AND ((@IsNull_Cod_Base_Tit_Recebidos = 1 AND [Cod_Base_Tit_Recebidos] IS NULL) OR ([Cod_Base_Tit_Recebidos] = @Original_Cod_Base_Tit_Recebidos)) AND ((@IsNull_Cod_Banco = 1 AND [Cod_Banco] IS NULL) OR ([Cod_Banco] = @Original_Cod_Banco)) AND ((@IsNull_Numero_Conta = 1 AND [Numero_Conta] IS NULL) OR ([Numero_Conta] = @Original_Numero_Conta)) AND ((@IsNull_Numero_Chque = 1 AND [Numero_Chque] IS NULL) OR ([Numero_Chque] = @Original_Numero_Chque)) AND ((@IsNull_Data_Lancamento = 1 AND [Data_Lancamento] IS NULL) OR ([Data_Lancamento] = @Original_Data_Lancamento)) AND ((@IsNull_Descricao_Operacao = 1 AND [Descricao_Operacao] IS NULL) OR ([Descricao_Operacao] = @Original_Descricao_Operacao)) AND ((@IsNull_Recebimento_Titulos = 1 AND [Recebimento_Titulos] IS NULL) OR ([Recebimento_Titulos] = @Original_Recebimento_Titulos)) AND ((@IsNull_Pagamento_Titulos = 1 AND [Pagamento_Titulos] IS NULL) OR ([Pagamento_Titulos] = @Original_Pagamento_Titulos)) AND ((@IsNull_Valor_Movimento = 1 AND [Valor_Movimento] IS NULL) OR ([Valor_Movimento] = @Original_Valor_Movimento)) AND ((@IsNull_Saldo_Anterior = 1 AND [Saldo_Anterior] IS NULL) OR ([Saldo_Anterior] = @Original_Saldo_Anterior)) AND ((@IsNull_Saldo = 1 AND [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))</CommandText>
@@ -73,9 +74,9 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos, Cod_Banco,                      Numero_Conta, Numero_Chque, Data_Lancamento, Descricao_Operacao, Recebimento_Titulos,                      Pagamento_Titulos, 
-                     Valor_Movimento,Saldo_Anterior, Saldo, Data_Login, Login_Name
-FROM          Lancamentos</CommandText>
+                    <CommandText>SELECT        Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos, Cod_Banco, Numero_Conta, Numero_Chque, Data_Lancamento, Descricao_Operacao, Recebimento_Titulos, Pagamento_Titulos, 
+                         Valor_Movimento, Saldo_Anterior, Saldo, Data_Login, Login_Name
+FROM            Lancamentos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -149,10 +150,10 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
               <Mapping SourceColumn="Recebimento_Titulos" DataSetColumn="Recebimento_Titulos" />
               <Mapping SourceColumn="Pagamento_Titulos" DataSetColumn="Pagamento_Titulos" />
               <Mapping SourceColumn="Valor_Movimento" DataSetColumn="Valor_Movimento" />
+              <Mapping SourceColumn="Saldo_Anterior" DataSetColumn="Saldo_Anterior" />
+              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
               <Mapping SourceColumn="Data_Login" DataSetColumn="Data_Login" />
               <Mapping SourceColumn="Login_Name" DataSetColumn="Login_Name" />
-              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
-              <Mapping SourceColumn="Saldo_Anterior" DataSetColumn="Saldo_Anterior" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -164,7 +165,7 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
   <xs:element name="Lancamentos_Movimentos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Lancamentos_Movimentos" msprop:Generator_UserDSName="Lancamentos_Movimentos">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Lancamentos" msprop:Generator_TableClassName="LancamentosDataTable" msprop:Generator_TableVarName="tableLancamentos" msprop:Generator_RowChangedName="LancamentosRowChanged" msprop:Generator_TablePropName="Lancamentos" msprop:Generator_RowDeletingName="LancamentosRowDeleting" msprop:Generator_RowChangingName="LancamentosRowChanging" msprop:Generator_RowEvHandlerName="LancamentosRowChangeEventHandler" msprop:Generator_RowDeletedName="LancamentosRowDeleted" msprop:Generator_RowClassName="LancamentosRow" msprop:Generator_UserTableName="Lancamentos" msprop:Generator_RowEvArgName="LancamentosRowChangeEvent">
+        <xs:element name="Lancamentos" msprop:Generator_TableClassName="LancamentosDataTable" msprop:Generator_TableVarName="tableLancamentos" msprop:Generator_TablePropName="Lancamentos" msprop:Generator_RowDeletingName="LancamentosRowDeleting" msprop:Generator_RowChangingName="LancamentosRowChanging" msprop:Generator_RowEvHandlerName="LancamentosRowChangeEventHandler" msprop:Generator_RowDeletedName="LancamentosRowDeleted" msprop:Generator_UserTableName="Lancamentos" msprop:Generator_RowChangedName="LancamentosRowChanged" msprop:Generator_RowEvArgName="LancamentosRowChangeEvent" msprop:Generator_RowClassName="LancamentosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod_Lancamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Lancamento" msprop:Generator_ColumnPropNameInRow="Cod_Lancamento" msprop:Generator_ColumnPropNameInTable="Cod_LancamentoColumn" msprop:Generator_UserColumnName="Cod_Lancamento" type="xs:int" />
@@ -190,13 +191,15 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
               <xs:element name="Descricao_Operacao" msprop:Generator_ColumnVarNameInTable="columnDescricao_Operacao" msprop:Generator_ColumnPropNameInRow="Descricao_Operacao" msprop:Generator_ColumnPropNameInTable="Descricao_OperacaoColumn" msprop:Generator_UserColumnName="Descricao_Operacao" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Recebimento_Titulos" msprop:Generator_ColumnVarNameInTable="columnRecebimento_Titulos" msprop:Generator_ColumnPropNameInRow="Recebimento_Titulos" msprop:Generator_ColumnPropNameInTable="Recebimento_TitulosColumn" msprop:Generator_UserColumnName="Recebimento_Titulos" type="xs:decimal" minOccurs="0" />
               <xs:element name="Pagamento_Titulos" msprop:Generator_ColumnVarNameInTable="columnPagamento_Titulos" msprop:Generator_ColumnPropNameInRow="Pagamento_Titulos" msprop:Generator_ColumnPropNameInTable="Pagamento_TitulosColumn" msprop:Generator_UserColumnName="Pagamento_Titulos" type="xs:decimal" minOccurs="0" />
               <xs:element name="Valor_Movimento" msprop:Generator_ColumnVarNameInTable="columnValor_Movimento" msprop:Generator_ColumnPropNameInRow="Valor_Movimento" msprop:Generator_ColumnPropNameInTable="Valor_MovimentoColumn" msprop:Generator_UserColumnName="Valor_Movimento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Saldo_Anterior" msprop:Generator_ColumnVarNameInTable="columnSaldo_Anterior" msprop:Generator_ColumnPropNameInRow="Saldo_Anterior" msprop:Generator_ColumnPropNameInTable="Saldo_AnteriorColumn" msprop:Generator_UserColumnName="Saldo_Anterior" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:decimal" minOccurs="0" />
               <xs:element name="Data_Login" msprop:Generator_ColumnVarNameInTable="columnData_Login" msprop:Generator_ColumnPropNameInRow="Data_Login" msprop:Generator_ColumnPropNameInTable="Data_LoginColumn" msprop:Generator_UserColumnName="Data_Login" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Login_Name" msprop:Generator_ColumnVarNameInTable="columnLogin_Name" msprop:Generator_ColumnPropNameInRow="Login_Name" msprop:Generator_ColumnPropNameInTable="Login_NameColumn" msprop:Generator_UserColumnName="Login_Name" minOccurs="0">
                 <xs:simpleType>
@@ -205,8 +208,6 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Saldo_Anterior" msprop:Generator_ColumnVarNameInTable="columnSaldo_Anterior" msprop:Generator_ColumnPropNameInRow="Saldo_Anterior" msprop:Generator_ColumnPropNameInTable="Saldo_AnteriorColumn" msprop:Generator_UserColumnName="Saldo_Anterior" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

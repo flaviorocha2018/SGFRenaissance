@@ -279,9 +279,9 @@ namespace SGFRenaissance {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Numero_Parcelas_a_PagarDataTable : global::System.Data.TypedTableBase<Numero_Parcelas_a_PagarRow> {
             
-            private global::System.Data.DataColumn columnCod_Entrada_Titulos_a_Pagar;
-            
             private global::System.Data.DataColumn columnCod_Numero_Parcelas_a_Pagar;
+            
+            private global::System.Data.DataColumn columnCod_Entrada_Titulos_a_Pagar;
             
             private global::System.Data.DataColumn columnNumero_Parcela;
             
@@ -292,8 +292,6 @@ namespace SGFRenaissance {
             private global::System.Data.DataColumn columnHistorico;
             
             private global::System.Data.DataColumn columnCod_Status_Titulo;
-            
-            private global::System.Data.DataColumn columnDescricao_Status_Titulo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -330,17 +328,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_Entrada_Titulos_a_PagarColumn {
+            public global::System.Data.DataColumn Cod_Numero_Parcelas_a_PagarColumn {
                 get {
-                    return this.columnCod_Entrada_Titulos_a_Pagar;
+                    return this.columnCod_Numero_Parcelas_a_Pagar;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cod_Numero_Parcelas_a_PagarColumn {
+            public global::System.Data.DataColumn Cod_Entrada_Titulos_a_PagarColumn {
                 get {
-                    return this.columnCod_Numero_Parcelas_a_Pagar;
+                    return this.columnCod_Entrada_Titulos_a_Pagar;
                 }
             }
             
@@ -386,14 +384,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Descricao_Status_TituloColumn {
-                get {
-                    return this.columnDescricao_Status_Titulo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,17 +419,16 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Numero_Parcelas_a_PagarRow AddNumero_Parcelas_a_PagarRow(int Cod_Entrada_Titulos_a_Pagar, decimal Numero_Parcela, System.DateTime Data_Vencimento, decimal Valor_Parcela, string Historico, int Cod_Status_Titulo, string Descricao_Status_Titulo) {
+            public Numero_Parcelas_a_PagarRow AddNumero_Parcelas_a_PagarRow(int Cod_Entrada_Titulos_a_Pagar, decimal Numero_Parcela, System.DateTime Data_Vencimento, decimal Valor_Parcela, string Historico, int Cod_Status_Titulo) {
                 Numero_Parcelas_a_PagarRow rowNumero_Parcelas_a_PagarRow = ((Numero_Parcelas_a_PagarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Cod_Entrada_Titulos_a_Pagar,
                         null,
+                        Cod_Entrada_Titulos_a_Pagar,
                         Numero_Parcela,
                         Data_Vencimento,
                         Valor_Parcela,
                         Historico,
-                        Cod_Status_Titulo,
-                        Descricao_Status_Titulo};
+                        Cod_Status_Titulo};
                 rowNumero_Parcelas_a_PagarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowNumero_Parcelas_a_PagarRow);
                 return rowNumero_Parcelas_a_PagarRow;
@@ -469,23 +458,22 @@ namespace SGFRenaissance {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnCod_Entrada_Titulos_a_Pagar = base.Columns["Cod_Entrada_Titulos_a_Pagar"];
                 this.columnCod_Numero_Parcelas_a_Pagar = base.Columns["Cod_Numero_Parcelas_a_Pagar"];
+                this.columnCod_Entrada_Titulos_a_Pagar = base.Columns["Cod_Entrada_Titulos_a_Pagar"];
                 this.columnNumero_Parcela = base.Columns["Numero_Parcela"];
                 this.columnData_Vencimento = base.Columns["Data_Vencimento"];
                 this.columnValor_Parcela = base.Columns["Valor_Parcela"];
                 this.columnHistorico = base.Columns["Historico"];
                 this.columnCod_Status_Titulo = base.Columns["Cod_Status_Titulo"];
-                this.columnDescricao_Status_Titulo = base.Columns["Descricao_Status_Titulo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnCod_Entrada_Titulos_a_Pagar = new global::System.Data.DataColumn("Cod_Entrada_Titulos_a_Pagar", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Entrada_Titulos_a_Pagar);
                 this.columnCod_Numero_Parcelas_a_Pagar = new global::System.Data.DataColumn("Cod_Numero_Parcelas_a_Pagar", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCod_Numero_Parcelas_a_Pagar);
+                this.columnCod_Entrada_Titulos_a_Pagar = new global::System.Data.DataColumn("Cod_Entrada_Titulos_a_Pagar", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Entrada_Titulos_a_Pagar);
                 this.columnNumero_Parcela = new global::System.Data.DataColumn("Numero_Parcela", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumero_Parcela);
                 this.columnData_Vencimento = new global::System.Data.DataColumn("Data_Vencimento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -496,8 +484,6 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnHistorico);
                 this.columnCod_Status_Titulo = new global::System.Data.DataColumn("Cod_Status_Titulo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCod_Status_Titulo);
-                this.columnDescricao_Status_Titulo = new global::System.Data.DataColumn("Descricao_Status_Titulo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescricao_Status_Titulo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Numero_Parcelas_a_Pagar}, true));
                 this.columnCod_Numero_Parcelas_a_Pagar.AutoIncrement = true;
@@ -507,7 +493,6 @@ namespace SGFRenaissance {
                 this.columnCod_Numero_Parcelas_a_Pagar.ReadOnly = true;
                 this.columnCod_Numero_Parcelas_a_Pagar.Unique = true;
                 this.columnHistorico.MaxLength = 200;
-                this.columnDescricao_Status_Titulo.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,6 +635,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Cod_Numero_Parcelas_a_Pagar {
+                get {
+                    return ((int)(this[this.tableNumero_Parcelas_a_Pagar.Cod_Numero_Parcelas_a_PagarColumn]));
+                }
+                set {
+                    this[this.tableNumero_Parcelas_a_Pagar.Cod_Numero_Parcelas_a_PagarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Cod_Entrada_Titulos_a_Pagar {
                 get {
                     try {
@@ -662,17 +658,6 @@ namespace SGFRenaissance {
                 }
                 set {
                     this[this.tableNumero_Parcelas_a_Pagar.Cod_Entrada_Titulos_a_PagarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cod_Numero_Parcelas_a_Pagar {
-                get {
-                    return ((int)(this[this.tableNumero_Parcelas_a_Pagar.Cod_Numero_Parcelas_a_PagarColumn]));
-                }
-                set {
-                    this[this.tableNumero_Parcelas_a_Pagar.Cod_Numero_Parcelas_a_PagarColumn] = value;
                 }
             }
             
@@ -762,23 +747,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Descricao_Status_Titulo {
-                get {
-                    try {
-                        return ((string)(this[this.tableNumero_Parcelas_a_Pagar.Descricao_Status_TituloColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Descricao_Status_Titulo\' in table \'Numero_Parcelas_a_Pagar\'" +
-                                " is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableNumero_Parcelas_a_Pagar.Descricao_Status_TituloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCod_Entrada_Titulos_a_PagarNull() {
                 return this.IsNull(this.tableNumero_Parcelas_a_Pagar.Cod_Entrada_Titulos_a_PagarColumn);
             }
@@ -847,18 +815,6 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCod_Status_TituloNull() {
                 this[this.tableNumero_Parcelas_a_Pagar.Cod_Status_TituloColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDescricao_Status_TituloNull() {
-                return this.IsNull(this.tableNumero_Parcelas_a_Pagar.Descricao_Status_TituloColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDescricao_Status_TituloNull() {
-                this[this.tableNumero_Parcelas_a_Pagar.Descricao_Status_TituloColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1021,22 +977,74 @@ namespace SGFRenaissance.DGVNumeroParcelasPagarTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Numero_Parcelas_a_Pagar";
-            tableMapping.ColumnMappings.Add("Cod_Entrada_Titulos_a_Pagar", "Cod_Entrada_Titulos_a_Pagar");
             tableMapping.ColumnMappings.Add("Cod_Numero_Parcelas_a_Pagar", "Cod_Numero_Parcelas_a_Pagar");
+            tableMapping.ColumnMappings.Add("Cod_Entrada_Titulos_a_Pagar", "Cod_Entrada_Titulos_a_Pagar");
             tableMapping.ColumnMappings.Add("Numero_Parcela", "Numero_Parcela");
             tableMapping.ColumnMappings.Add("Data_Vencimento", "Data_Vencimento");
             tableMapping.ColumnMappings.Add("Valor_Parcela", "Valor_Parcela");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
             tableMapping.ColumnMappings.Add("Cod_Status_Titulo", "Cod_Status_Titulo");
-            tableMapping.ColumnMappings.Add("Descricao_Status_Titulo", "Descricao_Status_Titulo");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Numero_Parcelas_a_Pagar] WHERE (([Cod_Numero_Parcelas_a_Pagar] = @Original_Cod_Numero_Parcelas_a_Pagar) AND ((@IsNull_Cod_Entrada_Titulos_a_Pagar = 1 AND [Cod_Entrada_Titulos_a_Pagar] IS NULL) OR ([Cod_Entrada_Titulos_a_Pagar] = @Original_Cod_Entrada_Titulos_a_Pagar)) AND ((@IsNull_Numero_Parcela = 1 AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Original_Numero_Parcela)) AND ((@IsNull_Data_Vencimento = 1 AND [Data_Vencimento] IS NULL) OR ([Data_Vencimento] = @Original_Data_Vencimento)) AND ((@IsNull_Valor_Parcela = 1 AND [Valor_Parcela] IS NULL) OR ([Valor_Parcela] = @Original_Valor_Parcela)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Cod_Status_Titulo = 1 AND [Cod_Status_Titulo] IS NULL) OR ([Cod_Status_Titulo] = @Original_Cod_Status_Titulo)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Numero_Parcelas_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_a_Pagar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Parcela", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Vencimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Vencimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Valor_Parcela", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Valor_Parcela", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Valor_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Parcela", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Historico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Numero_Parcelas_a_Pagar] ([Cod_Entrada_Titulos_a_Pagar], [Numero_Parcela], [Data_Vencimento], [Valor_Parcela], [Historico], [Cod_Status_Titulo]) VALUES (@Cod_Entrada_Titulos_a_Pagar, @Numero_Parcela, @Data_Vencimento, @Valor_Parcela, @Historico, @Cod_Status_Titulo);
+SELECT Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Parcela, Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo FROM Numero_Parcelas_a_Pagar WHERE (Cod_Numero_Parcelas_a_Pagar = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Vencimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valor_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Parcela", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Numero_Parcelas_a_Pagar] SET [Cod_Entrada_Titulos_a_Pagar] = @Cod_Entrada_Titulos_a_Pagar, [Numero_Parcela] = @Numero_Parcela, [Data_Vencimento] = @Data_Vencimento, [Valor_Parcela] = @Valor_Parcela, [Historico] = @Historico, [Cod_Status_Titulo] = @Cod_Status_Titulo WHERE (([Cod_Numero_Parcelas_a_Pagar] = @Original_Cod_Numero_Parcelas_a_Pagar) AND ((@IsNull_Cod_Entrada_Titulos_a_Pagar = 1 AND [Cod_Entrada_Titulos_a_Pagar] IS NULL) OR ([Cod_Entrada_Titulos_a_Pagar] = @Original_Cod_Entrada_Titulos_a_Pagar)) AND ((@IsNull_Numero_Parcela = 1 AND [Numero_Parcela] IS NULL) OR ([Numero_Parcela] = @Original_Numero_Parcela)) AND ((@IsNull_Data_Vencimento = 1 AND [Data_Vencimento] IS NULL) OR ([Data_Vencimento] = @Original_Data_Vencimento)) AND ((@IsNull_Valor_Parcela = 1 AND [Valor_Parcela] IS NULL) OR ([Valor_Parcela] = @Original_Valor_Parcela)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Cod_Status_Titulo = 1 AND [Cod_Status_Titulo] IS NULL) OR ([Cod_Status_Titulo] = @Original_Cod_Status_Titulo)));
+SELECT Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Parcela, Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo FROM Numero_Parcelas_a_Pagar WHERE (Cod_Numero_Parcelas_a_Pagar = @Cod_Numero_Parcelas_a_Pagar)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Vencimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valor_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Parcela", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Numero_Parcelas_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_a_Pagar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Entrada_Titulos_a_Pagar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Entrada_Titulos_a_Pagar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Parcela", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Numero_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Numero_Parcela", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Vencimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Vencimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Vencimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Valor_Parcela", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Valor_Parcela", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Valor_Parcela", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Parcela", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Historico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Status_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Status_Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Numero_Parcelas_a_Pagar", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Numero_Parcelas_a_Pagar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1045,10 +1053,9 @@ namespace SGFRenaissance.DGVNumeroParcelasPagarTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Numero_Parcelas_a_Pagar.Cod_Entrada_Titulos_a_Pagar, Numero_Parcelas_a_Pagar.Cod_Numero_Parcelas_a_Pagar, Numero_Parcelas_a_Pagar.Numero_Parcela, Numero_Parcelas_a_Pagar.Data_Vencimento, 
-                         Numero_Parcelas_a_Pagar.Valor_Parcela, Numero_Parcelas_a_Pagar.Historico, Numero_Parcelas_a_Pagar.Cod_Status_Titulo, Status_Titulo.Descricao_Status_Titulo
-FROM            Numero_Parcelas_a_Pagar INNER JOIN
-                         Status_Titulo ON Numero_Parcelas_a_Pagar.Cod_Status_Titulo = Status_Titulo.Cod_Status_Titulo";
+            this._commandCollection[0].CommandText = "SELECT        Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Pa" +
+                "rcela, Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo\r\nFROM       " +
+                "     Numero_Parcelas_a_Pagar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1075,6 +1082,277 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DGVNumeroParcelasPagar.Numero_Parcelas_a_PagarDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DGVNumeroParcelasPagar dataSet) {
+            return this.Adapter.Update(dataSet, "Numero_Parcelas_a_Pagar");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Cod_Numero_Parcelas_a_Pagar, global::System.Nullable<int> Original_Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Original_Numero_Parcela, global::System.Nullable<global::System.DateTime> Original_Data_Vencimento, global::System.Nullable<decimal> Original_Valor_Parcela, string Original_Historico, global::System.Nullable<int> Original_Cod_Status_Titulo) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Cod_Numero_Parcelas_a_Pagar));
+            if ((Original_Cod_Entrada_Titulos_a_Pagar.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Cod_Entrada_Titulos_a_Pagar.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Numero_Parcela.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Numero_Parcela.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Data_Vencimento.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Data_Vencimento.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Valor_Parcela.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_Valor_Parcela.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Historico == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Historico));
+            }
+            if ((Original_Cod_Status_Titulo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Cod_Status_Titulo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<int> Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Numero_Parcela, global::System.Nullable<global::System.DateTime> Data_Vencimento, global::System.Nullable<decimal> Valor_Parcela, string Historico, global::System.Nullable<int> Cod_Status_Titulo) {
+            if ((Cod_Entrada_Titulos_a_Pagar.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Cod_Entrada_Titulos_a_Pagar.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Numero_Parcela.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Numero_Parcela.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Data_Vencimento.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data_Vencimento.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Valor_Parcela.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Valor_Parcela.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Historico == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Historico));
+            }
+            if ((Cod_Status_Titulo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Cod_Status_Titulo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Numero_Parcela, global::System.Nullable<global::System.DateTime> Data_Vencimento, global::System.Nullable<decimal> Valor_Parcela, string Historico, global::System.Nullable<int> Cod_Status_Titulo, int Original_Cod_Numero_Parcelas_a_Pagar, global::System.Nullable<int> Original_Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Original_Numero_Parcela, global::System.Nullable<global::System.DateTime> Original_Data_Vencimento, global::System.Nullable<decimal> Original_Valor_Parcela, string Original_Historico, global::System.Nullable<int> Original_Cod_Status_Titulo, int Cod_Numero_Parcelas_a_Pagar) {
+            if ((Cod_Entrada_Titulos_a_Pagar.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Cod_Entrada_Titulos_a_Pagar.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Numero_Parcela.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Numero_Parcela.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Data_Vencimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data_Vencimento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Valor_Parcela.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Valor_Parcela.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Historico == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Historico));
+            }
+            if ((Cod_Status_Titulo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Cod_Status_Titulo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Cod_Numero_Parcelas_a_Pagar));
+            if ((Original_Cod_Entrada_Titulos_a_Pagar.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Cod_Entrada_Titulos_a_Pagar.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Numero_Parcela.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_Numero_Parcela.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Data_Vencimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Data_Vencimento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Valor_Parcela.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_Valor_Parcela.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Historico == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Historico));
+            }
+            if ((Original_Cod_Status_Titulo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Cod_Status_Titulo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Cod_Numero_Parcelas_a_Pagar));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Numero_Parcela, global::System.Nullable<global::System.DateTime> Data_Vencimento, global::System.Nullable<decimal> Valor_Parcela, string Historico, global::System.Nullable<int> Cod_Status_Titulo, int Original_Cod_Numero_Parcelas_a_Pagar, global::System.Nullable<int> Original_Cod_Entrada_Titulos_a_Pagar, global::System.Nullable<decimal> Original_Numero_Parcela, global::System.Nullable<global::System.DateTime> Original_Data_Vencimento, global::System.Nullable<decimal> Original_Valor_Parcela, string Original_Historico, global::System.Nullable<int> Original_Cod_Status_Titulo) {
+            return this.Update(Cod_Entrada_Titulos_a_Pagar, Numero_Parcela, Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo, Original_Cod_Numero_Parcelas_a_Pagar, Original_Cod_Entrada_Titulos_a_Pagar, Original_Numero_Parcela, Original_Data_Vencimento, Original_Valor_Parcela, Original_Historico, Original_Cod_Status_Titulo, Original_Cod_Numero_Parcelas_a_Pagar);
+        }
     }
     
     /// <summary>
@@ -1089,6 +1367,8 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
         
         private UpdateOrderOption _updateOrder;
         
+        private Numero_Parcelas_a_PagarTableAdapter _numero_Parcelas_a_PagarTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1101,6 +1381,20 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Numero_Parcelas_a_PagarTableAdapter Numero_Parcelas_a_PagarTableAdapter {
+            get {
+                return this._numero_Parcelas_a_PagarTableAdapter;
+            }
+            set {
+                this._numero_Parcelas_a_PagarTableAdapter = value;
             }
         }
         
@@ -1123,6 +1417,10 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._numero_Parcelas_a_PagarTableAdapter != null) 
+                            && (this._numero_Parcelas_a_PagarTableAdapter.Connection != null))) {
+                    return this._numero_Parcelas_a_PagarTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -1136,6 +1434,9 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -1147,6 +1448,15 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(DGVNumeroParcelasPagar dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Numero_Parcelas_a_Pagar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._numero_Parcelas_a_PagarTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -1157,6 +1467,14 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(DGVNumeroParcelasPagar dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Numero_Parcelas_a_Pagar.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._numero_Parcelas_a_PagarTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -1167,6 +1485,14 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(DGVNumeroParcelasPagar dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Numero_Parcelas_a_Pagar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._numero_Parcelas_a_PagarTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -1206,6 +1532,11 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._numero_Parcelas_a_PagarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._numero_Parcelas_a_PagarTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1238,6 +1569,15 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                    revertConnections.Add(this._numero_Parcelas_a_PagarTableAdapter, this._numero_Parcelas_a_PagarTableAdapter.Connection);
+                    this._numero_Parcelas_a_PagarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._numero_Parcelas_a_PagarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._numero_Parcelas_a_PagarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._numero_Parcelas_a_PagarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._numero_Parcelas_a_PagarTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1295,6 +1635,10 @@ FROM            Numero_Parcelas_a_Pagar INNER JOIN
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._numero_Parcelas_a_PagarTableAdapter != null)) {
+                    this._numero_Parcelas_a_PagarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._numero_Parcelas_a_PagarTableAdapter]));
+                    this._numero_Parcelas_a_PagarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

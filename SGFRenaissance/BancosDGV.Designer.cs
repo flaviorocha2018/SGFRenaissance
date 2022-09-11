@@ -1439,26 +1439,26 @@ namespace SGFRenaissance.BancosDGVTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Bancos] WHERE (([Cod_Banco] = @Original_Cod_Banco) AND ((@IsNu" +
-                "ll_Nome_Banco = 1 AND [Nome_Banco] IS NULL) OR ([Nome_Banco] = @Original_Nome_Ba" +
-                "nco)) AND ((@IsNull_Numero_Conta = 1 AND [Numero_Conta] IS NULL) OR ([Numero_Con" +
-                "ta] = @Original_Numero_Conta)) AND ((@IsNull_Agencia = 1 AND [Agencia] IS NULL) " +
-                "OR ([Agencia] = @Original_Agencia)) AND ((@IsNull_Numero_Banco = 1 AND [Numero_B" +
-                "anco] IS NULL) OR ([Numero_Banco] = @Original_Numero_Banco)) AND ((@IsNull_Saldo" +
-                " = 1 AND [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_Endereco" +
-                " = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull" +
-                "_Bairro = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((@IsNul" +
-                "l_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio))" +
-                " AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)" +
-                ") AND ((@IsNull_Telefone_1 = 1 AND [Telefone_1] IS NULL) OR ([Telefone_1] = @Ori" +
-                "ginal_Telefone_1)) AND ((@IsNull_Telefone_2 = 1 AND [Telefone_2] IS NULL) OR ([T" +
-                "elefone_2] = @Original_Telefone_2)) AND ((@IsNull_Contato = 1 AND [Contato] IS N" +
-                "ULL) OR ([Contato] = @Original_Contato)) AND ((@IsNull_email = 1 AND [email] IS " +
-                "NULL) OR ([email] = @Original_email)) AND ((@IsNull_data_cadastro = 1 AND [data_" +
-                "cadastro] IS NULL) OR ([data_cadastro] = @Original_data_cadastro)) AND ((@IsNull" +
-                "_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Logi" +
-                "n)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @O" +
-                "riginal_Login_Name)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Bancos] WHERE (([Cod_Banco] = @Original_Cod_Banco) AND ((@IsNull_Nom" +
+                "e_Banco = 1 AND [Nome_Banco] IS NULL) OR ([Nome_Banco] = @Original_Nome_Banco)) " +
+                "AND ((@IsNull_Numero_Conta = 1 AND [Numero_Conta] IS NULL) OR ([Numero_Conta] = " +
+                "@Original_Numero_Conta)) AND ((@IsNull_Agencia = 1 AND [Agencia] IS NULL) OR ([A" +
+                "gencia] = @Original_Agencia)) AND ((@IsNull_Numero_Banco = 1 AND [Numero_Banco] " +
+                "IS NULL) OR ([Numero_Banco] = @Original_Numero_Banco)) AND ((@IsNull_Saldo = 1 A" +
+                "ND [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_Endereco = 1 A" +
+                "ND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Bairr" +
+                "o = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((@IsNull_Muni" +
+                "cipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio)) AND (" +
+                "(@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND " +
+                "((@IsNull_Telefone_1 = 1 AND [Telefone_1] IS NULL) OR ([Telefone_1] = @Original_" +
+                "Telefone_1)) AND ((@IsNull_Telefone_2 = 1 AND [Telefone_2] IS NULL) OR ([Telefon" +
+                "e_2] = @Original_Telefone_2)) AND ((@IsNull_Contato = 1 AND [Contato] IS NULL) O" +
+                "R ([Contato] = @Original_Contato)) AND ((@IsNull_email = 1 AND [email] IS NULL) " +
+                "OR ([email] = @Original_email)) AND ((@IsNull_data_cadastro = 1 AND [data_cadast" +
+                "ro] IS NULL) OR ([data_cadastro] = @Original_data_cadastro)) AND ((@IsNull_Data_" +
+                "Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AN" +
+                "D ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Origina" +
+                "l_Login_Name)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Banco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Banco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nome_Banco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome_Banco", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1495,7 +1495,7 @@ namespace SGFRenaissance.BancosDGVTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Bancos] ([Nome_Banco], [Numero_Conta], [Agencia], [Numero_Banco], [Saldo], [Endereco], [Bairro], [Municipio], [Estado], [Telefone_1], [Telefone_2], [Contato], [email], [data_cadastro], [Data_Login], [Login_Name]) VALUES (@Nome_Banco, @Numero_Conta, @Agencia, @Numero_Banco, @Saldo, @Endereco, @Bairro, @Municipio, @Estado, @Telefone_1, @Telefone_2, @Contato, @email, @data_cadastro, @Data_Login, @Login_Name);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Bancos] ([Nome_Banco], [Numero_Conta], [Agencia], [Numero_Banco], [Saldo], [Endereco], [Bairro], [Municipio], [Estado], [Telefone_1], [Telefone_2], [Contato], [email], [data_cadastro], [Data_Login], [Login_Name]) VALUES (@Nome_Banco, @Numero_Conta, @Agencia, @Numero_Banco, @Saldo, @Endereco, @Bairro, @Municipio, @Estado, @Telefone_1, @Telefone_2, @Contato, @email, @data_cadastro, @Data_Login, @Login_Name);
 SELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, Endereco, Bairro, Municipio, Estado, Telefone_1, Telefone_2, Contato, email, data_cadastro, Data_Login, Login_Name FROM Bancos WHERE (Cod_Banco = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome_Banco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome_Banco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1516,34 +1516,34 @@ SELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, Endere
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Bancos] SET [Nome_Banco] = @Nome_Banco, [Numero_Conta] = @Numero_Co" +
-                "nta, [Agencia] = @Agencia, [Numero_Banco] = @Numero_Banco, [Saldo] = @Saldo, [En" +
-                "dereco] = @Endereco, [Bairro] = @Bairro, [Municipio] = @Municipio, [Estado] = @E" +
-                "stado, [Telefone_1] = @Telefone_1, [Telefone_2] = @Telefone_2, [Contato] = @Cont" +
-                "ato, [email] = @email, [data_cadastro] = @data_cadastro, [Data_Login] = @Data_Lo" +
-                "gin, [Login_Name] = @Login_Name WHERE (([Cod_Banco] = @Original_Cod_Banco) AND (" +
-                "(@IsNull_Nome_Banco = 1 AND [Nome_Banco] IS NULL) OR ([Nome_Banco] = @Original_N" +
-                "ome_Banco)) AND ((@IsNull_Numero_Conta = 1 AND [Numero_Conta] IS NULL) OR ([Nume" +
-                "ro_Conta] = @Original_Numero_Conta)) AND ((@IsNull_Agencia = 1 AND [Agencia] IS " +
-                "NULL) OR ([Agencia] = @Original_Agencia)) AND ((@IsNull_Numero_Banco = 1 AND [Nu" +
-                "mero_Banco] IS NULL) OR ([Numero_Banco] = @Original_Numero_Banco)) AND ((@IsNull" +
-                "_Saldo = 1 AND [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_En" +
-                "dereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@" +
-                "IsNull_Bairro = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((" +
-                "@IsNull_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Munic" +
-                "ipio)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_E" +
-                "stado)) AND ((@IsNull_Telefone_1 = 1 AND [Telefone_1] IS NULL) OR ([Telefone_1] " +
-                "= @Original_Telefone_1)) AND ((@IsNull_Telefone_2 = 1 AND [Telefone_2] IS NULL) " +
-                "OR ([Telefone_2] = @Original_Telefone_2)) AND ((@IsNull_Contato = 1 AND [Contato" +
-                "] IS NULL) OR ([Contato] = @Original_Contato)) AND ((@IsNull_email = 1 AND [emai" +
-                "l] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_data_cadastro = 1 AND " +
-                "[data_cadastro] IS NULL) OR ([data_cadastro] = @Original_data_cadastro)) AND ((@" +
-                "IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Dat" +
-                "a_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name" +
-                "] = @Original_Login_Name)));\r\nSELECT Cod_Banco, Nome_Banco, Numero_Conta, Agenci" +
-                "a, Numero_Banco, Saldo, Endereco, Bairro, Municipio, Estado, Telefone_1, Telefon" +
-                "e_2, Contato, email, data_cadastro, Data_Login, Login_Name FROM Bancos WHERE (Co" +
-                "d_Banco = @Cod_Banco)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Bancos] SET [Nome_Banco] = @Nome_Banco, [Numero_Conta] = @Numero_Conta, [" +
+                "Agencia] = @Agencia, [Numero_Banco] = @Numero_Banco, [Saldo] = @Saldo, [Endereco" +
+                "] = @Endereco, [Bairro] = @Bairro, [Municipio] = @Municipio, [Estado] = @Estado," +
+                " [Telefone_1] = @Telefone_1, [Telefone_2] = @Telefone_2, [Contato] = @Contato, [" +
+                "email] = @email, [data_cadastro] = @data_cadastro, [Data_Login] = @Data_Login, [" +
+                "Login_Name] = @Login_Name WHERE (([Cod_Banco] = @Original_Cod_Banco) AND ((@IsNu" +
+                "ll_Nome_Banco = 1 AND [Nome_Banco] IS NULL) OR ([Nome_Banco] = @Original_Nome_Ba" +
+                "nco)) AND ((@IsNull_Numero_Conta = 1 AND [Numero_Conta] IS NULL) OR ([Numero_Con" +
+                "ta] = @Original_Numero_Conta)) AND ((@IsNull_Agencia = 1 AND [Agencia] IS NULL) " +
+                "OR ([Agencia] = @Original_Agencia)) AND ((@IsNull_Numero_Banco = 1 AND [Numero_B" +
+                "anco] IS NULL) OR ([Numero_Banco] = @Original_Numero_Banco)) AND ((@IsNull_Saldo" +
+                " = 1 AND [Saldo] IS NULL) OR ([Saldo] = @Original_Saldo)) AND ((@IsNull_Endereco" +
+                " = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull" +
+                "_Bairro = 1 AND [Bairro] IS NULL) OR ([Bairro] = @Original_Bairro)) AND ((@IsNul" +
+                "l_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio))" +
+                " AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)" +
+                ") AND ((@IsNull_Telefone_1 = 1 AND [Telefone_1] IS NULL) OR ([Telefone_1] = @Ori" +
+                "ginal_Telefone_1)) AND ((@IsNull_Telefone_2 = 1 AND [Telefone_2] IS NULL) OR ([T" +
+                "elefone_2] = @Original_Telefone_2)) AND ((@IsNull_Contato = 1 AND [Contato] IS N" +
+                "ULL) OR ([Contato] = @Original_Contato)) AND ((@IsNull_email = 1 AND [email] IS " +
+                "NULL) OR ([email] = @Original_email)) AND ((@IsNull_data_cadastro = 1 AND [data_" +
+                "cadastro] IS NULL) OR ([data_cadastro] = @Original_data_cadastro)) AND ((@IsNull" +
+                "_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Logi" +
+                "n)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @O" +
+                "riginal_Login_Name)));\r\nSELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Num" +
+                "ero_Banco, Saldo, Endereco, Bairro, Municipio, Estado, Telefone_1, Telefone_2, C" +
+                "ontato, email, data_cadastro, Data_Login, Login_Name FROM Bancos WHERE (Cod_Banc" +
+                "o = @Cod_Banco)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome_Banco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome_Banco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Conta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Conta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1601,7 +1601,7 @@ SELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, Endere
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1610,9 +1610,9 @@ SELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, Endere
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, Enderec" +
-                "o, Bairro, Municipio, Estado, Telefone_1, Telefone_2, Contato, email, data_cadas" +
-                "tro, Data_Login, Login_Name FROM dbo.Bancos";
+            this._commandCollection[0].CommandText = "SELECT        Cod_Banco, Nome_Banco, Numero_Conta, Agencia, Numero_Banco, Saldo, " +
+                "Endereco, Bairro, Municipio, Estado, Telefone_1, Telefone_2, Contato, email, dat" +
+                "a_cadastro, Data_Login, Login_Name\r\nFROM            Bancos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

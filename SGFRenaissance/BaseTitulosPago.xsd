@@ -2,14 +2,15 @@
 <xs:schema id="BaseTitulosPago" targetNamespace="http://tempuri.org/BaseTitulosPago.xsd" xmlns:mstns="http://tempuri.org/BaseTitulosPago.xsd" xmlns="http://tempuri.org/BaseTitulosPago.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_Titulos_PagosTableAdapter" GeneratorDataComponentClassName="Base_Titulos_PagosTableAdapter" Name="Base_Titulos_Pagos" UserDataComponentName="Base_Titulos_PagosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectName="SGFRenaissance.dbo.Base_Titulos_Pagos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString1 (Settings)" DbObjectName="SGFRenaissance.dbo.Base_Titulos_Pagos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Base_Titulos_Pagos] WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos_Pagos) AND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_Pagamento)) AND ((@IsNull_Total_Pago = 1 AND [Total_Pago] IS NULL) OR ([Total_Pago] = @Original_Total_Pago)) AND ((@IsNull_Banco_Debitado = 1 AND [Banco_Debitado] IS NULL) OR ([Banco_Debitado] = @Original_Banco_Debitado)) AND ((@IsNull_Numero_Cheque = 1 AND [Numero_Cheque] IS NULL) OR ([Numero_Cheque] = @Original_Numero_Cheque)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))</CommandText>
@@ -90,12 +91,12 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numer
             <Mappings>
               <Mapping SourceColumn="Cod_Base_Titulos_Pagos" DataSetColumn="Cod_Base_Titulos_Pagos" />
               <Mapping SourceColumn="Data_Pagamento" DataSetColumn="Data_Pagamento" />
+              <Mapping SourceColumn="Total_Pago" DataSetColumn="Total_Pago" />
               <Mapping SourceColumn="Banco_Debitado" DataSetColumn="Banco_Debitado" />
               <Mapping SourceColumn="Numero_Cheque" DataSetColumn="Numero_Cheque" />
               <Mapping SourceColumn="Historico" DataSetColumn="Historico" />
               <Mapping SourceColumn="Data_Login" DataSetColumn="Data_Login" />
               <Mapping SourceColumn="Login_Name" DataSetColumn="Login_Name" />
-              <Mapping SourceColumn="Total_Pago" DataSetColumn="Total_Pago" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -107,23 +108,24 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numer
   <xs:element name="BaseTitulosPago" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BaseTitulosPago" msprop:Generator_UserDSName="BaseTitulosPago">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Base_Titulos_Pagos" msprop:Generator_TableClassName="Base_Titulos_PagosDataTable" msprop:Generator_TableVarName="tableBase_Titulos_Pagos" msprop:Generator_RowChangedName="Base_Titulos_PagosRowChanged" msprop:Generator_TablePropName="Base_Titulos_Pagos" msprop:Generator_RowDeletingName="Base_Titulos_PagosRowDeleting" msprop:Generator_RowChangingName="Base_Titulos_PagosRowChanging" msprop:Generator_RowEvHandlerName="Base_Titulos_PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Titulos_PagosRowDeleted" msprop:Generator_RowClassName="Base_Titulos_PagosRow" msprop:Generator_UserTableName="Base_Titulos_Pagos" msprop:Generator_RowEvArgName="Base_Titulos_PagosRowChangeEvent">
+        <xs:element name="Base_Titulos_Pagos" msprop:Generator_TableClassName="Base_Titulos_PagosDataTable" msprop:Generator_TableVarName="tableBase_Titulos_Pagos" msprop:Generator_TablePropName="Base_Titulos_Pagos" msprop:Generator_RowDeletingName="Base_Titulos_PagosRowDeleting" msprop:Generator_RowChangingName="Base_Titulos_PagosRowChanging" msprop:Generator_RowEvHandlerName="Base_Titulos_PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_Titulos_PagosRowDeleted" msprop:Generator_UserTableName="Base_Titulos_Pagos" msprop:Generator_RowChangedName="Base_Titulos_PagosRowChanged" msprop:Generator_RowEvArgName="Base_Titulos_PagosRowChangeEvent" msprop:Generator_RowClassName="Base_Titulos_PagosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod_Base_Titulos_Pagos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Base_Titulos_Pagos" msprop:Generator_ColumnPropNameInRow="Cod_Base_Titulos_Pagos" msprop:Generator_ColumnPropNameInTable="Cod_Base_Titulos_PagosColumn" msprop:Generator_UserColumnName="Cod_Base_Titulos_Pagos" type="xs:int" />
               <xs:element name="Data_Pagamento" msprop:Generator_ColumnVarNameInTable="columnData_Pagamento" msprop:Generator_ColumnPropNameInRow="Data_Pagamento" msprop:Generator_ColumnPropNameInTable="Data_PagamentoColumn" msprop:Generator_UserColumnName="Data_Pagamento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total_Pago" msprop:Generator_ColumnVarNameInTable="columnTotal_Pago" msprop:Generator_ColumnPropNameInRow="Total_Pago" msprop:Generator_ColumnPropNameInTable="Total_PagoColumn" msprop:Generator_UserColumnName="Total_Pago" type="xs:decimal" minOccurs="0" />
               <xs:element name="Banco_Debitado" msprop:Generator_ColumnVarNameInTable="columnBanco_Debitado" msprop:Generator_ColumnPropNameInRow="Banco_Debitado" msprop:Generator_ColumnPropNameInTable="Banco_DebitadoColumn" msprop:Generator_UserColumnName="Banco_Debitado" type="xs:int" minOccurs="0" />
               <xs:element name="Numero_Cheque" msprop:Generator_ColumnVarNameInTable="columnNumero_Cheque" msprop:Generator_ColumnPropNameInRow="Numero_Cheque" msprop:Generator_ColumnPropNameInTable="Numero_ChequeColumn" msprop:Generator_UserColumnName="Numero_Cheque" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="25" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Historico" msprop:Generator_ColumnVarNameInTable="columnHistorico" msprop:Generator_ColumnPropNameInRow="Historico" msprop:Generator_ColumnPropNameInTable="HistoricoColumn" msprop:Generator_UserColumnName="Historico" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
+                    <xs:maxLength value="350" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -135,7 +137,6 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numer
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Total_Pago" msprop:Generator_ColumnVarNameInTable="columnTotal_Pago" msprop:Generator_ColumnPropNameInRow="Total_Pago" msprop:Generator_ColumnPropNameInTable="Total_PagoColumn" msprop:Generator_UserColumnName="Total_Pago" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

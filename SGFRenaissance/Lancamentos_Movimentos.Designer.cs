@@ -303,13 +303,13 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnValor_Movimento;
             
-            private global::System.Data.DataColumn columnData_Login;
-            
-            private global::System.Data.DataColumn columnLogin_Name;
+            private global::System.Data.DataColumn columnSaldo_Anterior;
             
             private global::System.Data.DataColumn columnSaldo;
             
-            private global::System.Data.DataColumn columnSaldo_Anterior;
+            private global::System.Data.DataColumn columnData_Login;
+            
+            private global::System.Data.DataColumn columnLogin_Name;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -442,17 +442,9 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Data_LoginColumn {
+            public global::System.Data.DataColumn Saldo_AnteriorColumn {
                 get {
-                    return this.columnData_Login;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Login_NameColumn {
-                get {
-                    return this.columnLogin_Name;
+                    return this.columnSaldo_Anterior;
                 }
             }
             
@@ -466,9 +458,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Saldo_AnteriorColumn {
+            public global::System.Data.DataColumn Data_LoginColumn {
                 get {
-                    return this.columnSaldo_Anterior;
+                    return this.columnData_Login;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Login_NameColumn {
+                get {
+                    return this.columnLogin_Name;
                 }
             }
             
@@ -509,7 +509,7 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public LancamentosRow AddLancamentosRow(int Cod_Operacao, int Cod_Base_Tit_Pagos, int Cod_Base_Tit_Recebidos, int Cod_Banco, string Numero_Conta, string Numero_Chque, System.DateTime Data_Lancamento, string Descricao_Operacao, decimal Recebimento_Titulos, decimal Pagamento_Titulos, decimal Valor_Movimento, System.DateTime Data_Login, string Login_Name, decimal Saldo, decimal Saldo_Anterior) {
+            public LancamentosRow AddLancamentosRow(int Cod_Operacao, int Cod_Base_Tit_Pagos, int Cod_Base_Tit_Recebidos, int Cod_Banco, string Numero_Conta, string Numero_Chque, System.DateTime Data_Lancamento, string Descricao_Operacao, decimal Recebimento_Titulos, decimal Pagamento_Titulos, decimal Valor_Movimento, decimal Saldo_Anterior, decimal Saldo, System.DateTime Data_Login, string Login_Name) {
                 LancamentosRow rowLancamentosRow = ((LancamentosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -524,10 +524,10 @@ namespace SGFRenaissance {
                         Recebimento_Titulos,
                         Pagamento_Titulos,
                         Valor_Movimento,
-                        Data_Login,
-                        Login_Name,
+                        Saldo_Anterior,
                         Saldo,
-                        Saldo_Anterior};
+                        Data_Login,
+                        Login_Name};
                 rowLancamentosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLancamentosRow);
                 return rowLancamentosRow;
@@ -569,10 +569,10 @@ namespace SGFRenaissance {
                 this.columnRecebimento_Titulos = base.Columns["Recebimento_Titulos"];
                 this.columnPagamento_Titulos = base.Columns["Pagamento_Titulos"];
                 this.columnValor_Movimento = base.Columns["Valor_Movimento"];
+                this.columnSaldo_Anterior = base.Columns["Saldo_Anterior"];
+                this.columnSaldo = base.Columns["Saldo"];
                 this.columnData_Login = base.Columns["Data_Login"];
                 this.columnLogin_Name = base.Columns["Login_Name"];
-                this.columnSaldo = base.Columns["Saldo"];
-                this.columnSaldo_Anterior = base.Columns["Saldo_Anterior"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -602,14 +602,14 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnPagamento_Titulos);
                 this.columnValor_Movimento = new global::System.Data.DataColumn("Valor_Movimento", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValor_Movimento);
+                this.columnSaldo_Anterior = new global::System.Data.DataColumn("Saldo_Anterior", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaldo_Anterior);
+                this.columnSaldo = new global::System.Data.DataColumn("Saldo", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaldo);
                 this.columnData_Login = new global::System.Data.DataColumn("Data_Login", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Login);
                 this.columnLogin_Name = new global::System.Data.DataColumn("Login_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLogin_Name);
-                this.columnSaldo = new global::System.Data.DataColumn("Saldo", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaldo);
-                this.columnSaldo_Anterior = new global::System.Data.DataColumn("Saldo_Anterior", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaldo_Anterior);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Lancamento}, true));
                 this.columnCod_Lancamento.AutoIncrement = true;
@@ -620,7 +620,7 @@ namespace SGFRenaissance {
                 this.columnCod_Lancamento.Unique = true;
                 this.columnNumero_Conta.MaxLength = 15;
                 this.columnNumero_Chque.MaxLength = 20;
-                this.columnDescricao_Operacao.MaxLength = 200;
+                this.columnDescricao_Operacao.MaxLength = 250;
                 this.columnLogin_Name.MaxLength = 15;
             }
             
@@ -951,6 +951,38 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Saldo_Anterior {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLancamentos.Saldo_AnteriorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Saldo_Anterior\' in table \'Lancamentos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLancamentos.Saldo_AnteriorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Saldo {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLancamentos.SaldoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Saldo\' in table \'Lancamentos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLancamentos.SaldoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime Data_Login {
                 get {
                     try {
@@ -978,38 +1010,6 @@ namespace SGFRenaissance {
                 }
                 set {
                     this[this.tableLancamentos.Login_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Saldo {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableLancamentos.SaldoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Saldo\' in table \'Lancamentos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLancamentos.SaldoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Saldo_Anterior {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableLancamentos.Saldo_AnteriorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Saldo_Anterior\' in table \'Lancamentos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLancamentos.Saldo_AnteriorColumn] = value;
                 }
             }
             
@@ -1147,6 +1147,30 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSaldo_AnteriorNull() {
+                return this.IsNull(this.tableLancamentos.Saldo_AnteriorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSaldo_AnteriorNull() {
+                this[this.tableLancamentos.Saldo_AnteriorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSaldoNull() {
+                return this.IsNull(this.tableLancamentos.SaldoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSaldoNull() {
+                this[this.tableLancamentos.SaldoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsData_LoginNull() {
                 return this.IsNull(this.tableLancamentos.Data_LoginColumn);
             }
@@ -1167,30 +1191,6 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLogin_NameNull() {
                 this[this.tableLancamentos.Login_NameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSaldoNull() {
-                return this.IsNull(this.tableLancamentos.SaldoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSaldoNull() {
-                this[this.tableLancamentos.SaldoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSaldo_AnteriorNull() {
-                return this.IsNull(this.tableLancamentos.Saldo_AnteriorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSaldo_AnteriorNull() {
-                this[this.tableLancamentos.Saldo_AnteriorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1365,10 +1365,10 @@ namespace SGFRenaissance.Lancamentos_MovimentosTableAdapters {
             tableMapping.ColumnMappings.Add("Recebimento_Titulos", "Recebimento_Titulos");
             tableMapping.ColumnMappings.Add("Pagamento_Titulos", "Pagamento_Titulos");
             tableMapping.ColumnMappings.Add("Valor_Movimento", "Valor_Movimento");
+            tableMapping.ColumnMappings.Add("Saldo_Anterior", "Saldo_Anterior");
+            tableMapping.ColumnMappings.Add("Saldo", "Saldo");
             tableMapping.ColumnMappings.Add("Data_Login", "Data_Login");
             tableMapping.ColumnMappings.Add("Login_Name", "Login_Name");
-            tableMapping.ColumnMappings.Add("Saldo", "Saldo");
-            tableMapping.ColumnMappings.Add("Saldo_Anterior", "Saldo_Anterior");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1536,7 +1536,7 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1545,9 +1545,9 @@ SELECT Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos, Cod_Banco,                      Numero_Conta, Numero_Chque, Data_Lancamento, Descricao_Operacao, Recebimento_Titulos,                      Pagamento_Titulos, 
-                     Valor_Movimento,Saldo_Anterior, Saldo, Data_Login, Login_Name
-FROM          Lancamentos";
+            this._commandCollection[0].CommandText = @"SELECT        Cod_Lancamento, Cod_Operacao, Cod_Base_Tit_Pagos, Cod_Base_Tit_Recebidos, Cod_Banco, Numero_Conta, Numero_Chque, Data_Lancamento, Descricao_Operacao, Recebimento_Titulos, Pagamento_Titulos, 
+                         Valor_Movimento, Saldo_Anterior, Saldo, Data_Login, Login_Name
+FROM            Lancamentos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

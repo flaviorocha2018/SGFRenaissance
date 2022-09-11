@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGFRenaissance" Class="SGFRenaissanceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True" SettingsObjectName="SGFRenaissance.Properties.Settings" SettingsPropertyName="SGFRenaissanceConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Validade_Pagamentos" Member="Validade_Pagamentos">
+    <Type Name="Validade_Pagamento">
+      <Column Name="Cod_Senha_Pgto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Senha_PGTO" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="data_validade" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Status_Titulo" Member="Status_Titulos">
+    <Type Name="Status_Titulo">
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Status_Titulo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Status_Titulo_Status_Titulo" Member="Status_Titulo2" ThisKey="Cod_Status_Titulo" OtherKey="Cod_Status_Titulo" Type="Status_Titulo" Cardinality="One" />
+      <Association Name="Status_Titulo_Status_Titulo" Member="Status_Titulo1" ThisKey="Cod_Status_Titulo" OtherKey="Cod_Status_Titulo" Type="Status_Titulo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Status_Titulos_a_Receber" Member="Status_Titulos_a_Recebers">
+    <Type Name="Status_Titulos_a_Receber">
+      <Column Name="Codigo_Status_Tit_a_Receber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Status" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="data_login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="login_name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipos_Acesso" Member="Tipos_Acessos">
+    <Type Name="Tipos_Acesso">
+      <Column Name="Cod_acesso" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Nome_Login" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipos_Receita" Member="Tipos_Receitas">
+    <Type Name="Tipos_Receita">
+      <Column Name="Codigo_Tipo_Receita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Receita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="codigo_contabilidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="data_login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="login_name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transferencias" Member="Transferencias">
+    <Type Name="Transferencia">
+      <Column Name="Cod_Transferencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Descricao_Operacao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Valor_Movimento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Conta_Origem_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nome_Banco_Origem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Numero_Conta_Origem" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Conta_Destino_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nome_Banco_Destino" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Numero_Conta_Destino" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Banco_Transferencia" Member="Banco" ThisKey="Conta_Destino_Banco" OtherKey="Cod_Banco" Type="Banco" IsForeignKey="true" />
+      <Association Name="Banco_Transferencia1" Member="Banco1" ThisKey="Conta_Origem_Banco" OtherKey="Cod_Banco" Type="Banco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="Cod_Usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome_Usuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Senha_Usuario" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Codigo_Acesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Nome_Login" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Baixa_Titulos_a_Pagar_Pagamentos" Member="Baixa_Titulos_a_Pagar_Pagamentos">
+    <Type Name="Baixa_Titulos_a_Pagar_Pagamento">
+      <Column Name="Cod_Baixa_Titulos_a_Pagar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Data_Pagamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cod_Banco_Debitado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Cheque" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Total_Pago" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Numero_Titulos_Pagos" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="Historico_Pagamentos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Observacao" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Baixa_Titulos_a_Pagar_Pagamento_Baixa_Titulos_a_Pagar_Pagamento" Member="Baixa_Titulos_a_Pagar_Pagamento2" ThisKey="Cod_Baixa_Titulos_a_Pagar" OtherKey="Cod_Baixa_Titulos_a_Pagar" Type="Baixa_Titulos_a_Pagar_Pagamento" Cardinality="One" />
+      <Association Name="Baixa_Titulos_a_Pagar_Pagamento_Itens_Pgtos_Baixa_Titulos_a_Pagar" Member="Itens_Pgtos_Baixa_Titulos_a_Pagars" ThisKey="Cod_Baixa_Titulos_a_Pagar" OtherKey="Cod_Baixa_Titulos_a_Pagar" Type="Itens_Pgtos_Baixa_Titulos_a_Pagar" />
+      <Association Name="Baixa_Titulos_a_Pagar_Pagamento_Baixa_Titulos_a_Pagar_Pagamento" Member="Baixa_Titulos_a_Pagar_Pagamento1" ThisKey="Cod_Baixa_Titulos_a_Pagar" OtherKey="Cod_Baixa_Titulos_a_Pagar" Type="Baixa_Titulos_a_Pagar_Pagamento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Baixa_Titulos_a_Receber" Member="Baixa_Titulos_a_Recebers">
+    <Type Name="Baixa_Titulos_a_Receber">
+      <Column Name="Cod_Baixa_Titulo_Recebido" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_NF" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Pagamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Valor_NF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Acrescimos" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descontos" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total_Pago" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Creditar_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cod_Receita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Parcela" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Banco_Baixa_Titulos_a_Receber" Member="Banco" ThisKey="Creditar_Banco" OtherKey="Cod_Banco" Type="Banco" IsForeignKey="true" />
+      <Association Name="Clientes_Contas_a_Receber_Baixa_Titulos_a_Receber" Member="Clientes_Contas_a_Receber" ThisKey="Cod_Cliente" OtherKey="Cod_Cliente_Contas_a_Receber" Type="Clientes_Contas_a_Receber" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bancos" Member="Bancos">
+    <Type Name="Banco">
+      <Column Name="Cod_Banco" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome_Banco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Numero_Conta" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Agencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Numero_Banco" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Endereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Bairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Telefone_1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Telefone_2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Contato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data_cadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Banco_Transferencia" Member="Transferencias" ThisKey="Cod_Banco" OtherKey="Conta_Destino_Banco" Type="Transferencia" />
+      <Association Name="Banco_Transferencia1" Member="Transferencias1" ThisKey="Cod_Banco" OtherKey="Conta_Origem_Banco" Type="Transferencia" />
+      <Association Name="Banco_Baixa_Titulos_a_Receber" Member="Baixa_Titulos_a_Recebers" ThisKey="Cod_Banco" OtherKey="Creditar_Banco" Type="Baixa_Titulos_a_Receber" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base_Parcelas_Pagas" Member="Base_Parcelas_Pagas">
+    <Type Name="Base_Parcelas_Paga">
+      <Column Name="Cod_Base_Titulos_Pagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cod_Titulo_a_Pagar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cod_Numero_Parc_a_Pagar" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cod_Fornecedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Documento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Numero_Parcela" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Valor_Titulo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Data_Documento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Pagamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Venc_Parcela" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cod_Centro_Custos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Despesa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Valor_Pago_a_Vista" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Valor_Pago" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Numero_banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_cheque" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Acrescimos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Descontos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="StatusTitulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Historico_Titulo" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base_Parcelas_Recebidas" Member="Base_Parcelas_Recebidas">
+    <Type Name="Base_Parcelas_Recebida">
+      <Column Name="Cod_Base_Titulos_a_Recebidos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cod_Entrada_Titulos_a_Receber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cod_Numero_Parcelas_Receber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cod_Cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Documento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Numero_Parcela" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Valor_Titulo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Valor_Pago_a_Vista" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Data_Documento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Recebimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Venc_Parcela" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Numero_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Receita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Valor_Recebido" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Acrescimos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Desconto" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Status_Titulo_a_Receber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico_Titulo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Historico_Parcela" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base_Titulos_Pagos" Member="Base_Titulos_Pagos">
+    <Type Name="Base_Titulos_Pago">
+      <Column Name="Cod_Base_Titulos_Pagos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Data_Pagamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Total_Pago" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Banco_Debitado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Cheque" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base_Titulos_Recebidos" Member="Base_Titulos_Recebidos">
+    <Type Name="Base_Titulos_Recebido">
+      <Column Name="Cod_Base_Titulos_a_Recebidos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Data_Recebimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Total_Recebido" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Banco_Creditado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NumeroNF" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Centro_Custos" Member="Centro_Custos">
+    <Type Name="Centro_Custo">
+      <Column Name="Cod_Centro_Custos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Centro_Custos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clientes_Contas_a_Receber" Member="Clientes_Contas_a_Recebers">
+    <Type Name="Clientes_Contas_a_Receber">
+      <Column Name="Cod_Cliente_Contas_a_Receber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome_Cliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Endereço_Cliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Bairro_Cliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Municipio_Cliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Telefone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CNPJ" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="Identificacao" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Cod_Grupo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Clientes_Contas_a_Receber_Baixa_Titulos_a_Receber" Member="Baixa_Titulos_a_Recebers" ThisKey="Cod_Cliente_Contas_a_Receber" OtherKey="Cod_Cliente" Type="Baixa_Titulos_a_Receber" />
+      <Association Name="Grupo_Clientes_Contas_a_Receber" Member="Grupo" ThisKey="Cod_Grupo" OtherKey="Cod_Grupo" Type="Grupo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contas_Despesas" Member="Contas_Despesas">
+    <Type Name="Contas_Despesa">
+      <Column Name="Cod_Despesa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Despesa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Despesa_Contab" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="Tipo_Despesa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entrada_Titulos_a_Pagar" Member="Entrada_Titulos_a_Pagars">
+    <Type Name="Entrada_Titulos_a_Pagar">
+      <Column Name="Cod_Entrada_Titulos_a_Pagar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Fornecedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Documento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_Documento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Data_Vencimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Valor_Titulo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Valor_Pago_a_Vista" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Acrescimos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Descontos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Numero_Parcelas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Centro_Custos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Despesa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico_Titulo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Observacao" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entrada_Titulos_a_Receber" Member="Entrada_Titulos_a_Recebers">
+    <Type Name="Entrada_Titulos_a_Receber">
+      <Column Name="Cod_Entrada_Titulos_a_Receber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_NF" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_NF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Valor_NF" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Cod_Receita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_Vencimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Numero_Parcelas" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="Valor_Pago_a_Vista" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Codigo_CV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fornecedor_Contas_a_Pagar" Member="Fornecedor_Contas_a_Pagars">
+    <Type Name="Fornecedor_Contas_a_Pagar">
+      <Column Name="Cod_Fornecedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome_Fornecedor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Endereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Bairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="CEP" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Telefone_1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Telefone_2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CNPJ" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="Cod_Status_Fornecedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_Cadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Inscricao_Estadual" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="CPF" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="Identificacao" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Status_Fornecedor_Cliente_Fornecedor_Contas_a_Pagar" Member="Status_Fornecedor_Cliente" ThisKey="Cod_Status_Fornecedor" OtherKey="Cod_Status_Fornecedor" Type="Status_Fornecedor_Cliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grupo" Member="Grupos">
+    <Type Name="Grupo">
+      <Column Name="Cod_Grupo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Grupo_Descricao" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Grupo_Clientes_Contas_a_Receber" Member="Clientes_Contas_a_Recebers" ThisKey="Cod_Grupo" OtherKey="Cod_Grupo" Type="Clientes_Contas_a_Receber" />
+      <Association Name="Grupo_Grupo" Member="Grupo2" ThisKey="Cod_Grupo" OtherKey="Cod_Grupo" Type="Grupo" Cardinality="One" />
+      <Association Name="Grupo_Grupo" Member="Grupo1" ThisKey="Cod_Grupo" OtherKey="Cod_Grupo" Type="Grupo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Itens_Pgtos_Baixa_Titulos_a_Pagar" Member="Itens_Pgtos_Baixa_Titulos_a_Pagars">
+    <Type Name="Itens_Pgtos_Baixa_Titulos_a_Pagar">
+      <Column Name="Cod_Baixa_Titulos_a_Pagar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Itens_Titulos_a_Pagar" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cod_Fornecedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Pagamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Valor_Titulo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Acrescimos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Descontos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Total_Pago" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Historico_Titulo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Parcela" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="Data_Vencimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Baixa_Titulos_a_Pagar_Pagamento_Itens_Pgtos_Baixa_Titulos_a_Pagar" Member="Baixa_Titulos_a_Pagar_Pagamento" ThisKey="Cod_Baixa_Titulos_a_Pagar" OtherKey="Cod_Baixa_Titulos_a_Pagar" Type="Baixa_Titulos_a_Pagar_Pagamento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lancamentos" Member="Lancamentos">
+    <Type Name="Lancamento">
+      <Column Name="Cod_Lancamento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Operacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Base_Tit_Pagos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Base_Tit_Recebidos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Conta" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Numero_Chque" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Lancamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Descricao_Operacao" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Recebimento_Titulos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Pagamento_Titulos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Valor_Movimento" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Saldo_Anterior" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Numero_Parcelas_a_Pagar" Member="Numero_Parcelas_a_Pagars">
+    <Type Name="Numero_Parcelas_a_Pagar">
+      <Column Name="Cod_Numero_Parcelas_a_Pagar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Entrada_Titulos_a_Pagar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Numero_Parcela" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="Data_Vencimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Valor_Parcela" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Numero_Parcelas_a_Receber" Member="Numero_Parcelas_a_Recebers">
+    <Type Name="Numero_Parcelas_a_Receber">
+      <Column Name="Cod_Numero_Parcelas_Receber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cod_Entrada_Titulos_a_Receber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_Parcela" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_Vencimento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Valor_Parcela" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Historico" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Cod_Status_Titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Operacao" Member="Operacaos">
+    <Type Name="Operacao">
+      <Column Name="Cod_Operacao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Op" Type="System.String" DbType="VarChar(65)" CanBeNull="true" />
+      <Column Name="Nome_Login" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pesquisa_Por_Nome" Member="Pesquisa_Por_Nomes">
+    <Type Name="Pesquisa_Por_Nome">
+      <Column Name="Cod_Pesquisa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Primeiro_Nome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Ultimo_Nome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Status_Fornecedor_Cliente" Member="Status_Fornecedor_Clientes">
+    <Type Name="Status_Fornecedor_Cliente">
+      <Column Name="Cod_Status_Fornecedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao_Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Data_Login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Login_Name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Status_Fornecedor_Cliente_Fornecedor_Contas_a_Pagar" Member="Fornecedor_Contas_a_Pagars" ThisKey="Cod_Status_Fornecedor" OtherKey="Cod_Status_Fornecedor" Type="Fornecedor_Contas_a_Pagar" />
+    </Type>
+  </Table>
+</Database>

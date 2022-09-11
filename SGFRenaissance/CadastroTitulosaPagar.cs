@@ -18,7 +18,7 @@ namespace SGFRenaissance
     public partial class CadastroTitulosaPagar : Form
     {
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         SqlDataAdapter adapt2;
@@ -85,7 +85,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Nome_Fornecedor from Fornecedor_Contas_a_Pagar where Cod_Fornecedor='{0}'", Cod_FornecedorTextbox.Text);
@@ -109,7 +109,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Descricao_Centro_Custos from Centro_Custos where Cod_Centro_Custos ='{0}'", TextBox_Cod_CentroCustos.Text);
@@ -133,7 +133,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Descricao_Despesa from Contas_Despesas where Cod_Despesa ='{0}'", cod_DespesaTextBox.Text);
@@ -158,7 +158,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Descricao_Status_Titulo from Status_Titulo where Cod_Status_Titulo ='{0}'", cod_Status_TituloTextBox1.Text);
@@ -389,7 +389,7 @@ namespace SGFRenaissance
             data_logintxtbox.Text = Data_Agora.ToShortDateString();
             login_NameTextBox.Text = Login.DadosGerais.Loginusuario;
             
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
 
                 if (Cod_FornecedorTextbox.Text != "" && TextBox_Cod_CentroCustos.Text != "" && cod_Status_TituloTextBox1.Text != "" && cod_DespesaTextBox.Text != "" && Numero_Titulo.Text != "" && valor_TituloTextBox.Text != "" && valor_TituloTextBox.Text != "" && valor_Pago_a_VistaTextBox.Text !="" && descontosTextBox.Text!="" && acrescimosTextBox.Text !="" )
@@ -512,7 +512,7 @@ namespace SGFRenaissance
             TryRefreshCustos();
             TryRefreshDespesa();
             TryRefreshStatusTitulo();
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
             {
                 SqlDataAdapter sda = new SqlDataAdapter("Select * From Entrada_Titulos_a_Pagar", conn);
@@ -528,7 +528,7 @@ namespace SGFRenaissance
 
         void GetDetails()
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             int currentId;
             int index = DataGridViewTitulo.CurrentCell.RowIndex;
             currentId = Convert.ToInt32(DataGridViewTitulo.Rows[index].Cells["Cod_Id"].Value);
@@ -789,7 +789,7 @@ namespace SGFRenaissance
 
         private void DataGridViewParcela_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
                 if (e.ColumnIndex == 7)
                 {

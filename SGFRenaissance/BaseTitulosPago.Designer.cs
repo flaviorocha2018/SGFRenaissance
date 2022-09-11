@@ -283,6 +283,8 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnData_Pagamento;
             
+            private global::System.Data.DataColumn columnTotal_Pago;
+            
             private global::System.Data.DataColumn columnBanco_Debitado;
             
             private global::System.Data.DataColumn columnNumero_Cheque;
@@ -292,8 +294,6 @@ namespace SGFRenaissance {
             private global::System.Data.DataColumn columnData_Login;
             
             private global::System.Data.DataColumn columnLogin_Name;
-            
-            private global::System.Data.DataColumn columnTotal_Pago;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -346,6 +346,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Total_PagoColumn {
+                get {
+                    return this.columnTotal_Pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Banco_DebitadoColumn {
                 get {
                     return this.columnBanco_Debitado;
@@ -386,14 +394,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Total_PagoColumn {
-                get {
-                    return this.columnTotal_Pago;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,17 +429,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Base_Titulos_PagosRow AddBase_Titulos_PagosRow(System.DateTime Data_Pagamento, int Banco_Debitado, string Numero_Cheque, string Historico, System.DateTime Data_Login, string Login_Name, decimal Total_Pago) {
+            public Base_Titulos_PagosRow AddBase_Titulos_PagosRow(System.DateTime Data_Pagamento, decimal Total_Pago, int Banco_Debitado, string Numero_Cheque, string Historico, System.DateTime Data_Login, string Login_Name) {
                 Base_Titulos_PagosRow rowBase_Titulos_PagosRow = ((Base_Titulos_PagosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Data_Pagamento,
+                        Total_Pago,
                         Banco_Debitado,
                         Numero_Cheque,
                         Historico,
                         Data_Login,
-                        Login_Name,
-                        Total_Pago};
+                        Login_Name};
                 rowBase_Titulos_PagosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBase_Titulos_PagosRow);
                 return rowBase_Titulos_PagosRow;
@@ -471,12 +471,12 @@ namespace SGFRenaissance {
             internal void InitVars() {
                 this.columnCod_Base_Titulos_Pagos = base.Columns["Cod_Base_Titulos_Pagos"];
                 this.columnData_Pagamento = base.Columns["Data_Pagamento"];
+                this.columnTotal_Pago = base.Columns["Total_Pago"];
                 this.columnBanco_Debitado = base.Columns["Banco_Debitado"];
                 this.columnNumero_Cheque = base.Columns["Numero_Cheque"];
                 this.columnHistorico = base.Columns["Historico"];
                 this.columnData_Login = base.Columns["Data_Login"];
                 this.columnLogin_Name = base.Columns["Login_Name"];
-                this.columnTotal_Pago = base.Columns["Total_Pago"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -486,6 +486,8 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnCod_Base_Titulos_Pagos);
                 this.columnData_Pagamento = new global::System.Data.DataColumn("Data_Pagamento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Pagamento);
+                this.columnTotal_Pago = new global::System.Data.DataColumn("Total_Pago", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Pago);
                 this.columnBanco_Debitado = new global::System.Data.DataColumn("Banco_Debitado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBanco_Debitado);
                 this.columnNumero_Cheque = new global::System.Data.DataColumn("Numero_Cheque", typeof(string), null, global::System.Data.MappingType.Element);
@@ -496,8 +498,6 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnData_Login);
                 this.columnLogin_Name = new global::System.Data.DataColumn("Login_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLogin_Name);
-                this.columnTotal_Pago = new global::System.Data.DataColumn("Total_Pago", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal_Pago);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Base_Titulos_Pagos}, true));
                 this.columnCod_Base_Titulos_Pagos.AutoIncrement = true;
@@ -506,8 +506,8 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_Pagos.AllowDBNull = false;
                 this.columnCod_Base_Titulos_Pagos.ReadOnly = true;
                 this.columnCod_Base_Titulos_Pagos.Unique = true;
-                this.columnNumero_Cheque.MaxLength = 15;
-                this.columnHistorico.MaxLength = 250;
+                this.columnNumero_Cheque.MaxLength = 25;
+                this.columnHistorico.MaxLength = 350;
                 this.columnLogin_Name.MaxLength = 15;
             }
             
@@ -678,6 +678,22 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Total_Pago {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBase_Titulos_Pagos.Total_PagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Pago\' in table \'Base_Titulos_Pagos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Banco_Debitado {
                 get {
                     try {
@@ -758,22 +774,6 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Total_Pago {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBase_Titulos_Pagos.Total_PagoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Pago\' in table \'Base_Titulos_Pagos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsData_PagamentoNull() {
                 return this.IsNull(this.tableBase_Titulos_Pagos.Data_PagamentoColumn);
             }
@@ -782,6 +782,18 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetData_PagamentoNull() {
                 this[this.tableBase_Titulos_Pagos.Data_PagamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTotal_PagoNull() {
+                return this.IsNull(this.tableBase_Titulos_Pagos.Total_PagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTotal_PagoNull() {
+                this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -842,18 +854,6 @@ namespace SGFRenaissance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLogin_NameNull() {
                 this[this.tableBase_Titulos_Pagos.Login_NameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTotal_PagoNull() {
-                return this.IsNull(this.tableBase_Titulos_Pagos.Total_PagoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTotal_PagoNull() {
-                this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1018,12 +1018,12 @@ namespace SGFRenaissance.BaseTitulosPagoTableAdapters {
             tableMapping.DataSetTable = "Base_Titulos_Pagos";
             tableMapping.ColumnMappings.Add("Cod_Base_Titulos_Pagos", "Cod_Base_Titulos_Pagos");
             tableMapping.ColumnMappings.Add("Data_Pagamento", "Data_Pagamento");
+            tableMapping.ColumnMappings.Add("Total_Pago", "Total_Pago");
             tableMapping.ColumnMappings.Add("Banco_Debitado", "Banco_Debitado");
             tableMapping.ColumnMappings.Add("Numero_Cheque", "Numero_Cheque");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
             tableMapping.ColumnMappings.Add("Data_Login", "Data_Login");
             tableMapping.ColumnMappings.Add("Login_Name", "Login_Name");
-            tableMapping.ColumnMappings.Add("Total_Pago", "Total_Pago");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1090,7 +1090,7 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numer
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

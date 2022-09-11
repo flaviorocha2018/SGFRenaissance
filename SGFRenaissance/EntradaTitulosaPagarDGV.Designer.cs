@@ -1667,7 +1667,7 @@ SELECT Cod_Entrada_Titulos_a_Pagar, Cod_Fornecedor, Numero_Documento, Data_Docum
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1676,7 +1676,8 @@ SELECT Cod_Entrada_Titulos_a_Pagar, Cod_Fornecedor, Numero_Documento, Data_Docum
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Cod_Entrada_Titulos_a_Pagar, Cod_Fornecedor, Numero_Documento, Data_Documento, Data_Vencimento, Valor_Titulo, Valor_Pago_a_Vista, Acrescimos, Descontos, Saldo, Numero_Parcelas, Cod_Centro_Custos, Cod_Status_Titulo, Cod_Despesa, Historico_Titulo, Observacao, Data_Login, Login_Name
+            this._commandCollection[0].CommandText = @"SELECT        Cod_Entrada_Titulos_a_Pagar, Cod_Fornecedor, Numero_Documento, Data_Documento, Data_Vencimento, Valor_Titulo, Valor_Pago_a_Vista, Acrescimos, Descontos, Saldo, Numero_Parcelas, Cod_Centro_Custos, 
+                         Cod_Status_Titulo, Cod_Despesa, Historico_Titulo, Observacao, Data_Login, Login_Name
 FROM            Entrada_Titulos_a_Pagar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }

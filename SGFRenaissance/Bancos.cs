@@ -18,9 +18,9 @@ namespace SGFRenaissance
             InitializeComponent();
         }
 
-        private void Bancos_Load(object sender, EventArgs e)
+        public void Bancos_Load(object sender, EventArgs e)
         {
-           this.bancosBindingSource.DataSource = DataContextFactory.DataContext.Bancos;
+            this.bancosBindingSource.DataSource = DataContextFactory.DataContext.Bancos;
           
             cod_BancoTextBox.Enabled = false;
             nome_BancoTextBox.Enabled = false;

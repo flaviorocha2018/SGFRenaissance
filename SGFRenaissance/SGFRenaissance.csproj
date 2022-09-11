@@ -54,17 +54,17 @@
     <Reference Include="Microsoft.Extensions.Globalization.CultureInfoCache, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Globalization.CultureInfoCache.1.1.3\lib\netstandard1.1\Microsoft.Extensions.Globalization.CultureInfoCache.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
@@ -168,6 +168,7 @@
     <Compile Include="Clientes_Contas_a_Receber.Designer.cs">
       <DependentUpon>Clientes_Contas_a_Receber.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataContextFactorySGF.cs" />
     <Compile Include="DataSet_Relatorio_NF_Total_a_Receber.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +212,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntradaTitulosaPagarDataGrid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaTitulosaPagarDGV.cs">
+      <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
     </Compile>
     <Compile Include="EntradaTitulosaPagarDGV.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -388,6 +392,11 @@
     </Compile>
     <Compile Include="Report_TitulosaReceberemAberto.Designer.cs">
       <DependentUpon>Report_TitulosaReceberemAberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissance.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissance.dbml</DependentUpon>
     </Compile>
     <Compile Include="SGFRenaissanceDataSet.cs">
       <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
@@ -829,9 +838,9 @@
       <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
     </None>
     <None Include="EntradaTitulosaPagarDGV.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>EntradaTitulosaPagarDGV.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="EntradaTitulosaPagarDGV.xss">
       <DependentUpon>EntradaTitulosaPagarDGV.xsd</DependentUpon>
@@ -978,6 +987,14 @@
     <None Include="Rel_TitulosaReceberemAberto.xss">
       <DependentUpon>Rel_TitulosaReceberemAberto.xsd</DependentUpon>
     </None>
+    <None Include="SGFRenaissance.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SGFRenaissance.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissance.dbml.layout">
+      <DependentUpon>SGFRenaissance.dbml</DependentUpon>
+    </None>
     <None Include="SGFRenaissanceDataSet.xsc">
       <DependentUpon>SGFRenaissanceDataSet.xsd</DependentUpon>
     </None>
@@ -1050,25 +1067,25 @@
     <None Include="Resources\imageres.dll_I003b_0409.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\sistema.DAL\sistema.DAL.csproj">
       <Project>{8c3c7392-e988-42f9-bcda-bf4c8ee49888}</Project>
       <Name>sistema.DAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

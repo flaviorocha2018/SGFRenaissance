@@ -1739,7 +1739,7 @@ SELECT Cod_Base_Titulos_a_Recebidos, Cod_Entrada_Titulos_a_Receber, Cod_Numero_P
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1748,8 +1748,9 @@ SELECT Cod_Base_Titulos_a_Recebidos, Cod_Entrada_Titulos_a_Receber, Cod_Numero_P
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT    Cod_Base_Titulos_a_Recebidos, Cod_Entrada_Titulos_a_Receber, Cod_Numero_Parcelas_Receber,                  Cod_Cliente, Numero_Documento, Numero_Parcela, Valor_Titulo, Valor_Pago_a_Vista,                                   Data_Documento, Data_Recebimento,   Data_Venc_Parcela, Numero_Banco, Cod_Receita,                  Valor_Recebido, Acrescimos, Desconto, Saldo, Status_Titulo_a_Receber, Historico_Titulo,                  Historico_Parcela
-FROM      Base_Parcelas_Recebidas";
+            this._commandCollection[0].CommandText = @"SELECT        Cod_Base_Titulos_a_Recebidos, Cod_Entrada_Titulos_a_Receber, Cod_Numero_Parcelas_Receber, Cod_Cliente, Numero_Documento, Numero_Parcela, Valor_Titulo, Valor_Pago_a_Vista, Data_Documento, Data_Recebimento,
+                          Data_Venc_Parcela, Numero_Banco, Cod_Receita, Valor_Recebido, Acrescimos, Desconto, Saldo, Status_Titulo_a_Receber, Historico_Titulo, Historico_Parcela
+FROM            Base_Parcelas_Recebidas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

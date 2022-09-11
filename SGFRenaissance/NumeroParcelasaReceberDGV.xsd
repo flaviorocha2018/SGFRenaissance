@@ -2,14 +2,15 @@
 <xs:schema id="NumeroParcelasaReceberDGV" targetNamespace="http://tempuri.org/NumeroParcelasaReceberDGV.xsd" xmlns:mstns="http://tempuri.org/NumeroParcelasaReceberDGV.xsd" xmlns="http://tempuri.org/NumeroParcelasaReceberDGV.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SGFRenaissanceConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SGFRenaissanceConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SGFRenaissance.Properties.Settings.GlobalReference.Default.SGFRenaissanceConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Numero_Parcelas_a_ReceberTableAdapter" GeneratorDataComponentClassName="Numero_Parcelas_a_ReceberTableAdapter" Name="Numero_Parcelas_a_Receber" UserDataComponentName="Numero_Parcelas_a_ReceberTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Numero_Parcelas_a_Receber.Cod_Entrada_Titulos_a_Receber, Numero_Parcelas_a_Receber.Cod_Numero_Parcelas_Receber, Numero_Parcelas_a_Receber.Numero_Parcela, Numero_Parcelas_a_Receber.Data_Vencimento, 
@@ -23,64 +24,78 @@ FROM            Numero_Parcelas_a_Receber INNER JOIN
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Cod_Entrada_Titulos_a_Receber" DataSetColumn="Cod_Entrada_Titulos_a_Receber" />
               <Mapping SourceColumn="Cod_Numero_Parcelas_Receber" DataSetColumn="Cod_Numero_Parcelas_Receber" />
+              <Mapping SourceColumn="Cod_Entrada_Titulos_a_Receber" DataSetColumn="Cod_Entrada_Titulos_a_Receber" />
               <Mapping SourceColumn="Numero_Parcela" DataSetColumn="Numero_Parcela" />
               <Mapping SourceColumn="Data_Vencimento" DataSetColumn="Data_Vencimento" />
               <Mapping SourceColumn="Valor_Parcela" DataSetColumn="Valor_Parcela" />
               <Mapping SourceColumn="Historico" DataSetColumn="Historico" />
               <Mapping SourceColumn="Cod_Status_Titulo" DataSetColumn="Cod_Status_Titulo" />
               <Mapping SourceColumn="Descricao_Status" DataSetColumn="Descricao_Status" />
+              <Mapping SourceColumn="Codigo_Status_Tit_a_Receber" DataSetColumn="Codigo_Status_Tit_a_Receber" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Status_Titulos_a_ReceberTableAdapter" GeneratorDataComponentClassName="Status_Titulos_a_ReceberTableAdapter" Name="Status_Titulos_a_Receber" UserDataComponentName="Status_Titulos_a_ReceberTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SGFRenaissanceConnectionString (Settings)" DbObjectName="SGFRenaissance.dbo.Status_Titulos_a_Receber" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SGFRenaissanceConnectionString1 (Settings)" DbObjectName="SGFRenaissance.dbo.Status_Titulos_a_Receber" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [Status_Titulos_a_Receber] WHERE (((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Status_Titulos_a_Receber] WHERE (([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber) AND ((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ((@IsNull_data_login = 1 AND [data_login] IS NULL) OR ([data_login] = @Original_data_login)) AND ((@IsNull_login_name = 1 AND [login_name] IS NULL) OR ([login_name] = @Original_login_name)))</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Descricao_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Descricao_Status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_data_login" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_data_login" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_login_name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_login_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [Status_Titulos_a_Receber] ([Descricao_Status]) VALUES (@Descricao_Status);
-SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Status_Titulos_a_Receber] ([Descricao_Status], [data_login], [login_name]) VALUES (@Descricao_Status, @data_login, @login_name);
+SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Descricao_Status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@data_login" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@login_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Descricao_Status, Codigo_Status_Tit_a_Receber
-FROM            Status_Titulos_a_Receber</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM dbo.Status_Titulos_a_Receber</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [Status_Titulos_a_Receber] SET [Descricao_Status] = @Descricao_Status WHERE (((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber));
-SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = @Codigo_Status_Tit_a_Receber)</CommandText>
+                    <CommandText>UPDATE [dbo].[Status_Titulos_a_Receber] SET [Descricao_Status] = @Descricao_Status, [data_login] = @data_login, [login_name] = @login_name WHERE (([Codigo_Status_Tit_a_Receber] = @Original_Codigo_Status_Tit_a_Receber) AND ((@IsNull_Descricao_Status = 1 AND [Descricao_Status] IS NULL) OR ([Descricao_Status] = @Original_Descricao_Status)) AND ((@IsNull_data_login = 1 AND [data_login] IS NULL) OR ([data_login] = @Original_data_login)) AND ((@IsNull_login_name = 1 AND [login_name] IS NULL) OR ([login_name] = @Original_login_name)));
+SELECT Codigo_Status_Tit_a_Receber, Descricao_Status, data_login, login_name FROM Status_Titulos_a_Receber WHERE (Codigo_Status_Tit_a_Receber = @Codigo_Status_Tit_a_Receber)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Descricao_Status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@data_login" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@login_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Descricao_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Descricao_Status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Descricao_Status" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Codigo_Status_Tit_a_Receber" ColumnName="Codigo_Status_Tit_a_Receber" DataSourceName="SGFRenaissance.dbo.Status_Titulos_a_Receber" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_data_login" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_data_login" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="data_login" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_login_name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_login_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="login_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Codigo_Status_Tit_a_Receber" ColumnName="Codigo_Status_Tit_a_Receber" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Codigo_Status_Tit_a_Receber" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Codigo_Status_Tit_a_Receber" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Descricao_Status" DataSetColumn="Descricao_Status" />
               <Mapping SourceColumn="Codigo_Status_Tit_a_Receber" DataSetColumn="Codigo_Status_Tit_a_Receber" />
+              <Mapping SourceColumn="Descricao_Status" DataSetColumn="Descricao_Status" />
+              <Mapping SourceColumn="data_login" DataSetColumn="data_login" />
+              <Mapping SourceColumn="login_name" DataSetColumn="login_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -95,8 +110,8 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
         <xs:element name="Numero_Parcelas_a_Receber" msprop:Generator_TableClassName="Numero_Parcelas_a_ReceberDataTable" msprop:Generator_TableVarName="tableNumero_Parcelas_a_Receber" msprop:Generator_TablePropName="Numero_Parcelas_a_Receber" msprop:Generator_RowDeletingName="Numero_Parcelas_a_ReceberRowDeleting" msprop:Generator_RowChangingName="Numero_Parcelas_a_ReceberRowChanging" msprop:Generator_RowEvHandlerName="Numero_Parcelas_a_ReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="Numero_Parcelas_a_ReceberRowDeleted" msprop:Generator_UserTableName="Numero_Parcelas_a_Receber" msprop:Generator_RowChangedName="Numero_Parcelas_a_ReceberRowChanged" msprop:Generator_RowEvArgName="Numero_Parcelas_a_ReceberRowChangeEvent" msprop:Generator_RowClassName="Numero_Parcelas_a_ReceberRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Cod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnVarNameInTable="columnCod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnPropNameInRow="Cod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnPropNameInTable="Cod_Entrada_Titulos_a_ReceberColumn" msprop:Generator_UserColumnName="Cod_Entrada_Titulos_a_Receber" type="xs:int" />
               <xs:element name="Cod_Numero_Parcelas_Receber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Numero_Parcelas_Receber" msprop:Generator_ColumnPropNameInRow="Cod_Numero_Parcelas_Receber" msprop:Generator_ColumnPropNameInTable="Cod_Numero_Parcelas_ReceberColumn" msprop:Generator_UserColumnName="Cod_Numero_Parcelas_Receber" type="xs:int" />
+              <xs:element name="Cod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnVarNameInTable="columnCod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnPropNameInRow="Cod_Entrada_Titulos_a_Receber" msprop:Generator_ColumnPropNameInTable="Cod_Entrada_Titulos_a_ReceberColumn" msprop:Generator_UserColumnName="Cod_Entrada_Titulos_a_Receber" type="xs:int" />
               <xs:element name="Numero_Parcela" msprop:Generator_ColumnVarNameInTable="columnNumero_Parcela" msprop:Generator_ColumnPropNameInRow="Numero_Parcela" msprop:Generator_ColumnPropNameInTable="Numero_ParcelaColumn" msprop:Generator_UserColumnName="Numero_Parcela" type="xs:int" minOccurs="0" />
               <xs:element name="Data_Vencimento" msprop:Generator_ColumnVarNameInTable="columnData_Vencimento" msprop:Generator_ColumnPropNameInRow="Data_Vencimento" msprop:Generator_ColumnPropNameInTable="Data_VencimentoColumn" msprop:Generator_UserColumnName="Data_Vencimento" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Valor_Parcela" msprop:Generator_ColumnVarNameInTable="columnValor_Parcela" msprop:Generator_ColumnPropNameInRow="Valor_Parcela" msprop:Generator_ColumnPropNameInTable="Valor_ParcelaColumn" msprop:Generator_UserColumnName="Valor_Parcela" type="xs:decimal" minOccurs="0" />
@@ -115,12 +130,14 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Codigo_Status_Tit_a_Receber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInRow="Codigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInTable="Codigo_Status_Tit_a_ReceberColumn" msprop:Generator_UserColumnName="Codigo_Status_Tit_a_Receber" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Status_Titulos_a_Receber" msprop:Generator_TableClassName="Status_Titulos_a_ReceberDataTable" msprop:Generator_TableVarName="tableStatus_Titulos_a_Receber" msprop:Generator_TablePropName="Status_Titulos_a_Receber" msprop:Generator_RowDeletingName="Status_Titulos_a_ReceberRowDeleting" msprop:Generator_RowChangingName="Status_Titulos_a_ReceberRowChanging" msprop:Generator_RowEvHandlerName="Status_Titulos_a_ReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="Status_Titulos_a_ReceberRowDeleted" msprop:Generator_UserTableName="Status_Titulos_a_Receber" msprop:Generator_RowChangedName="Status_Titulos_a_ReceberRowChanged" msprop:Generator_RowEvArgName="Status_Titulos_a_ReceberRowChangeEvent" msprop:Generator_RowClassName="Status_Titulos_a_ReceberRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="Codigo_Status_Tit_a_Receber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInRow="Codigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInTable="Codigo_Status_Tit_a_ReceberColumn" msprop:Generator_UserColumnName="Codigo_Status_Tit_a_Receber" type="xs:int" />
               <xs:element name="Descricao_Status" msprop:Generator_ColumnVarNameInTable="columnDescricao_Status" msprop:Generator_ColumnPropNameInRow="Descricao_Status" msprop:Generator_ColumnPropNameInTable="Descricao_StatusColumn" msprop:Generator_UserColumnName="Descricao_Status" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -128,7 +145,14 @@ SELECT Descricao_Status, Codigo_Status_Tit_a_Receber FROM Status_Titulos_a_Receb
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Codigo_Status_Tit_a_Receber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInRow="Codigo_Status_Tit_a_Receber" msprop:Generator_ColumnPropNameInTable="Codigo_Status_Tit_a_ReceberColumn" msprop:Generator_UserColumnName="Codigo_Status_Tit_a_Receber" type="xs:int" />
+              <xs:element name="data_login" msprop:Generator_ColumnVarNameInTable="columndata_login" msprop:Generator_ColumnPropNameInRow="data_login" msprop:Generator_ColumnPropNameInTable="data_loginColumn" msprop:Generator_UserColumnName="data_login" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="login_name" msprop:Generator_ColumnVarNameInTable="columnlogin_name" msprop:Generator_ColumnPropNameInRow="login_name" msprop:Generator_ColumnPropNameInTable="login_nameColumn" msprop:Generator_UserColumnName="login_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

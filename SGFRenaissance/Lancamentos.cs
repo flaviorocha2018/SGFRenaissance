@@ -20,7 +20,7 @@ namespace SGFRenaissance
         decimal Total = 0;
         public decimal saldoanterior = 0;
         public decimal saldo = 0;
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         Int32 LastID = 0;
@@ -36,7 +36,7 @@ namespace SGFRenaissance
         private void PreencherCB_Box_Operacao()
 
         {
-            String scon = "Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            String scon = "Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             SqlConnection con = new SqlConnection(scon);
             try
             {
@@ -80,7 +80,7 @@ namespace SGFRenaissance
             btn_novo.Enabled = true;
             btn_operacao.Enabled = false;
             btn_Banco.Enabled = false;
-            btn_base_Titulos_Pagos.Enabled = false;
+            btn_base_Titulos_a_Pagar.Enabled = false;
             btn_Base_Titulos_Recebidos.Enabled = false;
             btn_salvar.Enabled = false;
             btn_Update.Enabled = false;
@@ -98,7 +98,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select Numero_Conta from Bancos where Cod_Banco='{0}'", textBoxCod_banco.Text);
@@ -124,7 +124,7 @@ namespace SGFRenaissance
             {
               
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select Saldo from Lancamentos where Cod_Banco='{0}'", textBoxCod_banco.Text);
@@ -151,7 +151,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select Nome_Banco from Bancos where Cod_Banco='{0}'", textBoxCod_banco.Text);
@@ -179,7 +179,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select Descricao_Op from Operacao where Cod_Operacao ='{0}'", textBoxCodOperacao.Text);
@@ -205,7 +205,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = "SELECT MAX(Cod_Lancamento) FROM Lancamentos";
@@ -438,10 +438,10 @@ namespace SGFRenaissance
             }
             if (textBoxCodOperacao.Text == "2")
             {
-                btn_base_Titulos_Pagos.Enabled = true;
-                btn_base_Titulos_Pagos.BackColor = Color.Orange;
-                btn_base_Titulos_Pagos.ForeColor = Color.Navy;
-                btn_base_Titulos_Pagos.Focus();
+                btn_base_Titulos_a_Pagar.Enabled = true;
+                btn_base_Titulos_a_Pagar.BackColor = Color.Orange;
+                btn_base_Titulos_a_Pagar.ForeColor = Color.Navy;
+                btn_base_Titulos_a_Pagar.Focus();
                 valor_MovimentoTextBox.Enabled = false;
                 valor_MovimentoTextBox.ReadOnly = true;
                 descricao_OperacaoTextBox.Enabled = true;
@@ -560,10 +560,10 @@ namespace SGFRenaissance
 
         }
 
-        private void btn_base_Titulos_Pagos_Click(object sender, EventArgs e)
+        private void btn_base_Titulos_a_Pagar_Click(object sender, EventArgs e)
         {
-            TelaBaseTitulosPagos frm = new TelaBaseTitulosPagos() { Owner = this };
-            frm.Show();
+          //  Form_Titulos_a_Pagar_Total frm = new Form_Titulos_a_Pagar_Total() { Owner = this };
+          //   frm.Show();
         }
 
         private void btn_Base_Titulos_Recebidos_Click(object sender, EventArgs e)
@@ -597,7 +597,7 @@ namespace SGFRenaissance
             BuscarDadosConta();
             BuscarNomeBanco();
             BuscarSaldoConta();
-            btn_base_Titulos_Pagos.Enabled = false;
+            btn_base_Titulos_a_Pagar.Enabled = false;
             valor_MovimentoTextBox.Enabled = true;
             valor_MovimentoTextBox.Text = Valor_Tit_Pagos.Text;
             valorMovimento = Convert.ToDecimal(valor_MovimentoTextBox.Text);
@@ -609,9 +609,9 @@ namespace SGFRenaissance
             btn_salvar.Enabled = true;
             btn_salvar.BackColor = Color.Orange;
             btn_salvar.ForeColor = Color.DarkBlue;
-            btn_base_Titulos_Pagos.Enabled = false;
-            btn_base_Titulos_Pagos.BackColor = Color.Gainsboro;
-            btn_base_Titulos_Pagos.ForeColor = Color.Black;
+            btn_base_Titulos_a_Pagar.Enabled = false;
+            btn_base_Titulos_a_Pagar.BackColor = Color.Gainsboro;
+            btn_base_Titulos_a_Pagar.ForeColor = Color.Black;
         }
 
         private void cod_Titulos_recebidos_TextChanged(object sender, EventArgs e)
