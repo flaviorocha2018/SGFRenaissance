@@ -124,7 +124,7 @@
     <Compile Include="BaseTitulosPago.cs">
       <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BaseTitulosPago.Designer.cs">
+    <Compile Include="BaseTitulosPago1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
@@ -250,11 +250,11 @@
     <Compile Include="Form_Relatorio_Lancamentos.Designer.cs">
       <DependentUpon>Form_Relatorio_Lancamentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Titulos_a_Pagar_Total.cs">
+    <Compile Include="Form_Rel_Titulos_a_Pagar_Total.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Titulos_a_Pagar_Total.Designer.cs">
-      <DependentUpon>Form_Titulos_a_Pagar_Total.cs</DependentUpon>
+    <Compile Include="Form_Rel_Titulos_a_Pagar_Total.Designer.cs">
+      <DependentUpon>Form_Rel_Titulos_a_Pagar_Total.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRel_TitulosRecebidos.cs">
       <SubType>Form</SubType>
@@ -262,11 +262,11 @@
     <Compile Include="FrmRel_TitulosRecebidos.Designer.cs">
       <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTitulosPagos.cs">
+    <Compile Include="Frm_Rel_Titulos_Pagos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTitulosPagos.Designer.cs">
-      <DependentUpon>FrmTitulosPagos.cs</DependentUpon>
+    <Compile Include="Frm_Rel_Titulos_Pagos.Designer.cs">
+      <DependentUpon>Frm_Rel_Titulos_Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.cs">
       <SubType>Form</SubType>
@@ -416,6 +416,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SGFRenaissanceDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SGFRenaissanceDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissanceDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SGFRenaissanceDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFRenaissanceDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SGFRenaissance_Base_Parcelas_Pagas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -440,6 +450,12 @@
     </Compile>
     <Compile Include="TelaBancosNova.Designer.cs">
       <DependentUpon>TelaBancosNova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBaseLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBaseLancamentos.Designer.cs">
+      <DependentUpon>TelaBaseLancamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaBaseTitulosPagos.cs">
       <SubType>Form</SubType>
@@ -570,14 +586,14 @@
     <EmbeddedResource Include="Form_Relatorio_Lancamentos.resx">
       <DependentUpon>Form_Relatorio_Lancamentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Titulos_a_Pagar_Total.resx">
-      <DependentUpon>Form_Titulos_a_Pagar_Total.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Rel_Titulos_a_Pagar_Total.resx">
+      <DependentUpon>Form_Rel_Titulos_a_Pagar_Total.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRel_TitulosRecebidos.resx">
       <DependentUpon>FrmRel_TitulosRecebidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTitulosPagos.resx">
-      <DependentUpon>FrmTitulosPagos.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Rel_Titulos_Pagos.resx">
+      <DependentUpon>Frm_Rel_Titulos_Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Rel_Titulos_a_Pagar_em_Aberto.resx">
       <DependentUpon>Frm_Rel_Titulos_a_Pagar_em_Aberto.cs</DependentUpon>
@@ -640,6 +656,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaBancosNova.resx">
       <DependentUpon>TelaBancosNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaBaseLancamentos.resx">
+      <DependentUpon>TelaBaseLancamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaBaseTitulosPagos.resx">
       <DependentUpon>TelaBaseTitulosPagos.cs</DependentUpon>
@@ -716,8 +735,8 @@
     </None>
     <None Include="BaseTitulosPago.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaseTitulosPago.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>BaseTitulosPago1.Designer.cs</LastGenOutput>
     </None>
     <None Include="BaseTitulosPago.xss">
       <DependentUpon>BaseTitulosPago.xsd</DependentUpon>
@@ -749,8 +768,8 @@
     </None>
     <None Include="base_Parcelas_PagasDGV.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>base_Parcelas_PagasDGV.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>base_Parcelas_PagasDGV1.Designer.cs</LastGenOutput>
     </None>
     <None Include="base_Parcelas_PagasDGV.xss">
       <DependentUpon>base_Parcelas_PagasDGV.xsd</DependentUpon>
@@ -1027,6 +1046,28 @@
     </None>
     <None Include="SGFRenaissanceDataSet2.xss">
       <DependentUpon>SGFRenaissanceDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet3.xsc">
+      <DependentUpon>SGFRenaissanceDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissanceDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissanceDataSet3.xss">
+      <DependentUpon>SGFRenaissanceDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet4.xsc">
+      <DependentUpon>SGFRenaissanceDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SGFRenaissanceDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFRenaissanceDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFRenaissanceDataSet4.xss">
+      <DependentUpon>SGFRenaissanceDataSet4.xsd</DependentUpon>
     </None>
     <None Include="SGFRenaissance_Base_Parcelas_Pagas.xsc">
       <DependentUpon>SGFRenaissance_Base_Parcelas_Pagas.xsd</DependentUpon>

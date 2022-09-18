@@ -283,7 +283,7 @@ namespace SGFRenaissance {
             
             private global::System.Data.DataColumn columnData_Pagamento;
             
-            private global::System.Data.DataColumn columnValor_Pago;
+            private global::System.Data.DataColumn columnTotal_Pago;
             
             private global::System.Data.DataColumn columnBanco_Debitado;
             
@@ -346,9 +346,9 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Valor_PagoColumn {
+            public global::System.Data.DataColumn Total_PagoColumn {
                 get {
-                    return this.columnValor_Pago;
+                    return this.columnTotal_Pago;
                 }
             }
             
@@ -429,12 +429,12 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Base_Titulos_PagosRow AddBase_Titulos_PagosRow(System.DateTime Data_Pagamento, decimal Valor_Pago, int Banco_Debitado, string Numero_Cheque, string Historico, System.DateTime Data_Login, string Login_Name) {
+            public Base_Titulos_PagosRow AddBase_Titulos_PagosRow(System.DateTime Data_Pagamento, decimal Total_Pago, int Banco_Debitado, string Numero_Cheque, string Historico, System.DateTime Data_Login, string Login_Name) {
                 Base_Titulos_PagosRow rowBase_Titulos_PagosRow = ((Base_Titulos_PagosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Data_Pagamento,
-                        Valor_Pago,
+                        Total_Pago,
                         Banco_Debitado,
                         Numero_Cheque,
                         Historico,
@@ -471,7 +471,7 @@ namespace SGFRenaissance {
             internal void InitVars() {
                 this.columnCod_Base_Titulos_Pagos = base.Columns["Cod_Base_Titulos_Pagos"];
                 this.columnData_Pagamento = base.Columns["Data_Pagamento"];
-                this.columnValor_Pago = base.Columns["Valor_Pago"];
+                this.columnTotal_Pago = base.Columns["Total_Pago"];
                 this.columnBanco_Debitado = base.Columns["Banco_Debitado"];
                 this.columnNumero_Cheque = base.Columns["Numero_Cheque"];
                 this.columnHistorico = base.Columns["Historico"];
@@ -486,8 +486,8 @@ namespace SGFRenaissance {
                 base.Columns.Add(this.columnCod_Base_Titulos_Pagos);
                 this.columnData_Pagamento = new global::System.Data.DataColumn("Data_Pagamento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Pagamento);
-                this.columnValor_Pago = new global::System.Data.DataColumn("Valor_Pago", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValor_Pago);
+                this.columnTotal_Pago = new global::System.Data.DataColumn("Total_Pago", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Pago);
                 this.columnBanco_Debitado = new global::System.Data.DataColumn("Banco_Debitado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBanco_Debitado);
                 this.columnNumero_Cheque = new global::System.Data.DataColumn("Numero_Cheque", typeof(string), null, global::System.Data.MappingType.Element);
@@ -506,8 +506,8 @@ namespace SGFRenaissance {
                 this.columnCod_Base_Titulos_Pagos.AllowDBNull = false;
                 this.columnCod_Base_Titulos_Pagos.ReadOnly = true;
                 this.columnCod_Base_Titulos_Pagos.Unique = true;
-                this.columnNumero_Cheque.MaxLength = 15;
-                this.columnHistorico.MaxLength = 150;
+                this.columnNumero_Cheque.MaxLength = 25;
+                this.columnHistorico.MaxLength = 350;
                 this.columnLogin_Name.MaxLength = 15;
             }
             
@@ -678,17 +678,17 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Valor_Pago {
+            public decimal Total_Pago {
                 get {
                     try {
-                        return ((decimal)(this[this.tableBase_Titulos_Pagos.Valor_PagoColumn]));
+                        return ((decimal)(this[this.tableBase_Titulos_Pagos.Total_PagoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Valor_Pago\' in table \'Base_Titulos_Pagos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Pago\' in table \'Base_Titulos_Pagos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBase_Titulos_Pagos.Valor_PagoColumn] = value;
+                    this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = value;
                 }
             }
             
@@ -786,14 +786,14 @@ namespace SGFRenaissance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsValor_PagoNull() {
-                return this.IsNull(this.tableBase_Titulos_Pagos.Valor_PagoColumn);
+            public bool IsTotal_PagoNull() {
+                return this.IsNull(this.tableBase_Titulos_Pagos.Total_PagoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetValor_PagoNull() {
-                this[this.tableBase_Titulos_Pagos.Valor_PagoColumn] = global::System.Convert.DBNull;
+            public void SetTotal_PagoNull() {
+                this[this.tableBase_Titulos_Pagos.Total_PagoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1018,7 +1018,7 @@ namespace SGFRenaissance.BaseTitulosPagosINSERTTableAdapters {
             tableMapping.DataSetTable = "Base_Titulos_Pagos";
             tableMapping.ColumnMappings.Add("Cod_Base_Titulos_Pagos", "Cod_Base_Titulos_Pagos");
             tableMapping.ColumnMappings.Add("Data_Pagamento", "Data_Pagamento");
-            tableMapping.ColumnMappings.Add("Valor_Pago", "Valor_Pago");
+            tableMapping.ColumnMappings.Add("Total_Pago", "Total_Pago");
             tableMapping.ColumnMappings.Add("Banco_Debitado", "Banco_Debitado");
             tableMapping.ColumnMappings.Add("Numero_Cheque", "Numero_Cheque");
             tableMapping.ColumnMappings.Add("Historico", "Historico");
@@ -1027,13 +1027,13 @@ namespace SGFRenaissance.BaseTitulosPagosINSERTTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Base_Titulos_Pagos] WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos_Pagos) AND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_Pagamento)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS NULL) OR ([Valor_Pago] = @Original_Valor_Pago)) AND ((@IsNull_Banco_Debitado = 1 AND [Banco_Debitado] IS NULL) OR ([Banco_Debitado] = @Original_Banco_Debitado)) AND ((@IsNull_Numero_Cheque = 1 AND [Numero_Cheque] IS NULL) OR ([Numero_Cheque] = @Original_Numero_Cheque)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Base_Titulos_Pagos] WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos_Pagos) AND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_Pagamento)) AND ((@IsNull_Total_Pago = 1 AND [Total_Pago] IS NULL) OR ([Total_Pago] = @Original_Total_Pago)) AND ((@IsNull_Banco_Debitado = 1 AND [Banco_Debitado] IS NULL) OR ([Banco_Debitado] = @Original_Banco_Debitado)) AND ((@IsNull_Numero_Cheque = 1 AND [Numero_Cheque] IS NULL) OR ([Numero_Cheque] = @Original_Numero_Cheque)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_Pagos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_Pagos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Pagamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Pagamento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Valor_Pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Valor_Pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Valor_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Total_Pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total_Pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Total_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Cheque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Cheque", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1046,11 +1046,11 @@ namespace SGFRenaissance.BaseTitulosPagosINSERTTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Base_Titulos_Pagos] ([Data_Pagamento], [Valor_Pago], [Banco_Debitado], [Numero_Cheque], [Historico], [Data_Login], [Login_Name]) VALUES (@Data_Pagamento, @Valor_Pago, @Banco_Debitado, @Numero_Cheque, @Historico, @Data_Login, @Login_Name);
-SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name FROM Base_Titulos_Pagos WHERE (Cod_Base_Titulos_Pagos = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Base_Titulos_Pagos] ([Data_Pagamento], [Total_Pago], [Banco_Debitado], [Numero_Cheque], [Historico], [Data_Login], [Login_Name]) VALUES (@Data_Pagamento, @Total_Pago, @Banco_Debitado, @Numero_Cheque, @Historico, @Data_Login, @Login_Name);
+SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name FROM Base_Titulos_Pagos WHERE (Cod_Base_Titulos_Pagos = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Pagamento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valor_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Cheque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Cheque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1058,11 +1058,11 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Base_Titulos_Pagos] SET [Data_Pagamento] = @Data_Pagamento, [Valor_Pago] = @Valor_Pago, [Banco_Debitado] = @Banco_Debitado, [Numero_Cheque] = @Numero_Cheque, [Historico] = @Historico, [Data_Login] = @Data_Login, [Login_Name] = @Login_Name WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos_Pagos) AND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_Pagamento)) AND ((@IsNull_Valor_Pago = 1 AND [Valor_Pago] IS NULL) OR ([Valor_Pago] = @Original_Valor_Pago)) AND ((@IsNull_Banco_Debitado = 1 AND [Banco_Debitado] IS NULL) OR ([Banco_Debitado] = @Original_Banco_Debitado)) AND ((@IsNull_Numero_Cheque = 1 AND [Numero_Cheque] IS NULL) OR ([Numero_Cheque] = @Original_Numero_Cheque)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)));
-SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name FROM Base_Titulos_Pagos WHERE (Cod_Base_Titulos_Pagos = @Cod_Base_Titulos_Pagos)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Base_Titulos_Pagos] SET [Data_Pagamento] = @Data_Pagamento, [Total_Pago] = @Total_Pago, [Banco_Debitado] = @Banco_Debitado, [Numero_Cheque] = @Numero_Cheque, [Historico] = @Historico, [Data_Login] = @Data_Login, [Login_Name] = @Login_Name WHERE (([Cod_Base_Titulos_Pagos] = @Original_Cod_Base_Titulos_Pagos) AND ((@IsNull_Data_Pagamento = 1 AND [Data_Pagamento] IS NULL) OR ([Data_Pagamento] = @Original_Data_Pagamento)) AND ((@IsNull_Total_Pago = 1 AND [Total_Pago] IS NULL) OR ([Total_Pago] = @Original_Total_Pago)) AND ((@IsNull_Banco_Debitado = 1 AND [Banco_Debitado] IS NULL) OR ([Banco_Debitado] = @Original_Banco_Debitado)) AND ((@IsNull_Numero_Cheque = 1 AND [Numero_Cheque] IS NULL) OR ([Numero_Cheque] = @Original_Numero_Cheque)) AND ((@IsNull_Historico = 1 AND [Historico] IS NULL) OR ([Historico] = @Original_Historico)) AND ((@IsNull_Data_Login = 1 AND [Data_Login] IS NULL) OR ([Data_Login] = @Original_Data_Login)) AND ((@IsNull_Login_Name = 1 AND [Login_Name] IS NULL) OR ([Login_Name] = @Original_Login_Name)));
+SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name FROM Base_Titulos_Pagos WHERE (Cod_Base_Titulos_Pagos = @Cod_Base_Titulos_Pagos)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Pagamento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valor_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numero_Cheque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Cheque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Historico", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Historico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1071,8 +1071,8 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Base_Titulos_Pagos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Base_Titulos_Pagos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Pagamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Pagamento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Pagamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Valor_Pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Valor_Pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Valor_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Valor_Pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Total_Pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total_Pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Total_Pago", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Total_Pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Banco_Debitado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Banco_Debitado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Numero_Cheque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numero_Cheque", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1090,7 +1090,7 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1099,9 +1099,8 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado," +
-                " Numero_Cheque, Historico, Data_Login, Login_Name\r\nFROM            Base_Titulos_" +
-                "Pagos";
+            this._commandCollection[0].CommandText = "SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Total_Pago, Banco_Debitado, Numero" +
+                "_Cheque, Historico, Data_Login, Login_Name FROM dbo.Base_Titulos_Pagos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1162,7 +1161,7 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Cod_Base_Titulos_Pagos, global::System.Nullable<global::System.DateTime> Original_Data_Pagamento, global::System.Nullable<decimal> Original_Valor_Pago, global::System.Nullable<int> Original_Banco_Debitado, string Original_Numero_Cheque, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
+        public virtual int Delete(int Original_Cod_Base_Titulos_Pagos, global::System.Nullable<global::System.DateTime> Original_Data_Pagamento, global::System.Nullable<decimal> Original_Total_Pago, global::System.Nullable<int> Original_Banco_Debitado, string Original_Numero_Cheque, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Cod_Base_Titulos_Pagos));
             if ((Original_Data_Pagamento.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -1172,9 +1171,9 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Valor_Pago.HasValue == true)) {
+            if ((Original_Total_Pago.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Valor_Pago.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Total_Pago.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -1240,15 +1239,15 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data_Pagamento, global::System.Nullable<decimal> Valor_Pago, global::System.Nullable<int> Banco_Debitado, string Numero_Cheque, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data_Pagamento, global::System.Nullable<decimal> Total_Pago, global::System.Nullable<int> Banco_Debitado, string Numero_Cheque, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name) {
             if ((Data_Pagamento.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Data_Pagamento.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Valor_Pago.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Valor_Pago.Value));
+            if ((Total_Pago.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Total_Pago.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1305,7 +1304,7 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     global::System.Nullable<global::System.DateTime> Data_Pagamento, 
-                    global::System.Nullable<decimal> Valor_Pago, 
+                    global::System.Nullable<decimal> Total_Pago, 
                     global::System.Nullable<int> Banco_Debitado, 
                     string Numero_Cheque, 
                     string Historico, 
@@ -1313,7 +1312,7 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
                     string Login_Name, 
                     int Original_Cod_Base_Titulos_Pagos, 
                     global::System.Nullable<global::System.DateTime> Original_Data_Pagamento, 
-                    global::System.Nullable<decimal> Original_Valor_Pago, 
+                    global::System.Nullable<decimal> Original_Total_Pago, 
                     global::System.Nullable<int> Original_Banco_Debitado, 
                     string Original_Numero_Cheque, 
                     string Original_Historico, 
@@ -1326,8 +1325,8 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Valor_Pago.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Valor_Pago.Value));
+            if ((Total_Pago.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Total_Pago.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1371,9 +1370,9 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_Valor_Pago.HasValue == true)) {
+            if ((Original_Total_Pago.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Valor_Pago.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Total_Pago.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
@@ -1440,8 +1439,8 @@ SELECT Cod_Base_Titulos_Pagos, Data_Pagamento, Valor_Pago, Banco_Debitado, Numer
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Pagamento, global::System.Nullable<decimal> Valor_Pago, global::System.Nullable<int> Banco_Debitado, string Numero_Cheque, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name, int Original_Cod_Base_Titulos_Pagos, global::System.Nullable<global::System.DateTime> Original_Data_Pagamento, global::System.Nullable<decimal> Original_Valor_Pago, global::System.Nullable<int> Original_Banco_Debitado, string Original_Numero_Cheque, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
-            return this.Update(Data_Pagamento, Valor_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name, Original_Cod_Base_Titulos_Pagos, Original_Data_Pagamento, Original_Valor_Pago, Original_Banco_Debitado, Original_Numero_Cheque, Original_Historico, Original_Data_Login, Original_Login_Name, Original_Cod_Base_Titulos_Pagos);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Pagamento, global::System.Nullable<decimal> Total_Pago, global::System.Nullable<int> Banco_Debitado, string Numero_Cheque, string Historico, global::System.Nullable<global::System.DateTime> Data_Login, string Login_Name, int Original_Cod_Base_Titulos_Pagos, global::System.Nullable<global::System.DateTime> Original_Data_Pagamento, global::System.Nullable<decimal> Original_Total_Pago, global::System.Nullable<int> Original_Banco_Debitado, string Original_Numero_Cheque, string Original_Historico, global::System.Nullable<global::System.DateTime> Original_Data_Login, string Original_Login_Name) {
+            return this.Update(Data_Pagamento, Total_Pago, Banco_Debitado, Numero_Cheque, Historico, Data_Login, Login_Name, Original_Cod_Base_Titulos_Pagos, Original_Data_Pagamento, Original_Total_Pago, Original_Banco_Debitado, Original_Numero_Cheque, Original_Historico, Original_Data_Login, Original_Login_Name, Original_Cod_Base_Titulos_Pagos);
         }
     }
     

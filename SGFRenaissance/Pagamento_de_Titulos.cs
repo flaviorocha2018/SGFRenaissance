@@ -28,7 +28,7 @@ namespace SGFRenaissance
         public int numeroparcelaDGVInt  = 0;
         public int CodigoTituloPagar = 0;
         
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         Int32 LastID = 0;
@@ -47,20 +47,28 @@ namespace SGFRenaissance
         {
             this.Validate();
             this.numero_Parcelas_a_PagarBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.numeroParcelasaPagarDGV);
+            this.tableAdapterManager.UpdateAll(this.dGVNumeroParcelasPagar);
 
         }
 
         private void Pagamento_de_Titulos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sGFRenaissanceDataSet4.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
+            this.base_Parcelas_PagasTableAdapter1.Fill(this.sGFRenaissanceDataSet4.Base_Parcelas_Pagas);
             // TODO: This line of code loads data into the 'base_Parcelas_PagasDGV.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
-            this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
+
+            // TODO: This line of code loads data into the 'dGVNumeroParcelasPagar.Numero_Parcelas_a_Pagar' table. You can move, or remove it, as needed.
+            this.numero_Parcelas_a_PagarTableAdapter.Fill(this.dGVNumeroParcelasPagar.Numero_Parcelas_a_Pagar);
+            // TODO: This line of code loads data into the 'dGVNumeroParcelasPagar.Numero_Parcelas_a_Pagar' table. You can move, or remove it, as needed.
+            this.numero_Parcelas_a_PagarTableAdapter.Fill(this.dGVNumeroParcelasPagar.Numero_Parcelas_a_Pagar);
             // TODO: This line of code loads data into the 'base_Parcelas_PagasDGV.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
-            this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
+
+            // TODO: This line of code loads data into the 'base_Parcelas_PagasDGV.Base_Parcelas_Pagas' table. You can move, or remove it, as needed.
+            // this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
             // TODO: This line of code loads data into the 'baseTitulosPago.Base_Titulos_Pagos' table. You can move, or remove it, as needed.
-            this.base_Titulos_PagosTableAdapter.Fill(this.baseTitulosPago.Base_Titulos_Pagos);
+            //  this.base_Titulos_PagosTableAdapter.Fill(this.baseTitulosPago.Base_Titulos_Pagos);
             // TODO: This line of code loads data into the 'numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar' table. You can move, or remove it, as needed.
-            this.numero_Parcelas_a_PagarTableAdapter.Fill(this.numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar);
+           
             btn_salvar.Enabled = false;
             btn_editar.Enabled = false;
             btn_proximo.Enabled = false;
@@ -91,7 +99,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Fornecedor from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -116,7 +124,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Numero_Documento from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -142,7 +150,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Valor_Titulo from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -167,7 +175,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Valor_Pago_a_Vista from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -192,7 +200,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Data_Documento from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -218,7 +226,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Centro_Custos from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -244,7 +252,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Cod_Despesa from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -269,7 +277,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Historico_Titulo from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", cod_Titulo_a_PagarTextBox.Text);
@@ -295,7 +303,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Numero_Parcelas from Entrada_Titulos_a_Pagar where Cod_Entrada_Titulos_a_Pagar='{0}'", numero_Parcelas_a_PagarDataGridView.CurrentRow.Cells[0].Value.ToString());
@@ -380,7 +388,7 @@ namespace SGFRenaissance
             login_NameTextBox.Text = Login.DadosGerais.Loginusuario;
             valor_PagoTextBox1.Text = textBoxTotal.Text;
             ID = Convert.ToInt32(cod_Base_Titulos_PagosTextBox1.Text);
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
               
             if (cod_Base_Titulos_PagosTextBox1.Text != null && banco_DebitadoTextBox1.Text != null && numero_ChequeTextBox1.Text !=null)
@@ -624,7 +632,7 @@ namespace SGFRenaissance
                         Int32 result = cmd.ExecuteNonQuery();
                         Total = Total + valorpago;
                         textBoxTotal.Text = Convert.ToString(Total);
-                        this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
+                     
                         MessageBox.Show("Dados do Título Inseridos com Sucesso na Base de Parcelas Pagas! " + result.ToString() + " Registro Inserido!");
                         numero_Parcelas_a_PagarBindingSource.MoveFirst();
                         btn_Pagar.Enabled = false;
@@ -648,7 +656,7 @@ namespace SGFRenaissance
                                 int result0 = cmd.ExecuteNonQuery();
                                 MessageBox.Show("Parcela Excluida com Sucesso!" + result0.ToString() + " Registro Excluído!");
                                 numero_Parcelas_a_PagarDataGridView.Rows.Remove(numero_Parcelas_a_PagarDataGridView.CurrentRow);
-                                this.numero_Parcelas_a_PagarTableAdapter.Fill(this.numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar);
+                              
                                 this.numero_Parcelas_a_PagarBindingSource.MoveLast();
                                 this.numero_Parcelas_a_PagarDataGridView.RowsDefaultCellStyle.BackColor = Color.LightGray;
                                 this.base_Parcelas_PagasDataGridView.DefaultCellStyle.BackColor = Color.Beige;
@@ -673,7 +681,7 @@ namespace SGFRenaissance
                                 int result0 = cmd.ExecuteNonQuery();
                                 MessageBox.Show("Parcela Excluida com Sucesso!" + result0.ToString() + " Registro Excluído!");
                                 numero_Parcelas_a_PagarDataGridView.Rows.Remove(numero_Parcelas_a_PagarDataGridView.CurrentRow);
-                                this.numero_Parcelas_a_PagarTableAdapter.Fill(this.numeroParcelasaPagarDGV.Numero_Parcelas_a_Pagar);
+                                
                                 this.numero_Parcelas_a_PagarBindingSource.MoveLast();
                                 this.base_Parcelas_PagasDataGridView.BackgroundColor = Color.Gray;
 
@@ -735,7 +743,7 @@ namespace SGFRenaissance
                     decimal acrescimos = 0;
                     decimal descontos = 0;
                     decimal saldo = 0;
-                    this.base_Parcelas_PagasTableAdapter.Fill(this.base_Parcelas_PagasDGV.Base_Parcelas_Pagas);
+                   
                     this.base_Parcelas_PagasBindingSource.MoveLast();
                     this.numero_Parcelas_a_PagarBindingSource.MoveFirst();
 
@@ -864,6 +872,11 @@ namespace SGFRenaissance
         {
             btn_Bancos.Enabled = true;
             btn_Bancos.Focus();
+        }
+
+        private void base_Parcelas_PagasBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

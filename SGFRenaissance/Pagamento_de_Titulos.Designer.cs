@@ -54,58 +54,15 @@
             this._lblLinha = new System.Windows.Forms.Label();
             this.groupBox_Tit_a_Pagar = new System.Windows.Forms.GroupBox();
             this.numero_Parcelas_a_PagarDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PagarTitulo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.numero_Parcelas_a_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numeroParcelasaPagarDGV = new SGFRenaissance.NumeroParcelasaPagarDGV();
-            this.GB_TitulosPago = new System.Windows.Forms.GroupBox();
-            this.base_Parcelas_PagasDataGridView = new System.Windows.Forms.DataGridView();
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTituloaPagarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEntradaTitulosaPagarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroParcelaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataPagamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVencParcelaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codCentroCustosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codDespesaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorPagoaVistaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerobancoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerochequeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acrescimosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descontosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saldoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorParcelaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historicoTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.base_Parcelas_PagasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.base_Parcelas_PagasDGV = new SGFRenaissance.base_Parcelas_PagasDGV();
-            this.base_Parcelas_PagasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.baseTitulosPagosINSERT = new SGFRenaissance.BaseTitulosPagosINSERT();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.login_NameTextBox = new System.Windows.Forms.TextBox();
-            this.base_Titulos_PagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baseTitulosPago = new SGFRenaissance.BaseTitulosPago();
-            this.data_LoginTextBox = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Localizar = new System.Windows.Forms.Button();
-            this.btn_Anterior = new System.Windows.Forms.Button();
-            this.btn_proximo = new System.Windows.Forms.Button();
-            this.btn_fechar = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.btn_novo = new System.Windows.Forms.Button();
+            this.codStatusTituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero_Parcelas_a_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dGVNumeroParcelasPagar = new SGFRenaissance.DGVNumeroParcelasPagar();
             this.groupBoxInformacoesTitulo = new System.Windows.Forms.GroupBox();
             this.vencimento_Parcela = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -143,6 +100,44 @@
             this.cod_Numero_Parcela_a_PagarTextBox = new System.Windows.Forms.TextBox();
             this.cod_Titulo_a_PagarTextBox = new System.Windows.Forms.TextBox();
             this.cod_Base_Titulos_PagosTextBox = new System.Windows.Forms.TextBox();
+            this.GB_TitulosPago = new System.Windows.Forms.GroupBox();
+            this.base_Parcelas_PagasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baseParcelasPagasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sGFRenaissanceDataSet4 = new SGFRenaissance.SGFRenaissanceDataSet4();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.login_NameTextBox = new System.Windows.Forms.TextBox();
+            this.data_LoginTextBox = new System.Windows.Forms.TextBox();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Localizar = new System.Windows.Forms.Button();
+            this.btn_Anterior = new System.Windows.Forms.Button();
+            this.btn_proximo = new System.Windows.Forms.Button();
+            this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_novo = new System.Windows.Forms.Button();
             this._lblMensagemUsuario = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBoxConfirmarPgto = new System.Windows.Forms.GroupBox();
@@ -154,13 +149,13 @@
             this.numero_ChequeTextBox1 = new System.Windows.Forms.TextBox();
             this.btn_Bancos = new System.Windows.Forms.Button();
             this.historicoTextBox1 = new System.Windows.Forms.TextBox();
-            this.base_Titulos_PagosTableAdapter = new SGFRenaissance.BaseTitulosPagoTableAdapters.Base_Titulos_PagosTableAdapter();
-            this.tableAdapterManager1 = new SGFRenaissance.BaseTitulosPagoTableAdapters.TableAdapterManager();
             this.labelTotaltitulos = new System.Windows.Forms.Label();
-            this.numero_Parcelas_a_PagarTableAdapter = new SGFRenaissance.NumeroParcelasaPagarDGVTableAdapters.Numero_Parcelas_a_PagarTableAdapter();
-            this.tableAdapterManager = new SGFRenaissance.NumeroParcelasaPagarDGVTableAdapters.TableAdapterManager();
-            this.base_Parcelas_PagasTableAdapter = new SGFRenaissance.base_Parcelas_PagasDGVTableAdapters.base_Parcelas_PagasTableAdapter();
-            this.tableAdapterManager2 = new SGFRenaissance.base_Parcelas_PagasDGVTableAdapters.TableAdapterManager();
+            this.numero_Parcelas_a_PagarTableAdapter = new SGFRenaissance.DGVNumeroParcelasPagarTableAdapters.Numero_Parcelas_a_PagarTableAdapter();
+            this.tableAdapterManager = new SGFRenaissance.DGVNumeroParcelasPagarTableAdapters.TableAdapterManager();
+            this.base_Parcelas_PagasDGV = new SGFRenaissance.base_Parcelas_PagasDGV();
+            this.base_Parcelas_PagasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager1 = new SGFRenaissance.base_Parcelas_PagasDGVTableAdapters.TableAdapterManager();
+            this.base_Parcelas_PagasTableAdapter1 = new SGFRenaissance.SGFRenaissanceDataSet4TableAdapters.Base_Parcelas_PagasTableAdapter();
             LoginLabel = new System.Windows.Forms.Label();
             label19 = new System.Windows.Forms.Label();
             cod_Base_Titulos_PagosLabel = new System.Windows.Forms.Label();
@@ -184,20 +179,18 @@
             this.groupBox_Tit_a_Pagar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_PagarDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_PagarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numeroParcelasaPagarDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVNumeroParcelasPagar)).BeginInit();
+            this.groupBoxInformacoesTitulo.SuspendLayout();
             this.GB_TitulosPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseTitulosPagosINSERT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseParcelasPagasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sGFRenaissanceDataSet4)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Titulos_PagosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseTitulosPago)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBoxInformacoesTitulo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxConfirmarPgto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginLabel
@@ -390,7 +383,7 @@
             this._lblTituloJanela.AutoSize = true;
             this._lblTituloJanela.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblTituloJanela.ForeColor = System.Drawing.Color.Maroon;
-            this._lblTituloJanela.Location = new System.Drawing.Point(0, 9);
+            this._lblTituloJanela.Location = new System.Drawing.Point(-1, 9);
             this._lblTituloJanela.Name = "_lblTituloJanela";
             this._lblTituloJanela.Size = new System.Drawing.Size(276, 29);
             this._lblTituloJanela.TabIndex = 1;
@@ -403,7 +396,7 @@
             this._lblLinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblLinha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this._lblLinha.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this._lblLinha.Location = new System.Drawing.Point(-58, 38);
+            this._lblLinha.Location = new System.Drawing.Point(-35, 38);
             this._lblLinha.Name = "_lblLinha";
             this._lblLinha.Size = new System.Drawing.Size(1072, 18);
             this._lblLinha.TabIndex = 117;
@@ -414,470 +407,84 @@
             // groupBox_Tit_a_Pagar
             // 
             this.groupBox_Tit_a_Pagar.Controls.Add(this.numero_Parcelas_a_PagarDataGridView);
+            this.groupBox_Tit_a_Pagar.Controls.Add(this.groupBoxInformacoesTitulo);
             this.groupBox_Tit_a_Pagar.Location = new System.Drawing.Point(3, 141);
             this.groupBox_Tit_a_Pagar.Name = "groupBox_Tit_a_Pagar";
-            this.groupBox_Tit_a_Pagar.Size = new System.Drawing.Size(963, 148);
+            this.groupBox_Tit_a_Pagar.Size = new System.Drawing.Size(963, 313);
             this.groupBox_Tit_a_Pagar.TabIndex = 118;
             this.groupBox_Tit_a_Pagar.TabStop = false;
             this.groupBox_Tit_a_Pagar.Text = "Dados da Parcela a Pagar";
             // 
             // numero_Parcelas_a_PagarDataGridView
             // 
-            this.numero_Parcelas_a_PagarDataGridView.AllowUserToAddRows = false;
-            this.numero_Parcelas_a_PagarDataGridView.AllowUserToDeleteRows = false;
             this.numero_Parcelas_a_PagarDataGridView.AutoGenerateColumns = false;
             this.numero_Parcelas_a_PagarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.numero_Parcelas_a_PagarDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.PagarTitulo});
-            this.numero_Parcelas_a_PagarDataGridView.DataSource = this.numero_Parcelas_a_PagarBindingSource;
-            this.numero_Parcelas_a_PagarDataGridView.Location = new System.Drawing.Point(9, 19);
-            this.numero_Parcelas_a_PagarDataGridView.Name = "numero_Parcelas_a_PagarDataGridView";
-            this.numero_Parcelas_a_PagarDataGridView.ReadOnly = true;
-            this.numero_Parcelas_a_PagarDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.numero_Parcelas_a_PagarDataGridView.Size = new System.Drawing.Size(951, 114);
-            this.numero_Parcelas_a_PagarDataGridView.TabIndex = 0;
-            this.numero_Parcelas_a_PagarDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.numero_Parcelas_a_PagarDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Entrada_Titulos_a_Pagar";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cód.Entrada Tít. a Pagar";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cod_Numero_Parcelas_a_Pagar";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cód. Nº Parc. a Pagar";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Numero_Parcela";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nº Parcela";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Data_Vencimento";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Data Vencimento";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Valor_Parcela";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor Parcela";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Historico";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Histórico";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Cod_Status_Titulo";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Cód. Status Titulo";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 130;
-            // 
-            // PagarTitulo
-            // 
-            this.PagarTitulo.HeaderText = "Selecionar Título";
-            this.PagarTitulo.Name = "PagarTitulo";
-            this.PagarTitulo.ReadOnly = true;
-            this.PagarTitulo.Text = "Pagar Título";
-            this.PagarTitulo.UseColumnTextForButtonValue = true;
-            this.PagarTitulo.Width = 135;
-            // 
-            // numero_Parcelas_a_PagarBindingSource
-            // 
-            this.numero_Parcelas_a_PagarBindingSource.DataMember = "Numero_Parcelas_a_Pagar";
-            this.numero_Parcelas_a_PagarBindingSource.DataSource = this.numeroParcelasaPagarDGV;
-            // 
-            // numeroParcelasaPagarDGV
-            // 
-            this.numeroParcelasaPagarDGV.DataSetName = "NumeroParcelasaPagarDGV";
-            this.numeroParcelasaPagarDGV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // GB_TitulosPago
-            // 
-            this.GB_TitulosPago.Controls.Add(this.base_Parcelas_PagasDataGridView);
-            this.GB_TitulosPago.Location = new System.Drawing.Point(4, 449);
-            this.GB_TitulosPago.Name = "GB_TitulosPago";
-            this.GB_TitulosPago.Size = new System.Drawing.Size(966, 124);
-            this.GB_TitulosPago.TabIndex = 119;
-            this.GB_TitulosPago.TabStop = false;
-            this.GB_TitulosPago.Text = "Base Parcelas  Pagas";
-            // 
-            // base_Parcelas_PagasDataGridView
-            // 
-            this.base_Parcelas_PagasDataGridView.AllowUserToAddRows = false;
-            this.base_Parcelas_PagasDataGridView.AllowUserToDeleteRows = false;
-            this.base_Parcelas_PagasDataGridView.AutoGenerateColumns = false;
-            this.base_Parcelas_PagasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.base_Parcelas_PagasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn,
-            this.codTituloaPagarDataGridViewTextBoxColumn,
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn,
-            this.codFornecedorDataGridViewTextBoxColumn,
-            this.numeroDocumentoDataGridViewTextBoxColumn,
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn,
+            this.codEntradaTitulosaPagarDataGridViewTextBoxColumn,
             this.numeroParcelaDataGridViewTextBoxColumn,
-            this.valorTituloDataGridViewTextBoxColumn,
-            this.dataDocumentoDataGridViewTextBoxColumn,
-            this.dataPagamentoDataGridViewTextBoxColumn,
-            this.dataVencParcelaDataGridViewTextBoxColumn,
-            this.codCentroCustosDataGridViewTextBoxColumn,
-            this.codDespesaDataGridViewTextBoxColumn,
-            this.valorPagoaVistaDataGridViewTextBoxColumn,
-            this.valorPagoDataGridViewTextBoxColumn,
-            this.numerobancoDataGridViewTextBoxColumn,
-            this.numerochequeDataGridViewTextBoxColumn,
-            this.acrescimosDataGridViewTextBoxColumn,
-            this.descontosDataGridViewTextBoxColumn,
-            this.saldoDataGridViewTextBoxColumn,
-            this.statusTituloDataGridViewTextBoxColumn,
+            this.dataVencimentoDataGridViewTextBoxColumn,
+            this.valorParcelaDataGridViewTextBoxColumn,
             this.historicoDataGridViewTextBoxColumn,
-            this.historicoTituloDataGridViewTextBoxColumn});
-            this.base_Parcelas_PagasDataGridView.DataSource = this.base_Parcelas_PagasBindingSource1;
-            this.base_Parcelas_PagasDataGridView.Location = new System.Drawing.Point(6, 19);
-            this.base_Parcelas_PagasDataGridView.Name = "base_Parcelas_PagasDataGridView";
-            this.base_Parcelas_PagasDataGridView.ReadOnly = true;
-            this.base_Parcelas_PagasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.base_Parcelas_PagasDataGridView.Size = new System.Drawing.Size(954, 99);
-            this.base_Parcelas_PagasDataGridView.TabIndex = 0;
+            this.codStatusTituloDataGridViewTextBoxColumn});
+            this.numero_Parcelas_a_PagarDataGridView.DataSource = this.numero_Parcelas_a_PagarBindingSource;
+            this.numero_Parcelas_a_PagarDataGridView.Location = new System.Drawing.Point(6, 23);
+            this.numero_Parcelas_a_PagarDataGridView.Name = "numero_Parcelas_a_PagarDataGridView";
+            this.numero_Parcelas_a_PagarDataGridView.Size = new System.Drawing.Size(948, 112);
+            this.numero_Parcelas_a_PagarDataGridView.TabIndex = 0;
             // 
-            // codBaseTitulosPagosDataGridViewTextBoxColumn
+            // codNumeroParcelasaPagarDataGridViewTextBoxColumn
             // 
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn.DataPropertyName = "Cod_Base_Titulos_Pagos";
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn.HeaderText = "Cod_Base_Titulos_Pagos";
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn.Name = "codBaseTitulosPagosDataGridViewTextBoxColumn";
-            this.codBaseTitulosPagosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn.DataPropertyName = "Cod_Numero_Parcelas_a_Pagar";
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn.HeaderText = "Cod_Numero_Parcelas_a_Pagar";
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn.Name = "codNumeroParcelasaPagarDataGridViewTextBoxColumn";
+            this.codNumeroParcelasaPagarDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // codTituloaPagarDataGridViewTextBoxColumn
+            // codEntradaTitulosaPagarDataGridViewTextBoxColumn
             // 
-            this.codTituloaPagarDataGridViewTextBoxColumn.DataPropertyName = "Cod_Titulo_a_Pagar";
-            this.codTituloaPagarDataGridViewTextBoxColumn.HeaderText = "Cod_Titulo_a_Pagar";
-            this.codTituloaPagarDataGridViewTextBoxColumn.Name = "codTituloaPagarDataGridViewTextBoxColumn";
-            this.codTituloaPagarDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codNumeroParcaPagarDataGridViewTextBoxColumn
-            // 
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn.DataPropertyName = "Cod_Numero_Parc_a_Pagar";
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn.HeaderText = "Cod_Numero_Parc_a_Pagar";
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn.Name = "codNumeroParcaPagarDataGridViewTextBoxColumn";
-            this.codNumeroParcaPagarDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codFornecedorDataGridViewTextBoxColumn
-            // 
-            this.codFornecedorDataGridViewTextBoxColumn.DataPropertyName = "Cod_Fornecedor";
-            this.codFornecedorDataGridViewTextBoxColumn.HeaderText = "Cod_Fornecedor";
-            this.codFornecedorDataGridViewTextBoxColumn.Name = "codFornecedorDataGridViewTextBoxColumn";
-            this.codFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroDocumentoDataGridViewTextBoxColumn
-            // 
-            this.numeroDocumentoDataGridViewTextBoxColumn.DataPropertyName = "Numero_Documento";
-            this.numeroDocumentoDataGridViewTextBoxColumn.HeaderText = "Numero_Documento";
-            this.numeroDocumentoDataGridViewTextBoxColumn.Name = "numeroDocumentoDataGridViewTextBoxColumn";
-            this.numeroDocumentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codEntradaTitulosaPagarDataGridViewTextBoxColumn.DataPropertyName = "Cod_Entrada_Titulos_a_Pagar";
+            this.codEntradaTitulosaPagarDataGridViewTextBoxColumn.HeaderText = "Cod_Entrada_Titulos_a_Pagar";
+            this.codEntradaTitulosaPagarDataGridViewTextBoxColumn.Name = "codEntradaTitulosaPagarDataGridViewTextBoxColumn";
             // 
             // numeroParcelaDataGridViewTextBoxColumn
             // 
             this.numeroParcelaDataGridViewTextBoxColumn.DataPropertyName = "Numero_Parcela";
             this.numeroParcelaDataGridViewTextBoxColumn.HeaderText = "Numero_Parcela";
             this.numeroParcelaDataGridViewTextBoxColumn.Name = "numeroParcelaDataGridViewTextBoxColumn";
-            this.numeroParcelaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // valorTituloDataGridViewTextBoxColumn
+            // dataVencimentoDataGridViewTextBoxColumn
             // 
-            this.valorTituloDataGridViewTextBoxColumn.DataPropertyName = "Valor_Titulo";
-            this.valorTituloDataGridViewTextBoxColumn.HeaderText = "Valor_Titulo";
-            this.valorTituloDataGridViewTextBoxColumn.Name = "valorTituloDataGridViewTextBoxColumn";
-            this.valorTituloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataVencimentoDataGridViewTextBoxColumn.DataPropertyName = "Data_Vencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.HeaderText = "Data_Vencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.Name = "dataVencimentoDataGridViewTextBoxColumn";
             // 
-            // dataDocumentoDataGridViewTextBoxColumn
+            // valorParcelaDataGridViewTextBoxColumn
             // 
-            this.dataDocumentoDataGridViewTextBoxColumn.DataPropertyName = "Data_Documento";
-            this.dataDocumentoDataGridViewTextBoxColumn.HeaderText = "Data_Documento";
-            this.dataDocumentoDataGridViewTextBoxColumn.Name = "dataDocumentoDataGridViewTextBoxColumn";
-            this.dataDocumentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataPagamentoDataGridViewTextBoxColumn
-            // 
-            this.dataPagamentoDataGridViewTextBoxColumn.DataPropertyName = "Data_Pagamento";
-            this.dataPagamentoDataGridViewTextBoxColumn.HeaderText = "Data_Pagamento";
-            this.dataPagamentoDataGridViewTextBoxColumn.Name = "dataPagamentoDataGridViewTextBoxColumn";
-            this.dataPagamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataVencParcelaDataGridViewTextBoxColumn
-            // 
-            this.dataVencParcelaDataGridViewTextBoxColumn.DataPropertyName = "Data_Venc_Parcela";
-            this.dataVencParcelaDataGridViewTextBoxColumn.HeaderText = "Data_Venc_Parcela";
-            this.dataVencParcelaDataGridViewTextBoxColumn.Name = "dataVencParcelaDataGridViewTextBoxColumn";
-            this.dataVencParcelaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codCentroCustosDataGridViewTextBoxColumn
-            // 
-            this.codCentroCustosDataGridViewTextBoxColumn.DataPropertyName = "Cod_Centro_Custos";
-            this.codCentroCustosDataGridViewTextBoxColumn.HeaderText = "Cod_Centro_Custos";
-            this.codCentroCustosDataGridViewTextBoxColumn.Name = "codCentroCustosDataGridViewTextBoxColumn";
-            this.codCentroCustosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codDespesaDataGridViewTextBoxColumn
-            // 
-            this.codDespesaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Despesa";
-            this.codDespesaDataGridViewTextBoxColumn.HeaderText = "Cod_Despesa";
-            this.codDespesaDataGridViewTextBoxColumn.Name = "codDespesaDataGridViewTextBoxColumn";
-            this.codDespesaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorPagoaVistaDataGridViewTextBoxColumn
-            // 
-            this.valorPagoaVistaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Pago_a_Vista";
-            this.valorPagoaVistaDataGridViewTextBoxColumn.HeaderText = "Valor_Pago_a_Vista";
-            this.valorPagoaVistaDataGridViewTextBoxColumn.Name = "valorPagoaVistaDataGridViewTextBoxColumn";
-            this.valorPagoaVistaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorPagoDataGridViewTextBoxColumn
-            // 
-            this.valorPagoDataGridViewTextBoxColumn.DataPropertyName = "Valor_Pago";
-            this.valorPagoDataGridViewTextBoxColumn.HeaderText = "Valor_Pago";
-            this.valorPagoDataGridViewTextBoxColumn.Name = "valorPagoDataGridViewTextBoxColumn";
-            this.valorPagoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numerobancoDataGridViewTextBoxColumn
-            // 
-            this.numerobancoDataGridViewTextBoxColumn.DataPropertyName = "Numero_banco";
-            this.numerobancoDataGridViewTextBoxColumn.HeaderText = "Numero_banco";
-            this.numerobancoDataGridViewTextBoxColumn.Name = "numerobancoDataGridViewTextBoxColumn";
-            this.numerobancoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numerochequeDataGridViewTextBoxColumn
-            // 
-            this.numerochequeDataGridViewTextBoxColumn.DataPropertyName = "Numero_cheque";
-            this.numerochequeDataGridViewTextBoxColumn.HeaderText = "Numero_cheque";
-            this.numerochequeDataGridViewTextBoxColumn.Name = "numerochequeDataGridViewTextBoxColumn";
-            this.numerochequeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // acrescimosDataGridViewTextBoxColumn
-            // 
-            this.acrescimosDataGridViewTextBoxColumn.DataPropertyName = "Acrescimos";
-            this.acrescimosDataGridViewTextBoxColumn.HeaderText = "Acrescimos";
-            this.acrescimosDataGridViewTextBoxColumn.Name = "acrescimosDataGridViewTextBoxColumn";
-            this.acrescimosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descontosDataGridViewTextBoxColumn
-            // 
-            this.descontosDataGridViewTextBoxColumn.DataPropertyName = "Descontos";
-            this.descontosDataGridViewTextBoxColumn.HeaderText = "Descontos";
-            this.descontosDataGridViewTextBoxColumn.Name = "descontosDataGridViewTextBoxColumn";
-            this.descontosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // saldoDataGridViewTextBoxColumn
-            // 
-            this.saldoDataGridViewTextBoxColumn.DataPropertyName = "Saldo";
-            this.saldoDataGridViewTextBoxColumn.HeaderText = "Saldo";
-            this.saldoDataGridViewTextBoxColumn.Name = "saldoDataGridViewTextBoxColumn";
-            this.saldoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusTituloDataGridViewTextBoxColumn
-            // 
-            this.statusTituloDataGridViewTextBoxColumn.DataPropertyName = "StatusTitulo";
-            this.statusTituloDataGridViewTextBoxColumn.HeaderText = "StatusTitulo";
-            this.statusTituloDataGridViewTextBoxColumn.Name = "statusTituloDataGridViewTextBoxColumn";
-            this.statusTituloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorParcelaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Parcela";
+            this.valorParcelaDataGridViewTextBoxColumn.HeaderText = "Valor_Parcela";
+            this.valorParcelaDataGridViewTextBoxColumn.Name = "valorParcelaDataGridViewTextBoxColumn";
             // 
             // historicoDataGridViewTextBoxColumn
             // 
             this.historicoDataGridViewTextBoxColumn.DataPropertyName = "Historico";
             this.historicoDataGridViewTextBoxColumn.HeaderText = "Historico";
             this.historicoDataGridViewTextBoxColumn.Name = "historicoDataGridViewTextBoxColumn";
-            this.historicoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // historicoTituloDataGridViewTextBoxColumn
+            // codStatusTituloDataGridViewTextBoxColumn
             // 
-            this.historicoTituloDataGridViewTextBoxColumn.DataPropertyName = "Historico_Titulo";
-            this.historicoTituloDataGridViewTextBoxColumn.HeaderText = "Historico_Titulo";
-            this.historicoTituloDataGridViewTextBoxColumn.Name = "historicoTituloDataGridViewTextBoxColumn";
-            this.historicoTituloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codStatusTituloDataGridViewTextBoxColumn.DataPropertyName = "Cod_Status_Titulo";
+            this.codStatusTituloDataGridViewTextBoxColumn.HeaderText = "Cod_Status_Titulo";
+            this.codStatusTituloDataGridViewTextBoxColumn.Name = "codStatusTituloDataGridViewTextBoxColumn";
             // 
-            // base_Parcelas_PagasBindingSource1
+            // numero_Parcelas_a_PagarBindingSource
             // 
-            this.base_Parcelas_PagasBindingSource1.DataMember = "Base_Parcelas_Pagas";
-            this.base_Parcelas_PagasBindingSource1.DataSource = this.base_Parcelas_PagasDGV;
+            this.numero_Parcelas_a_PagarBindingSource.DataMember = "Numero_Parcelas_a_Pagar";
+            this.numero_Parcelas_a_PagarBindingSource.DataSource = this.dGVNumeroParcelasPagar;
             // 
-            // base_Parcelas_PagasDGV
+            // dGVNumeroParcelasPagar
             // 
-            this.base_Parcelas_PagasDGV.DataSetName = "base_Parcelas_PagasDGV";
-            this.base_Parcelas_PagasDGV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // base_Parcelas_PagasBindingSource
-            // 
-            this.base_Parcelas_PagasBindingSource.DataMember = "Base_Parcelas_Pagas";
-            // 
-            // textBoxTotal
-            // 
-            this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.textBoxTotal.Location = new System.Drawing.Point(860, 573);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.ReadOnly = true;
-            this.textBoxTotal.Size = new System.Drawing.Size(103, 20);
-            this.textBoxTotal.TabIndex = 124;
-            // 
-            // baseTitulosPagosINSERT
-            // 
-            this.baseTitulosPagosINSERT.DataSetName = "BaseTitulosPagosINSERT";
-            this.baseTitulosPagosINSERT.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.flowLayoutPanel1.Controls.Add(LoginLabel);
-            this.flowLayoutPanel1.Controls.Add(this.login_NameTextBox);
-            this.flowLayoutPanel1.Controls.Add(label19);
-            this.flowLayoutPanel1.Controls.Add(this.data_LoginTextBox);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 658);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(966, 26);
-            this.flowLayoutPanel1.TabIndex = 136;
-            // 
-            // login_NameTextBox
-            // 
-            this.login_NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.login_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Login_Name", true));
-            this.login_NameTextBox.Enabled = false;
-            this.login_NameTextBox.Location = new System.Drawing.Point(50, 9);
-            this.login_NameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-            this.login_NameTextBox.Name = "login_NameTextBox";
-            this.login_NameTextBox.ReadOnly = true;
-            this.login_NameTextBox.Size = new System.Drawing.Size(100, 13);
-            this.login_NameTextBox.TabIndex = 94;
-            // 
-            // base_Titulos_PagosBindingSource
-            // 
-            this.base_Titulos_PagosBindingSource.DataMember = "Base_Titulos_Pagos";
-            this.base_Titulos_PagosBindingSource.DataSource = this.baseTitulosPago;
-            // 
-            // baseTitulosPago
-            // 
-            this.baseTitulosPago.DataSetName = "BaseTitulosPago";
-            this.baseTitulosPago.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // data_LoginTextBox
-            // 
-            this.data_LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.data_LoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Data_Login", true));
-            this.data_LoginTextBox.Enabled = false;
-            this.data_LoginTextBox.Location = new System.Drawing.Point(198, 10);
-            this.data_LoginTextBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.data_LoginTextBox.Name = "data_LoginTextBox";
-            this.data_LoginTextBox.ReadOnly = true;
-            this.data_LoginTextBox.Size = new System.Drawing.Size(100, 13);
-            this.data_LoginTextBox.TabIndex = 93;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.btn_Localizar);
-            this.panel1.Controls.Add(this.btn_Anterior);
-            this.panel1.Controls.Add(this.btn_proximo);
-            this.panel1.Controls.Add(this.btn_fechar);
-            this.panel1.Controls.Add(this.btn_salvar);
-            this.panel1.Controls.Add(this.btn_editar);
-            this.panel1.Controls.Add(this.btn_novo);
-            this.panel1.Location = new System.Drawing.Point(5, 599);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(964, 41);
-            this.panel1.TabIndex = 0;
-            // 
-            // btn_Localizar
-            // 
-            this.btn_Localizar.Location = new System.Drawing.Point(429, 6);
-            this.btn_Localizar.Name = "btn_Localizar";
-            this.btn_Localizar.Size = new System.Drawing.Size(85, 30);
-            this.btn_Localizar.TabIndex = 5;
-            this.btn_Localizar.Text = "Localizar";
-            this.btn_Localizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Anterior
-            // 
-            this.btn_Anterior.Location = new System.Drawing.Point(151, 6);
-            this.btn_Anterior.Name = "btn_Anterior";
-            this.btn_Anterior.Size = new System.Drawing.Size(85, 30);
-            this.btn_Anterior.TabIndex = 4;
-            this.btn_Anterior.Text = "Voltar";
-            this.btn_Anterior.UseVisualStyleBackColor = true;
-            // 
-            // btn_proximo
-            // 
-            this.btn_proximo.Location = new System.Drawing.Point(282, 6);
-            this.btn_proximo.Name = "btn_proximo";
-            this.btn_proximo.Size = new System.Drawing.Size(85, 30);
-            this.btn_proximo.TabIndex = 3;
-            this.btn_proximo.Text = "Próximo";
-            this.btn_proximo.UseVisualStyleBackColor = true;
-            // 
-            // btn_fechar
-            // 
-            this.btn_fechar.BackColor = System.Drawing.Color.Silver;
-            this.btn_fechar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_fechar.Location = new System.Drawing.Point(845, 6);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(85, 30);
-            this.btn_fechar.TabIndex = 0;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = false;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.BackColor = System.Drawing.Color.LightGray;
-            this.btn_salvar.Location = new System.Drawing.Point(712, 6);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(85, 30);
-            this.btn_salvar.TabIndex = 2;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = false;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.Location = new System.Drawing.Point(579, 6);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(85, 30);
-            this.btn_editar.TabIndex = 6;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.UseVisualStyleBackColor = true;
-            // 
-            // btn_novo
-            // 
-            this.btn_novo.Location = new System.Drawing.Point(12, 6);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(85, 30);
-            this.btn_novo.TabIndex = 1;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
+            this.dGVNumeroParcelasPagar.DataSetName = "DGVNumeroParcelasPagar";
+            this.dGVNumeroParcelasPagar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBoxInformacoesTitulo
             // 
@@ -929,7 +536,7 @@
             this.groupBoxInformacoesTitulo.Controls.Add(this.cod_Titulo_a_PagarTextBox);
             this.groupBoxInformacoesTitulo.Controls.Add(cod_Base_Titulos_PagosLabel);
             this.groupBoxInformacoesTitulo.Controls.Add(this.cod_Base_Titulos_PagosTextBox);
-            this.groupBoxInformacoesTitulo.Location = new System.Drawing.Point(3, 295);
+            this.groupBoxInformacoesTitulo.Location = new System.Drawing.Point(1, 141);
             this.groupBoxInformacoesTitulo.Name = "groupBoxInformacoesTitulo";
             this.groupBoxInformacoesTitulo.Size = new System.Drawing.Size(960, 148);
             this.groupBoxInformacoesTitulo.TabIndex = 0;
@@ -1227,7 +834,6 @@
             // data_PagamentoDateTimePicker
             // 
             this.data_PagamentoDateTimePicker.CustomFormat = "   ";
-            this.data_PagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.base_Titulos_PagosBindingSource, "Data_Pagamento", true));
             this.data_PagamentoDateTimePicker.Enabled = false;
             this.data_PagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_PagamentoDateTimePicker.Location = new System.Drawing.Point(703, 39);
@@ -1263,12 +869,327 @@
             this.cod_Base_Titulos_PagosTextBox.Size = new System.Drawing.Size(38, 20);
             this.cod_Base_Titulos_PagosTextBox.TabIndex = 0;
             // 
+            // GB_TitulosPago
+            // 
+            this.GB_TitulosPago.Controls.Add(this.base_Parcelas_PagasDataGridView);
+            this.GB_TitulosPago.Controls.Add(this.flowLayoutPanel1);
+            this.GB_TitulosPago.Location = new System.Drawing.Point(4, 449);
+            this.GB_TitulosPago.Name = "GB_TitulosPago";
+            this.GB_TitulosPago.Size = new System.Drawing.Size(966, 261);
+            this.GB_TitulosPago.TabIndex = 119;
+            this.GB_TitulosPago.TabStop = false;
+            this.GB_TitulosPago.Text = "Base Parcelas  Pagas";
+            // 
+            // base_Parcelas_PagasDataGridView
+            // 
+            this.base_Parcelas_PagasDataGridView.AutoGenerateColumns = false;
+            this.base_Parcelas_PagasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.base_Parcelas_PagasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34});
+            this.base_Parcelas_PagasDataGridView.DataSource = this.baseParcelasPagasBindingSource;
+            this.base_Parcelas_PagasDataGridView.Location = new System.Drawing.Point(5, 19);
+            this.base_Parcelas_PagasDataGridView.Name = "base_Parcelas_PagasDataGridView";
+            this.base_Parcelas_PagasDataGridView.Size = new System.Drawing.Size(957, 99);
+            this.base_Parcelas_PagasDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cod_Base_Titulos_Pagos";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cod_Base_Titulos_Pagos";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Titulo_a_Pagar";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cod_Titulo_a_Pagar";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cod_Numero_Parc_a_Pagar";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cod_Numero_Parc_a_Pagar";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cod_Fornecedor";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cod_Fornecedor";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Numero_Documento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Numero_Documento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Numero_Parcela";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Numero_Parcela";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Valor_Titulo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Valor_Titulo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Data_Documento";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Data_Documento";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Data_Pagamento";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Data_Pagamento";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Data_Venc_Parcela";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Data_Venc_Parcela";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Cod_Centro_Custos";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Cod_Centro_Custos";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Cod_Despesa";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Cod_Despesa";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Valor_Pago_a_Vista";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Valor_Pago_a_Vista";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Valor_Pago";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Valor_Pago";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Numero_banco";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Numero_banco";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "Numero_cheque";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Numero_cheque";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "Acrescimos";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Acrescimos";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Descontos";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Descontos";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "Saldo";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Saldo";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "StatusTitulo";
+            this.dataGridViewTextBoxColumn32.HeaderText = "StatusTitulo";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "Historico";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Historico";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "Historico_Titulo";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Historico_Titulo";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // baseParcelasPagasBindingSource
+            // 
+            this.baseParcelasPagasBindingSource.DataMember = "Base_Parcelas_Pagas";
+            this.baseParcelasPagasBindingSource.DataSource = this.sGFRenaissanceDataSet4;
+            // 
+            // sGFRenaissanceDataSet4
+            // 
+            this.sGFRenaissanceDataSet4.DataSetName = "SGFRenaissanceDataSet4";
+            this.sGFRenaissanceDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.flowLayoutPanel1.Controls.Add(LoginLabel);
+            this.flowLayoutPanel1.Controls.Add(this.login_NameTextBox);
+            this.flowLayoutPanel1.Controls.Add(label19);
+            this.flowLayoutPanel1.Controls.Add(this.data_LoginTextBox);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 211);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(955, 34);
+            this.flowLayoutPanel1.TabIndex = 136;
+            // 
+            // login_NameTextBox
+            // 
+            this.login_NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.login_NameTextBox.Enabled = false;
+            this.login_NameTextBox.Location = new System.Drawing.Point(50, 9);
+            this.login_NameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+            this.login_NameTextBox.Name = "login_NameTextBox";
+            this.login_NameTextBox.ReadOnly = true;
+            this.login_NameTextBox.Size = new System.Drawing.Size(100, 13);
+            this.login_NameTextBox.TabIndex = 94;
+            // 
+            // data_LoginTextBox
+            // 
+            this.data_LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.data_LoginTextBox.Enabled = false;
+            this.data_LoginTextBox.Location = new System.Drawing.Point(198, 10);
+            this.data_LoginTextBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.data_LoginTextBox.Name = "data_LoginTextBox";
+            this.data_LoginTextBox.ReadOnly = true;
+            this.data_LoginTextBox.Size = new System.Drawing.Size(100, 13);
+            this.data_LoginTextBox.TabIndex = 93;
+            // 
+            // textBoxTotal
+            // 
+            this.textBoxTotal.Enabled = false;
+            this.textBoxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.textBoxTotal.Location = new System.Drawing.Point(860, 573);
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
+            this.textBoxTotal.Size = new System.Drawing.Size(103, 20);
+            this.textBoxTotal.TabIndex = 124;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.btn_Localizar);
+            this.panel1.Controls.Add(this.btn_Anterior);
+            this.panel1.Controls.Add(this.btn_proximo);
+            this.panel1.Controls.Add(this.btn_fechar);
+            this.panel1.Controls.Add(this.btn_salvar);
+            this.panel1.Controls.Add(this.btn_editar);
+            this.panel1.Controls.Add(this.btn_novo);
+            this.panel1.Location = new System.Drawing.Point(10, 599);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(954, 41);
+            this.panel1.TabIndex = 0;
+            // 
+            // btn_Localizar
+            // 
+            this.btn_Localizar.Location = new System.Drawing.Point(429, 6);
+            this.btn_Localizar.Name = "btn_Localizar";
+            this.btn_Localizar.Size = new System.Drawing.Size(85, 30);
+            this.btn_Localizar.TabIndex = 5;
+            this.btn_Localizar.Text = "Localizar";
+            this.btn_Localizar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Anterior
+            // 
+            this.btn_Anterior.Location = new System.Drawing.Point(151, 6);
+            this.btn_Anterior.Name = "btn_Anterior";
+            this.btn_Anterior.Size = new System.Drawing.Size(85, 30);
+            this.btn_Anterior.TabIndex = 4;
+            this.btn_Anterior.Text = "Voltar";
+            this.btn_Anterior.UseVisualStyleBackColor = true;
+            // 
+            // btn_proximo
+            // 
+            this.btn_proximo.Location = new System.Drawing.Point(282, 6);
+            this.btn_proximo.Name = "btn_proximo";
+            this.btn_proximo.Size = new System.Drawing.Size(85, 30);
+            this.btn_proximo.TabIndex = 3;
+            this.btn_proximo.Text = "Próximo";
+            this.btn_proximo.UseVisualStyleBackColor = true;
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.BackColor = System.Drawing.Color.Silver;
+            this.btn_fechar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_fechar.Location = new System.Drawing.Point(845, 6);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(85, 30);
+            this.btn_fechar.TabIndex = 0;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.BackColor = System.Drawing.Color.LightGray;
+            this.btn_salvar.Location = new System.Drawing.Point(712, 6);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(85, 30);
+            this.btn_salvar.TabIndex = 2;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.Location = new System.Drawing.Point(579, 6);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(85, 30);
+            this.btn_editar.TabIndex = 6;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            // 
+            // btn_novo
+            // 
+            this.btn_novo.Location = new System.Drawing.Point(12, 6);
+            this.btn_novo.Name = "btn_novo";
+            this.btn_novo.Size = new System.Drawing.Size(85, 30);
+            this.btn_novo.TabIndex = 1;
+            this.btn_novo.Text = "Novo";
+            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
+            // 
             // _lblMensagemUsuario
             // 
             this._lblMensagemUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this._lblMensagemUsuario.AutoSize = true;
             this._lblMensagemUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblMensagemUsuario.Location = new System.Drawing.Point(2, 642);
+            this._lblMensagemUsuario.Location = new System.Drawing.Point(25, 642);
             this._lblMensagemUsuario.Name = "_lblMensagemUsuario";
             this._lblMensagemUsuario.Size = new System.Drawing.Size(202, 15);
             this._lblMensagemUsuario.TabIndex = 136;
@@ -1318,7 +1239,6 @@
             // 
             // cod_Base_Titulos_PagosTextBox1
             // 
-            this.cod_Base_Titulos_PagosTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Cod_Base_Titulos_Pagos", true));
             this.cod_Base_Titulos_PagosTextBox1.Enabled = false;
             this.cod_Base_Titulos_PagosTextBox1.Location = new System.Drawing.Point(126, 24);
             this.cod_Base_Titulos_PagosTextBox1.Name = "cod_Base_Titulos_PagosTextBox1";
@@ -1329,7 +1249,6 @@
             // data_PagamentoDateTimePicker1
             // 
             this.data_PagamentoDateTimePicker1.CustomFormat = "   ";
-            this.data_PagamentoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.base_Titulos_PagosBindingSource, "Data_Pagamento", true));
             this.data_PagamentoDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_PagamentoDateTimePicker1.Location = new System.Drawing.Point(263, 24);
             this.data_PagamentoDateTimePicker1.Name = "data_PagamentoDateTimePicker1";
@@ -1341,7 +1260,6 @@
             // 
             // valor_PagoTextBox1
             // 
-            this.valor_PagoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Total_Pago", true));
             this.valor_PagoTextBox1.Location = new System.Drawing.Point(442, 25);
             this.valor_PagoTextBox1.Name = "valor_PagoTextBox1";
             this.valor_PagoTextBox1.ReadOnly = true;
@@ -1351,7 +1269,6 @@
             // 
             // banco_DebitadoTextBox1
             // 
-            this.banco_DebitadoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Banco_Debitado", true));
             this.banco_DebitadoTextBox1.Location = new System.Drawing.Point(650, 24);
             this.banco_DebitadoTextBox1.Name = "banco_DebitadoTextBox1";
             this.banco_DebitadoTextBox1.ReadOnly = true;
@@ -1360,7 +1277,6 @@
             // 
             // numero_ChequeTextBox1
             // 
-            this.numero_ChequeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Numero_Cheque", true));
             this.numero_ChequeTextBox1.Location = new System.Drawing.Point(613, 50);
             this.numero_ChequeTextBox1.Name = "numero_ChequeTextBox1";
             this.numero_ChequeTextBox1.Size = new System.Drawing.Size(89, 20);
@@ -1380,22 +1296,11 @@
             // 
             // historicoTextBox1
             // 
-            this.historicoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.base_Titulos_PagosBindingSource, "Historico", true));
             this.historicoTextBox1.Location = new System.Drawing.Point(126, 50);
             this.historicoTextBox1.MaxLength = 250;
             this.historicoTextBox1.Name = "historicoTextBox1";
             this.historicoTextBox1.Size = new System.Drawing.Size(409, 20);
             this.historicoTextBox1.TabIndex = 4;
-            // 
-            // base_Titulos_PagosTableAdapter
-            // 
-            this.base_Titulos_PagosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Base_Titulos_PagosTableAdapter = this.base_Titulos_PagosTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = SGFRenaissance.BaseTitulosPagoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // labelTotaltitulos
             // 
@@ -1416,30 +1321,39 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Numero_Parcelas_a_PagarTableAdapter = this.numero_Parcelas_a_PagarTableAdapter;
-            this.tableAdapterManager.UpdateOrder = SGFRenaissance.NumeroParcelasaPagarDGVTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = SGFRenaissance.DGVNumeroParcelasPagarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // base_Parcelas_PagasTableAdapter
+            // base_Parcelas_PagasDGV
             // 
-            this.base_Parcelas_PagasTableAdapter.ClearBeforeFill = true;
+            this.base_Parcelas_PagasDGV.DataSetName = "base_Parcelas_PagasDGV";
+            this.base_Parcelas_PagasDGV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tableAdapterManager2
+            // base_Parcelas_PagasBindingSource
             // 
-            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager2.base_Parcelas_PagasTableAdapter = this.base_Parcelas_PagasTableAdapter;
-            this.tableAdapterManager2.UpdateOrder = SGFRenaissance.base_Parcelas_PagasDGVTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.base_Parcelas_PagasBindingSource.DataMember = "Base_Parcelas_Pagas";
+            this.base_Parcelas_PagasBindingSource.DataSource = this.base_Parcelas_PagasDGV;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.base_Parcelas_PagasTableAdapter = null;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = SGFRenaissance.base_Parcelas_PagasDGVTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // base_Parcelas_PagasTableAdapter1
+            // 
+            this.base_Parcelas_PagasTableAdapter1.ClearBeforeFill = true;
             // 
             // Pagamento_de_Titulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 686);
+            this.ClientSize = new System.Drawing.Size(1017, 703);
             this.Controls.Add(this.labelTotaltitulos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this._lblMensagemUsuario);
-            this.Controls.Add(this.groupBoxInformacoesTitulo);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.GB_TitulosPago);
             this.Controls.Add(this.groupBox_Tit_a_Pagar);
             this.Controls.Add(this._lblLinha);
@@ -1452,23 +1366,21 @@
             this.groupBox_Tit_a_Pagar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_PagarDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numero_Parcelas_a_PagarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numeroParcelasaPagarDGV)).EndInit();
-            this.GB_TitulosPago.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseTitulosPagosINSERT)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.base_Titulos_PagosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseTitulosPago)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVNumeroParcelasPagar)).EndInit();
             this.groupBoxInformacoesTitulo.ResumeLayout(false);
             this.groupBoxInformacoesTitulo.PerformLayout();
+            this.GB_TitulosPago.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseParcelasPagasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sGFRenaissanceDataSet4)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBoxConfirmarPgto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.base_Parcelas_PagasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1491,15 +1403,6 @@
         private System.Windows.Forms.Button btn_novo;
         private System.Windows.Forms.GroupBox groupBoxInformacoesTitulo;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private NumeroParcelasaPagarDGV numeroParcelasaPagarDGV;
-        private System.Windows.Forms.BindingSource numero_Parcelas_a_PagarBindingSource;
-        private NumeroParcelasaPagarDGVTableAdapters.Numero_Parcelas_a_PagarTableAdapter numero_Parcelas_a_PagarTableAdapter;
-        private NumeroParcelasaPagarDGVTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView numero_Parcelas_a_PagarDataGridView;
-        private BaseTitulosPago baseTitulosPago;
-        private System.Windows.Forms.BindingSource base_Titulos_PagosBindingSource;
-        private BaseTitulosPagoTableAdapters.Base_Titulos_PagosTableAdapter base_Titulos_PagosTableAdapter;
-        private BaseTitulosPagoTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.TextBox numero_ChequeTextBox;
         private System.Windows.Forms.TextBox valor_PagoTextBox;
         private System.Windows.Forms.DateTimePicker data_PagamentoDateTimePicker;
@@ -1514,20 +1417,7 @@
         private System.Windows.Forms.TextBox historicoTextBox;
         private System.Windows.Forms.TextBox login_NameTextBox;
         private System.Windows.Forms.TextBox data_LoginTextBox;
-        private BaseTitulosPagosINSERT baseTitulosPagosINSERT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewButtonColumn PagarTitulo;
-      
-        private System.Windows.Forms.BindingSource base_Parcelas_PagasBindingSource;
        
-       
-        private System.Windows.Forms.DataGridView base_Parcelas_PagasDataGridView;
         private System.Windows.Forms.Label _lblMensagemUsuario;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox cod_Base_Titulos_PagosTextBox1;
@@ -1576,31 +1466,47 @@
         private System.Windows.Forms.Label labelValoravista;
         private System.Windows.Forms.TextBox vencimento_Parcela;
         private System.Windows.Forms.Label label4;
-        private base_Parcelas_PagasDGV base_Parcelas_PagasDGV;
-        private System.Windows.Forms.BindingSource base_Parcelas_PagasBindingSource1;
-        private base_Parcelas_PagasDGVTableAdapters.base_Parcelas_PagasTableAdapter base_Parcelas_PagasTableAdapter;
-        private base_Parcelas_PagasDGVTableAdapters.TableAdapterManager tableAdapterManager2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codBaseTitulosPagosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codTituloaPagarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codNumeroParcaPagarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codFornecedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDocumentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView numero_Parcelas_a_PagarDataGridView;
+        private DGVNumeroParcelasPagar dGVNumeroParcelasPagar;
+        private System.Windows.Forms.BindingSource numero_Parcelas_a_PagarBindingSource;
+        private DGVNumeroParcelasPagarTableAdapters.Numero_Parcelas_a_PagarTableAdapter numero_Parcelas_a_PagarTableAdapter;
+        private DGVNumeroParcelasPagarTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codNumeroParcelasaPagarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codEntradaTitulosaPagarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroParcelaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorTituloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDocumentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataPagamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataVencParcelaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codCentroCustosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codDespesaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorPagoaVistaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorPagoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerobancoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerochequeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn acrescimosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descontosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saldoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusTituloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataVencimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorParcelaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn historicoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn historicoTituloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codStatusTituloDataGridViewTextBoxColumn;
+        private base_Parcelas_PagasDGV base_Parcelas_PagasDGV;
+        private System.Windows.Forms.BindingSource base_Parcelas_PagasBindingSource;
+
+        private base_Parcelas_PagasDGVTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridView base_Parcelas_PagasDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private SGFRenaissanceDataSet4 sGFRenaissanceDataSet4;
+        private System.Windows.Forms.BindingSource baseParcelasPagasBindingSource;
+        private SGFRenaissanceDataSet4TableAdapters.Base_Parcelas_PagasTableAdapter base_Parcelas_PagasTableAdapter1;
     }
 }

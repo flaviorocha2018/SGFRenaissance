@@ -17,7 +17,7 @@ namespace SGFRenaissance
     public partial class EntradaTitulosaReceber : Form
     {
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         SqlDataAdapter adapt2;
@@ -38,7 +38,7 @@ namespace SGFRenaissance
 
         private void load()
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             this.entrada_Titulos_a_ReceberDataGridView.DataSource = null;
             using (SqlConnection conn = new SqlConnection(constr))
             {
@@ -59,7 +59,7 @@ namespace SGFRenaissance
             {
                
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Nome_Cliente from Clientes_Contas_a_Receber where Cod_Cliente_Contas_a_Receber='{0}'", cod_ClienteTextBox.Text);
@@ -87,7 +87,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Descricao_Receita from Tipos_Receita where Codigo_Tipo_Receita ='{0}'", Cod_ReceitaTextBox.Text);
@@ -109,7 +109,7 @@ namespace SGFRenaissance
             try
             {
                 String StrConn;
-                StrConn = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+                StrConn = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(StrConn);
                 sqlConnection.Open();
                 string sql = string.Format("select  Descricao_Status from Status_Titulos_a_Receber where Codigo_Status_Tit_a_Receber ='{0}'", Cod_StatusTextBox.Text);
@@ -212,7 +212,7 @@ namespace SGFRenaissance
               TryRefreshTipoReceita();
               TryRefreshStatusTitulo();
               inabilitardados_Titulo();
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
             {
                 SqlDataAdapter sda = new SqlDataAdapter("Select * From Entrada_Titulos_a_Receber", conn);
@@ -230,7 +230,7 @@ namespace SGFRenaissance
 
         void GetDetails()
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             int currentId;
             int index = entrada_Titulos_a_ReceberDataGridView.CurrentCell.RowIndex;
             currentId = Convert.ToInt32(entrada_Titulos_a_ReceberDataGridView.Rows[index].Cells["Cod_Id"].Value);
@@ -264,7 +264,7 @@ namespace SGFRenaissance
          //     this.entrada_Titulos_a_ReceberTableAdapter.Update(this.entradaTitulosaReceberDGV.Entrada_Titulos_a_Receber);
          //     MessageBox.Show("Dados do Título Atualizados com Sucesso!");
             
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
             {
                 ID = Convert.ToInt32(cod_Entrada_Titulos_a_ReceberTextBox.Text);
@@ -701,7 +701,7 @@ namespace SGFRenaissance
 
         private void numero_Parcelas_a_ReceberDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
                 if (e.ColumnIndex == 7)
                 {
@@ -844,7 +844,7 @@ namespace SGFRenaissance
 
         private void btn_gravarParcela_Click(object sender, EventArgs e)
         {
-            string constr = @"Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True";
+            string constr = @"Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(constr))
             {
                 ID = Convert.ToInt32(cod_Numero_Parcelas_ReceberTextBox.Text);

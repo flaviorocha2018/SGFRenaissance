@@ -562,8 +562,8 @@ namespace SGFRenaissance
 
         private void btn_base_Titulos_a_Pagar_Click(object sender, EventArgs e)
         {
-          //  Form_Titulos_a_Pagar_Total frm = new Form_Titulos_a_Pagar_Total() { Owner = this };
-          //   frm.Show();
+            Form_Rel_Titulos_a_Pagar_Total frm = new Form_Rel_Titulos_a_Pagar_Total() { Owner = this };
+            frm.Show();
         }
 
         private void btn_Base_Titulos_Recebidos_Click(object sender, EventArgs e)

@@ -201,19 +201,25 @@ namespace SGFRenaissance
 
         private void títulosAPagarQuitadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmTitulosPagos frm = new FrmTitulosPagos();
+            Frm_Rel_Titulos_Pagos frm = new Frm_Rel_Titulos_Pagos();
             frm.Show();
         }
 
         private void títulosAPagarTotalTodosOsFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_Titulos_a_Pagar_Total frm = new Form_Titulos_a_Pagar_Total();
+            Form_Rel_Titulos_a_Pagar_Total frm = new Form_Rel_Titulos_a_Pagar_Total();
             frm.Show();
         }
 
         private void títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Relatorio_Contas_Receber_Total frm = new Form_Relatorio_Contas_Receber_Total();
+            frm.Show();
+        }
+
+        private void lançamentosBancáriosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaBaseLancamentos frm = new TelaBaseLancamentos();
             frm.Show();
         }
     }

@@ -14,7 +14,7 @@ namespace SGFRenaissance
 {
     public partial class Form_DRE_Exercicio : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O98051;Initial Catalog=SGFRenaissance;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CHNLG1O;Initial Catalog=SGFRenaissance;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         decimal TotalRevenues = 0;

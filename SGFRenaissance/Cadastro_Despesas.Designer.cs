@@ -123,7 +123,7 @@
             this._lblTituloJanela.AutoSize = true;
             this._lblTituloJanela.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblTituloJanela.ForeColor = System.Drawing.Color.Maroon;
-            this._lblTituloJanela.Location = new System.Drawing.Point(7, 9);
+            this._lblTituloJanela.Location = new System.Drawing.Point(13, 9);
             this._lblTituloJanela.Name = "_lblTituloJanela";
             this._lblTituloJanela.Size = new System.Drawing.Size(249, 29);
             this._lblTituloJanela.TabIndex = 114;
@@ -135,12 +135,12 @@
             this._lblLinha.AutoSize = true;
             this._lblLinha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblLinha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this._lblLinha.Location = new System.Drawing.Point(-1, 38);
+            this._lblLinha.Location = new System.Drawing.Point(-3, 38);
             this._lblLinha.Name = "_lblLinha";
-            this._lblLinha.Size = new System.Drawing.Size(784, 18);
+            this._lblLinha.Size = new System.Drawing.Size(944, 18);
             this._lblLinha.TabIndex = 115;
             this._lblLinha.Text = "_________________________________________________________________________________" +
-    "________________";
+    "____________________________________";
             // 
             // panel1
             // 
@@ -152,12 +152,12 @@
             this.panel1.Controls.Add(this.btn_fechar);
             this.panel1.Location = new System.Drawing.Point(0, 339);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(733, 64);
+            this.panel1.Size = new System.Drawing.Size(877, 64);
             this.panel1.TabIndex = 116;
             // 
             // btn_voltar
             // 
-            this.btn_voltar.Location = new System.Drawing.Point(178, 15);
+            this.btn_voltar.Location = new System.Drawing.Point(210, 15);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(85, 30);
             this.btn_voltar.TabIndex = 4;
@@ -177,7 +177,7 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.Location = new System.Drawing.Point(321, 15);
+            this.btn_salvar.Location = new System.Drawing.Point(386, 15);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(85, 30);
             this.btn_salvar.TabIndex = 2;
@@ -187,7 +187,7 @@
             // 
             // btn_proximo
             // 
-            this.btn_proximo.Location = new System.Drawing.Point(467, 15);
+            this.btn_proximo.Location = new System.Drawing.Point(555, 15);
             this.btn_proximo.Name = "btn_proximo";
             this.btn_proximo.Size = new System.Drawing.Size(85, 30);
             this.btn_proximo.TabIndex = 1;
@@ -197,7 +197,7 @@
             // 
             // btn_fechar
             // 
-            this.btn_fechar.Location = new System.Drawing.Point(604, 15);
+            this.btn_fechar.Location = new System.Drawing.Point(732, 15);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(85, 30);
             this.btn_fechar.TabIndex = 0;
@@ -218,7 +218,7 @@
             this.groupBox1.Controls.Add(this.cod_DespesaTextBox);
             this.groupBox1.Location = new System.Drawing.Point(5, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(728, 125);
+            this.groupBox1.Size = new System.Drawing.Size(872, 125);
             this.groupBox1.TabIndex = 117;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da Despesa";
@@ -296,7 +296,7 @@
             this.panel2.Controls.Add(this.login_NameTextBox);
             this.panel2.Location = new System.Drawing.Point(0, 431);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(733, 53);
+            this.panel2.Size = new System.Drawing.Size(877, 53);
             this.panel2.TabIndex = 119;
             // 
             // data_LoginTextBox
@@ -346,7 +346,7 @@
             this.contas_DespesaDataGridView.Name = "contas_DespesaDataGridView";
             this.contas_DespesaDataGridView.ReadOnly = true;
             this.contas_DespesaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.contas_DespesaDataGridView.Size = new System.Drawing.Size(728, 143);
+            this.contas_DespesaDataGridView.Size = new System.Drawing.Size(872, 143);
             this.contas_DespesaDataGridView.TabIndex = 120;
             // 
             // dataGridViewTextBoxColumn1
@@ -362,7 +362,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Descrição Despesa";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 220;
+            this.dataGridViewTextBoxColumn2.Width = 325;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -370,7 +370,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Cód. Despesa Contabil";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 120;
+            this.dataGridViewTextBoxColumn3.Width = 140;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -378,13 +378,13 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Tipo da Despesa";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 220;
+            this.dataGridViewTextBoxColumn4.Width = 260;
             // 
             // Cadastro_Despesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 487);
+            this.ClientSize = new System.Drawing.Size(924, 487);
             this.Controls.Add(this.contas_DespesaDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);

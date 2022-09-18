@@ -83,9 +83,9 @@
             // gb_cod_despesa
             // 
             this.gb_cod_despesa.Controls.Add(this.dataGridView_cod_despesas);
-            this.gb_cod_despesa.Location = new System.Drawing.Point(4, 101);
+            this.gb_cod_despesa.Location = new System.Drawing.Point(12, 111);
             this.gb_cod_despesa.Name = "gb_cod_despesa";
-            this.gb_cod_despesa.Size = new System.Drawing.Size(699, 368);
+            this.gb_cod_despesa.Size = new System.Drawing.Size(809, 368);
             this.gb_cod_despesa.TabIndex = 3;
             this.gb_cod_despesa.TabStop = false;
             this.gb_cod_despesa.Text = "Lista de Códigos de Despesas";
@@ -108,7 +108,7 @@
             this.dataGridView_cod_despesas.Name = "dataGridView_cod_despesas";
             this.dataGridView_cod_despesas.ReadOnly = true;
             this.dataGridView_cod_despesas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_cod_despesas.Size = new System.Drawing.Size(693, 349);
+            this.dataGridView_cod_despesas.Size = new System.Drawing.Size(803, 349);
             this.dataGridView_cod_despesas.TabIndex = 0;
             this.dataGridView_cod_despesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_cod_despesas_CellContentClick);
             // 
@@ -122,7 +122,7 @@
             this.btn_fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btn_fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_fechar.Location = new System.Drawing.Point(314, 475);
+            this.btn_fechar.Location = new System.Drawing.Point(732, 485);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(86, 30);
             this.btn_fechar.TabIndex = 4;
@@ -144,7 +144,7 @@
             this.descricaoDespesaDataGridViewTextBoxColumn.HeaderText = "Descrição da Despesa";
             this.descricaoDespesaDataGridViewTextBoxColumn.Name = "descricaoDespesaDataGridViewTextBoxColumn";
             this.descricaoDespesaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDespesaDataGridViewTextBoxColumn.Width = 200;
+            this.descricaoDespesaDataGridViewTextBoxColumn.Width = 300;
             // 
             // codigoDespesaContabDataGridViewTextBoxColumn
             // 
@@ -159,7 +159,7 @@
             this.Tipo_Despesa.HeaderText = "Tipo_Despesa";
             this.Tipo_Despesa.Name = "Tipo_Despesa";
             this.Tipo_Despesa.ReadOnly = true;
-            this.Tipo_Despesa.Width = 150;
+            this.Tipo_Despesa.Width = 170;
             // 
             // Selecionar
             // 
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 512);
+            this.ClientSize = new System.Drawing.Size(833, 528);
             this.Controls.Add(this.btn_fechar);
             this.Controls.Add(this.gb_cod_despesa);
             this.Controls.Add(this.gb_Consulta);

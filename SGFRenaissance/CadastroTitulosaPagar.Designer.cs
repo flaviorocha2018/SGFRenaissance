@@ -268,9 +268,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(722, 50);
+            this.button2.Location = new System.Drawing.Point(722, 51);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(22, 24);
+            this.button2.Size = new System.Drawing.Size(22, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "+";
             this.button2.UseVisualStyleBackColor = true;
@@ -503,7 +503,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(753, 55);
+            this.label6.Location = new System.Drawing.Point(753, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 126;
@@ -522,10 +522,10 @@
             // descricao_Despesa_textBox
             // 
             this.descricao_Despesa_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descricao_Despesa_textBox.Location = new System.Drawing.Point(486, 52);
+            this.descricao_Despesa_textBox.Location = new System.Drawing.Point(432, 52);
             this.descricao_Despesa_textBox.Name = "descricao_Despesa_textBox";
             this.descricao_Despesa_textBox.ReadOnly = true;
-            this.descricao_Despesa_textBox.Size = new System.Drawing.Size(236, 21);
+            this.descricao_Despesa_textBox.Size = new System.Drawing.Size(290, 21);
             this.descricao_Despesa_textBox.TabIndex = 13;
             // 
             // TexBoxNome_CentroCustos
@@ -550,7 +550,7 @@
             // 
             this.cod_DespesaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.entradaTitulosaPagarBindingSource, "Cod_Despesa", true));
             this.cod_DespesaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cod_DespesaTextBox.Location = new System.Drawing.Point(455, 52);
+            this.cod_DespesaTextBox.Location = new System.Drawing.Point(401, 52);
             this.cod_DespesaTextBox.Name = "cod_DespesaTextBox";
             this.cod_DespesaTextBox.ReadOnly = true;
             this.cod_DespesaTextBox.Size = new System.Drawing.Size(30, 21);
@@ -580,7 +580,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(372, 55);
+            this.label5.Location = new System.Drawing.Point(318, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 7;
@@ -1221,6 +1221,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.Numero_Parcelas_a_PagarTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SGFRenaissance.DGVNumeroParcelasPagarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // numero_Parcelas_a_PagarTableAdapter

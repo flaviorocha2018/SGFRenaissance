@@ -1044,25 +1044,19 @@ SELECT Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Parcela,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString;
+            this._connection.ConnectionString = global::SGFRenaissance.Properties.Settings.Default.SGFRenaissanceConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Parcela, " +
                 "Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo FROM dbo.Numero_Par" +
                 "celas_a_Pagar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Pa" +
-                "rcela, Data_Vencimento, Valor_Parcela, Historico, Cod_Status_Titulo\r\nFROM       " +
-                "     Numero_Parcelas_a_Pagar";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1087,19 +1081,6 @@ SELECT Cod_Numero_Parcelas_a_Pagar, Cod_Entrada_Titulos_a_Pagar, Numero_Parcela,
             NumeroParcelasaPagarDGV.Numero_Parcelas_a_PagarDataTable dataTable = new NumeroParcelasaPagarDGV.Numero_Parcelas_a_PagarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTabelaCompleta(NumeroParcelasaPagarDGV.Numero_Parcelas_a_PagarDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

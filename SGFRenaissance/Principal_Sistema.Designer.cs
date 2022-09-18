@@ -63,6 +63,7 @@
             this.títulosAPagarEmAbertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.títulosAPagarTotalTodosOsFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.titulosAReceberEmAbertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.títulosAPagarQuitadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.titulosAReceberQuitadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dREOperacionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,7 +93,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -277,6 +277,7 @@
             this.lançamentosBancáriosToolStripMenuItem1.Name = "lançamentosBancáriosToolStripMenuItem1";
             this.lançamentosBancáriosToolStripMenuItem1.Size = new System.Drawing.Size(229, 22);
             this.lançamentosBancáriosToolStripMenuItem1.Text = "Lançamentos Bancários";
+            this.lançamentosBancáriosToolStripMenuItem1.Click += new System.EventHandler(this.lançamentosBancáriosToolStripMenuItem1_Click);
             // 
             // baseDeTítulosPagosToolStripMenuItem1
             // 
@@ -377,6 +378,13 @@
             this.titulosAReceberEmAbertoToolStripMenuItem.Size = new System.Drawing.Size(399, 22);
             this.titulosAReceberEmAbertoToolStripMenuItem.Text = "Titulos a Receber em Aberto";
             this.titulosAReceberEmAbertoToolStripMenuItem.Click += new System.EventHandler(this.titulosAReceberEmAbertoToolStripMenuItem_Click);
+            // 
+            // títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem
+            // 
+            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Name = "títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem";
+            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Size = new System.Drawing.Size(399, 22);
+            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Text = "Títulos a Receber em Aberto - Todos os Clientes (Total)";
+            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Click += new System.EventHandler(this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem_Click);
             // 
             // títulosAPagarQuitadoToolStripMenuItem
             // 
@@ -568,13 +576,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(385, 44);
             this.panel3.TabIndex = 1;
-            // 
-            // títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem
-            // 
-            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Name = "títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem";
-            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Size = new System.Drawing.Size(399, 22);
-            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Text = "Títulos a Receber em Aberto - Todos os Clientes (Total)";
-            this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem.Click += new System.EventHandler(this.títulosAReceberEmAbertoTodosOsClientesTotalToolStripMenuItem_Click);
             // 
             // Principal_Sistema
             // 

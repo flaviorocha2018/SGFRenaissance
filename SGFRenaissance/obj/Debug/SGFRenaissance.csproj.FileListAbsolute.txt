@@ -59,9 +59,7 @@ D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Form_DRE_Exercicio.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Form_Relatorio_Contas_Receber_Total.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Form_Relatorio_Lancamentos.resources
-D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Form_Titulos_a_Pagar_Total.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.FrmRel_TitulosRecebidos.resources
-D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.FrmTitulosPagos.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Frm_Rel_Titulos_a_Pagar_em_Aberto.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.FormEscolherBanco.resources
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Fornecedor_Contas_a_Pagar.resources
@@ -146,3 +144,6 @@ D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\bin\Debug\zh-CHT\Microsof
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.csproj.CopyComplete
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.exe
 D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.pdb
+D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.TelaBaseLancamentos.resources
+D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Form_Rel_Titulos_a_Pagar_Total.resources
+D:\SGFRenaissance_Flavio\SGFRenaissance\SGFRenaissance\obj\Debug\SGFRenaissance.Frm_Rel_Titulos_Pagos.resources
