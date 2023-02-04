@@ -1,5 +1,5 @@
 # SGFRenaissance
-Repositório do Sistema de Fluxo de Caixa - SGFRenaissance
+Repositório do Sistema de Fluxo de Caixa - SGFRenaissance - Empresa de pequeno porte em que tive uma participação.</br>
 1- Sistema de Fluxo de Caixa, com Títulos a Receber e Títulos a Pagar, Lançamentos Bancários, Relatórios, e visualização da DRE (Demonstrativo do Resultado do Exercício).</br>
 2- O Sistema possui um acesso ao banco de dados com o projeto .DAL usando um layer para salvar e editar os cadastros.</br>
 3- Criei também alguns cadastros fora do sistema DAL, utilizando outro acesso ao banco, fazendo o CRUD, porém não criei uma classe de conexão.</br>
